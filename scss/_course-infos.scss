@@ -1,0 +1,25 @@
+/*------------------------------------
+43. Course Infos
+------------------------------------*/
+.elh-course-infos{
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+}
+.elh-course-infobox{
+    border: 1px solid #e7e7e7;
+    text-align: center;
+    padding: 25px 15px;
+    margin-bottom: 30px;
+    .course-info-icon{
+        font-size: 2.2rem;
+    }
+    .elh-course-info-name{
+        margin-bottom: 0;
+    }
+    .elh-course-info-value{
+        font-size: 1.8rem;
+        margin-top: 3px;
+        margin-bottom: 0;
+    }
+}

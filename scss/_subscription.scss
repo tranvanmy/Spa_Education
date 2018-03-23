@@ -1,0 +1,160 @@
+/*------------------------------------
+28. Subscription
+------------------------------------*/
+.elh-subscribe-section {
+    padding: 35px 0;
+}
+
+.elh-subscribe-heading {
+    h5 {
+        margin: 0;
+    }
+    h3 {
+        margin: 2px 0 0;
+    }
+}
+
+.elh-subscribe-form {
+    margin-top: 10px;
+    width: 400px;
+    &.pull-center{
+        float: none;
+        zoom: 1;
+        position: relative;
+        zoom: 1;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+     ::-webkit-input-placeholder {
+        color: rgba(#ffffff, 0.55);
+        opacity: 1
+    }
+     ::-moz-placeholder {
+        color: rgba(#ffffff, 0.55);
+        opacity: 1
+    }
+     :-ms-input-placeholder {
+        color: rgba(#ffffff, 0.55);
+        opacity: 1
+    }
+     :-moz-placeholder {
+        color: rgba(#ffffff, 0.55);
+        opacity: 1
+    }
+    input:not([type=submit]):not([type=radio]):not([type=checkbox]),
+    select,
+    textarea {
+        width: calc(100% - 135px);
+        border-color: #ffffff;
+        border-radius: 3px;
+        color: #ffffff;
+        float: left;
+        margin-right: 10px;
+        &:focus,
+        &:active {
+            border-color: #ffffff;
+        }
+    }
+    [type=submit] {
+        width: 125px;
+        text-align: center;
+        padding: 8px 15px;
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+        font-family: $headingFont;
+        float: left;
+        border-radius: 3px;
+    }
+}
+
+.elh-subscribe-section.style-2 {
+    padding: 45px 0;
+    .elh-subscribe-heading{
+        h3{
+            margin-top: 10px;
+        }
+    }
+    .elh-subscribe-form {
+         ::-webkit-input-placeholder {
+            color: rgba(#262626, 0.55);
+            opacity: 1
+        }
+         ::-moz-placeholder {
+            color: rgba(#262626, 0.55);
+            opacity: 1
+        }
+         :-ms-input-placeholder {
+            color: rgba(#262626, 0.55);
+            opacity: 1
+        }
+         :-moz-placeholder {
+            color: rgba(#262626, 0.55);
+            opacity: 1
+        }
+        input:not([type=submit]):not([type=radio]):not([type=checkbox]),
+        select,
+        textarea {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 11px 70px 11px 30px;
+            color: #262626;
+        }
+        [type=submit] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 11px 0;
+            text-align: center;
+            width: 70px;
+        }
+    }
+}
+.elh-subscribe-section.style-3 {
+    padding: 33px 0;
+    .elh-subscribe-heading{
+        h3{
+            font-size: 2.8rem;
+            margin-top: 10px;
+        }
+    }
+    .elh-subscribe-form {
+         ::-webkit-input-placeholder {
+            color: rgba(#ffffff, 0.55);
+            opacity: 1
+        }
+         ::-moz-placeholder {
+            color: rgba(#ffffff, 0.55);
+            opacity: 1
+        }
+         :-ms-input-placeholder {
+            color: rgba(#ffffff, 0.55);
+            opacity: 1
+        }
+         :-moz-placeholder {
+            color: rgba(#ffffff, 0.55);
+            opacity: 1
+        }
+        input:not([type=submit]):not([type=radio]):not([type=checkbox]),
+        select,
+        textarea {
+            width: 100%;
+            background-color: transparent;
+            line-height: 20px;
+            padding: 11px 70px 11px 30px;
+            color: #ffffff;
+        }
+        [type=submit] {
+            position: absolute;
+            font-size: 1.8rem;
+            line-height: 20px;
+            top: 0;
+            right: 0;
+            padding: 11px 0;
+            text-align: center;
+            width: 70px;
+            color: #ffffff;
+            background-color: transparent;
+            border-color: transparent;
+        }
+    }
+}

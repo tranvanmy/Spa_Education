@@ -1,0 +1,42 @@
+/*------------------------------------
+15. Word From Instructor
+------------------------------------*/
+.instructor-comments{
+    color: #ffffff;
+    border-radius: 3px;
+    &.style-2{
+        background-color: transparent;
+        color: #262626;
+        border-radius: 0;
+        .elh-theme-bg &, .elh-img-bg &{
+            color: #ffffff;
+        }
+    }
+}
+.instructor-comment{
+    .style-2 &{
+        padding: 0;
+    }
+    padding: 50px;
+    text-align: center;
+    .instructor-thumb{
+        border-radius: 50%;
+        width: 100px;
+        margin: 0 auto 22px;
+        overflow: hidden;
+    }
+    blockquote{
+        font-size: 1.4rem;
+        border: none;
+        padding: 0;
+        margin: 0 0 13px;
+    }
+    .instructor-name{
+        font-size: 1.8rem;
+        margin: 0;
+    }
+    .instructor-field{
+        font-family: $headingFont;
+        margin: 3px 0 0;
+    }
+}

@@ -1,0 +1,309 @@
+/*------------------------------------
+30. Shop
+------------------------------------*/
+.shop-filter-short {
+    margin-bottom: 46px;
+}
+
+.shop-category-select {
+    font-size: 1.8rem;
+    width: 100px;
+    padding: 0;
+    font-family: $headingFont;
+    border: none;
+}
+
+.shop-shorting {
+    font-size: 1.8rem;
+    width: 100px;
+    padding: 0;
+    font-family: $headingFont;
+    border: none;
+}
+
+.elh-products {
+    zoom: 1;
+    position: relative;
+    overflow: hidden;
+    .post-pagination {
+        margin-top: 60px;
+    }
+}
+
+.elh-product {
+    margin-bottom: 30px;
+    .elh-product-thumb {
+        position: relative;
+    }
+    .elh-product-attr {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        span {
+            background-color: #262626;
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-family: $headingFont;
+            line-height: 2.5rem;
+            display: inline-block;
+            border-radius: 3px;
+            letter-spacing: 1px;
+            padding: 0 20px;
+        }
+    }
+    .elh-product-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(#000, 0.2);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    .elh-product-btns {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        text-align: center;
+        a {
+            color: #ffffff;
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+            line-height: 35px;
+            border-radius: 3px;
+            text-align: center;
+            + a {
+                margin-left: 115px;
+            }
+            &:hover {
+                background-color: #262626;
+            }
+        }
+    }
+    &:hover {
+        .elh-product-hover {
+            opacity: 1;
+        }
+        .elh-product-btns {
+            a {
+                + a {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    .elh-product-body {
+        margin-top: 10px;
+    }
+    .elh-product-name {
+        font-size: 2.2rem;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #262626;
+        a {
+            color: inherit;
+        }
+    }
+    .elh-product-price {
+        font-size: 1.8rem;
+        font-family: $headingFont;
+        font-weight: 700;
+    }
+}
+
+
+/**** Single Product ****/
+
+.elh-single-product-gallery {
+    .owl-buttons {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1.4rem;
+        .owl-prev,
+        .owl-next {
+            display: inline-block;
+            vertical-align: bottom;
+            color: #ffffff;
+            height: 20px;
+            width: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .owl-next {
+            margin-left: 10px;
+        }
+    }
+}
+
+.elh-product-single {
+    .elh-product-body {
+        margin-top: 0;
+        margin-left: 30px;
+    }
+    .elh-product-name {
+        font-weight: 700;
+        color: #111;
+    }
+    .elh-product-review {
+        margin-top: 8px;
+        .elh-rating-star {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .elh-product-review-count{
+            display: inline-block;
+            float: right;
+            vertical-align: middle;
+            font-family: $headingFont;
+            font-weight: 700;
+        }
+    }
+    .elh-product-price{
+        font-size: 4.4rem;
+        margin-top: 10px;
+        margin-bottom: 0;
+        .elh-product-price-now{
+            color: #111;
+        }
+    }
+    .elh-product-entry{
+        margin-top: 15px;
+    }
+    .elh-order-form{
+        margin-top: 30px;
+        > [type=number]:not([type=submit]){
+            width: auto;
+            font-size: 1.8rem;
+            font-family: $headingFont;
+            font-weight: 700;
+            line-height: 50px;
+            padding: 0 0 0 30px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        [type=submit]{
+            line-height: 50px;
+            border-width: 1px;
+            border-style: solid;
+            color: #ffffff;
+            padding: 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: $headingFont;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 3px;
+            min-width: 160px;
+            text-align: center;
+            margin-left: 15px;
+        }
+    }
+    .elh-product-category{
+        margin-top: 30px;
+        font-family: $headingFont;
+        label{
+            margin: 0;
+        }
+    }
+}
+
+.elh-rating-star {
+    .rate-star {
+        display: inline-block;
+        color: #999999;
+        + .rate-star{
+            margin-left: 3px;
+        }
+        &:before {
+            content: "\f005";
+            font-family: "FontAwesome";
+        }
+    }
+}
+.elh-product-single-tab{
+    margin-top: 90px;
+    .nav-tabs{
+        border: none;
+        display: inline-block;
+        >li{
+            margin: 0;
+            >a{
+                margin: 0;
+                line-height: 20px;
+                border-radius: 0;
+                background-color: #f7f7f7;
+                border: 1px solid #e7e7e7;
+                font-family: $headingFont;
+                font-weight: 700;
+                color: #262626;
+                padding: 15px 44px;
+            }
+            &.active{
+                >a{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    .tab-content{
+        margin-top: 45px;
+    }
+    .elh-product-description{
+        h3{
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 3.4rem;
+        }
+    }
+}
+.angle-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+        &:before{
+            content: "\f105";
+            font-family: "FontAwesome";
+            margin-right: 7px;
+        }
+    }
+}
+.review-table{
+    .review-head{
+        width: 200px;
+       vertical-align: top;
+    }
+    .review-reviewer{
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .review-date{
+        display: block;
+        margin-top: -5px;
+    }
+    .review-body{
+        vertical-align: top;
+        padding: 0;
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    .review-title{
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+}
+.elh-related-products{
+    margin-top: 75px;
+    .elh-related-products-title{
+        margin-top: 0;
+        margin-bottom: 54px;
+        font-size: 3.4rem;
+    }
+}

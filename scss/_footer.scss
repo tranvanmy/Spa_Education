@@ -1,0 +1,191 @@
+/*------------------------------------
+40. Footer
+------------------------------------*/
+footer{
+    color: rgba(#fff, 0.5);
+    a{
+        color: rgba(#fff, 0.5);
+    }
+}
+.elh-footer-widget-area{
+    padding: 80px 0;
+    .elh-footer-widgets{
+        zoom: 1;
+        position: relative;
+        overflow: hidden;
+    }
+    .widget{
+        .socials{
+            a{
+                color: #ffffff;
+                font-size: 1.2rem;
+                display: inline-block;
+                width: 34px;
+                height: 34px;
+                line-height: 34px;
+                border-radius: 50%;
+                background-color: rgba(#ffffff, 0.07);
+                text-align: center;
+                + a{
+                    margin-left: 8px;
+                }
+            }
+        }
+        .elh-subscribe-form{
+            position: relative;
+            max-width: 300px;
+            input:not([type=submit]):not([type=radio]):not([type=checkbox]), select, textarea{
+                width: 100%;
+                line-height: 3.4rem;
+                border-color: rgba(#fff, 0.4);
+                padding: 0 110px 0 30px;
+                float: none;
+                margin: 0;
+                font-family: 'Open Sans' sans-serif;
+                font-size: 1.2rem;
+            }
+            [type=submit]{
+                width: 100px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                line-height: 3.4rem;
+                font-size: 1.2rem;
+                padding: 0;
+                color: #ffffff;
+            }
+            + .clearfix + .socials{
+                clear: left;
+                margin-top: 20px;
+            }
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-info-item{
+            zoom: 1;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            + .contact-info-item{
+                margin-top: 14px;
+            }
+            .fa{
+                width: 14px;
+                margin-right: 10px;
+                float: left;
+                display: inline-block;
+                vertical-align: middle;
+                + .contact_info{
+                    width: calc(100% - 24px);
+                    margin-top: -3px;
+                }
+            }
+            .contact_info{
+                display: inline-block;
+                float: left;
+                width: 100%;
+                vertical-align: middle;
+                line-height: 2rem;
+            }
+        }
+        .flickr-photos{
+            a{
+                display: inline-block;
+                vertical-align: middle;
+                margin-bottom: 5px;
+                margin-right: 1px;
+            }
+        }
+    }
+    .about_widget{
+        max-width: 370px;
+        .footer-logo + p{
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        .socials{
+            margin-top: 25px;
+        }
+    }
+    .widget-title{
+        font-size: 1.8rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.elh-footer-lower-area{
+    border-top: 1px solid rgba(#ffffff, 0.2);
+    font-size: 1.2rem;
+    padding: 20px 0;
+    .footer-menu{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+            display: inline-block;
+            + li{
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+/*** Kids footer ***/
+footer.elh-kids-footer{
+    color: #ffffff;
+    .elh-footer-upper{
+        padding: 85px 0;
+        min-height: 600px;
+        background-image: url(../images/bg/16.jpg);
+        background-position: center bottom;
+        background-size: cover;
+        .footer-sitelogo{
+            display: inline-block;
+            font-size: 4.8rem;
+            font-weight: 700;
+            font-family: $headingFont;
+            line-height: 1;
+        }
+        .about-text{
+            font-family: $headingFont;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+        .socials{
+            margin-top: 20px;
+            a{
+                font-size: 1.2rem;
+                text-align: center;
+                display: inline-block;
+                width: 34px;
+                height: 34px;
+                line-height: 34px;
+                color: #ffffff;
+                background-color: rgba(#fff, 0.2);
+                border-radius: 50%;
+                + a{
+                    margin-left: 7px;
+                }
+                &:hover{
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
+    .elh-footer-lower-area{
+        border: none;
+        font-size: 1.4rem;
+        font-family: $headingFont;
+        .copyright{
+            a{
+                color: #ffffff;
+            }
+        }
+    }
+}

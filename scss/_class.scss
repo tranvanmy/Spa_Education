@@ -1,0 +1,67 @@
+/*------------------------------------
+34. Class
+------------------------------------*/
+.elh-classes{
+    zoom: 1;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -30px;
+}
+
+.elh-class{
+    background-color: #ffffff;
+    position: relative;
+    margin-bottom: 30px;
+    text-align: center;
+    .elh-class-thumb{
+        display: block;
+    }
+    .elh-class-body{
+        padding: 15px 30px;
+    }
+    .elh-class-name{
+        font-size: 2.2rem;
+        margin-bottom: 2px;
+    }
+    .elh-class-admission{
+        font-family: $headingFont;
+    }
+    .elh-class-attribute{
+        p{
+            font-family: $headingFont;
+            margin-bottom: 0;
+            + p{
+                margin-top: -5px;
+            }
+            label{
+                font-weight: 700;
+            }
+        }
+    }
+    .elh-class-footer{
+        border-top: 1px solid #bdbdbd;
+        margin-top: 25px;
+        padding: 13px 0;
+        text-align: left;
+    }
+    .elh-course-price{
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-family: $headingFont;
+        margin: 0;
+        .elh-price-now{
+            
+        }
+    }
+    .elh-class-admission-link{
+        font-size: 1.8rem;
+        font-family: $headingFont;
+        font-weight: 700;
+        display: inline-block;
+        float: right;
+        .fa{
+            margin-left: 5px;
+        }
+    }
+}

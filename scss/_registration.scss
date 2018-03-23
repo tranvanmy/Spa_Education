@@ -1,0 +1,94 @@
+/*------------------------------------
+29. Registration
+------------------------------------*/
+.elh-register-header {
+    margin-top: 100px;
+    .section_count {
+        display: inline-block;
+        +.section_count {
+            margin-left: 65px;
+        }
+        .section_count_data {
+            display: block;
+        }
+        .count-data {
+            display: block;
+        }
+        .tcount {
+            display: block;
+            font-size: 4.8rem;
+            font-family: $headingFont;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .text {
+            font-size: 1.4rem;
+            display: block;
+            line-height: 1;
+            font-family: $headingFont;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+    }
+}
+
+.registration-form {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    overflow: hidden;
+    label {
+        color: #ffffff;
+        font-size: 1.8rem;
+        font-family: $headingFont;
+        line-height: 3rem;
+        font-weight: 700;
+        margin: 0;
+        padding: 32px 40px;
+    }
+    .form-body {
+        padding: 40px;
+        input:not([type=submit]):not([type=radio]):not([type=checkbox]),
+        select,
+        textarea {
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+        [type=submit]{
+            line-height: 42px;
+            padding: 0;
+            border-radius: 3px;
+            border-width: 1px;
+            border-style: solid;
+            color: #ffffff;
+            width: 100%;
+            text-align: center;
+            font-family: $headingFont;
+            transition: all 0.3s ease;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+/***  Instructor registration ***/
+.instructor-registration{
+    h4{
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    label{
+        display: block;
+        margin: 0;
+        text-align: left;
+        font-weight: 400;
+        input{
+            margin: 0;
+        }
+    }
+    .btn{
+        width: 100%;
+    }
+}
+

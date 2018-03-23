@@ -1,0 +1,70 @@
+/*------------------------------------
+5. Background
+------------------------------------*/
+.elh-bg-1, .elh-bg-2, .elh-bg-3, .elh-bg-4, .elh-bg-5, .elh-bg-6, .elh-bg-7, .elh-bg-8, .elh-bg-9, .elh-bg-10, .elh-bg-11, .elh-bg-14{
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    .elh-overlay{
+        color: #ffffff;
+        background-color: rgba(#000000, 0.4);
+    }
+}
+.elh-bg-1{
+    background-image: url(../images/bg/1.jpg);
+}
+.elh-bg-2{
+    background-image: url(../images/bg/2.jpg);
+}
+.elh-bg-3{
+    background-image: url(../images/bg/3.jpg);
+}
+.elh-bg-4{
+    background-image: url(../images/bg/4.jpg);
+}
+.elh-bg-5{
+    background-image: url(../images/bg/5.jpg);
+}
+.elh-bg-6{
+    background-image: url(../images/bg/6.jpg);
+}
+.elh-bg-7{
+    background-image: url(../images/bg/7.jpg);
+}
+.elh-bg-8{
+    background-image: url(../images/bg/8.jpg);
+}
+.elh-bg-9{
+    background-image: url(../images/bg/9.jpg);
+}
+.elh-bg-10{
+    background-image: url(../images/bg/10.jpg);
+}
+.elh-bg-11{
+    background-image: url(../images/bg/11.jpg);
+}
+.elh-bg-12{
+    background-image: url(../images/bg/12.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+.elh-bg-13{
+    background-image: url(../images/bg/13.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+.elh-bg-14{
+    background-image: url(../images/bg/14.jpg);
+}
+.elh-bg-15{
+    background-image: url(../images/bg/15.jpg);
+    background-color: cover;
+    background-position: center center;
+    color: #ffffff;
+}
+.elh-bg-17{
+    background-image: url(../images/bg/17.jpg);
+    background-color: cover;
+    background-position: center center;
+    color: #ffffff;
+}
