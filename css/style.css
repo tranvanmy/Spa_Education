@@ -1117,10 +1117,14 @@ button:focus {
 }
 
 .elh-bg-17 {
-  background-image: url(../images/bg/17.jpg);
+  background-image: url(../images/bg/18.jpg);
   background-color: cover;
   background-position: center center;
   color: #ffffff;
+}
+
+.elh-instructor-entry {
+  text-align: justify;
 }
 
 /*------------------------------------
