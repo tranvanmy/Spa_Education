@@ -687,7 +687,7 @@ button:focus {
 }
 .navbar.fix-nav {
   position: fixed;
-  top: 0;
+  top: 52px;
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.3);
