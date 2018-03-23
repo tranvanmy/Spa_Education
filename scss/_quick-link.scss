@@ -1,0 +1,29 @@
+/*------------------------------------
+31. Quick Link
+------------------------------------*/
+.elh-quick-links{
+    margin-top: 30px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: table;
+    width: 100%;
+    color: #ffffff;
+    padding: 25px;
+    .elh-quick-link{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        a{
+            color: #ffffff;
+            display: inline-block;
+            font-family: $headingFont;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            .fa{
+                font-size: 2.2rem;
+                line-height: inherit;
+                margin-right: 6px;
+            }
+        }
+    }
+}

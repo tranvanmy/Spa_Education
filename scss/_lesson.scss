@@ -1,0 +1,90 @@
+/*------------------------------------
+45. Lesson
+------------------------------------*/
+.elh-lesson-main-wrap{
+    position: relative;
+}
+.elh-lesson-list-wrap{
+    width: 480px;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: -480px;
+    position: fixed;
+    z-index: 3;
+    background-color: #ffffff;
+    transition: all 0.4s ease;
+    &.lesson-list-showing{
+        left: 0;
+        + .elh-lesson-content-wrap{
+            left: 480px;
+        }
+    }
+}
+.elh-lesson-content-wrap{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.4s ease;
+    background-color: #262626;
+}
+.elh-lesson-content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.elh-lesson-content .plyr-video{
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+}
+
+/*** Lesson Navbar ***/
+.navbar{
+    &.navbar-lesson{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(to bottom, #262626, rgba(0, 0, 0, 0));
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        padding: 15px 0 30px;
+        opacity: 0;
+        visibility: hidden;
+        &.show-navbar-lesson{
+            opacity: 1;
+            visibility: visible;
+        }
+        .elh-lesson-list-toggle{
+            border-width: 1px;
+            border-radius: 3px;
+            border-style: solid;
+            background-color: transparent;
+            font-size: 2rem;
+            line-height: 38px;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .elh-current-lesson{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 11px;
+            .elh-current-lesson-title{
+                font-size: 1.8rem;
+                margin: 0;
+            }
+            .elh-current-lesson-number{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

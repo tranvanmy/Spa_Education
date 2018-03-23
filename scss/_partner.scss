@@ -1,0 +1,38 @@
+/*------------------------------------
+25. Partner
+------------------------------------*/
+.partner-logoes{
+    zoom: 1;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: -20px;
+}
+.partner-logoes{
+    padding: 38px 0;
+}
+.partner-logo{
+    display: inline-block;
+    width: 20%;
+    height: 100px;
+    margin-bottom: 20px;
+    position: relative;
+    float: left;
+    img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .partner-logoes.style-2 &{
+        width: 16.666666%;
+        img{
+            top: auto;
+            bottom: 0;
+            left: 0;
+            transform: translate(0, 0);
+        }
+    }
+    .partner-logoes.style-3 &{
+        width: 100%;
+    }
+}

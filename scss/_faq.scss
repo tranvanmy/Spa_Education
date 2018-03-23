@@ -1,0 +1,25 @@
+/*------------------------------------
+36. FAQ
+------------------------------------*/
+.faq-group{
+    .faq-group-name{
+        margin-top: 0;
+        margin-bottom: 26px;
+        font-size: 1.8rem;
+    }
+}
+
+.elh-generic-faq-group{
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+    margin-bottom: -40px;
+}
+.elh-faq-generic{
+    margin-bottom: 40px;
+    .question{
+        font-weight: 700;
+        font-family: $headingFont;
+        margin-bottom: 7px;
+    }
+}

@@ -1,0 +1,129 @@
+/*------------------------------------
+22. Widget
+------------------------------------*/
+.sidebar{
+    .widget{
+        border: 1px solid #e7e7e7;
+        border-radius: 3px;
+        padding: 26px 30px 30px;
+        + .widget{
+            margin-top: 30px;
+        }
+    }
+    .widget-title{
+        font-size: 1.8rem;
+        margin-top: 0;
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        &:before{
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            height: 1px;
+            width: 110px;
+            background-color: #bdbdbd;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            width: 40px;
+        }
+    }
+    input:not([type=submit]):not([type=radio]):not([type=checkbox]), select, textarea{
+        border-radius: 3px;
+    }
+    .search_widget{
+        form{
+            position: relative;
+            [type=submit]{
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 7px 20px;
+                border: 1px solid transparent;
+                background-color: transparent;
+            }
+        }
+    }
+    .categories{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+            a{
+                font-family: $headingFont;
+                color: #262626;
+                &:before{
+                    content: "\f105";
+                    font-family: "FontAwesome";
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .widget-post{
+        + .widget-post{
+            margin-top: 30px;
+        }
+        .widget-post-thumb{
+            display: inline-block;
+            width: 60px;
+            float: left;
+            margin-right: 20px;
+            + .widget-post-content{
+                width: calc(100% - 80px);
+            }
+        }
+        .widget-post-content{
+            float: left;
+            width: 100%;
+        }
+        .widget-post-title{
+            display: block;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            color: #262626;
+            font-family: $headingFont;
+            margin-top: -5px;
+            margin-bottom: -3px;
+        }
+        .widget-read-more{
+            display: inline-block;
+            font-size: 1.2rem;
+            font-family: $headingFont;
+            font-weight: 700;
+            .fa{
+                margin-left: 5px;
+            }
+        }
+        .widget-price{
+            display: inline-block;
+            font-size: 1.2rem;
+            font-family: $headingFont;
+            font-weight: 700;
+        }
+    }
+    .tags{
+        margin-right: -6px;
+        margin-bottom: -10px;
+        a{
+            display: inline-block;
+            color: #262626;
+            border: 1px solid #e7e7e7;
+            border-radius: 3px;
+            font-family: $headingFont;
+            font-size: 1.2rem;
+            padding: 3px 14px;
+            margin-right: 6px;
+            margin-bottom: 10px;
+            &:hover{
+                color: #ffffff;
+            }
+        }
+    }
+}
