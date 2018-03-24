@@ -2498,6 +2498,10 @@ button:focus {
 }
 
 /*** Listing ***/
+.elh-posts-center {
+  float: none;
+  margin: auto;
+}
 .elh-posts-listing {
   zoom: 1;
   position: relative;
