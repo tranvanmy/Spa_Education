@@ -4914,3 +4914,7 @@ footer.elh-kids-footer .elh-footer-lower-area .copyright a {
 .elh-mission h3, .elh-vision h3 {
   margin-top: 0;
 }
+
+#navbar-search-toggle {
+    color: #fff
+}
