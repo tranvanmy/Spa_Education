@@ -1082,7 +1082,7 @@ button:focus {
 }
 
 .elh-bg-9 {
-  background-image: url(../images/bg/9.jpg);
+  background-image: url(../images/instructor/cover-10.jpg);
 }
 
 .elh-bg-10 {
@@ -4200,6 +4200,7 @@ footer.elh-kids-footer .elh-footer-lower-area .copyright a {
 .elh-course-body {
   border: 1px solid #e7e7e7;
   padding: 42px 50px;
+  text-align: justify;
 }
 .elh-course-body .elh-course-section {
   margin-bottom: 40px;
