@@ -390,7 +390,7 @@ $(document).ready(function ($) {
             }
         });
     }
-    
+
     /*-----------------------------------
     Contact Form
     -----------------------------------*/
@@ -428,13 +428,13 @@ $(document).ready(function ($) {
 
         return false;
     });
-    
+
     /*-----------------------------------
     Subscription
     -----------------------------------*/
     $(".elh-subscribe-form").ajaxChimp({
         callback: mailchimpResponse,
-        url: "http://codepassenger.us10.list-manage.com/subscribe/post?u=6b2e008d85f125cf2eb2b40e9&id=6083876991" // Replace your mailchimp post url inside double quote "".  
+        url: "http://codepassenger.us10.list-manage.com/subscribe/post?u=6b2e008d85f125cf2eb2b40e9&id=6083876991" // Replace your mailchimp post url inside double quote "".
     });
 
     function mailchimpResponse(resp) {
@@ -464,7 +464,7 @@ $(document).ready(function ($) {
     });
 
     $('#lessonContent .plyr-video').css('max-width', $(window).height() * 1.7776);
-    
+
     var nlTimer;
     $('#lessonContentWrap').on('mousemove', function () {
         $('#navbar-lesson').addClass('show-navbar-lesson');
