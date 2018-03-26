@@ -1044,6 +1044,10 @@ button:focus {
   opacity: 1;
 }
 
+.upcoming {
+  font-weight: bold;
+}
+
 /*------------------------------------
 5. Background
 ------------------------------------*/
@@ -1090,7 +1094,7 @@ button:focus {
 }
 
 .elh-bg-9 {
-  background-image: url(../images/instructor/cover-10.jpg);
+  background-image: url(../images/instructor/5.jpg);
 }
 
 .elh-bg-10 {
