@@ -17,7 +17,7 @@
         <!-- Header -->
             @include('user.layouts.libraries.header')
         <!-- End header -->
-
+        
         <!-- Navigation -->
             @yield('user-nav')
         <!-- Navigation End -->

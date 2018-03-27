@@ -1,188 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('user.layouts.master')
 
-<head>
-    <!-- Site information -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EduLearn Hub - Multi-Purpose LMS &amp; Education Template</title>
-    <meta name="description" content="Edu Description">
+@section('user-title', 'AI Academy')
+@section('seo-description', 'AI Academy')
+@section('seo-keyword',  'AI Academy')
 
+@section('user-css')
     <!-- External CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/plyr.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="/static/assets/css/slick.css">
+    <link rel="stylesheet" href="/static/assets/css/plyr.css">
+    <link rel="stylesheet" href="/static/assets/css/magnific-popup.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/scheme/primary.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
+    <link rel="stylesheet" href="/static/css/style.css?id=1">
+    <link rel="stylesheet" href="/static/css/scheme/primary.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CRoboto+Slab:400,700%7CPacifico" rel="stylesheet">
-
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/icon-114x114.png">
-
+    <link rel="icon" href="/static/images/favicon.png">
+    <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/icon-114x114.png">
     <!--[if lt IE 9]>
-        <script src="assets/js/html5shiv.min.js"></script>
-        <script src="assets/js/respond.min.js"></script>
+    <script src="assets/js/html5shiv.min.js"></script>
+    <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-</head>
+@endsection
 
-<body>
-    <!-- Topbar -->
-    <header class="elh-topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-xs-4">
-                    <div class="top-block">
-                        <p class="top-phone"><i class="fa fa-phone"></i>+1-0000-000-000</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xs-8 text-right">
-                    <div class="top-block top-socials">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                        <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-vimeo"></i></a>
-                    </div>
-                    <div class="top-block language-block">
-                        <div class="language-wrap">
-                            <p id="languageToggle" class="language-selected">EN <i class="fa fa-angle-down"></i></p>
-                            <ul id="language-select" class="language-select">
-                                <li class="current"><a href="#">EN</a></li>
-                                <li><a href="#">VI</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Topbar End -->
+@section('user-nav')
+    @include('user.layouts.libraries.navbar')
+@endsection
 
-    <!-- Navigation -->
-    <nav class="navbar fix-nav style-2" data-spy="affix" data-offset-top="52">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><img src="images/logo-7.svg" alt="Site Logo"></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <div class="navbar-search navbar-right">
-                    <button id="navbar-search-toggle" class="navbar-search-toggle"><i class="fa fa-search"></i></button>
-                    <form id="navbar-searchform" class="navbar-searchform">
-                        <input type="search" name="search" placeholder="Search...">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-                <ul class="nav navbar-nav navbar-right" id="home-nav-onepage">
-                    <li class="dropdown">
-                        <a href="#">About us</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="purchase-link" href="about-us.html">Vision / Mission</a></li>
-                            <li><a class="purchase-link" href="about-us.html">Scientific Advisory Board</a></li>
-                            <li><a class="purchase-link" href="about-us.html">Researchers & Data scientists</a></li>
-                            <li><a class="purchase-link" href="about-us.html">Student & PhD. candidates </a></li>
-                            <li><a class="purchase-link" href="about-us.html">Our philosophy and approaches</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Courses</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="purchase-link" href="category-course.html">ML Fundamental</a></li>
-                            <li><a class="purchase-link" href="category-course.html">ML in Computer Vision</a></li>
-                            <li><a class="purchase-link" href="category-course.html">ML in NLP</a></li>
-                            <li><a class="purchase-link" href="category-course.html">ML in Cyber Security</a></li>
-                            <li><a class="purchase-link" href="category-course.html">ML in the Cloud</a></li>
-                            <li >
-                                <a class="purchase-link" href="category-course.html">
-                                    AI in Smart Agriculture
-                                    <p class="upcoming">(upcoming)</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="purchase-link" href="category-course.html">
-                                    AI in Smart City
-                                    <p class="upcoming">
-                                        (upcoming)
-                                    </p>
-                                </a>
-                            </li>
-                            <li><a class="purchase-link" href="category-course.html">Student & PhD. candidates </a></li>
-                            <li><a class="purchase-link" href="category-course.html">AI in Marketing</a></li>
-                            <li><a class="purchase-link" href="category-course.html">BigData ecosystem & architecture</a></li>
-                            <li><a class="purchase-link" href="category-course.html">Data governance in the enterprise</a></li>
-                            <li><a class="purchase-link" href="category-course.html">Data analytics & visualization</a></li>
-                            <li><a class="purchase-link" href="category-course.html">AI for Business leaders</a></li>
-                            <li><a class="purchase-link" href="category-course.html">AI for IT leaders</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">R&D</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="purchase-link" href="research-category.html">Research projects</a></li>
-                            <li><a class="purchase-link" href="research-category.html">Publications</a></li>
-                            <li><a class="purchase-link" href="research-category.html">Data Science Lab</a></li>
-                            <li><a class="purchase-link" href="research-category.html">Technology transfer</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Products</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="purchase-link" href="product-category.html">Smart camera</a></li>
-                            <li><a class="purchase-link" href="product-category.html">NLP</a></li>
-                            <li><a class="purchase-link" href="product-category.html">Data Science Lab</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="">DataScientists' corner</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="purchase-link" href="data-scientist.html">Tutorials</a></li>
-                            <li><a class="purchase-link" href="data-scientist.html">Tools and practices</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="seminar.html">Seminars</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Joining us</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="join-us.html">Deliver courses with us</a></li>
-                            <li><a href="join-us.html">Become our data scientist</a></li>
-                            <li><a href="join-us.html">Become our industry advisor </a></li>
-                            <li><a href="join-us.html">Join our partner network</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navigation End -->
-
-    <!-- Page header -->
-    <div class="elh-page-header elh-img-bg elh-bg-9">
+@section('user-banner')
+     <div class="elh-page-header elh-img-bg elh-bg-9">
         <div class="elh-overlay">
             <div class="container text-center">
                 <h3 class="elh-page-title">Research Project 1</h3>
@@ -194,9 +48,9 @@
             </div>
         </div>
     </div>
-    <!-- Page header End -->
+@endsection
 
-    <!-- Main wrapper start -->
+@section('user-content')
     <div class="elh-main-wrap">
 
         <!-- Blog Sigle -->
@@ -241,7 +95,7 @@
                             <div class="elh-course-reviews">
                                 <div class="elh-course-review-item">
                                     <div class="elh-course-reviewer-thumb">
-                                        <img class="img-responsive" src="images/course/course-reviewer-thumb.jpg" alt="...">
+                                        <img class="img-responsive" src="static/images/course/course-reviewer-thumb.jpg" alt="...">
                                     </div>
                                     <div class="elh-course-review-body">
                                         <div class="elh-course-review-title">
@@ -295,7 +149,7 @@
                                 <div class="col-xs-6">
                                     <div class="elh-course">
                                         <a class="elh-course-thumb" href="research-single.html">
-                                            <img class="img-responsive" src="images/course/1.jpg" alt="...">
+                                            <img class="img-responsive" src="static/images/course/1.jpg" alt="...">
                                         </a>
                                         <div class="elh-course-content">
                                             <h4 class="elh-course-title"><a href="research-single.html">Research project 2</a></h4>
@@ -314,7 +168,7 @@
                                 <div class="col-xs-6">
                                     <div class="elh-course">
                                         <a class="elh-course-thumb" href="research-single.html">
-                                            <img class="img-responsive" src="images/course/2.jpg" alt="...">
+                                            <img class="img-responsive" src="static/images/course/2.jpg" alt="...">
                                         </a>
                                         <div class="elh-course-content">
                                             <h4 class="elh-course-title"><a href="research-single.html">Research Project 3</a></h4>
@@ -341,7 +195,7 @@
                                 <div class="widget-posts">
                                     <div class="widget-post">
                                         <a class="widget-post-thumb" href="research-single.html">
-                                            <img class="img-responsive" src="images/blog/s1.jpg" alt="Post Title">
+                                            <img class="img-responsive" src="static/images/blog/s1.jpg" alt="Post Title">
                                         </a>
                                         <div class="widget-post-content">
                                             <a class="widget-post-title" href="research-single.html">The Certificate giving ceremony of 2018 in California</a>
@@ -351,7 +205,7 @@
                                     </div>
                                     <div class="widget-post">
                                         <a class="widget-post-thumb" href="research-single.html">
-                                            <img class="img-responsive" src="images/blog/s2.jpg" alt="Post Title">
+                                            <img class="img-responsive" src="static/images/blog/s2.jpg" alt="Post Title">
                                         </a>
                                         <div class="widget-post-content">
                                             <a class="widget-post-title" href="research-single.html">The Certificate giving ceremony of 2018 in California</a>
@@ -361,7 +215,7 @@
                                     </div>
                                     <div class="widget-post">
                                         <a class="widget-post-thumb" href="research-single.html">
-                                            <img class="img-responsive" src="images/blog/s3.jpg" alt="Post Title">
+                                            <img class="img-responsive" src="static/images/blog/s3.jpg" alt="Post Title">
                                         </a>
                                         <div class="widget-post-content">
                                             <a class="widget-post-title" href="research-single.html">The Certificate giving ceremony of 2018 in California</a>
@@ -399,117 +253,25 @@
         <!-- Subscription End -->
 
     </div>
-    <!-- Main wrapper start end -->
+@endsection
 
-    <footer>
-        <div class="elh-footer-widget-area">
-            <div class="container">
-                <div class="row">
-                    <div class="elh-footer-widgets">
-                        <div class="col-md-5 col-xs-6">
-                            <aside class="widget about_widget">
-                                <a class="footer-logo" href="#">
-                                    <img src="images/logo-footer-3.png" alt="Site Logo">
-                                </a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-                                <form id="subscription" class="elh-subscribe-form pull-left clearfix" action="#" method="post">
-                                    <input type="email" name="email" placeholder="Enter your mail">
-                                    <button type="submit">Subscribe</button>
-                                </form>
-                                <div class="clearfix"></div>
-                                <div class="socials">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa fa-youtube"></i></a>
-                                </div>
-                            </aside>
-                        </div>
-                        <div class="col-md-3 col-xs-6">
-                            <div class="widget widget_contact_info">
-                                <h3 class="widget-title">Contact Us</h3>
-                                <div class="contact_info">
-                                    <p class="contact-info-item">
-                                        <i class="fa fa-map-marker"></i>
-                                        <span class="contact_info">5413 6th Ave NW, Seattle<br/>WA 98107</span>
-                                    </p>
-                                    <p class="contact-info-item">
-                                        <i class="fa fa-phone"></i>
-                                        <span class="contact_info">+1-0000-000-000</span>
-                                    </p>
-                                    <p class="contact-info-item">
-                                        <i class="fa fa-envelope-o"></i>
-                                        <span class="contact_info">mail@example.com</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-xs-6">
-                            <div class="widget widget_custom-menu">
-                                <h3 class="widget-title">Useful Links</h3>
-                                <ul class="custom-menu">
-                                    <li><a href="#">News &amp; Blog</a></li>
-                                    <li><a href="#">Features</a></li>
-                                    <li><a href="#">Discussion</a></li>
-                                    <li><a href="#">Spotlight on</a></li>
-                                    <li><a href="#">Research LAB</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-xs-6">
-                            <div class="widget widget_flickr">
-                                <h3 class="widget-title">Flickr Photos</h3>
-                                <div class="flickr-photos">
-                                    <a href="#"><img class="img-responsive" src="images/flickr/1.jpg" alt="..."></a>
-                                    <a href="#"><img class="img-responsive" src="images/flickr/2.jpg" alt="..."></a>
-                                    <a href="#"><img class="img-responsive" src="images/flickr/3.jpg" alt="..."></a>
-                                    <a href="#"><img class="img-responsive" src="images/flickr/4.jpg" alt="..."></a>
-                                    <a href="#"><img class="img-responsive" src="images/flickr/5.jpg" alt="..."></a>
-                                    <a href="#"><img class="img-responsive" src="images/flickr/6.jpg" alt="..."></a>
-                                    <a href="#"><img class="img-responsive" src="images/flickr/7.jpg" alt="..."></a>
-                                    <a href="#"><img class="img-responsive" src="images/flickr/8.jpg" alt="..."></a>
-                                    <a href="#"><img class="img-responsive" src="images/flickr/9.jpg" alt="..."></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="elh-footer-lower-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-12">
-                        <p class="copyright xs-text-center">Copyright 2018, <a href="#">Education</a>. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-sm-6 col-xs-12 text-right xs-text-center">
-                        <ul class="footer-menu">
-                            <li><a href="#">Site Map</a></li>
-                            <li><a href="#">Legal</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+@section('user-script')
     <!-- Script -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/visible.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/plyr.js"></script>
-    <script src="assets/js/jquery.countTo.js"></script>
-    <script src="assets/js/jquery.countdown.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/assets/js/visible.js"></script>
+    <script src="/static/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/static/assets/js/owl.carousel.min.js"></script>
+    <script src="/static/assets/js/slick.min.js"></script>
+    <script src="/static/assets/js/plyr.js"></script>
+    <script src="/static/assets/js/jquery.countTo.js"></script>
+    <script src="/static/assets/js/jquery.countdown.min.js"></script>
+    <script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/static/js/jquery.sticky.js"></script>
+    <script src="/static/js/custom.js"></script>
+
     <script>
         $(document).ready(function () {
             if ($(window).width() >= 1000) {
@@ -525,7 +287,8 @@
 
         });
     </script>
-     <!--Start of Tawk.to Script-->
+
+    <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {},
             Tawk_LoadStart = new Date();
@@ -540,6 +303,4 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
-</body>
-
-</html>
+@endsection
