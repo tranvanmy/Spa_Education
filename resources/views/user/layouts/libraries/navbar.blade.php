@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="/static/images/logo-7.svg" alt="Site Logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="/images/logo-7.svg" alt="Site Logo"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">

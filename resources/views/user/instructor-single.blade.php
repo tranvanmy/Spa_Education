@@ -4,33 +4,6 @@
 @section('seo-description', 'AI Academy')
 @section('seo-keyword',  'AI Academy')
 
-@section('user-css')
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/assets/css/themify-icons.css">
-    <link rel="stylesheet" href="/static/assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="/static/assets/css/slick.css">
-    <link rel="stylesheet" href="/static/assets/css/plyr.css">
-    <link rel="stylesheet" href="/static/assets/css/magnific-popup.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/css/style.css?id=1">
-    <link rel="stylesheet" href="/static/css/scheme/primary.css">
-    <link rel="stylesheet" href="/static/css/responsive.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CRoboto+Slab:400,700%7CPacifico" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" href="/static/images/favicon.png">
-    <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/icon-114x114.png">
-    <!--[if lt IE 9]>
-    <script src="assets/js/html5shiv.min.js"></script>
-    <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-@endsection
-
 @section('user-nav')
     @include('user.layouts.libraries.navbar')
 @endsection
@@ -57,7 +30,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="elh-instructor-thumb">
-                            <img class="img-responsive" src="static/images/instructor/avatar.jpg" alt="...">
+                            <img class="img-responsive" src="/images/instructor/avatar.jpg" alt="...">
                         </div>
                         <div class="elh-contact-instructor">
                             <a class="btn" href="#">Contact Instructor</a>
@@ -119,14 +92,14 @@
                     <div class="elh-generic-carousel owl-carousel owl-theme" style="opacity: 1; display: block;">
                         <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 3120px; left: 0px; display: block;"><div class="owl-item" style="width: 390px;"><div class="elh-course">
                             <a class="elh-course-thumb" href="course-single.html">
-                                <img class="img-responsive" src="static/images/course/7.jpg" alt="...">
+                                <img class="img-responsive" src="/images/course/7.jpg" alt="...">
                             </a>
                             <div class="elh-course-content">
                                 <h4 class="elh-course-title"><a href="course-single.html">Advance Method for<br>Adobe Photoshop CC 2018</a></h4>
                             </div>
                             <div class="elh-course-instructor">
                                 <div class="elh-instructor-thumb">
-                                    <img class="img-responsive" src="static/images/instructor/small-5.jpg" alt="...">
+                                    <img class="img-responsive" src="/images/instructor/small-5.jpg" alt="...">
                                 </div>
                                 <h5 class="elh-instructor-name">Z.Alexander</h5>
                             </div>
@@ -142,14 +115,14 @@
                             </div>
                         </div></div><div class="owl-item" style="width: 390px;"><div class="elh-course">
                             <a class="elh-course-thumb" href="course-single.html">
-                                <img class="img-responsive" src="static/images/course/8.jpg" alt="...">
+                                <img class="img-responsive" src="/images/course/8.jpg" alt="...">
                             </a>
                             <div class="elh-course-content">
                                 <h4 class="elh-course-title"><a href="course-single.html">Higher Diploma in<br>Graphic Design &amp; Multimedia</a></h4>
                             </div>
                             <div class="elh-course-instructor">
                                 <div class="elh-instructor-thumb">
-                                    <img class="img-responsive" src="static/images/instructor/small-6.jpg" alt="...">
+                                    <img class="img-responsive" src="/images/instructor/small-6.jpg" alt="...">
                                 </div>
                                 <h5 class="elh-instructor-name">Olivia Chloe</h5>
                             </div>
@@ -165,14 +138,14 @@
                             </div>
                         </div></div><div class="owl-item" style="width: 390px;"><div class="elh-course">
                             <a class="elh-course-thumb" href="course-single.html">
-                                <img class="img-responsive" src="static/images/course/9.jpg" alt="...">
+                                <img class="img-responsive" src="/images/course/9.jpg" alt="...">
                             </a>
                             <div class="elh-course-content">
                                 <h4 class="elh-course-title"><a href="course-single.html">Diploma in<br>Web Design &amp; Development</a></h4>
                             </div>
                             <div class="elh-course-instructor">
                                 <div class="elh-instructor-thumb">
-                                    <img class="img-responsive" src="static/images/instructor/small-7.jpg" alt="...">
+                                    <img class="img-responsive" src="/images/instructor/small-7.jpg" alt="...">
                                 </div>
                                 <h5 class="elh-instructor-name">William Logan</h5>
                             </div>
@@ -188,14 +161,14 @@
                             </div>
                         </div></div><div class="owl-item" style="width: 390px;"><div class="elh-course">
                             <a class="elh-course-thumb" href="course-single.html">
-                                <img class="img-responsive" src="static/images/course/7.jpg" alt="...">
+                                <img class="img-responsive" src="/images/course/7.jpg" alt="...">
                             </a>
                             <div class="elh-course-content">
                                 <h4 class="elh-course-title"><a href="course-single.html">Advance Method for<br>Adobe Photoshop CC 2018</a></h4>
                             </div>
                             <div class="elh-course-instructor">
                                 <div class="elh-instructor-thumb">
-                                    <img class="img-responsive" src="static/images/instructor/small-5.jpg" alt="...">
+                                    <img class="img-responsive" src="/images/instructor/small-5.jpg" alt="...">
                                 </div>
                                 <h5 class="elh-instructor-name">Z.Alexander</h5>
                             </div>
@@ -210,9 +183,9 @@
                                 </p>
                             </div>
                         </div></div></div></div>
-                        
-                        
-                        
+
+
+
 
 
                     <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div></div></div>
@@ -237,7 +210,7 @@
                     <div class="elh-generic-carousel owl-carousel owl-theme" style="opacity: 1; display: block;">
                         <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 3120px; left: 0px; display: block;"><div class="owl-item" style="width: 390px;"><div class="elh-course">
                             <a class="elh-course-thumb" href="course-single.html">
-                                <img class="img-responsive" src="static/images/course/7.jpg" alt="...">
+                                <img class="img-responsive" src="/images/course/7.jpg" alt="...">
                             </a>
                             <div class="elh-course-content">
                                 <h4 class="elh-course-title"><a href="course-single.html">Smart Camera<br>2018</a></h4>
@@ -245,7 +218,7 @@
                             <div class="elh-course-footer"></div>
                         </div></div><div class="owl-item" style="width: 390px;"><div class="elh-course">
                             <a class="elh-course-thumb" href="course-single.html">
-                                <img class="img-responsive" src="static/images/course/8.jpg" alt="...">
+                                <img class="img-responsive" src="/images/course/8.jpg" alt="...">
                             </a>
                             <div class="elh-course-content">
                                 <h4 class="elh-course-title"><a href="course-single.html">NLP<br>Graphic Design &amp; Multimedia</a></h4>
@@ -257,7 +230,7 @@
                             </div>
                         </div></div><div class="owl-item" style="width: 390px;"><div class="elh-course">
                             <a class="elh-course-thumb" href="course-single.html">
-                                <img class="img-responsive" src="static/images/course/9.jpg" alt="...">
+                                <img class="img-responsive" src="/images/course/9.jpg" alt="...">
                             </a>
                             <div class="elh-course-content">
                                 <h4 class="elh-course-title"><a href="course-single.html">Chat Bot<br>Facebook</a></h4>
@@ -266,7 +239,7 @@
                             </div>
                         </div></div><div class="owl-item" style="width: 390px;"><div class="elh-course">
                             <a class="elh-course-thumb" href="course-single.html">
-                                <img class="img-responsive" src="static/images/course/7.jpg" alt="...">
+                                <img class="img-responsive" src="/images/course/7.jpg" alt="...">
                             </a>
                             <div class="elh-course-content">
                                 <h4 class="elh-course-title"><a href="course-single.html">Data Lab<br>Pro</a></h4>
@@ -274,9 +247,9 @@
                             <div class="elh-course-footer">
                             </div>
                         </div></div></div></div>
-                        
-                        
-                        
+
+
+
                     <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div></div></div>
                 </div>
             </div>
@@ -308,21 +281,6 @@
 @endsection
 
 @section('user-script')
-    <!-- Script -->
-    <script src="/static/assets/js/jquery.min.js"></script>
-    <script src="/static/assets/js/bootstrap.min.js"></script>
-    <script src="/static/assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="/static/assets/js/visible.js"></script>
-    <script src="/static/assets/js/isotope.pkgd.min.js"></script>
-    <script src="/static/assets/js/owl.carousel.min.js"></script>
-    <script src="/static/assets/js/slick.min.js"></script>
-    <script src="/static/assets/js/plyr.js"></script>
-    <script src="/static/assets/js/jquery.countTo.js"></script>
-    <script src="/static/assets/js/jquery.countdown.min.js"></script>
-    <script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="/static/assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="/static/js/custom.js"></script>
-
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {},
