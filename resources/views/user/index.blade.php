@@ -4,33 +4,6 @@
 @section('seo-description', 'AI Academy')
 @section('seo-keyword',  'AI Academy')
 
-@section('user-css')
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/assets/css/themify-icons.css">
-    <link rel="stylesheet" href="/static/assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="/static/assets/css/slick.css">
-    <link rel="stylesheet" href="/static/assets/css/plyr.css">
-    <link rel="stylesheet" href="/static/assets/css/magnific-popup.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/css/style.css?id=1">
-    <link rel="stylesheet" href="/static/css/scheme/primary.css">
-    <link rel="stylesheet" href="/static/css/responsive.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CRoboto+Slab:400,700%7CPacifico" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" href="/static/images/favicon.png">
-    <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/icon-114x114.png">
-    <!--[if lt IE 9]>
-    <script src="assets/js/html5shiv.min.js"></script>
-    <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-@endsection
-
 @section('user-nav')
 <!-- Navigation -->
 <nav class="navbar fix-nav style-2" data-spy="affix" data-offset-top="51" style="border-bottom: 1px solid #FFF">
@@ -43,7 +16,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="/static/images/logo-7.svg" alt="Site Logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="/images/logo-7.svg" alt="Site Logo"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -177,25 +150,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <h3 class="fact-title" style="font-size: 3rem">Academy - at a glance</h3>
+                    <h3 style="font-size: 3rem; padding-top: 18px">Academy - at a glance</h3>
                 </div>
                 <div class="col-sm-8">
                     <div class="elh-counter-group">
                         <div class="elh-counter-item">
-                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="125"></span></h3>
-                            <p class="elh-fact-name">Instructors</p>
+                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="15"></span></h3>
+                            <p class="elh-fact-name" style="height: 50px">Professors</p>
                         </div>
                         <div class="elh-counter-item">
-                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="12"></span>K</h3>
-                            <p class="elh-fact-name">Students</p>
+                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="45"></span></h3>
+                            <p class="elh-fact-name" style="height: 50px">Research assistant</p>
                         </div>
                         <div class="elh-counter-item">
-                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="28"></span></h3>
-                            <p class="elh-fact-name">Courses</p>
+                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="15"></span></h3>
+                            <p class="elh-fact-name" style="height: 50px">Courses</p>
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="5"></span></h3>
-                            <p class="elh-fact-name">Projects</p>
+                            <p class="elh-fact-name" style="height: 50px">Projects</p>
                         </div>
                     </div>
                 </div>
@@ -243,129 +216,148 @@
                 <div class="elh-generic-carousel owl-carousel">
                     <div class="elh-course style-2">
                         <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="static/images/course/1.jpg" alt="...">
+                            <img class="img-responsive" src="/images/course/1.jpg" alt="...">
                         </a>
                         <div class="elh-course-content">
-                            <h4 class="elh-course-title"><a href="course-single.html">Advance Method for<br/>Adobe Photoshop CC 2018</a></h4>
+                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learning Fundamentals</a></h4>
                             <p style="text-align: justify">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                         <div class="elh-course-footer">
-                            <p class="elh-course-price">
-                                <span class="elh-price-free">Free</span>
+                            <p class="elh-course-price" style="color: #00bcd4">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </p>
                             <p class="elh-course-metas">
-                                <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
+
                                 <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
                             </p>
                         </div>
                     </div>
                     <div class="elh-course style-2">
                         <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/static/images/course/2.jpg" alt="...">
+                            <img class="img-responsive" src="/images/course/2.jpg" alt="...">
                         </a>
                         <div class="elh-course-content">
-                            <h4 class="elh-course-title"><a href="course-single.html">Higher Diploma in<br/>Graphic Design &amp; Multimedia</a></h4>
+                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learnign in Computer vision</a></h4>
                             <p style="text-align: justify">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                         <div class="elh-course-footer">
-                            <p class="elh-course-price">
-                                <span class="elh-price-now">$35.00</span>
-                                <span class="elh-price-regular">$45.00</span>
+                            <p class="elh-course-price" style="color: #00bcd4">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </p>
                             <p class="elh-course-metas">
-                                <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
+
                                 <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
                             </p>
                         </div>
                     </div>
                     <div class="elh-course style-2">
                         <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/static/images/course/3.jpg" alt="...">
+                            <img class="img-responsive" src="/images/course/3.jpg" alt="...">
                         </a>
                         <div class="elh-course-content">
-                            <h4 class="elh-course-title"><a href="course-single.html">Diploma in<br/>Web Design &amp; Development</a></h4>
+                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">AI for Business leaders</a></h4>
                             <p style="text-align: justify">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                         <div class="elh-course-footer">
-                            <p class="elh-course-price">
-                                <span class="elh-price-now">$35.00</span>
-                                <span class="elh-price-regular">$45.00</span>
+                            <p class="elh-course-price" style="color: #00bcd4">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </p>
                             <p class="elh-course-metas">
-                                <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
+
                                 <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
                             </p>
                         </div>
                     </div>
                     <div class="elh-course style-2">
                         <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/static/images/course/1.jpg" alt="...">
+                            <img class="img-responsive" src="/images/course/1.jpg" alt="...">
                         </a>
                         <div class="elh-course-content">
-                            <h4 class="elh-course-title"><a href="course-single.html">Advance Method for<br/>Adobe Photoshop CC 2018</a></h4>
+                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learning Fundamentals</a></h4>
                             <p style="text-align: justify">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                         <div class="elh-course-footer">
-                            <p class="elh-course-price">
-                                <span class="elh-price-now">$35.00</span>
-                                <span class="elh-price-regular">$45.00</span>
+                            <p class="elh-course-price" style="color: #00bcd4">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </p>
                             <p class="elh-course-metas">
-                                <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
+
                                 <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
                             </p>
                         </div>
                     </div>
                     <div class="elh-course style-2">
                         <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/static/images/course/2.jpg" alt="...">
+                            <img class="img-responsive" src="/images/course/2.jpg" alt="...">
                         </a>
                         <div class="elh-course-content">
-                            <h4 class="elh-course-title"><a href="course-single.html">Higher Diploma in<br/>Graphic Design &amp; Multimedia</a></h4>
+                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learnign in Computer vision</a></h4>
                             <p style="text-align: justify">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                         <div class="elh-course-footer">
-                            <p class="elh-course-price">
-                                <span class="elh-price-now">$35.00</span>
-                                <span class="elh-price-regular">$45.00</span>
+                            <p class="elh-course-price" style="color: #00bcd4">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </p>
                             <p class="elh-course-metas">
-                                <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
+
                                 <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
                             </p>
                         </div>
                     </div>
                     <div class="elh-course style-2">
                         <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/static/images/course/3.jpg" alt="...">
+                            <img class="img-responsive" src="/images/course/3.jpg" alt="...">
                         </a>
                         <div class="elh-course-content">
-                            <h4 class="elh-course-title"><a href="course-single.html">Diploma in<br/>Web Design &amp; Development</a></h4>
+                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">AI for Business leaders</a></h4>
                             <p style="text-align: justify">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                         <div class="elh-course-footer">
-                            <p class="elh-course-price">
-                                <span class="elh-price-now">$35.00</span>
-                                <span class="elh-price-regular">$45.00</span>
+                            <p class="elh-course-price" style="color: #00bcd4">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </p>
                             <p class="elh-course-metas">
-                                <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
                                 <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
                             </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -388,32 +380,21 @@
                     <div class="elh-generic-carousel owl-carousel elh-generic-4">
                         <div class="elh-instructor">
                             <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/static/images/instructor/large-1.jpg">
+                                <img class="img-responsive" src="/images/instructor/large-2.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title"><a href="instructor-single.html">Lillian Galilea</a></h4>
-                                <p class="elh-instructor-field">Computer vision</p>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Assoc. Prof. Dr.<br> Nguyen Xuan Hoai</a></h4>
+                                <p class="elh-instructor-field">Natural Languge processing</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                         <div class="elh-instructor">
                             <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/static/images/instructor/large-2.jpg">
+                                <img class="img-responsive" src="/images/instructor/large-1.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title"><a href="instructor-single.html">Ryan Brayden</a></h4>
-                                <p class="elh-instructor-field">Natural language processing</p>
-                                <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="elh-instructor">
-                            <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/static/images/instructor/large-3.jpg">
-                            </a>
-                            <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title"><a href="instructor-single.html">Anabel Hattie</a></h4>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Anabel Hattie</a></h4>
                                 <p class="elh-instructor-field">Network Security</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
@@ -421,10 +402,21 @@
                         </div>
                         <div class="elh-instructor">
                             <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/static/images/instructor/large-1.jpg">
+                                <img class="img-responsive" src="/images/instructor/large-5.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title"><a href="instructor-single.html">Lillian Galilea</a></h4>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Assoc. Prof. Dr.<br> Le Thanh Ha</a></h4>
+                                <p class="elh-instructor-field">Computer Vision</p>
+                                <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="elh-instructor">
+                            <a class="elh-instructor-thumb" href="instructor-single.html">
+                                <img class="img-responsive" src="/images/instructor/large-1.jpg">
+                            </a>
+                            <div class="elh-instructor-body">
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Lillian Galilea</a></h4>
                                 <p class="elh-instructor-field">Natural language processing</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
@@ -432,10 +424,10 @@
                         </div>
                         <div class="elh-instructor">
                             <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/static/images/instructor/large-2.jpg">
+                                <img class="img-responsive" src="/images/instructor/large-2.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title"><a href="instructor-single.html">Ryan Brayden</a></h4>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Ryan Brayden</a></h4>
                                 <p class="elh-instructor-field">Network Security</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
@@ -443,10 +435,10 @@
                         </div>
                         <div class="elh-instructor">
                             <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/static/images/instructor/large-3.jpg">
+                                <img class="img-responsive" src="/images/instructor/large-3.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title"><a href="instructor-single.html">Anabel Hattie</a></h4>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Anabel Hattie</a></h4>
                                 <p class="elh-instructor-field">Network Security</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
@@ -478,7 +470,7 @@
                     <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
                         <a class="elh-category-tile" href="research-single.html">
                             <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="/static/images/category/medium-1.jpg" alt="...">
+                                <img class="img-responsive" src="/images/category/medium-1.jpg" alt="...">
                             </div>
                             <div class="elh-category-tile-overlay">
                                 <div class="elh-category-tile-content">
@@ -491,7 +483,7 @@
                     <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
                         <a class="elh-category-tile" href="research-single.html">
                             <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="/static/images/category/large-1.jpg" alt="...">
+                                <img class="img-responsive" src="/images/category/large-1.jpg" alt="...">
                             </div>
                             <div class="elh-category-tile-overlay">
                                 <div class="elh-category-tile-content">
@@ -504,7 +496,7 @@
                     <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
                         <a class="elh-category-tile" href="research-single.html">
                             <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="/static/images/category/medium-2.jpg" alt="...">
+                                <img class="img-responsive" src="/images/category/medium-2.jpg" alt="...">
                             </div>
                             <div class="elh-category-tile-overlay">
                                 <div class="elh-category-tile-content">
@@ -517,7 +509,7 @@
                     <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
                         <a class="elh-category-tile" href="research-single.html">
                             <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="/static/images/category/medium-3.jpg" alt="...">
+                                <img class="img-responsive" src="/images/category/medium-3.jpg" alt="...">
                             </div>
                             <div class="elh-category-tile-overlay">
                                 <div class="elh-category-tile-content">
@@ -530,7 +522,7 @@
                     <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
                         <a class="elh-category-tile" href="research-single.html">
                             <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="/static/images/category/medium-4.jpg" alt="...">
+                                <img class="img-responsive" src="/images/category/medium-4.jpg" alt="...">
                             </div>
                             <div class="elh-category-tile-overlay">
                                 <div class="elh-category-tile-content">
@@ -561,19 +553,19 @@
                 <div class="col-xs-12">
                     <div class="partner-logoes">
                         <a class="partner-logo" href="#">
-                            <img class="img-responsive" src="/static/images/partner/1.png" alt="...">
+                            <img class="img-responsive" src="/images/partner/1.png" alt="...">
                         </a>
                         <a class="partner-logo" href="#">
-                            <img class="img-responsive" src="/static/images/partner/2.png" alt="...">
+                            <img class="img-responsive" src="/images/partner/2.png" alt="...">
                         </a>
                         <a class="partner-logo" href="#">
-                            <img class="img-responsive" src="/static/images/partner/3.png" alt="...">
+                            <img class="img-responsive" src="/images/partner/3.png" alt="...">
                         </a>
                         <a class="partner-logo" href="#">
-                            <img class="img-responsive" src="/static/images/partner/4.png" alt="...">
+                            <img class="img-responsive" src="/images/partner/4.png" alt="...">
                         </a>
                         <a class="partner-logo" href="#">
-                            <img class="img-responsive" src="/static/images/partner/5.png" alt="...">
+                            <img class="img-responsive" src="/images/partner/5.png" alt="...">
                         </a>
                     </div>
                 </div>
@@ -598,7 +590,7 @@
                 <div class="elh-events">
                     <div class="col-md-6 col-xs-12">
                         <div class="elh-event style-2">
-                            <div class="elh-event-date" style="background-image: url(/static/images/event/small-1.jpg)">
+                            <div class="elh-event-date" style="background-image: url(/images/event/small-1.jpg)">
                             </div>
                             <div class="elh-event-detail">
                                 <h4 class="elh-event-title"><a href="detail-serminal.html">Inauguration Day 2018</a></h4>
@@ -612,7 +604,7 @@
                     </div>
                     <div class="col-md-6 col-xs-12">
                         <div class="elh-event style-2">
-                            <div class="elh-event-date" style="background-image: url(/static/images/event/small-2.jpg)">
+                            <div class="elh-event-date" style="background-image: url(/images/event/small-2.jpg)">
                             </div>
                             <div class="elh-event-detail">
                                 <h4 class="elh-event-title"><a href="#">Inauguration Day 2018</a></h4>
@@ -626,7 +618,7 @@
                     </div>
                     <div class="col-md-6 col-xs-12">
                         <div class="elh-event style-2">
-                            <div class="elh-event-date" style="background-image: url(/static/images/event/small-3.jpg)">
+                            <div class="elh-event-date" style="background-image: url(/images/event/small-3.jpg)">
                             </div>
                             <div class="elh-event-detail">
                                 <h4 class="elh-event-title"><a href="#">Inauguration Day 2018</a></h4>
@@ -640,7 +632,7 @@
                     </div>
                     <div class="col-md-6 col-xs-12">
                         <div class="elh-event style-2">
-                            <div class="elh-event-date" style="background-image: url(/static/images/event/small-4.jpg)">
+                            <div class="elh-event-date" style="background-image: url(/images/event/small-4.jpg)">
                             </div>
                             <div class="elh-event-detail">
                                 <h4 class="elh-event-title"><a href="#">Inauguration Day 2018</a></h4>
@@ -665,7 +657,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">News &amp; <span>Blog</span></h3>
+                            <h3 class="elh-section-title"><span>News</span></h3>
                             <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
                             <a class="all-link style-2" href="blog.html">See All</a>
                         </div>
@@ -675,7 +667,7 @@
                     <div class="elh-generic-carousel owl-carousel">
                         <article class="elh-post">
                             <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/static/images/blog/medium-1.jpg" alt="...">
+                                <img class="img-responsive" src="/images/blog/medium-1.jpg" alt="...">
                             </a>
                             <div class="elh-post-body">
                                 <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
@@ -684,7 +676,7 @@
                         </article>
                         <article class="elh-post">
                             <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/static/images/blog/medium-2.jpg" alt="...">
+                                <img class="img-responsive" src="/images/blog/medium-2.jpg" alt="...">
                             </a>
                             <div class="elh-post-body">
                                 <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
@@ -693,7 +685,7 @@
                         </article>
                         <article class="elh-post">
                             <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/static/images/blog/medium-3.jpg" alt="...">
+                                <img class="img-responsive" src="/images/blog/medium-3.jpg" alt="...">
                             </a>
                             <div class="elh-post-body">
                                 <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
@@ -702,7 +694,7 @@
                         </article>
                         <article class="elh-post">
                             <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/static/images/blog/medium-1.jpg" alt="...">
+                                <img class="img-responsive" src="/images/blog/medium-1.jpg" alt="...">
                             </a>
                             <div class="elh-post-body">
                                 <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
@@ -711,7 +703,7 @@
                         </article>
                         <article class="elh-post">
                             <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/static/images/blog/medium-2.jpg" alt="...">
+                                <img class="img-responsive" src="/images/blog/medium-2.jpg" alt="...">
                             </a>
                             <div class="elh-post-body">
                                 <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
@@ -720,7 +712,7 @@
                         </article>
                         <article class="elh-post">
                             <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/static/images/blog/medium-3.jpg" alt="...">
+                                <img class="img-responsive" src="/images/blog/medium-3.jpg" alt="...">
                             </a>
                             <div class="elh-post-body">
                                 <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
@@ -748,7 +740,7 @@
             </div>
         </div>
         <div class="join-us-img">
-            <img class="img-responsive" src="/static/images/bg/join-us.jpg" alt="...">
+            <img class="img-responsive" src="/images/bg/join-us.jpg" alt="...">
         </div>
     </div>
     <!-- Education for all end -->
@@ -770,22 +762,8 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
-
     <!-- Script -->
-    <script src="/static/assets/js/jquery.min.js"></script>
-    <script src="/static/assets/js/bootstrap.min.js"></script>
-    <script src="/static/assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="/static/assets/js/visible.js"></script>
-    <script src="/static/assets/js/isotope.pkgd.min.js"></script>
-    <script src="/static/assets/js/owl.carousel.min.js"></script>
-    <script src="/static/assets/js/slick.min.js"></script>
-    <script src="/static/assets/js/plyr.js"></script>
-    <script src="/static/assets/js/jquery.countTo.js"></script>
-    <script src="/static/assets/js/jquery.countdown.min.js"></script>
-    <script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="/static/assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="/static/js/jquery.nav.js"></script>
-    <script src="/static/js/custom.js"></script>
+
     <script>
         $(document).ready(function(){
             $('#home-nav-onepage').onePageNav({

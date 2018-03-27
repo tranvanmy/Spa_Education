@@ -4,33 +4,6 @@
 @section('seo-description', 'AI Academy')
 @section('seo-keyword',  'AI Academy')
 
-@section('user-css')
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/assets/css/themify-icons.css">
-    <link rel="stylesheet" href="/static/assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="/static/assets/css/slick.css">
-    <link rel="stylesheet" href="/static/assets/css/plyr.css">
-    <link rel="stylesheet" href="/static/assets/css/magnific-popup.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/css/style.css?id=1">
-    <link rel="stylesheet" href="/static/css/scheme/primary.css">
-    <link rel="stylesheet" href="/static/css/responsive.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CRoboto+Slab:400,700%7CPacifico" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" href="/static/images/favicon.png">
-    <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/icon-114x114.png">
-    <!--[if lt IE 9]>
-    <script src="assets/js/html5shiv.min.js"></script>
-    <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-@endsection
-
 @section('user-nav')
     @include('user.layouts.libraries.navbar')
 @endsection
@@ -52,7 +25,7 @@
                     <div class="col-xs-12">
                         <div class="elh-course-profile">
                             <div class="elh-instructor-thumb elh-course-profile-item">
-                                <img class="img-responsive" src="static/images/instructor/small-4.jpg" alt="...">
+                                <img class="img-responsive" src="/images/instructor/small-4.jpg" alt="...">
                             </div>
                             <div class="elh-instructor-name elh-course-profile-item">
                                 <p>Author</p>
@@ -116,14 +89,14 @@
                                 <div class="col-xs-6">
                                     <div class="elh-course">
                                         <a class="elh-course-thumb" href="course-single.html">
-                                            <img class="img-responsive" src="static/images/course/1.jpg" alt="...">
+                                            <img class="img-responsive" src="/images/course/1.jpg" alt="...">
                                         </a>
                                         <div class="elh-course-content">
                                             <h4 class="elh-course-title"><a href="course-single.html">Chat</a></h4>
                                         </div>
                                         <div class="elh-course-instructor">
                                             <div class="elh-instructor-thumb">
-                                                <img class="img-responsive" src="static/images/instructor/small-1.jpg" alt="...">
+                                                <img class="img-responsive" src="/images/instructor/small-1.jpg" alt="...">
                                             </div>
                                             <h5 class="elh-instructor-name">Z.Alexander</h5>
                                         </div>
@@ -140,14 +113,14 @@
                                 <div class="col-xs-6">
                                     <div class="elh-course">
                                         <a class="elh-course-thumb" href="course-single.html">
-                                            <img class="img-responsive" src="static/images/course/2.jpg" alt="...">
+                                            <img class="img-responsive" src="/images/course/2.jpg" alt="...">
                                         </a>
                                         <div class="elh-course-content">
                                             <h4 class="elh-course-title"><a href="course-single.html">HLC-serminal</a></h4>
                                         </div>
                                         <div class="elh-course-instructor">
                                             <div class="elh-instructor-thumb">
-                                                <img class="img-responsive" src="static/images/instructor/small-2.jpg" alt="...">
+                                                <img class="img-responsive" src="/images/instructor/small-2.jpg" alt="...">
                                             </div>
                                             <h5 class="elh-instructor-name">Olivia Chloe</h5>
                                         </div>
@@ -208,22 +181,6 @@
 @endsection
 
 @section('user-script')
-    <!-- Script -->
-    <script src="/static/assets/js/jquery.min.js"></script>
-    <script src="/static/assets/js/bootstrap.min.js"></script>
-    <script src="/static/assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="/static/assets/js/visible.js"></script>
-    <script src="/static/assets/js/isotope.pkgd.min.js"></script>
-    <script src="/static/assets/js/owl.carousel.min.js"></script>
-    <script src="/static/assets/js/slick.min.js"></script>
-    <script src="/static/assets/js/plyr.js"></script>
-    <script src="/static/assets/js/jquery.countTo.js"></script>
-    <script src="/static/assets/js/jquery.countdown.min.js"></script>
-    <script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="/static/assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="/static/js/jquery.sticky.js"></script>
-    <script src="/static/js/custom.js"></script>
-
     <script>
         $(document).ready(function () {
             if ($(window).width() >= 1000) {
