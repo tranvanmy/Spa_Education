@@ -1,0 +1,54 @@
+/*------------------------------------
+42. Header Floatbox
+------------------------------------*/
+.elh-header-floatbox{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    left: 0;
+    right: 0;
+    .elh-course-profile{
+        background-color: #f7f7f7;
+        padding: 50px;
+        .elh-course-profile-item{
+            display: inline-block;
+            vertical-align: middle;
+            & + .elh-course-profile-item{
+                margin-left: 46px;
+            }
+            &:not(.elh-instructor-thumb){
+                min-width: 150px;
+            }
+            &.elh-instructor-thumb{
+                width: 80px;
+                height: 80px;
+                overflow: hidden;
+                border-radius: 40px;
+            }
+            p{
+                color: #262626;
+                margin-bottom: 0;
+            }
+            h5{
+                margin-top: 4px;
+                margin-bottom: 0;
+            }
+            .elh-rating{
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: 4px;
+                .star{
+                    font-size: 1.8rem;
+                }
+            }
+            .elh-review-count{
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: 4px;
+                h5{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

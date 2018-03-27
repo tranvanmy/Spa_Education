@@ -1,0 +1,45 @@
+/*------------------------------------
+41. Page
+------------------------------------*/
+.elh-page-header{
+    background-attachment: scroll;
+    position: relative;
+    .elh-overlay{
+        padding-top: 170px;
+        padding-bottom: 90px;
+        background-color: rgba(#000, 0.7);
+    }
+    .elh-page-title{
+        margin: 0;
+        font-size: 4.8rem;
+    }
+    .breadcrumb{
+        display: inline-block;
+        border-radius: 0;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        font-family: $headingFont;
+        font-weight: 400;
+        font-size: 1.8rem;
+        color: #ffffff;
+        >li{
+            color: #ffffff;
+            + li{
+                &:before{
+                    content: "-";
+                    margin: 0 7px;
+                }
+            }
+            >a{
+                color: #ffffff;
+            }
+        }
+    }
+    &.has-floatbox{
+        margin-bottom: 70px;
+        .elh-overlay{
+            padding-bottom: 240px;
+        }
+    }
+}

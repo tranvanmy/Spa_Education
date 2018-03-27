@@ -1,0 +1,34 @@
+/*------------------------------------
+46. Student
+------------------------------------*/
+.elh-student-course-tab{
+    .nav-tabs{
+        border: none;
+        display: inline-block;
+        >li{
+            margin: 0;
+            >a{
+                margin: 0;
+                line-height: 20px;
+                border-radius: 0;
+                background-color: #f7f7f7;
+                border: 1px solid #e7e7e7;
+                font-family: $headingFont;
+                font-weight: 700;
+                color: #262626;
+                padding: 15px 44px;
+            }
+            &.active{
+                >a{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    .tab-content{
+        margin-top: 45px;
+    }
+    .elh-course{
+        margin-bottom: 30px;
+    }
+}

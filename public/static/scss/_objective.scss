@@ -1,0 +1,20 @@
+/*------------------------------------
+18. Objectives
+------------------------------------*/
+.elh-objectives{
+    zoom: 1;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -48px;
+}
+.elh-objective{
+    margin-bottom: 48px;
+    &:nth-child(3n + 1){
+        clear: left;
+    }
+    .elh-objective-title{
+        font-size: 1.8rem;
+        margin-top: 17px;
+        margin-bottom: 12px;
+    }
+}

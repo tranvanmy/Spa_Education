@@ -1,0 +1,152 @@
+/*------------------------------------
+17. Gallery
+------------------------------------*/
+.elh-gallery{
+    zoom: 1;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -30px;
+}
+.elh-gallery-item{
+    margin-bottom: 30px;
+    position: relative;
+    .gallery-hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(17, 17, 17, 0.3);
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+    .gallery-big{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        color: #ffffff;
+        background-color: rgba(17, 17, 17, 0.8);
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        border-radius: 0;
+        transition: all 0.3s ease;
+    }
+    &:hover{
+        .gallery-hover{
+            opacity: 1;
+        }
+        .gallery-big{
+            border-radius: 20px;
+        }
+    }
+    &.style-2{
+        .gallery-hover{
+            background-color: rgba(#000, 0.6);
+        }
+        .gallery-buttons{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            text-align: center;
+            
+        }
+        .gallery-big, .gallery-link{
+            position: relative;
+            display: inline-block;
+            background-color: transparent;
+            color: #ffffff;
+            transform: translate(0, 0);
+            font-size: 2.8rem;
+            vertical-align: middle;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+            line-height: 1;
+            margin: 0 12px;
+        }
+    }
+}
+
+/*** Carouseled Gallery ***/
+.elh-carouseled-gallery{
+    margin-bottom: 0;
+    .elh-gallery-item{
+        margin-bottom: 0;
+        display: block;
+        &:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            background-color: rgba(#ff6800, 0.6);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        img{
+            z-index: 1;
+            position: relative;
+        }
+        .fa{
+            z-index: 3;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        &:hover{
+            &:before{
+                opacity: 1;
+            }
+            .fa{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*** Mini Gallery ***/
+.elh-gallery.mini-gallery{
+    margin-bottom: 0;
+    .elh-gallery-item{
+        float: left;
+        width: 33.333333%;
+        margin-bottom: 0;
+        .gallery-big{
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+
+/*** Filter Gallery ***/
+.elh-gallery-section{
+    text-align: center;
+    .elh-grid-filter{
+        position: relative;
+        top: 0;   
+        right: auto;
+        margin-bottom: 50px;
+        button{
+            text-transform: none;
+            font-weight: 400;
+            font-size: 1.4rem;
+        }
+    }
+}

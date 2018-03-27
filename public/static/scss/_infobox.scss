@@ -1,0 +1,91 @@
+/*------------------------------------
+9. Infobox
+------------------------------------*/
+.elh-info-boxes{
+    zoom: 1;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: -30px;
+}
+.elh-info-box{
+    margin-bottom: 30px;
+    border: 1px solid #e7e7e7;
+    border-radius: 3px;
+    text-align: center;
+    padding: 60px 30px;
+    .elh-infobox-icon{
+        margin-bottom: 18px;
+        img{
+            max-height: 70px;
+            width: auto;
+        }
+    }
+    .infobox-title{
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 1.8rem;
+        color: #000000;
+    }
+    .infobox-info{
+        font-family: $headingFont;
+    }
+    &.style-2{
+        padding: 40px 30px 30px;
+        .elh-infobox-icon{
+            margin-bottom: 25px;
+        }
+        .infobox-title{
+            font-size: 2.2rem;
+        }
+        .elh-info-more{
+            font-family: $headingFont;
+            font-weight: 700;
+            margin-top: 18px;
+            display: inline-block;
+            .fa {
+                margin-left: 3px;
+                transition: all 0.3s ease;
+            }
+            &:hover {
+                .fa {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    &.style-3{
+        border: none;
+        position: relative;
+        border-radius: 3px;
+        overflow: hidden;
+        color: #ffffff;
+        background-size: cover;
+        background-position: center center;
+        &:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 3px;
+            background-color: rgba(#000, 0.4);
+        }
+        *{
+            position: relative;
+            color: #ffffff;
+        }
+    }
+}
+
+.elh-theme-bg, .elh-blue-bg, .elh-green-bg, .elh-orange-bg{
+    &.elh-info-box{
+        color: #ffffff;
+        .infobox-title{
+            color: #ffffff;
+        }
+        .elh-info-more{
+            color: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/*------------------------------------
+39. Contact
+------------------------------------*/
+.quick-contact{
+    text-align: center;
+    h3{
+        margin-top: 0;
+        margin-bottom: 50px;
+        font-size: 3.6rem;
+    }
+    select{
+        height: 44px;
+    }
+    input:not([type=submit]):not([type=radio]):not([type=checkbox]), select, textarea{
+        margin-bottom: 20px;
+    }
+    [type=submit]{
+        min-width: 160px;
+    }
+}
+.input-success, .newsletter-success{
+    display: none;
+    margin-bottom: 0;
+    margin-top: 15px;
+    color: #1abc9c;
+}
+.input-error, .newsletter-error{
+    display: none;
+    margin-bottom: 0;
+    margin-top: 15px;
+    color: #e74c3c;
+}

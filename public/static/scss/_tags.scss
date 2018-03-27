@@ -1,0 +1,18 @@
+/*------------------------------------
+19. Tags
+------------------------------------*/
+.tag-items{
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+    margin-top: 30px;
+}
+.tag-item{
+    margin-bottom: 35px !important;
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-family: $headingFont;
+    .fa{
+        margin-right: 15px;
+    }
+}

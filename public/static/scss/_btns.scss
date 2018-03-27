@@ -1,0 +1,67 @@
+/*------------------------------------
+2. Buttons
+------------------------------------*/
+.btn{
+    font-family: $headingFont;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #ffffff;
+    line-height: 39px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0 40px;
+    transition: all 0.3s ease;
+    &:active, &.active, &:focus, &:active:focus{
+        box-shadow: none;
+        outline: none;
+    }
+    &.btn-shade{
+        background-color: rgba(#000, 0.3) !important;
+        border-color: transparent !important;
+        color: #ffffff !important;
+        &:hover{
+            background-color: #ffffff !important;
+        }
+    }
+    .elh-theme-bg &{
+        background-color: #ffffff;
+        border-color: #ffffff;
+        &:focus, &:visited, &:active, &:focus:visited, &:focus:active, &:visited:active, &:focus:visited:active{
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+        &:hover, &:hover:focus, &:hover:visited, &:hover:active, &:hover:focus:visited, &:hover:focus:active, &:hover:visited:active, &:hover:focus:visited:active{
+            background-color: transparent;
+            color: #ffffff;
+        }
+    }
+    &.btn-border{
+        background-color: transparent;
+        &:focus, &:visited, &:active, &:focus:visited, &:focus:active, &:visited:active, &:focus:visited:active{
+            background-color: transparent;
+        }
+        &:hover, &:hover:focus, &:hover:visited, &:hover:active, &:hover:focus:visited, &:hover:focus:active, &:hover:visited:active, &:hover:focus:visited:active{
+            color: #ffffff;
+        }
+        .elh-theme-bg &, .elh-img-bg &, .banner-overlay &{
+            border-color: #ffffff;
+            color: #ffffff;
+            &:hover, &:hover:focus, &:hover:visited, &:hover:active, &:hover:focus:visited, &:hover:focus:active, &:hover:visited:active, &:hover:focus:visited:active{
+                color: #ffffff;
+            }
+        }
+    }
+}
+.button-group{
+    margin-top: 40px;
+}
+.simple-video-play{
+    color: #111111;
+    font-size: 3.6rem;
+    font-family: $headingFont;
+    font-weight: 700;
+    display: inline-block;
+    .elh-theme-bg &, .elh-img-bg &{
+        color: #ffffff;
+    }
+}
