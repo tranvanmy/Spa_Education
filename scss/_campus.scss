@@ -1,0 +1,28 @@
+/*------------------------------------
+16. Campus
+------------------------------------*/
+.elh-campus-item{
+    margin-bottom: 80px;
+    .elh-campus-thumb{
+        overflow: hidden;
+        position: relative;
+        border-radius: 3px;
+        display: block;
+    }
+    .elh-campus-name{
+        font-size: 1.8rem;
+        color: #262626;
+        margin-top: 27px;
+        margin-bottom: 0;
+        .elh-theme-bg &, .elh-img-bg &{
+            color: #ffffff;
+        } 
+        a{
+            color: inherit;
+        }
+    }
+    .elh-campus-location{
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,82 @@
+/*------------------------------------
+23. Fact
+------------------------------------*/
+.elh-fact-section{
+    padding: 60px 0;
+}
+.fact-title{
+    margin: 18px 0 0;
+    font-size: 3.6rem;
+    position: relative;
+    padding-top: 18px;
+    &:before{
+        content: "";
+        height: 5px;
+        width: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+    }
+}
+.elh-counter-group{
+    text-align: right;
+    .elh-counter-item{
+        display: inline-block;
+        width: 80px;
+        + .elh-counter-item{
+            margin-left: 95px;
+        }
+        .elh-fact-number{
+            font-size: 4.8rem;
+            margin: 0;
+        }
+        .elh-fact-name{
+            font-weight: 600;
+            margin-top: -3px;
+        }
+    }
+}
+
+.elh-counter-group.style-2{
+    text-align: center;
+    &.text-left{
+        text-align: left;
+    }
+}
+.elh-counter-group.style-3{
+    text-align: left;
+    padding: 80px 0 50px;
+    zoom: 1;
+    position: relative;
+    overflow: hidden;
+    .elh-counter-item{
+        float: left;
+        width: 100%;
+        margin-bottom: 30px;
+        .fact-icon{
+            float: left;
+            width: 36px;
+            font-size: 3.6rem;
+            margin-right: 15px;
+            line-height: 1;
+            .elh-theme-bg &, .elh-img-bg &{
+                color: #ffffff;
+            }
+            + .fact-content{
+                width: calc(100% - 51px);
+            }
+        }
+        .fact-content{
+            width: 100%;
+            float: left;
+        }
+        .elh-fact-number{
+            font-size: 2.2rem;
+            margin-top: -4px;
+        }
+        .elh-fact-name{
+            font-family: $headingFont;
+        }
+    }
+}

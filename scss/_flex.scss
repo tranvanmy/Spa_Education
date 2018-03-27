@@ -1,0 +1,30 @@
+/*------------------------------------
+37. Flex
+------------------------------------*/
+.elh-display-flex{
+    position: relative;
+    .elh-flex-relative{
+        position: relative;
+        width: 50%;
+        margin-left: 50%;
+    }
+    .elh-flex-absolute{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 50%;
+        border: 1px solid #e7e7e7;
+    }
+    .elh-flex-content{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        padding: 0 30px 0 40px;
+        h3{
+            margin-top: 0;
+        }
+    }
+}

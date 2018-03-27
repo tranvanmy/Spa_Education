@@ -1,0 +1,594 @@
+/*------------------------------------
+44. Course Single
+------------------------------------*/
+.elh-course-body {
+    border: 1px solid #e7e7e7;
+    padding: 42px 50px;
+    .elh-course-section {
+        margin-bottom: 40px;
+        h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 2.8rem;
+        }
+    }
+    .post-entry {
+        .plyr-video {
+            margin-bottom: 25px;
+        }
+    }
+    .elh-course-offer-coupon {
+        padding: 20px;
+        .coupon-img {
+            display: inline-block;
+            width: 240px;
+            vertical-align: middle;
+            margin-right: 26px;
+        }
+        .coupon-code-content {
+            display: inline-block;
+            vertical-align: middle;
+            font-family: $headingFont;
+            p {
+                margin: 0;
+            }
+            h5 {
+                font-size: 2.2rem;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        &:before {
+            content: "\f00c";
+            font-family: "FontAwesome";
+            margin-right: 6px;
+        }
+    }
+    &.half-list {
+        position: relative;
+        overflow: hidden;
+        zoom: 1;
+        li {
+            float: left;
+            width: 50%;
+        }
+    }
+}
+
+/*** Course Pdf Curriculum download ***/
+
+.elh-course-pdf-curriculum {
+    margin-top: 50px;
+    padding: 30px;
+    .elh-pdf-icon {
+        background-color: #ffffff;
+        font-size: 2.8rem;
+        height: 86px;
+        width: 86px;
+        line-height: 86px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 26px;
+    }
+    .elh-pdf-text {
+        display: inline-block;
+        vertical-align: middle;
+        p {
+            margin: 0;
+            font-family: $headingFont;
+        }
+        h5 {
+            font-size: 2.2rem;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+    }
+    .elh-pdf-download-link {
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 24px;
+    }
+}
+
+/*** Course Curriculum ***/
+
+.elh-course-curriculum {
+    margin-top: 50px;
+    padding: 42px 50px;
+    border: 1px solid #e7e7e7;
+}
+
+.panel-group.elh-curriculum-accordion {
+    margin: 0;
+    border: 1px solid #e7e7e7;
+    .panel {
+        + .panel {
+            margin-top: 0;
+            border-top: 1px solid #e7e7e7;
+        }
+        .panel-heading {
+            .panel-title {
+                font-size: 1.6rem;
+                font-weight: 400;
+                a {
+                    border: none;
+                    border-radius: 0;
+                    padding: 13px 30px;
+                    color: #262626;
+                    position: relative;
+                    overflow: hidden;
+                    zoom: 1;
+                    .elh-chapter-meta {
+                        float: right;
+                        width: 220px;
+                        text-align: right;
+                    }
+                    .elh-chapter-title {
+                        float: right;
+                        width: calc(100% - 250px);
+                    }
+                    .elh-chapter-lesson-count {
+                        display: inline-block;
+                        text-align: left;
+                        min-width: 100px;
+                    }
+                    .elh-chapter-duration {
+                        min-width: 95px;
+                        text-align: right;
+                        display: inline-block;
+                    }
+                    &:after {
+                        content: none;
+                    }
+                    &:before {
+                        content: "\f067";
+                        font-family: "FontAwesome";
+                        width: 30px;
+                        display: inline-block;
+                    }
+                    &[aria-expanded="true"] {
+                        color: #262626;
+                        background-color: transparent;
+                        &:before {
+                            content: "\f068";
+                        }
+                    }
+                }
+            }
+            & + .panel-collapse > .list-group,
+            & + .panel-collapse > .panel-body {
+                border: none;
+            }
+        }
+        .panel-body {
+            padding: 0;
+        }
+    }
+}
+
+/*** Lesson list items ***/
+
+.elh-lesson-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    .elh-lesson-item {
+        border-top: 1px solid #e7e7e7;
+        > a {
+            display: block;
+            padding: 12px 30px 12px 65px;
+            color: $baseFontColor;
+            zoom: 1;
+            position: relative;
+            overflow: hidden;
+            &.running-lesson{
+                color: #ffffff;
+            }
+            &:hover{
+                background-color: #f7f7f7;
+            }
+        }
+        .elh-lesson-state {
+            margin-right: 7px;
+            &:before {
+                content: "\f023";
+                font-family: "FontAwesome";
+                font-style: normal;
+            }
+        }
+        &.elh-lesson-opened {
+            .elh-lesson-state {
+                &:before {
+                    content: "\f144";
+                }
+            }
+        }
+        &.elh-lesson-active{
+            color: #ffffff;
+        }
+        .elh-lesson-item-left {
+            float: left;
+            width: calc(100% - 200px);
+        }
+        .elh-lesson-item-right {
+            float: left;
+            text-align: right;
+            width: 200px;
+        }
+        .elh-lesson-preview-link {
+            margin-right: 80px;
+        }
+    }
+}
+
+/*** Single course instructor ***/
+
+.elh-course-single-instructor {
+    border: 1px solid #e7e7e7;
+    margin-top: 50px;
+    .elh-section-header {
+        padding: 42px 50px 0;
+    }
+    .elh-course-instructor-box {
+        padding: 0 50px 45px;
+        + .elh-course-instructor-box {
+            border-top: 1px solid #e7e7e7;
+            padding-top: 50px;
+        }
+        .elh-course-instructor-thumb {
+            width: 120px;
+            height: 120px;
+            float: left;
+            margin-right: 30px;
+            border-radius: 50%;
+            margin-top: 10px;
+            overflow: hidden;
+            + .elh-course-instructor-body {
+                width: calc(100% - 150px);
+            }
+        }
+        .elh-course-instructor-body {
+            width: 100%;
+            float: left;
+            .elh-course-instructor-name {
+                margin-top: 0;
+                margin-bottom: 5px;
+                font-size: 1.8rem;
+            }
+            .elh-course-instructor-field {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+            .elh-course-instructor-excerpt {
+                margin-bottom: 8px;
+            }
+            .elh-socials {
+                a {
+                    display: inline-block;
+                    color: $baseFontColor;
+                    + a {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*** Student Feedback ***/
+
+.elh-course-student-feedback {
+    border: 1px solid #e7e7e7;
+    padding: 42px 50px;
+    margin-top: 50px;
+}
+
+.elh-course-rating {
+    .elh-rating-summery {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border-width: 10px;
+        border-style: solid;
+        position: relative;
+        float: left;
+        margin-right: 50px;
+        .elh-rating-summery-content {
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        .elh-rating-summery-text {
+            font-size: 4.8rem;
+            margin: 0;
+        }
+        .elh-rating-summery-star {
+            margin-top: -10px;
+            .star {
+                font-size: 1rem;
+                &:before {
+                    content: "\f006";
+                    font-family: "FontAwesome";
+                }
+                &.on {
+                    &:before {
+                        content: "\f005";
+                    }
+                }
+            }
+        }
+        .elh-rating-summery-count {
+            font-size: 1.2rem;
+            margin-top: -4px;
+        }
+        + .elh-rating-counter {
+            width: calc(100% - 250px);
+        }
+    }
+    .elh-rating-counter {
+        float: left;
+        width: 100%;
+        .elh-rating-counter-item {
+            display: table;
+            width: 100%;
+            + .elh-rating-counter-item {
+                margin-top: 8px;
+            }
+            .elh-rating-counter-star {
+                margin-bottom: 0;
+                font-size: 1.8rem;
+                font-family: $headingFont;
+                display: table-cell;
+                vertical-align: middle;
+                width: 75px;
+            }
+            .elh-rating-counter-bar-wrap {
+                display: table-cell;
+                vertical-align: middle;
+                .elh-rating-counter-percent {
+                    background-color: #e7e7e7;
+                    height: 10px;
+                    position: relative;
+                    .elh-rating-counter-percentbar {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+            .elh-rating-counter-count {
+                display: table-cell;
+                vertical-align: middle;
+                margin-bottom: 0;
+                font-size: 1.8rem;
+                font-family: $headingFont;
+                opacity: 0.5;
+                width: 50px;
+                text-align: right;
+            }
+        }
+    }
+}
+
+/*** Given Reviews ***/
+
+.elh-course-reviews {
+    margin-top: 56px;
+}
+
+.elh-course-review-item {
+    margin-bottom: 45px;
+    .elh-course-reviewer-thumb {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        float: left;
+        margin-right: 30px;
+        margin-top: 10px;
+        overflow: hidden;
+        + .elh-course-review-body {
+            width: calc(100% - 150px);
+        }
+    }
+    .elh-course-review-body {
+        width: 100%;
+        float: left;
+    }
+    .elh-course-review-title {
+        h5 {
+            margin: 0;
+            display: inline-block;
+            font-size: 1.4rem;
+        }
+        .elh-course-reviewer-rating {
+            display: inline-block;
+            margin-left: 7px;
+            .star {
+                font-size: 1.4rem;
+                &:before {
+                    content: "\f006";
+                    font-family: "FontAwesome";
+                }
+                &.on {
+                    &:before {
+                        content: "\f005";
+                    }
+                }
+            }
+        }
+    }
+    .elh-course-review-time {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    .elh-review-feedback-form {
+        font-size: 1.2rem;
+        [type=submit] {
+            border: 1px solid #e7e7e7;
+            border-radius: 3px;
+            margin: 0 5px;
+            background-color: transparent;
+            &[value=yes] {
+                &.submitted {
+                    border-color: #00bcd4;
+                    color: #00bcd4;
+                }
+            }
+            &[value=no] {
+                &.submitted {
+                    border-color: #ff6800;
+                    color: #ff6800;
+                }
+            }
+        }
+        a {
+            color: $baseFontColor;
+        }
+    }
+}
+
+/*** Review form ***/
+
+.elh-course-review-form {
+    .lead {
+        font-size: 1.4rem;
+        font-family: $headingFont;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    .elh-rating-inputs {
+        margin-bottom: 10px;
+        label {
+            margin: 0;
+            font-weight: 400;
+            position: relative;
+            cursor: pointer;
+            + label {
+                margin-left: 6px;
+            }
+        }
+        [type=radio] {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+        .star {
+            font-size: 2rem;
+            font-family: "FontAwesome";
+            color: #d7d7d7;
+            font-style: normal;
+            &:before {
+                content: "\f006";
+            }
+        }
+        .elh-rate-on {
+            .star {
+                &:before {
+                    content: "\f005";
+                }
+            }
+        }
+    }
+    textarea {
+        margin-bottom: 10px;
+    }
+}
+
+/*** Related Course ***/
+
+.elh-related-course {
+    margin-top: 92px;
+}
+
+
+/*** Sidebar ***/
+.course-sidebar {
+    position: relative;
+    .sidebar-affix {
+        position: relative;
+        &.affix {
+            position: fixed;
+            top: 80px;
+            left: inherit;
+            width: 360px;
+        }
+    }
+    .widget {
+        & + .widget {
+            margin-top: 30px;
+        }
+    }
+}
+
+.widget-purchase {
+    color: #ffffff;
+    padding: 56px 20px;
+    .elh-price {
+        margin: 0;
+        font-size: 3.6rem;
+    }
+    .widget-purchase-btn {
+        background-color: #ffffff;
+        display: inline-block;
+        font-family: $headingFont;
+        font-weight: 700;
+        line-height: 41px;
+        border-radius: 3px;
+        padding: 0 27px;
+        margin-top: 15px;
+    }
+    .widget-purchase-guarantee {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+    .lead {
+        font-size: 1.8rem;
+        font-family: $headingFont;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .widget-purchase-description {
+        margin-bottom: 0;
+    }
+}
+.widget-course-share{
+    color: #ffffff;
+    padding: 25px;
+    .lead{
+        font-family: $headingFont;
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    .elh-course-social-share{
+        a{
+            display: inline-block;
+            font-size: 1.2rem;
+            color: #ffffff;
+            text-align: center;
+            width: 34px;
+            height: 34px;
+            line-height: 32px;
+            border-radius: 50%;
+            border: 1px solid rgba(#ffffff, 0.3);
+            + a{
+              margin-left: 6px;  
+            }
+        }
+    }
+}
