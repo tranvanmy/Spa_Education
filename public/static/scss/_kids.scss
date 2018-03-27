@@ -1,0 +1,38 @@
+/*------------------------------------
+33. Kids
+------------------------------------*/
+.elh-kids-description{
+    padding: 45px 0;
+    .elh-kids-title{
+        margin: 0;
+        font-size: 4.8rem;
+        text-transform: uppercase;
+    }
+    .elh-kids-subtitle{
+        margin: 0;
+    }
+    .elh-kids-text{
+        font-family: $headingFont;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        margin-top: 15px;
+        margin-bottom: 35px;
+    }
+}
+.elh-section-header.elh-header-kids-style{
+    .elh-section-title{
+        padding-bottom: 0;
+        &:before, &:after{
+            content: none;
+        }
+    }
+    .elh-section-text{
+        font-size: 1.8rem;
+        font-family: $headingFont;
+    }
+}
+
+.instructor-comments.parent-comments{
+    background-color: rgba(#fff, 0.8);
+    color: #262626;
+}

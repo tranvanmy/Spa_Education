@@ -1,0 +1,42 @@
+/*------------------------------------
+47. Miscelleneous
+------------------------------------*/
+.online-education-fact{
+    .elh-section-header{
+        margin-bottom: 35px;
+    }
+    .elh-counter-group .elh-counter-item + .elh-counter-item{
+        margin-left: 50px;
+    }
+    h4{
+        font-size: 2.2rem;
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
+    .registration-form{
+        border: none;
+        input:not([type=submit]):not([type=radio]):not([type=checkbox]), select, textarea{
+            border-radius: 3px;
+        }
+        [type=submit]{
+            border-width: 1px;
+            border-radius: 3px;
+            border-style: solid;
+            color: #ffffff;
+            width: 100%;
+            font-family: $headingFont;
+            padding: 8px 30px;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+}
+.elh-mission, .elh-vision{
+    margin-top: 30px;
+    border: 1px solid #e7e7e7;
+    padding: 40px 30px 40px 40px;
+    h3{
+        margin-top: 0;
+    }
+}

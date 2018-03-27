@@ -1,0 +1,79 @@
+/*------------------------------------
+35. Tabs
+------------------------------------*/
+.panel-group{
+    margin: 0;
+    .panel{
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        + .panel{
+            margin-top: 15px;
+        }
+        .panel-heading{
+            padding: 0;
+            border-radius: 0;
+            .panel-title{
+                font-size: 1.4rem;
+                a{
+                    display: block;
+                    border: 1px solid #e7e7e7;
+                    border-radius: 3px;
+                    padding: 11px 20px 11px 30px;
+                    position: relative;
+                    &:after{
+                        content: "\f107";
+                        font-family: "FontAwesome";
+                        float: right;
+                        transition: all 0.3s ease;
+                    }
+                    &[aria-expanded="true"]{
+                        color: #ffffff;
+                        &:after{
+                            color: #ffffff;
+                            content: "\f106";
+                        }
+                    }
+                }
+            }
+            & +.panel-collapse>.list-group, & +.panel-collapse>.panel-body{
+                border: none;
+            }
+        }
+        .panel-body{
+            padding: 18px 30px 0;
+        }
+    }
+    &.style-2{
+        .panel{
+            .panel-heading{
+                .panel-title{
+                    a{
+                        color: #ffffff;
+                        padding: 13px 20px 13px 30px;
+                        &:after{
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.style-3{
+        .panel{
+            .panel-heading{
+                .panel-title{
+                    a{
+                        padding: 13px 20px 13px 30px;
+                        &:after{
+                            color: inherit;
+                        }
+                        &[aria-expanded=true]{
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

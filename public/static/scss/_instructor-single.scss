@@ -1,0 +1,38 @@
+/*------------------------------------
+14. Instructor Single
+------------------------------------*/
+.instructor-entry{
+    margin-top: -20px;
+}
+.instructor-sign{
+    margin-top: 30px;
+    .instructor-role{
+        margin-top: 6px;
+        margin-bottom: 0;
+    }
+}
+.elh-instructor-counter-group{
+    zoom: 1;
+    position: relative;
+    overflow: hidden;
+    margin-top: 58px;
+    margin-bottom: -30px;
+    .elh-counter-item{
+        border-radius: 3px;
+        margin-bottom: 30px;
+        color: #ffffff;
+        padding: 30px 25px 20px;
+        .fact-icon{
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+        .elh-fact-number{
+            font-size: 2.2rem;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        .elh-fact-name{
+            font-family: $headingFont;
+        }
+    }
+}

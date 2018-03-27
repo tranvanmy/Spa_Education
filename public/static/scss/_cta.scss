@@ -1,0 +1,80 @@
+/*------------------------------------
+10. Call to action
+------------------------------------*/
+.elh-cta{
+    .elh-overlay{
+        padding: 220px 0;
+    }
+    .cta-subtitle{
+        margin: 0;
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+    .cta-title{
+        margin: 0;
+        font-size: 6.5rem;
+    }
+    .button-group{
+        margin-top: 35px;
+    }
+    &.style-2{
+        .cta-title{
+            font-size: 3.6rem;
+        }
+        .cta-text {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+        .button-group{
+            margin-top: 25px;
+        }
+    }
+    &.style-3{
+        .elh-overlay{
+            padding: 248px 0;
+        }
+        .elh-header-left-style{
+            margin-top: 0;
+            p{
+                font-family: $headingFont;
+                font-size: 2.2rem;
+            }
+        }
+        .simple-video-play{
+            margin-top: 70px;
+        }
+    }
+    &.style-4{
+        .button-group{
+            margin-top: 0;
+        }
+    }
+    &.style-5{
+        .elh-overlay{
+            padding: 90px 0;
+        }
+        .elh-header-left-style{
+            margin-top: 0;
+            p{
+                font-family: $headingFont;
+                font-size: 2.2rem;
+            }
+        }
+        .simple-video-play{
+            margin-top: 70px;
+        }
+    }
+    &.style-6{
+        padding: 65px 0;
+        .cta-title{
+            font-size: 3.6rem;
+        }
+        .cta-text {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+        .button-group{
+            margin-top: 25px;
+        }
+    }
+}

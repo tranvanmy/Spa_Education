@@ -1,0 +1,90 @@
+/*------------------------------------
+26. Testimonial
+------------------------------------*/
+.elh-testimonial-item {
+    &:focus {
+        outline: none;
+    }
+    .elh-testimonial-title {
+        margin-top: 0;
+        margin-bottom: 3px;
+    }
+    blockquote {
+        font-size: 1.4rem;
+        margin: 0 0 35px;
+        padding: 0;
+        border: none;
+    }
+    .elh-rating {
+        margin-bottom: 25px;
+    }
+    .elh-commenter-name {
+        font-size: 1.8rem;
+        margin-top: 0;
+        margin-bottom: 3px;
+    }
+    .elh-commenter-profession {
+        font-weight: 600;
+    }
+    .elh-mini-section & {
+        color: #262626;
+        margin-bottom: 18px;
+        .elh-testimonial-title{
+            margin-bottom: 8px;
+        }
+        blockquote{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.elh-rating {
+    .star {
+        font-family: "FontAwesome";
+        display: inline-block;
+        +.star {
+            margin-left: 3px;
+        }
+        &:before {
+            content: "\f006";
+        }
+        &.star-on {
+            &:before {
+                content: "\f005";
+            }
+        }
+    }
+}
+
+.elh-testimonial-nav-thumbs {
+    max-width: 390px;
+    margin: 15px auto 0;
+    .elh-commenter-thumb {
+        opacity: 0.2;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+        &.slick-current {
+            opacity: 1;
+        }
+    }
+    .elh-commenter-thumb-img {
+        height: 100px;
+        width: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+}
+
+.elh-mini-section {
+    .elh-commenter-thumb-img {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+}
