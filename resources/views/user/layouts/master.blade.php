@@ -17,7 +17,7 @@
         <!-- Header -->
             @include('user.layouts.libraries.header')
         <!-- End header -->
-        
+
         <!-- Navigation -->
             @yield('user-nav')
         <!-- Navigation End -->
@@ -34,6 +34,7 @@
 
         @yield('user-script')
 
+        <script src="/static/js/add-subscribe.js"></script>
     </body>
 
 </html>

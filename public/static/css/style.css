@@ -737,7 +737,7 @@ button:focus {
 4. Banner
 ------------------------------------*/
 .elh-banner-item {
-  background-position: center center;
+  background-position: top center;
   background-size: cover;
 }
 
@@ -767,6 +767,10 @@ button:focus {
 
 .banner-item-7 {
   background-image: url(../images/banner/7.jpg);
+}
+
+.banner-item-8 {
+  background-image: url(../images/banner/8.jpg);
 }
 
 .banner-item-9 {
