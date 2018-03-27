@@ -45,7 +45,7 @@
                         </li>
                         <li>
                             <a class="purchase-link" href="category-course.html">
-                                AI in Smart City (upcoming) 
+                                AI in Smart City (upcoming)
                             </a>
                         </li>
                         <li><a class="purchase-link" href="category-course.html">Student & PhD. candidates </a></li>
@@ -88,7 +88,7 @@
                     <a href="blog.html">Blog</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#">Joining us</a>
+                    <a href="#">Join us</a>
                     <ul class="dropdown-menu">
                         <li><a href="join-us.html">Deliver courses with us</a></li>
                         <li><a href="join-us.html">Become our data scientist</a></li>
