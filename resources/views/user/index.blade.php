@@ -119,9 +119,9 @@
               <div class="banner-content">
                   <div class="container-fluid">
                       <div class="row">
-                          <div class="col-xs-12" style="color: #40632c; padding-left: 30px;">
-                              <h4 class="elh-banner-title" style="font-size: 4.4rem; padding-left: 50px">
-                                  Want to learn AI <br> with AI Academy ?
+                          <div class="col-xs-12" style="color: #40632c;">
+                              <h4 class="elh-banner-title">
+                                  Want to learn AI <br> with AI Academy?
                               </h4>
                               <h1 class="elh-banner-subtitle">
                                   Whether you’re an Business Leader, SW engineer,
