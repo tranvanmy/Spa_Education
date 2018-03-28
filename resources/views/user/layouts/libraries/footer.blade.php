@@ -126,18 +126,6 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-2 col-xs-6">
-                        <div class="widget widget_custom-menu">
-                            <h3 class="widget-title">Useful Links</h3>
-                            <ul class="custom-menu">
-                                <li><a href="#">News &amp; Blog</a></li>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Discussion</a></li>
-                                <li><a href="#">Spotlight on</a></li>
-                                <li><a href="#">Research LAB</a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

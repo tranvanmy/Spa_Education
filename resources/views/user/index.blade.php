@@ -121,7 +121,7 @@
                       <div class="row">
                           <div class="col-xs-12" style="color: #40632c;">
                               <h4 class="elh-banner-title">
-                                  Want to learn AI <br> with AI Academy?
+                                  Want to learn AI <br> at AI Academy?
                               </h4>
                               <h1 class="elh-banner-subtitle">
                                  Whether you’re a business leader, engineer, industry expert or marketer
@@ -160,7 +160,7 @@
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="45"></span></h3>
-                            <p class="elh-fact-name" style="height: 50px">Research assistant</p>
+                            <p class="elh-fact-name" style="height: 50px">Researchers</p>
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="15"></span></h3>
@@ -448,7 +448,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
-                        <h3 class="elh-section-title">Highlights <span>Research & Development</span></h3>
+                        <h3 class="elh-section-title">Research & Development</h3>
                         <p class="elh-section-text">
                             ... Add your text here ....
                         </p>
