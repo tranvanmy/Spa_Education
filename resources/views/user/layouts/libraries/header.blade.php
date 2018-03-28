@@ -17,13 +17,6 @@
                     <a href="#"><i class="fa fa-vimeo"></i></a>
                     <a href="#" style="margin-left: 50px">EN</a>
                 </div>
-                <div class="top-block language-block">
-                    <div class="language-wrap">
-                        <p class="language-selected">
-                            <a href="#">EN</a>
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
