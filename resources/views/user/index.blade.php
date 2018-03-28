@@ -124,8 +124,8 @@
                                   Want to learn AI <br> with AI Academy?
                               </h4>
                               <h1 class="elh-banner-subtitle">
-                                  Whether you’re an Business Leader, SW engineer,
-                                  <br>Marketing specialist, Industry expert  there’s a AI skills to learn.
+                                 Whether you’re a business leader, engineer, industry expert or marketer
+                                 <br>there are AI skills to learn !
                               </h1>
                           </div>
                       </div>
@@ -155,10 +155,6 @@
                             <p class="elh-fact-name" style="height: 50px">Industry experts</p>
                         </div>
                         <div class="elh-counter-item">
-                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="15"></span></h3>
-                            <p class="elh-fact-name" style="height: 50px">Professors</p>
-                        </div>
-                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="15"></span></h3>
                             <p class="elh-fact-name" style="height: 50px">Professors</p>
                         </div>
@@ -214,7 +210,7 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Popular <span>Courses</span></h3>
-                        <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                        <p class="elh-section-text">... Add your text here ....</p>
                         <a class="all-link" href="course.html">See All Courses</a>
                     </div>
                 </div>
@@ -454,7 +450,7 @@
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Highlights <span>Research & Development</span></h3>
                         <p class="elh-section-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            ... Add your text here ....
                         </p>
                         <a class="all-link" href="research-develop-all.html">See All</a>
                     </div>
@@ -540,7 +536,7 @@
                 <div class="col-md-10 col-md-offset-1 col-xs-12">
                     <div class="elh-section-header text-center">
                         <h3 class="elh-section-title">Our <span>Partners</span></h3>
-                        <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                        <p class="elh-section-text">... Add your text here ....</p>
                     </div>
                 </div>
             </div>
@@ -576,7 +572,7 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Upcoming <span>Seminars</span></h3>
-                        <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                        <p class="elh-section-text">... Add your text here ....</p>
                         <a class="all-link style-2" href="seminar.html">See All Seminars</a>
                     </div>
                 </div>
@@ -593,7 +589,7 @@
                                     <span><i class="fa fa-clock-o"></i>22 Dec (9am - 2pm)</span>
                                     <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
                                 </p>
-                                <p class="elh-event-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                <p class="elh-event-excerpt">... Add your text here ....</p>
                             </div>
                         </div>
                     </div>
@@ -607,7 +603,7 @@
                                     <span><i class="fa fa-clock-o"></i>23 Dec (9am - 2pm)</span>
                                     <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
                                 </p>
-                                <p class="elh-event-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                <p class="elh-event-excerpt">... Add your text here ....</p>
                             </div>
                         </div>
                     </div>
@@ -621,7 +617,7 @@
                                     <span><i class="fa fa-clock-o"></i>24 Dec (9am - 2pm)</span>
                                     <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
                                 </p>
-                                <p class="elh-event-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                <p class="elh-event-excerpt">... Add your text here ....</p>
                             </div>
                         </div>
                     </div>
@@ -635,7 +631,7 @@
                                     <span><i class="fa fa-clock-o"></i>25 Dec (9am - 2pm)</span>
                                     <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
                                 </p>
-                                <p class="elh-event-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                <p class="elh-event-excerpt">... Add your text here ....</p>
                             </div>
                         </div>
                     </div>
@@ -653,7 +649,7 @@
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title"><span>News</span></h3>
-                            <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                            <p class="elh-section-text">... Add your text here ....</p>
                             <a class="all-link style-2" href="blog.html">See All</a>
                         </div>
                     </div>
@@ -728,7 +724,7 @@
                 <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
                     <div class="elh-section-header">
                         <h3 class="elh-section-title">Education for all! Join with us...</h3>
-                        <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                        <p class="elh-section-text">... Add your text here ....</p>
                     </div>
                     <a class="btn" href="#">Join Today</a>
                 </div>
