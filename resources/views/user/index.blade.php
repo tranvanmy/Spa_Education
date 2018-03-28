@@ -48,16 +48,12 @@
                         <li><a class="purchase-link" href="category-course.html">ML in the Cloud</a></li>
                         <li >
                         <a class="purchase-link" href="category-course.html">
-                            AI in Smart Agriculture
-                            <p class="upcoming">(upcoming)</p>
+                            AI in Smart Agriculture (upcoming)
                         </a>
                     </li>
                     <li>
                         <a class="purchase-link" href="category-course.html">
-                            AI in Smart City
-                            <p class="upcoming">
-                                (upcoming)
-                            </p>
+                            AI in Smart City (upcoming)
                         </a>
                     </li>
                         <li><a class="purchase-link" href="category-course.html">AI in Marketing</a></li>
@@ -149,12 +145,20 @@
     <div class="elh-section elh-theme-bg elh-fact-section" style="margin-top: 50px" id="home_about_us">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <h3 style="font-size: 3rem; padding-top: 18px">Academy - at a glance</h3>
+                <div class="col-sm-3">
+                    <h3 class="slogan_class">Academy - at a glance</h3>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-sm-9">
                     <div class="elh-counter-group">
                         <div class="elh-counter-item">
+                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="12"></span></h3>
+                            <p class="elh-fact-name" style="height: 50px">Industry experts</p>
+                        </div>
+                        <div class="elh-counter-item">
+                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="15"></span></h3>
+                            <p class="elh-fact-name" style="height: 50px">Professors</p>
+                        </div>
+                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="15"></span></h3>
                             <p class="elh-fact-name" style="height: 50px">Professors</p>
                         </div>
@@ -181,13 +185,16 @@
     <div class="elh-section elh-section-padding elh-bottom-0">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" style="text-align: justify;">
                     <div class="elh-about-section sm-bottom-30">
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title">About <span>Us</span></h3>
                         </div>
-                        <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim</strong></p>
-                        <p>ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <p>
+                        We are a group AI researchers, practitioners and industry specialists who set to build a learning environment for everyone to learn and apply AI to innovate.
+                        </p>
+                        <p>
+                        We consult on practical aspects of applied machine learning for enterprises, helping them build Data science team, AI-powered products to stay ahead of competition. </p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -221,16 +228,12 @@
                         <div class="elh-course-content">
                             <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learning Fundamentals</a></h4>
                             <p style="text-align: justify">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
                             </p>
                         </div>
                         <div class="elh-course-footer">
                             <p class="elh-course-price" style="color: #00bcd4">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+                               Basics
                             </p>
                             <p class="elh-course-metas">
 
@@ -243,18 +246,14 @@
                             <img class="img-responsive" src="/images/course/2.jpg" alt="...">
                         </a>
                         <div class="elh-course-content">
-                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learnign in Computer vision</a></h4>
-                            <p style="text-align: justify">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learning in Computer vision</a></h4>
+                           <p style="text-align: justify">
+                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
                             </p>
                         </div>
                         <div class="elh-course-footer">
                             <p class="elh-course-price" style="color: #00bcd4">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+                                Advanced
                             </p>
                             <p class="elh-course-metas">
 
@@ -269,16 +268,12 @@
                         <div class="elh-course-content">
                             <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">AI for Business leaders</a></h4>
                             <p style="text-align: justify">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
                             </p>
                         </div>
                         <div class="elh-course-footer">
                             <p class="elh-course-price" style="color: #00bcd4">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+                               Special track
                             </p>
                             <p class="elh-course-metas">
 
@@ -293,7 +288,7 @@
                         <div class="elh-course-content">
                             <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learning Fundamentals</a></h4>
                             <p style="text-align: justify">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
                             </p>
                         </div>
                         <div class="elh-course-footer">
@@ -317,7 +312,7 @@
                         <div class="elh-course-content">
                             <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learnign in Computer vision</a></h4>
                             <p style="text-align: justify">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
                             </p>
                         </div>
                         <div class="elh-course-footer">
@@ -341,7 +336,7 @@
                         <div class="elh-course-content">
                             <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">AI for Business leaders</a></h4>
                             <p style="text-align: justify">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
                             </p>
                         </div>
                         <div class="elh-course-footer">
@@ -371,8 +366,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">Our <span>Instructor</span></h3>
-                            <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                            <h3 class="elh-section-title">Our <span>Instructors</span></h3>
+                            <p class="elh-section-text">All our intrustors have at least 5 years of experiences researching and working at universities and hightech companies in AI disciplines and related fields like Big Data analytics, Data mining, Information architect, Cyber security, Image processing, etc.</p>
                         </div>
                     </div>
                 </div>
@@ -383,8 +378,8 @@
                                 <img class="img-responsive" src="/images/instructor/large-2.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Assoc. Prof. Dr.<br> Nguyen Xuan Hoai</a></h4>
-                                <p class="elh-instructor-field">Natural Languge processing</p>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Assoc. Prof. Dr. Nguyen Xuan Hoai</a></h4>
+                                <p class="elh-instructor-field">Computational Intelligence</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
                             </div>
@@ -394,7 +389,7 @@
                                 <img class="img-responsive" src="/images/instructor/large-1.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Anabel Hattie</a></h4>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Assoc. Prof. Dr. <br>Le Thanh Ha</a></h4>
                                 <p class="elh-instructor-field">Network Security</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
@@ -405,7 +400,7 @@
                                 <img class="img-responsive" src="/images/instructor/large-5.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Assoc. Prof. Dr.<br> Le Thanh Ha</a></h4>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Dr. Dinh Viet Sang</a></h4>
                                 <p class="elh-instructor-field">Computer Vision</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
@@ -416,7 +411,7 @@
                                 <img class="img-responsive" src="/images/instructor/large-1.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Lillian Galilea</a></h4>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Dr. Nguyen Thi Thuy</a></h4>
                                 <p class="elh-instructor-field">Natural language processing</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
@@ -427,7 +422,7 @@
                                 <img class="img-responsive" src="/images/instructor/large-2.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Ryan Brayden</a></h4>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Dr. Nguyen Do Van</a></h4>
                                 <p class="elh-instructor-field">Network Security</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
@@ -438,7 +433,7 @@
                                 <img class="img-responsive" src="/images/instructor/large-3.jpg">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Anabel Hattie</a></h4>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Dr. Nguyen Quang Uy</a></h4>
                                 <p class="elh-instructor-field">Network Security</p>
                                 <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
