@@ -10,3 +10,5 @@ yarn-error.log
 .docker/
 /public/bower_components
 /public/uploads
+/public/user
+/public/mix-manifest.json

@@ -12,9 +12,9 @@
 <div class="elh-page-header elh-img-bg elh-bg-17">
         <div class="elh-overlay">
             <div class="container text-center">
-                <h3 class="elh-page-title">TranVanMy</h3>
+                <h3 class="elh-page-title">Assoc. Prof. Dr. Nguyen Xuan Hoai</h3>
                 <ol class="breadcrumb">
-                    <li class="active">Web &amp; UX Designer</li>
+                    <li class="active">Computational Intelligence &amp; Machine Learning UX </li>
                 </ol>
             </div>
         </div>
@@ -47,9 +47,10 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="elh-instructor-entry">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac placerat purus. Phasellus at fermentum lacus. Aenean et ex eget purus laoreet facilisis. Donec vel euismod ex. Nullam sagittis sapien pretium est tempus, vitae facilisis magna pellentesque. Nam bibendum nulla id felis ultrices, sit amet egestas risus placerat. Aliquam laoreet aliquam lorem, sit amet tempor justo viverra eget. Phasellus dignissim, ex ac varius auctor, elit lacus cursus turpis, sit amet tempus lorem dui eget turpis. Suspendisse ex dolor, bibendum nec sagittis sit amet, vestibulum vel ex.</p>
-                            <blockquote>Proin varius neque nibh, placerat tempus nisi vestibulum vitae. Duis nec massa ac erat condimentum varius nec sit amet neque. Donec eu ex et massa placerat pellentesque non quis lorem.</blockquote>
-                            <p>In hac habitasse platea dictumst. Pellentesque a urna nisi. Mauris ac euismod ipsum. Aenean faucibus sapien odio, ut condimentum dolor imperdiet id. Nam tristique dolor non ex faucibus consequat. Sed maximus sapien purus, eget pellentesque quam dapibus eget. Praesent sodales mauris a sapien vehicula, ac sodales odio volutpat. Etiam tristique orci odio, a bibendum odio convallis id. Morbi quis tempor velit. Nullam suscipit pellentesque quam, id maximus nulla iaculis commodo. In id fermentum sem. Phasellus non hendrerit metus. Etiam ultrices ipsum ut ipsum condimentum tristique.</p>
+                            <p>+Assoc. Prof. Dr. Nguyen Xuan Hoai was born in Hanoi, Vietnam, 1975. He received the B.Sc degree in Computer Science from the Hanoi University, Vietnam, in 1995, the MSc degree in Applied Mathematics from Vietnam National University (VNU) in 1997, and the PhD degree in Computer Science from University of New South Wales, Australia, in 2005.
+                            <br>
+                            In 1997, He joined the faculty of Information Tecnhnology at Le Quy Don Technical University (Military Technical Academy), Vietnam as a lecturere and became a senior lecturer in 2005; in 2007-2009 He was a BK Assistant Professor at School of Computer Science and Engineering, Seoul National University, Korea; from 2010 he became an associate professor in Computer Science at Hanoi University serving at the director of IT Research Center. 
+                            His current research interests include – Computational Intelligence, Machine Learning, Evolutionary Computation, Computer Security, Operations Research, Natural Language Processing, Data Analytics, Ecological Modeling. He has published around 100 refereed academic papers/articles in the aforementioned fields (with approximately 1500 citations and a H-index of 17 on google scholar). He is currently a editorial board member of Journal of Genetic Programming and Evolvable Machines (Springer), Vietnamese Journal of Computer Science (Springer). He has served as a regular reviewer, a programme committee member of numerous prestigious academic journals and conferences such as IEEE Transaction on Evolutionary Computation, IEEE Transactions on Neural Networks and Learning Systems, IEEE Transactions on Cybernetics, ACM SIG EVO GECCO, EuroGP, .... Prof. Hoai is the elected member of the panel for Information and Computer Science of the National Foundation for Science and Technology (NAFOSTED), 2011-2014; 2014-2017.</p>
                         </div>
                         <div class="elh-instructor-facts">
                             <div class="elh-instructor-fact-item">
@@ -82,7 +83,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title"><span>Courses</span> by TRANVANMY</h3>
+                            <h3 class="elh-section-title"><span>Courses</span> by Nguyen Xuan Hoai</h3>
                             <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
                             <a class="all-link" href="course.html">See All Courses</a>
                         </div>
@@ -200,7 +201,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title"><span>Product</span> by TRANVANMY</h3>
+                            <h3 class="elh-section-title"><span>Product</span> by Nguyen Xuan Hoai</h3>
                             <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
                             <a class="all-link" href="course.html">See All Product</a>
                         </div>

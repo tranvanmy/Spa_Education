@@ -144,6 +144,15 @@ a:hover {
   position: relative;
 }
 
+.elh-counter-group .elh-counter-item {
+  width: unset !important;
+}
+
+.slogan_class {
+  font-size: 2.5rem;
+  padding-top: 10px;
+}
+
 .elh-section {
   position: relative;
 }
