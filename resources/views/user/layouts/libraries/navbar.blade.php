@@ -74,18 +74,15 @@
                         <li><a class="purchase-link" href="product-category.html">Data Science Lab</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="seminar.html">Events</a>
+                </li>
                 <li class="dropdown">
-                    <a href="#">DataScientists' corner</a>
+                    <a href="blog.html">DataScientists' corner</a>
                     <ul class="dropdown-menu">
                         <li><a class="purchase-link" href="data-scientist.html">Tutorials</a></li>
                         <li><a class="purchase-link" href="data-scientist.html">Tools and practices</a></li>
                     </ul>
-                </li>
-                <li>
-                    <a href="seminar.html">Seminars</a>
-                </li>
-                <li>
-                    <a href="blog.html">Blog</a>
                 </li>
                 <li class="dropdown">
                     <a href="#">Join us</a>
