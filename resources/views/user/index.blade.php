@@ -81,18 +81,15 @@
                         <li><a class="purchase-link" href="product-category.html">Data Science Lab</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#home_seminar">Events</a>
+                </li>
                 <li class="dropdown">
-                    <a href="">DataScientists' corner</a>
+                    <a href="#home_news_blog">DataScientists' corner</a>
                     <ul class="dropdown-menu">
                         <li><a class="purchase-link" href="data-scientist.html">Tutorials</a></li>
                         <li><a class="purchase-link" href="data-scientist.html">Tools and practices</a></li>
                     </ul>
-                </li>
-                <li>
-                    <a href="#home_seminar">Seminars</a>
-                </li>
-                <li>
-                    <a href="#home_news_blog">Blog</a>
                 </li>
                 <li class="dropdown">
                     <a href="#home_join_us">Join us</a>
@@ -571,9 +568,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
-                        <h3 class="elh-section-title">Upcoming <span>Seminars</span></h3>
+                        <h3 class="elh-section-title">Upcoming <span>Events</span></h3>
                         <p class="elh-section-text">... Add your text here ....</p>
-                        <a class="all-link style-2" href="seminar.html">See All Seminars</a>
+                        <a class="all-link style-2" href="seminar.html">See All Events</a>
                     </div>
                 </div>
             </div>
@@ -648,7 +645,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title"><span>News</span></h3>
+                            <h3 class="elh-section-title"><span>DataScientists' corner</span></h3>
                             <p class="elh-section-text">... Add your text here ....</p>
                             <a class="all-link style-2" href="blog.html">See All</a>
                         </div>
