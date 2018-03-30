@@ -85,10 +85,10 @@
                     <a href="#home_seminar">Events</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#home_news_blog">DataScientists' corner</a>
+                    <a href="#home_news_blog">Data scientist</a>
                     <ul class="dropdown-menu">
-                        <li><a class="purchase-link" href="data-scientist.html">Tutorials</a></li>
-                        <li><a class="purchase-link" href="data-scientist.html">Tools and practices</a></li>
+                        <li><a class="purchase-link" href="blog.html">Tutorials</a></li>
+                        <li><a class="purchase-link" href="blog.html">Tools and practices</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -723,7 +723,31 @@
                         <h3 class="elh-section-title">Education for all! Join with us...</h3>
                         <p class="elh-section-text">... Add your text here ....</p>
                     </div>
-                    <a class="btn" href="#">Join Today</a>
+
+                    <div class="quick-contact">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <input type="text" id="name" name="name" placeholder="Name *" required>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="email" id="email" name="email" placeholder="Email *" required>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="tel" id="phone" name="phone" placeholder="Phone">
+                                </div>
+                                <div class="col-xs-12">
+                                    <textarea id="message" name="message" placeholder="Message *" rows="3" required></textarea>
+                                    <button class="btn" type="submit">Join Today</button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="input-success">Your message sent. Thanks for contacting</p>
+                                    <p class="input-error">Something went wrong. try again later</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>

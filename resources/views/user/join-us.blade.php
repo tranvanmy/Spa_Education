@@ -60,103 +60,36 @@
                             </div>
                         </div>
 
-
-
-                        <!-- Feedback -->
-                        <div class="elh-course-student-feedback">
-                            <div class="elh-section-header text-left">
-                                <h3 class="elh-section-title">Feeback</h3>
-                            </div>
-
-                            <!-- Given Reiviews -->
-                            <div class="elh-course-reviews">
-                                <div class="elh-course-review-item">
-                                    <div class="elh-course-reviewer-thumb">
-                                        <img class="img-responsive" src="/images/course/course-reviewer-thumb.jpg" alt="...">
+                        <div class="quick-contact elh-section-padding">
+                            <form action="#" method="post">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <input type="text" id="name" name="name" placeholder="Name *" required>
                                     </div>
-                                    <div class="elh-course-review-body">
-                                        <div class="elh-course-review-title">
-                                            <h5>Oliver Liam</h5>
-                                            <div class="elh-course-reviewer-rating">
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                            </div>
-                                        </div>
-                                        <p class="elh-course-review-time"><i class="fa fa-clock-o"></i> June 9, 2018 at 09:52 am</p>
-                                        <p class="elh-course-review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        <form class="elh-review-feedback-form" action="#" method="post">
-                                            <span class="elh-feedback-on-review-question">Was this review helpful?</span>
-                                            <button class="submitted" type="submit" value="yes"><i class="fa fa-check"></i> Yes</button>
-                                            <button type="submit" value="no"><i class="fa fa-close"></i> No</button>
-                                            <a href="#">Report</a>
-                                        </form>
+                                    <div class="col-sm-4">
+                                        <input type="email" id="email" name="email" placeholder="Email *" required>
                                     </div>
-                                    <div class="clearfix"></div>
+                                    <div class="col-sm-4">
+                                        <input type="tel" id="phone" name="phone" placeholder="Phone">
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <textarea id="message" name="message" placeholder="Message *" rows="3" required></textarea>
+                                        <button class="btn" type="submit">Join Today</button>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <p class="input-success">Your message sent. Thanks for contacting</p>
+                                        <p class="input-error">Something went wrong. try again later</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- Given Reiviews End -->
-
-                            <!-- Write a review -->
-                            <form id="courseReviewForm" class="elh-course-review-form" action="#" method="post">
-                                <p class="lead elh-theme-color">Write a Review</p>
-                                <div class="elh-rating-inputs">
-                                    <label class="elh-rate-on"><input type="radio" name="rate-value" value="1"><i class="star"></i></label>
-                                    <label><input type="radio" name="rate-value" value="2"><i class="star"></i></label>
-                                    <label><input type="radio" name="rate-value" value="3"><i class="star"></i></label>
-                                    <label><input type="radio" name="rate-value" value="4"><i class="star"></i></label>
-                                    <label><input type="radio" name="rate-value" value="5"><i class="star"></i></label>
-                                </div>
-                                <textarea name="review-message" rows="4"></textarea>
-                                <button class="btn" type="submit">Submit</button>
                             </form>
-                            <!-- Write a review End -->
-
                         </div>
-                        <!-- Student feedback end -->
 
-                        <!-- Related Posts -->
-                        <!-- Related Posts End -->
                     </div>
-                    <!-- <div class="col-md-4">
-                        <div class="sidebar">
-                            <aside class="widget category_widget">
-                                <h4 class="widget-title">Categories</h4>
-                                <ul class="categories" id="categories">
-                                    <li style="font-size: 150%;"><a href="#">Teaching with us</a></li>
-                                    <li><a href="join-us.html">Become our data scientist</a></li>
-                                    <li><a href="join-us.html">Become our industry advisor </a></li>
-                                    <li><a href="join-us.html">Join our partner network</a></li>
-                                </ul>
-                            </aside>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
         <!-- Blog Single End -->
 
-        <!-- Subscription -->
-        <div class="elh-section elh-theme-bg elh-subscribe-section style-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="elh-subscribe-heading">
-                            <h3>Subscribe us for Future Updates</h3>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <form id="subscription" class="elh-subscribe-form pull-right xs-pull-center" action="#" method="post">
-                            <input type="email" name="email" placeholder="Enter your mail here">
-                            <button type="submit"><i class="fa fa-paper-plane"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Subscription End -->
 
     </div>
     <!-- Main wrapper start end -->

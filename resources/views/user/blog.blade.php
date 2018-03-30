@@ -32,41 +32,185 @@
     <div class="elh-section elh-section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 elh-posts-center">
+                <div class="col-sm-12 elh-posts-center">
                     <div class="elh-posts-listing">
-                        <article class="elh-post style-4">
-                            <a class="elh-post-thumb" href="blog-single.html">
+                        <div class="row">
+                            <article class="elh-post style-4">
+                                <div class="col-sm-8">
+                                    <a class="elh-post-thumb" href="blog-single.html">
                                         <img class="img-responsive" src="/images/banner/8.jpg" alt="...">
                                     </a>
-                            <div class="elh-post-body">
-                                <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
-                                <p class="elh-post-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
-                                <a class="elh-post-link" href="blog-single.html">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </article>
-                        <article class="elh-post style-4">
-                            <a class="elh-post-thumb" href="blog-single.html">
-                                        <img class="img-responsive" src="/images/banner/8.jpg" alt="...">
-                                    </a>
-                            <div class="elh-post-body">
-                                <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
-                                <p class="elh-post-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
-                                <a class="elh-post-link" href="blog-single.html">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </article>
-                        <article class="elh-post style-4">
-                            <a class="elh-post-thumb" href="blog-single.html">
-                                        <img class="img-responsive" src="/images/banner/8.jpg" alt="...">
-                                    </a>
-                            <div class="elh-post-body">
-                                <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
-                                <p class="elh-post-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
-                                <a class="elh-post-link" href="blog-single.html">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </article>
-                        <div class="text-center col-xs-12">
-                            <a class="btn" href="#">Load More</a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
+                                    <p class="elh-post-excerpt" style="color: rgba(0,0,0,.54);">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+                                    <div style="display: flex">
+                                        <div>
+                                            <img class="img-circle" src="images/instructor/small-1.jpg" alt="..." style="width: 50px;height: 50px"/>
+                                        </div>
+                                        <div style="padding-left: 15px">
+                                            <span style="font-size: 1.5rem; color: #5E6A73">
+                                                Z.Alexander
+                                            </span><br/>
+                                            <span style="color: rgba(0,0,0,.54);">Feb 27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
+                        <div class="row elh-section-padding elh-bottom-0">
+                            <div class="col-md-4 col-xs-6">
+                                <article class="elh-post style-3">
+                                    <a class="elh-post-thumb" href="blog-single.html">
+                                        <img class="img-responsive" src="images/blog/medium-1.jpg" alt="...">
+                                    </a>
+                                    <div class="elh-post-body">
+                                        <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
+                                        <p class="elh-post-excerpt elh-bottom-0" style="color: rgba(0,0,0,.54);">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+                                        <div style="display: flex">
+                                            <div>
+                                                <img class="img-circle" src="images/instructor/small-1.jpg" alt="..." style="width: 50px;height: 50px"/>
+                                            </div>
+                                            <div style="padding-left: 15px">
+                                                <span style="font-size: 1.5rem; color: #5E6A73">
+                                                    Z.Alexander
+                                                </span><br/>
+                                                <span style="color: rgba(0,0,0,.54);">Feb 27</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <article class="elh-post style-3">
+                                    <a class="elh-post-thumb" href="blog-single.html">
+                                        <img class="img-responsive" src="images/blog/medium-1.jpg" alt="...">
+                                    </a>
+                                    <div class="elh-post-body">
+                                        <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
+                                        <p class="elh-post-excerpt elh-bottom-0" style="color: rgba(0,0,0,.54);">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+                                        <div style="display: flex">
+                                            <div>
+                                                <img class="img-circle" src="images/instructor/small-1.jpg" alt="..." style="width: 50px;height: 50px"/>
+                                            </div>
+                                            <div style="padding-left: 15px">
+                                                <span style="font-size: 1.5rem; color: #5E6A73">
+                                                    Z.Alexander
+                                                </span><br/>
+                                                <span style="color: rgba(0,0,0,.54);">Feb 27</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <article class="elh-post style-3">
+                                    <a class="elh-post-thumb" href="blog-single.html">
+                                        <img class="img-responsive" src="images/blog/medium-1.jpg" alt="...">
+                                    </a>
+                                    <div class="elh-post-body">
+                                        <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
+                                        <p class="elh-post-excerpt elh-bottom-0" style="color: rgba(0,0,0,.54);">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+                                        <div style="display: flex">
+                                            <div>
+                                                <img class="img-circle" src="images/instructor/small-1.jpg" alt="..." style="width: 50px;height: 50px"/>
+                                            </div>
+                                            <div style="padding-left: 15px">
+                                                <span style="font-size: 1.5rem; color: #5E6A73">
+                                                    Z.Alexander
+                                                </span><br/>
+                                                <span style="color: rgba(0,0,0,.54);">Feb 27</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <article class="elh-post style-3">
+                                    <a class="elh-post-thumb" href="blog-single.html">
+                                        <img class="img-responsive" src="images/blog/medium-1.jpg" alt="...">
+                                    </a>
+                                    <div class="elh-post-body">
+                                        <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
+                                        <p class="elh-post-excerpt elh-bottom-0" style="color: rgba(0,0,0,.54);">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+                                        <div style="display: flex">
+                                            <div>
+                                                <img class="img-circle" src="images/instructor/small-1.jpg" alt="..." style="width: 50px;height: 50px"/>
+                                            </div>
+                                            <div style="padding-left: 15px">
+                                                <span style="font-size: 1.5rem; color: #5E6A73">
+                                                    Z.Alexander
+                                                </span><br/>
+                                                <span style="color: rgba(0,0,0,.54);">Feb 27</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <article class="elh-post style-3">
+                                    <a class="elh-post-thumb" href="blog-single.html">
+                                        <img class="img-responsive" src="images/blog/medium-1.jpg" alt="...">
+                                    </a>
+                                    <div class="elh-post-body">
+                                        <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
+                                        <p class="elh-post-excerpt elh-bottom-0" style="color: rgba(0,0,0,.54);">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+                                        <div style="display: flex">
+                                            <div>
+                                                <img class="img-circle" src="images/instructor/small-1.jpg" alt="..." style="width: 50px;height: 50px"/>
+                                            </div>
+                                            <div style="padding-left: 15px">
+                                                <span style="font-size: 1.5rem; color: #5E6A73">
+                                                    Z.Alexander
+                                                </span><br/>
+                                                <span style="color: rgba(0,0,0,.54);">Feb 27</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <article class="elh-post style-3">
+                                    <a class="elh-post-thumb" href="blog-single.html">
+                                        <img class="img-responsive" src="images/blog/medium-1.jpg" alt="...">
+                                    </a>
+                                    <div class="elh-post-body">
+                                        <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
+                                        <p class="elh-post-excerpt elh-bottom-0" style="color: rgba(0,0,0,.54);">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+                                        <div style="display: flex">
+                                            <div>
+                                                <img class="img-circle" src="images/instructor/small-1.jpg" alt="..." style="width: 50px;height: 50px"/>
+                                            </div>
+                                            <div style="padding-left: 15px">
+                                                <span style="font-size: 1.5rem; color: #5E6A73">
+                                                    Z.Alexander
+                                                </span><br/>
+                                                <span style="color: rgba(0,0,0,.54);">Feb 27</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <nav class="navigation post-pagination xs-text-center" role="navigation">
+                                <div class="nav-links">
+                                    <a class="prev page-numbers" href="#">
+                                        <i class="fa fa-angle-double-left"></i>
+                                    </a>
+                                    <a class="page-numbers" href="#">1</a>
+                                    <span class="page-numbers current">2</span>
+                                    <a class="page-numbers" href="#">3</a>
+                                    <a class="page-numbers" href="#">4</a>
+                                    <a class="page-numbers" href="#">5</a>
+                                    <a class="next page-numbers" href="#">
+                                        <i class="fa fa-angle-double-right"></i>
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>
+
                     </div>
                 </div>
             </div>
