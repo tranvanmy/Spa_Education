@@ -78,7 +78,7 @@
                     <a href="seminar.html">Events</a>
                 </li>
                 <li class="dropdown">
-                    <a href="blog.html">Data scientist</a>
+                    <a href="blog.html">Data Scientists' corner</a>
                     <ul class="dropdown-menu">
                         <li><a class="purchase-link" href="blog.html">Tutorials</a></li>
                         <li><a class="purchase-link" href="blog.html">Tools and practices</a></li>
