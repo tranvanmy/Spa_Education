@@ -41,21 +41,21 @@
                 <li class="dropdown">
                     <a href="#home_course">Courses</a>
                     <ul class="dropdown-menu">
-                        <li><a class="purchase-link" href="category-course.html">ML Fundamental</a></li>
-                        <li><a class="purchase-link" href="category-course.html">ML in Computer Vision</a></li>
-                        <li><a class="purchase-link" href="category-course.html">ML in NLP</a></li>
-                        <li><a class="purchase-link" href="category-course.html">ML in Cyber Security</a></li>
-                        <li><a class="purchase-link" href="category-course.html">ML in the Cloud</a></li>
+                        <li><a class="purchase-link" href="course-single.html">ML Fundamental</a></li>
+                        <li><a class="purchase-link" href="course-single.html">ML in Computer Vision</a></li>
+                        <li><a class="purchase-link" href="course-single.html">ML in NLP</a></li>
+                        <li><a class="purchase-link" href="course-single.html">ML in Cyber Security</a></li>
+                        <li><a class="purchase-link" href="course-single.html">ML in the Cloud</a></li>
                         <li >
-                        <a class="purchase-link" href="category-course.html">
-                            AI in Smart Agriculture (upcoming)
-                        </a>
-                    </li>
-                    <li>
-                        <a class="purchase-link" href="category-course.html">
-                            AI in Smart City (upcoming)
-                        </a>
-                    </li>
+                            <a class="purchase-link" href="category-course.html">
+                                AI in Smart Agriculture (upcoming)
+                            </a>
+                        </li>
+                        <li>
+                            <a class="purchase-link" href="category-course.html">
+                                AI in Smart City (upcoming)
+                            </a>
+                        </li>
                         <li><a class="purchase-link" href="category-course.html">AI in Marketing</a></li>
                         <li><a class="purchase-link" href="category-course.html">BigData ecosystem & architecture</a></li>
                         <li><a class="purchase-link" href="category-course.html">Data governance in the enterprise</a></li>
@@ -85,7 +85,7 @@
                     <a href="#home_seminar">Events</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#home_news_blog">Data scientist</a>
+                    <a href="#home_news_blog">Data Scientists' corner </a>
                     <ul class="dropdown-menu">
                         <li><a class="purchase-link" href="blog.html">Tutorials</a></li>
                         <li><a class="purchase-link" href="blog.html">Tools and practices</a></li>
