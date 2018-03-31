@@ -49,7 +49,7 @@
                         <div class="elh-instructor-entry">
                             <p>+Assoc. Prof. Dr. Nguyen Xuan Hoai was born in Hanoi, Vietnam, 1975. He received the B.Sc degree in Computer Science from the Hanoi University, Vietnam, in 1995, the MSc degree in Applied Mathematics from Vietnam National University (VNU) in 1997, and the PhD degree in Computer Science from University of New South Wales, Australia, in 2005.
                             <br>
-                            In 1997, He joined the faculty of Information Tecnhnology at Le Quy Don Technical University (Military Technical Academy), Vietnam as a lecturere and became a senior lecturer in 2005; in 2007-2009 He was a BK Assistant Professor at School of Computer Science and Engineering, Seoul National University, Korea; from 2010 he became an associate professor in Computer Science at Hanoi University serving at the director of IT Research Center. 
+                            In 1997, He joined the faculty of Information Tecnhnology at Le Quy Don Technical University (Military Technical Academy), Vietnam as a lecturere and became a senior lecturer in 2005; in 2007-2009 He was a BK Assistant Professor at School of Computer Science and Engineering, Seoul National University, Korea; from 2010 he became an associate professor in Computer Science at Hanoi University serving at the director of IT Research Center.
                             His current research interests include – Computational Intelligence, Machine Learning, Evolutionary Computation, Computer Security, Operations Research, Natural Language Processing, Data Analytics, Ecological Modeling. He has published around 100 refereed academic papers/articles in the aforementioned fields (with approximately 1500 citations and a H-index of 17 on google scholar). He is currently a editorial board member of Journal of Genetic Programming and Evolvable Machines (Springer), Vietnamese Journal of Computer Science (Springer). He has served as a regular reviewer, a programme committee member of numerous prestigious academic journals and conferences such as IEEE Transaction on Evolutionary Computation, IEEE Transactions on Neural Networks and Learning Systems, IEEE Transactions on Cybernetics, ACM SIG EVO GECCO, EuroGP, .... Prof. Hoai is the elected member of the panel for Information and Computer Science of the National Foundation for Science and Technology (NAFOSTED), 2011-2014; 2014-2017.</p>
                         </div>
                         <div class="elh-instructor-facts">
@@ -279,22 +279,4 @@
         <!-- Subscribe End -->
 
     </div>
-@endsection
-
-@section('user-script')
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/5aa3a4174b401e45400d980c/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
 @endsection
