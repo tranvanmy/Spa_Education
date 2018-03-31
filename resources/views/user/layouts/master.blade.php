@@ -20,7 +20,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CRoboto+Slab:400,700%7CPacifico" rel="stylesheet">
         <!-- Favicon -->
 
-        <link rel="icon" href="/static/images/favicon.png">
+        <link rel="icon" href="/images/favicon.png">
         <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/static/images/icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="/static/images/icon-114x114.png">
@@ -52,7 +52,7 @@
         <!-- End footer -->
 
         <script type="text/javascript" src="{{ mix('/user/library.min.js') }}"></script>
-        
+
         @yield('user-script')
 
     </body>
