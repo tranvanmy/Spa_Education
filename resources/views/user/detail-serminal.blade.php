@@ -40,8 +40,8 @@
                                 <h5>9.00-12.00</h5>
                             </div>
                             <div class="elh-review-score elh-course-profile-item">
-                                <p>TopPic</p>
-                                <h5>ChatBot</h5>
+                                <p>Location</p>
+                                <h5>Main Office</h5>
                             </div>
                         </div>
                     </div>
@@ -68,13 +68,20 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        Tag
+                         <div class="elh-course-tag">
+                           <ul>
+                               <li>ok</li>
+                               <li>ajdkajdksjdk</li>
+                           </ul>
+                        </div>
+
                         <!-- Student feedback end -->
                         <!-- Seminar -->
                         <div class="elh-related-course">
                             <div class="elh-section-header text-left">
-                                <a href="seminar.html">
-                                    <h3 class="elh-section-title">More Seminar</h3>
-                                </a>
+                               
                             </div>
                             <div class="row">
                                 <div class="col-xs-6">

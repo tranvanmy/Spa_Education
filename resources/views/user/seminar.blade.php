@@ -54,10 +54,12 @@
                                                 </div>
                                                 <p class="elh-event-metas">
                                                     <span><i class="fa fa-clock-o"></i>Apr 21 (9:00-12:00)</span>
-                                                    <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
+                                                    <span><i class="fa fa-users"></i>Victoria Campus</span>
                                                 </p>
-                                                <p class="elh-event-excerpt" style="margin-top: 20px; margin-right: 15px;">
+                                                <p class="elh-event-description elh-event-excerpt" style="margin-top: 20px; margin-right: 15px;">
+                                                <a href="detail-serminal.html">
                                                     Fall detection is important for safety for old people or patient living alone. There have been approaches for fall detection using wearable sensors or mobile phone accelerometers. However, wearable equipment is inconvenient for users and the elderly usually forget the equipment. Camera-based methods are more convenient .....
+                                                </a>                                                
                                                 </p>
                                             </div>
                                         </div>
