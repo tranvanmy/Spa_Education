@@ -8,7 +8,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="/images/logo-7.svg" alt="Site Logo"></a>
+            <a class="navbar-brand" href="index.html" style="padding-top: 5px; padding-bottom: 5px">
+                <img src="/images/logo.png" alt="Site Logo">
+            </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -77,12 +79,8 @@
                 <li>
                     <a href="seminar.html">Events</a>
                 </li>
-                <li class="dropdown">
+                <li>
                     <a href="blog.html">Data Scientists' corner</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="purchase-link" href="blog.html">Tutorials</a></li>
-                        <li><a class="purchase-link" href="blog.html">Tools and practices</a></li>
-                    </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#">Join us</a>

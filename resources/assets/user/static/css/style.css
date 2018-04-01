@@ -20,6 +20,7 @@ body {
 
 p {
     margin-bottom: 25px;
+    text-align: justify;
 }
 
 p:last-child {
@@ -2686,7 +2687,6 @@ button:focus {
 
 .elh-event .elh-event-date+.elh-event-detail {
     width: calc(100% - 190px);
-    margin-top: 15px;
 }
 
 .elh-event .elh-event-detail {
