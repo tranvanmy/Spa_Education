@@ -13,19 +13,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['domain' => env('DOMAIN_ADMIN'), 'namespace' => 'Api\Admin', 'prefix' => 'v0'], function() {
+Route::group(['domain' => 'admin.'.env('MAIN_DOMAIN'), 'namespace' => 'Api\Admin', 'prefix' => 'v0'], function() {
     Route::middleware('jwt.auth')->get('user', function (Request $request) {
         return $request->user();
     });
-
+    
     Route::post('login', 'AuthController@login');
-    Route::post('upload-image', 'MediaController@uploadImage');
 
     Route::group(['middleware' => 'jwt.auth'], function(){
         $methodAllow = ['index', 'show', 'store', 'update', 'destroy'];
 
         Route::post('logout', 'AuthController@logout');
 
+        Route::post('upload-image', 'MediaController@uploadImage');
         Route::resource('events', 'EventController')->only($methodAllow);
     });
 

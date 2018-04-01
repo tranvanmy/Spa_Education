@@ -12,11 +12,11 @@ const storeLanguage = {
         languages: [
             {
                 key: 'vi',
-                title: 'Vietnam',
+                title: 'Version Vietnam',
             },
             {
                 key: 'en',
-                title: 'English',
+                title: 'Version English',
             }
         ]
     }

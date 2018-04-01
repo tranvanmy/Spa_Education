@@ -8,11 +8,11 @@ use App\Http\Controllers\Controller;
 
 class EventController extends Controller
 {
-    protected $event;
+    protected $model;
 
     public function  __construct(Event $event)
     {
-        $this->event = $event;
+        $this->model = $event;
     }
 
     /**
@@ -22,7 +22,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = $this->event->orderBy('id', 'desc')->get();
+        $events = $this->model->orderBy('id', 'desc')->get();
 
         return $this->response($events);
     }
@@ -45,7 +45,10 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($this->model->create($request->all())) {
+            return $this->response(['message' => trans('message.add_success')]);
+        }
+        return $this->response(['message' => trans('message.add_failed')], 401);
     }
 
     /**

@@ -81,6 +81,11 @@ const en = {
     textAccountNotActive: 'Your account has not been activated!',
     textManageEvent: 'Manage Event',
     textAddEvent: 'Add new Event',
+    textPointReviewManual: 'Point Review manual',
+    textTotalReviewManual: 'Total Review manual',
+    textIsShowManual: 'Is show manual',
+    textHasIsset: 'Has isset',
+    textTopic: 'Topic',
 }
 
 export default en;

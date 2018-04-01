@@ -69,7 +69,7 @@ const actions = {
         if (response.status == 200) {
             vue.$toaster.success(response.data.message);
 
-            return vue.$router.push({ path: '/products' })
+            return vue.$router.push({ path: '/events' })
         }
 
         return vue.$toaster.error(Helper.getFirstError(response, vue.$i18n.t('textDefaultErrorRequest')));

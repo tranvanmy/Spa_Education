@@ -1,0 +1,9 @@
+{
+  "name": "Ai Academy",
+  "description": "Ai Academy",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "responsive-filemanager": "https://github.com/dinhvantai/responsive-filemanager.git"
+  }
+}
