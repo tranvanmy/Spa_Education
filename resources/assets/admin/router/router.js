@@ -1,25 +1,13 @@
 import VueRouter from 'vue-router'
 
-import { STORAGE_AUTH } from '../modules/auth/store/'
-import Admin from '../components/Admin.vue'
+import { STORAGE_AUTH } from 'Admin/modules/auth/store/'
+import Admin from 'Admin/components/Admin.vue'
 
-import Login from '../modules/auth/views/Login.vue'
-import Dashboard from '../modules/dashboard/views/Dashboard.vue'
+import Login from 'Admin/modules/auth/views/Login.vue'
+import Dashboard from 'Admin/modules/dashboard/views/Dashboard.vue'
 
-// import AdminMenu from '../modules/menu/views/AdminMenu.vue'
-// import AdminCategory from '../modules/category/views/AdminCategory.vue'
-//
-// import AdminProduct from '../modules/product/views/AdminProduct.vue'
-// import AdminProductAdd from '../modules/product/views/AdminProductAdd.vue'
-// import AdminProductEdit from '../modules/product/views/AdminProductEdit.vue'
-//
-// import AdminPost from '../modules/post/views/AdminPost.vue'
-// import AdminPostAdd from '../modules/post/views/AdminPostAdd.vue'
-// import AdminPostEdit from '../modules/post/views/AdminPostEdit.vue'
-//
-// import AdminBanner from '../modules/banner/views/AdminBanner.vue'
-//
-// import AdminSetup from '../modules/setup/views/AdminSetup.vue'
+import AdminEvent from 'Admin/modules/event/views/AdminEvent.vue'
+import AdminEventAdd from 'Admin/modules/event/views/AdminEventAdd.vue'
 
 const router =  new VueRouter({
     routes: [
@@ -34,6 +22,32 @@ const router =  new VueRouter({
                     path: '/dashboard',
                     name: 'Quản lý',
                     component: Dashboard
+                },
+                {
+                    name: 'Events',
+                    path: '/events',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: '',
+                            name: 'Event list',
+                            component: AdminEvent
+                        },
+                        {
+                            path: 'add',
+                            name: 'Add Event',
+                            component: AdminEventAdd
+                        },
+                        // {
+                        //     path: 'edit/:id',
+                        //     name: 'Update Event',
+                        //     component: AdminEventEdit
+                        // }
+                    ]
                 },
             ]
         },

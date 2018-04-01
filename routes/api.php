@@ -19,5 +19,15 @@ Route::group(['domain' => env('DOMAIN_ADMIN'), 'namespace' => 'Api\Admin', 'pref
     });
 
     Route::post('login', 'AuthController@login');
-    Route::post('logout', 'AuthController@logout');
+    Route::post('upload-image', 'MediaController@uploadImage');
+
+    Route::group(['middleware' => 'jwt.auth'], function(){
+        $methodAllow = ['index', 'show', 'store', 'update', 'destroy'];
+
+        Route::post('logout', 'AuthController@logout');
+
+        Route::resource('events', 'EventController')->only($methodAllow);
+    });
+
+
 });

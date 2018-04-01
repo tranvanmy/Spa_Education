@@ -78,7 +78,9 @@ const en = {
     textNewPassword: 'New password',
     textConfirmPassword: 'Confirm password',
     textConfirmPasswordNotCorrect: 'Please enter the same password above',
-    'textAccountNotActive': 'Your account has not been activated!',
+    textAccountNotActive: 'Your account has not been activated!',
+    textManageEvent: 'Manage Event',
+    textAddEvent: 'Add new Event',
 }
 
 export default en;
