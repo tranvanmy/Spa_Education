@@ -11,17 +11,19 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.
-    // .webpackConfig({
-    //     resolve: {
-    //         alias: {
-    //             Admin: path.resolve(__dirname, 'resources/assets/admin'),
-    //             Assets: path.resolve(__dirname, 'resources/assets')
-    //         }
-    //     }
-    // })
-   // .sass('resources/assets/sass/app.scss', 'public/css');
-   styles([
+mix
+    // Admin
+    .webpackConfig({
+        resolve: {
+            alias: {
+                Admin: path.resolve(__dirname, 'resources/assets/admin'),
+                Assets: path.resolve(__dirname, 'resources/assets')
+            }
+        }
+    })
+
+    // User
+    .styles([
        'resources/assets/user/static/assets/css/bootstrap.min.css',
        'resources/assets/user/static/assets/css/font-awesome.min.css',
        'resources/assets/user/static/assets/css/themify-icons.css',
@@ -57,6 +59,9 @@ mix.
         'resources/assets/user/static/custom/add-subscribe.js',
         'resources/assets/user/static/custom/custom.js',
     ], 'public/user/library.min.js')
+
+    // Admin
+    .js('resources/assets/admin/index.js', 'public/admin/js/index.js')
 
  if (mix.inProduction()) {
      mix.version();
