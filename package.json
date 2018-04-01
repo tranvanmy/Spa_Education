@@ -11,12 +11,39 @@
     },
     "devDependencies": {
         "axios": "^0.18",
+        "babel-eslint": "8.0.2",
+        "babel-loader": "7.1.2",
+        "babel-preset-stage-2": "^6.24.1",
         "bootstrap": "^4.0.0",
-        "popper.js": "^1.12",
+        "bootstrap-sass": "^3.3.7",
+        "bootstrap-vue": "^1.4.1",
         "cross-env": "^5.1",
+        "css-loader": "0.28.7",
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
-        "vue": "^2.5.7"
+        "popper.js": "^1.12",
+        "sass-loader": "6.0.6",
+        "simple-line-icons": "^2.4.1",
+        "slug": "^0.9.1",
+        "url-loader": "0.6.2",
+        "v-toaster": "^1.0.3",
+        "vue": "^2.5.7",
+        "vue-i18n": "^7.4.0",
+        "vue-loader": "13.5.0",
+        "vue-router": "3.0.1",
+        "vue-style-loader": "3.0.3",
+        "vue-swal": "^0.0.6",
+        "vue-tinymce-editor": "^1.4.4",
+        "vue-transmit": "^8.0.0",
+        "vuex": "^3.0.1",
+        "webpack": "3.8.1"
+    },
+    "dependencies": {
+        "babel-core": "^6.26.0",
+        "file-loader": "^1.1.11",
+        "font-awesome": "^4.7.0",
+        "node-sass": "^4.8.3",
+        "vue-template-compiler": "^2.5.16"
     }
 }
