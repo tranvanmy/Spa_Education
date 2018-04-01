@@ -16,7 +16,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="/images/logo-7.svg" alt="Site Logo"></a>
+            <a class="navbar-brand" href="index.html" style="padding-top: 5px; padding-bottom: 5px">
+                <img src="/images/logo.png" alt="Site Logo">
+            </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -84,12 +86,8 @@
                 <li>
                     <a href="#home_seminar">Events</a>
                 </li>
-                <li class="dropdown">
+                <li>
                     <a href="#home_news_blog">Data Scientists' corner </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="purchase-link" href="blog.html">Tutorials</a></li>
-                        <li><a class="purchase-link" href="blog.html">Tools and practices</a></li>
-                    </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#home_join_us">Join us</a>
@@ -576,62 +574,24 @@
             </div>
             <div class="row">
                 <div class="elh-events">
-                    <div class="col-md-6 col-xs-12">
-                        <div class="elh-event style-2">
-                            <div class="elh-event-date" style="background-image: url(/images/event/small-1.jpg)">
-                            </div>
-                            <div class="elh-event-detail">
-                                <h4 class="elh-event-title"><a href="detail-serminal.html">Inauguration Day 2018</a></h4>
-                                <p class="elh-event-metas">
-                                    <span><i class="fa fa-clock-o"></i>22 Dec (9am - 2pm)</span>
-                                    <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
-                                </p>
-                                <p class="elh-event-excerpt">... Add your text here ....</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xs-12">
-                        <div class="elh-event style-2">
-                            <div class="elh-event-date" style="background-image: url(/images/event/small-2.jpg)">
-                            </div>
-                            <div class="elh-event-detail">
-                                <h4 class="elh-event-title"><a href="#">Inauguration Day 2018</a></h4>
-                                <p class="elh-event-metas">
-                                    <span><i class="fa fa-clock-o"></i>23 Dec (9am - 2pm)</span>
-                                    <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
-                                </p>
-                                <p class="elh-event-excerpt">... Add your text here ....</p>
+                    @for($i = 0; $i < 4; $i++)
+                        <div class="col-md-6 col-xs-12">
+                            <div class="elh-event style-2">
+                                <div class="elh-event-date" style="background-image: url(/images/event/small-1.jpg)">
+                                </div>
+                                <div class="elh-event-detail">
+                                    <h4 class="elh-event-title"><a href="detail-serminal.html">Fall event detection using single camera for health care  </a></h4>
+                                    <p class="elh-event-metas">
+                                        <span><i class="fa fa-clock-o"></i>Apr 21 (9:00-12:00)</span>
+                                        <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
+                                    </p>
+                                    <p class="elh-event-excerpt">
+                                        Fall detection is important for safety for old people or patient living alone. There have been approaches for fall detection using wearable sensors or mobile phone accelerometers. However, wearable equipment is inconvenient for users and the elderly usually forget the equipment. Camera-based methods are more convenient .....
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-xs-12">
-                        <div class="elh-event style-2">
-                            <div class="elh-event-date" style="background-image: url(/images/event/small-3.jpg)">
-                            </div>
-                            <div class="elh-event-detail">
-                                <h4 class="elh-event-title"><a href="#">Inauguration Day 2018</a></h4>
-                                <p class="elh-event-metas">
-                                    <span><i class="fa fa-clock-o"></i>24 Dec (9am - 2pm)</span>
-                                    <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
-                                </p>
-                                <p class="elh-event-excerpt">... Add your text here ....</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xs-12">
-                        <div class="elh-event style-2">
-                            <div class="elh-event-date" style="background-image: url(/images/event/small-4.jpg)">
-                            </div>
-                            <div class="elh-event-detail">
-                                <h4 class="elh-event-title"><a href="#">Inauguration Day 2018</a></h4>
-                                <p class="elh-event-metas">
-                                    <span><i class="fa fa-clock-o"></i>25 Dec (9am - 2pm)</span>
-                                    <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
-                                </p>
-                                <p class="elh-event-excerpt">... Add your text here ....</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endfor
                 </div>
             </div>
         </div>
@@ -645,7 +605,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title"><span>DataScientists' corner</span></h3>
+                            <h3 class="elh-section-title"><span>Data Scientists' corner</span></h3>
                             <p class="elh-section-text">... Add your text here ....</p>
                             <a class="all-link style-2" href="blog.html">See All</a>
                         </div>

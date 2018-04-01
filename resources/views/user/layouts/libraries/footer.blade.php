@@ -90,7 +90,7 @@
                     <div class="col-md-6 col-xs-6">
                         <aside class="widget about_widget">
                             <a class="footer-logo" href="#">
-                                <img src="/images/logo-footer-2.png" alt="Site Logo">
+                                <img src="/images/logo.png" alt="Site Logo" style="height: 70px">
                             </a>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                             <div class="socials">

@@ -12,12 +12,12 @@
      <div class="elh-page-header elh-img-bg elh-bg-9">
         <div class="elh-overlay">
             <div class="container text-center">
-                <h3 class="elh-page-title">All Courses</h3>
+                <h3 class="elh-page-title">All Events</h3>
                 <ol class="breadcrumb">
                     <li>
                         <a href="course_hub.html">Home</a>
                     </li>
-                    <li class="active">Courses</li>
+                    <li class="active">Events</li>
                 </ol>
             </div>
         </div>
@@ -34,116 +34,37 @@
                     <div class="col-md-8">
                         <div class="row">
                             <div class="elh-course-listing">
-                                <div>
+                                @for ($i = 0; $i < 5; $i++)
+                                    <div>
                                     <div class="elh-event style-2">
                                         <div class="row">
                                             <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 40%; height: 300px;">
-                                                <span class="elh-event-day">22</span>
-                                                <span class="elh-event-month">December</span>
                                             </div>
                                             <div>
-                                                <h4 class="elh-event-title"><a href="detail-serminal.html">Inauguration Day 2018</a></h4>
-                                                <p>
-                                                    <span style="display: block;">
-                                                        <i class="fa fa-clock-o"></i> 9am - 2pm
-                                                    </span>
-                                                    <span style="display: block;">
-                                                        <i class="fa fa-map-marker"></i> Victoria Campus
-                                                    </span>
+                                                <h4 class="elh-event-title"><a href="detail-serminal.html">Fall event detection using single camera for health care</a></h4>
+                                                <div style="display: flex">
+                                                    <div>
+                                                        <img class="img-circle" src="images/instructor/small-1.jpg" alt="..." style="width: 50px;height: 50px"/>
+                                                    </div>
+                                                    <div style="padding-left: 15px; line-height: 50px">
+                                                        <span style="font-size: 1.5rem; color: #5E6A73">
+                                                            Thuy Nguyen
+                                                        </span><br/>
+                                                    </div>
+                                                </div>
+                                                <p class="elh-event-metas">
+                                                    <span><i class="fa fa-clock-o"></i>Apr 21 (9:00-12:00)</span>
+                                                    <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
                                                 </p>
-                                                <p class="elh-event-excerpt" style="margin-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                                <p class="elh-event-excerpt" style="margin-top: 20px; margin-right: 15px;">
+                                                    Fall detection is important for safety for old people or patient living alone. There have been approaches for fall detection using wearable sensors or mobile phone accelerometers. However, wearable equipment is inconvenient for users and the elderly usually forget the equipment. Camera-based methods are more convenient .....
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="elh-event style-2">
-                                        <div class="row">
-                                            <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 40%; height: 300px;">
-                                                <span class="elh-event-day">22</span>
-                                                <span class="elh-event-month">December</span>
-                                            </div>
-                                            <div>
-                                                <h4 class="elh-event-title"><a href="#">Inauguration Day 2018</a></h4>
-                                                <p>
-                                                    <span style="display: block;">
-                                                        <i class="fa fa-clock-o"></i> 9am - 2pm
-                                                    </span>
-                                                    <span style="display: block;">
-                                                        <i class="fa fa-map-marker"></i> Victoria Campus
-                                                    </span>
-                                                </p>
-                                                <p class="elh-event-excerpt" style="margin-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="elh-event style-2">
-                                        <div class="row">
-                                            <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 40%; height: 300px;">
-                                                <span class="elh-event-day">22</span>
-                                                <span class="elh-event-month">December</span>
-                                            </div>
-                                            <div>
-                                                <h4 class="elh-event-title"><a href="#">Inauguration Day 2018</a></h4>
-                                                <p>
-                                                    <span style="display: block;">
-                                                        <i class="fa fa-clock-o"></i> 9am - 2pm
-                                                    </span>
-                                                    <span style="display: block;">
-                                                        <i class="fa fa-map-marker"></i> Victoria Campus
-                                                    </span>
-                                                </p>
-                                                <p class="elh-event-excerpt" style="margin-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="elh-event style-2">
-                                        <div class="row">
-                                            <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 40%; height: 300px;">
-                                                <span class="elh-event-day">22</span>
-                                                <span class="elh-event-month">December</span>
-                                            </div>
-                                            <div>
-                                                <h4 class="elh-event-title"><a href="#">Inauguration Day 2018</a></h4>
-                                                <p>
-                                                    <span style="display: block;">
-                                                        <i class="fa fa-clock-o"></i> 9am - 2pm
-                                                    </span>
-                                                    <span style="display: block;">
-                                                        <i class="fa fa-map-marker"></i> Victoria Campus
-                                                    </span>
-                                                </p>
-                                                <p class="elh-event-excerpt" style="margin-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="elh-event style-2">
-                                        <div class="row">
-                                            <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 40%; height: 300px;">
-                                                <span class="elh-event-day">22</span>
-                                                <span class="elh-event-month">December</span>
-                                            </div>
-                                            <div>
-                                                <h4 class="elh-event-title"><a href="#">Inauguration Day 2018</a></h4>
-                                                <p>
-                                                    <span style="display: block;">
-                                                        <i class="fa fa-clock-o"></i> 9am - 2pm
-                                                    </span>
-                                                    <span style="display: block;">
-                                                        <i class="fa fa-map-marker"></i> Victoria Campus
-                                                    </span>
-                                                </p>
-                                                <p class="elh-event-excerpt" style="margin-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endfor
+                                
                                 <div class="col-xs-12">
                                     <nav class="navigation post-pagination xs-text-center" role="navigation">
                                         <div class="nav-links">
