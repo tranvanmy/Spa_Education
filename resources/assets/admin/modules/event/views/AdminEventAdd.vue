@@ -4,77 +4,6 @@
             <b-col sm="12">
                 <b-form validated>
                     <b-row>
-                        <b-col sm="6">
-                            <b-form-fieldset :label="$t('textName')">
-                                <b-form-input
-                                    type="text" required
-                                    :placeholder="$t('textName')"
-                                    v-model="formData.name"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                        <b-col sm="4">
-                            <b-form-fieldset :label="$t('textPrice')">
-                                <b-form-input
-                                    type="text" required
-                                    :placeholder="$t('textPrice')"
-                                    v-model="formData.price"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                        <b-col sm="2">
-                            <b-form-fieldset :label="$t('textStatus')" class="text-center">
-                                <c-switch
-                                    type="text" variant="primary-outline-alt"
-                                    on="On" off="Off"
-                                    :pill="true" :checked="true"
-                                    v-model="formData.status"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                    </b-row>
-
-                    <b-row>
-                        <b-col sm="6">
-                            <b-form-fieldset :label="$t('textSlug')">
-                                <b-form-input
-                                    type="text" required
-                                    v-model="formSlugName"
-                                    :placeholder="$t('textSlug')"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                        <b-col sm="6">
-                            <b-form-fieldset :label="$t('textGuarantee')">
-                                <b-form-input
-                                    type="text"
-                                    :placeholder="$t('textGuarantee')"
-                                    v-model="formData.guarantee"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col sm="6">
-                            <b-form-fieldset :label="$t('textPrioty')">
-                                <b-form-input type="number" :placeholder="$t('textPrioty')" v-model.number="formData.prioty" />
-                            </b-form-fieldset>
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col sm="12">
-                            <b-form-fieldset :label="$t('textDecription')">
-                                <textarea
-                                    class="form-control"
-                                    :placeholder="$t('textDecription')"
-                                    v-model="formData.description"
-                                    rows="4"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                    </b-row>
-
-                    <b-row>
                         <b-col sm="12">
                             <b-form-fieldset :label="$t('textImage')"
                             >
@@ -116,6 +45,7 @@
                                                         <div class="progress-bar bg-success"
                                                             :style="{width: file.upload.progress + '%'}"
                                                         >
+                                                            {{ file.upload.progress + '%' }}
                                                         </div>
                                                     </div>
                                                 </b-col>
@@ -133,49 +63,132 @@
                             </b-form-fieldset>
                         </b-col>
                     </b-row>
+                    <b-row>
+                        <b-col sm="5">
+                            <b-form-fieldset :label="$t('textPointReviewManual')">
+                                <b-form-input
+                                    type="text" required
+                                    :placeholder="$t('textPointReviewManual')"
+                                    v-model="formData.sameData.point_review_manual"
+                                />
+                            </b-form-fieldset>
+                        </b-col>
+                        <b-col sm="5">
+                            <b-form-fieldset :label="$t('textTotalReviewManual')">
+                                <b-form-input
+                                    type="text" required
+                                    :placeholder="$t('textTotalReviewManual')"
+                                    v-model="formData.sameData.total_review_manual"
+                                />
+                            </b-form-fieldset>
+                        </b-col>
+                        <b-col sm="2">
+                            <b-form-fieldset :label="$t('textIsShowManual')" class="text-center">
+                                <c-switch
+                                    type="text" variant="primary-outline-alt"
+                                    on="On" off="Off"
+                                    :pill="true" :checked="true"
+                                    v-model="formData.sameData.is_review_manual"
+                                />
+                            </b-form-fieldset>
+                        </b-col>
+                    </b-row>
 
-                    <b-row>
-                        <b-col sm="6">
-                            <b-form-fieldset :label="$t('textSeoKeyword')">
-                                <b-form-input
-                                    type="text"
-                                    :placeholder="$t('textSeoKeyword')"
-                                    v-model="formData.seo_keyword"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                        <b-col sm="6">
-                            <b-form-fieldset :label="$t('textSeoDescription')">
-                                <b-form-input
-                                    type="text"
-                                    :placeholder="$t('textSeoDescription')"
-                                    v-model="formData.seo_description"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col sm="12">
-                            <b-form-fieldset :label="$t('textDetail')">
-                                <tinymce
-                                    id="product_add_detail"
-                                    v-model="formData.detail"
-                                    :other_options="ortherOptions()"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col sm="12">
-                            <b-form-fieldset :label="$t('textGuide')">
-                                <tinymce
-                                    id="product_add_guide"
-                                    v-model="formData.guide"
-                                    :other_options="ortherOptions()"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                    </b-row>
+                    <b-tabs pills card>
+                        <b-tab
+                            :title="language.title"
+                            v-for="language in getLanguages()"
+                            :key="language.key"
+                        >
+                            <b-row>
+                                <b-col sm="10">
+                                    <b-form-fieldset :label="$t('textTitle')">
+                                        <b-form-input
+                                            type="text"
+                                            v-model="formData[language.key].title"
+                                            :placeholder="$t('textTitle')"
+                                            @input="handleChangeTitle($event, language.key)"
+                                        />
+                                    </b-form-fieldset>
+                                </b-col>
+                                <b-col sm="2">
+                                    <b-form-fieldset :label="$t('textHasIsset')" class="text-center">
+                                        <c-switch
+                                            type="text" variant="primary-outline-alt"
+                                            on="On" off="Off"
+                                            :pill="true" :checked="true"
+                                            v-model="formData[language.key].has"
+                                        />
+                                    </b-form-fieldset>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col sm="6">
+                                    <b-form-fieldset :label="$t('textSlug')">
+                                        <b-form-input
+                                            type="text"
+                                            v-model="formData[language.key].slug"
+                                            :placeholder="$t('textSlug')"
+                                        />
+                                    </b-form-fieldset>
+                                </b-col>
+                                <b-col sm="6">
+                                    <b-form-fieldset :label="$t('textTopic')">
+                                        <b-form-input
+                                            type="text"
+                                            v-model="formData[language.key].topic"
+                                            :placeholder="$t('textTopic')"
+                                        />
+                                    </b-form-fieldset>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col sm="12">
+                                    <b-form-fieldset :label="$t('textDecription')">
+                                        <textarea
+                                            class="form-control"
+                                            :placeholder="$t('textDecription')"
+                                            v-model="formData[language.key].description"
+                                            rows="4"
+                                        />
+                                    </b-form-fieldset>
+                                </b-col>
+                            </b-row>
+
+                            <b-row>
+                                <b-col sm="6">
+                                    <b-form-fieldset :label="$t('textSeoKeyword')">
+                                        <b-form-input
+                                            type="text"
+                                            :placeholder="$t('textSeoKeyword')"
+                                            v-model="formData[language.key].seo_keyword"
+                                        />
+                                    </b-form-fieldset>
+                                </b-col>
+                                <b-col sm="6">
+                                    <b-form-fieldset :label="$t('textSeoDescription')">
+                                        <b-form-input
+                                            type="text"
+                                            :placeholder="$t('textSeoDescription')"
+                                            v-model="formData[language.key].seo_description"
+                                        />
+                                    </b-form-fieldset>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col sm="12">
+                                    <b-form-fieldset :label="$t('textDetail')">
+                                        <tinymce
+                                            :id="`event_add_detail_${language.key}`"
+                                            v-model="formData[language.key].detail"
+                                            :other_options="ortherOptions()"
+                                        />
+                                    </b-form-fieldset>
+                                </b-col>
+                            </b-row>
+                        </b-tab>
+                    </b-tabs>
+
                 </b-form>
             </b-col><!--/.col-->
         </b-row>
@@ -248,18 +261,16 @@ export default {
         }
     },
 
-    computed: {
-        formSlugName: {
-            get() {
-                return slug(this.formData.name.toLowerCase())
-            },
-            set(val) {
-                return this.formData.slug = val
-            }
-        },
-    },
-
     methods: {
+        getLanguages(){
+            return this.$store.state.storeLanguage.languages
+        },
+
+        handleChangeTitle(value, languageKey) {
+            this.formData[languageKey].has = true;
+            this.formData[languageKey].slug = slug(value)
+        },
+
         triggerBrowse(event) {
             event.preventDefault()
 
@@ -282,13 +293,13 @@ export default {
                 dangerMode: true,
             }) && (this.$refs.uploader.files = files.filter((f, i) => i !== index))
 
-            return this.formData.image = ''
+            return this.formData.sameData.image_url = ''
         },
 
         successUploader(response) {
             let serveRespone = JSON.parse(response.xhr.response)
 
-            return this.formData.image = serveRespone.path
+            return this.formData.sameData.image_url = serveRespone.path
         },
 
         errorUploader(error) {
@@ -308,54 +319,61 @@ export default {
         },
 
         resetFromData() {
-            return this.formData = {
-                name: '',
-                price: '',
+            let sameForm = {
+                title: '',
                 slug: '',
-                image: '',
                 description: '',
-                status: true,
-                guarantee: '',
-                prioty: 0,
-                category_id: '',
+                detail: '',
+                has: false,
                 seo_keyword: '',
                 seo_description: '',
-                detail: '',
-                guide: '',
+                topic: ''
             }
-        },
 
-        validateForm() {
-            let params = this.formData
+            let formData = {
+                sameData: {
+                    'image_url': '',
+                    'author_id': null,
+                    'start_at': null,
+                    'end_at': null,
+                    'point_review_manual': 5,
+                    'total_review_manual': 0,
+                    'is_review_manual': true,
+                }
+            }
 
-            return params.name && params.slug
-                && params.price && params.category_id
-                && params.detail && params.guide
+            for (let language of this.getLanguages()) {
+                formData[language.key] = { ...sameForm }
+            }
+
+            return formData;
         },
 
         convertDataSubmit() {
-            let params = this.formData
-
-            return {
-                ...params,
-                status: params.status ? STATUS_SHOW : STATUS_HIDDEN
+            let params = {
+                ...this.formData.sameData
             }
+
+            for (let language of this.getLanguages()) {
+                let form = this.formData[language.key];
+                for(let key in form) {
+                    params[`${key}_${language.key}`] = form[key]
+                }
+            }
+
+            return params;
         },
 
         clickAddItem() {
-            if (!this.validateForm()) {
-                return this.$toaster.error(this.$i18n.t('textNotFillEnough'))
-            }
-
             let params = this.convertDataSubmit();
-
-            this.$store.dispatch('callProductAdd', { vue: this, params });
+            console.log(params);
+            this.$store.dispatch('actionEventAdd', { vue: this, params });
 
             return this.resetFromData()
         },
 
         clickCancel() {
-            return this.$router.push({ path: '/products' })
+            return this.$router.push({ path: '/events' })
         },
     },
 }

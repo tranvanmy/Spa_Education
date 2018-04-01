@@ -8,7 +8,7 @@ use App\Http\Controllers\Api\ApiController;
 
 class MediaController extends ApiController
 {
-    public function uploadImage(MediaRequest $request)
+    public function uploadImage(Request $request)
     {
         try {
             $folder = str_slug($request->folder ?: '');

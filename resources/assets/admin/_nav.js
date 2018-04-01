@@ -13,23 +13,18 @@ export default {
         },
         {
             name: 'Events',
-            url: '/events',
-            icon: 'icon-list'
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'Event list',
+                    url: '/events',
+                },
+                {
+                    name: 'Add new',
+                    url: '/events/add',
+                }
+            ]
         },
-        // {
-        //     name: 'Sản phẩm',
-        //     icon: 'icon-list',
-        //     children: [
-        //         {
-        //             name: 'Danh sách',
-        //             url: '/products',
-        //         },
-        //         {
-        //             name: 'Thêm mới',
-        //             url: '/products/add',
-        //         }
-        //     ]
-        // },
         // {
         //     name: 'Bài viết',
         //     icon: 'icon-list',
