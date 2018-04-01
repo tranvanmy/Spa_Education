@@ -2,23 +2,31 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import storeAuth from 'Admin/modules/auth/store'
-// import storeAdminMenu from 'Admin/modules/menu/store'
 import storeLoading from 'Admin/modules/loading/store'
-// import storeAdminCategory from 'Admin/modules/category/store'
-// import storeAdminProduct from 'Admin/modules/product/store'
-// import storeAdminPost from 'Admin/modules/post/store'
-// import storeAdminBanner from 'Admin/modules/banner/store'
+import storeAdminEvent from 'Admin/modules/event/store'
 
 Vue.use(Vuex)
+
+const storeLanguage = {
+    state: {
+        languages: [
+            {
+                key: 'vi',
+                title: 'Vietnam',
+            },
+            {
+                key: 'en',
+                title: 'English',
+            }
+        ]
+    }
+}
 
 export default new Vuex.Store({
     modules: {
         storeAuth,
-        // storeAdminMenu,
+        storeLanguage,
         storeLoading,
-        // storeAdminCategory,
-        // storeAdminProduct,
-        // storeAdminPost,
-        // storeAdminBanner,
+        storeAdminEvent,
     }
 })

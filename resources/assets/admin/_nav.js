@@ -12,52 +12,47 @@ export default {
             // }
         },
         {
-            name: 'Menus',
-            url: '/menus',
+            name: 'Events',
+            url: '/events',
             icon: 'icon-list'
         },
-        {
-            name: 'Danh mục',
-            url: '/categories',
-            icon: 'icon-list'
-        },
-        {
-            name: 'Sản phẩm',
-            icon: 'icon-list',
-            children: [
-                {
-                    name: 'Danh sách',
-                    url: '/products',
-                },
-                {
-                    name: 'Thêm mới',
-                    url: '/products/add',
-                }
-            ]
-        },
-        {
-            name: 'Bài viết',
-            icon: 'icon-list',
-            children: [
-                {
-                    name: 'Danh sách',
-                    url: '/posts',
-                },
-                {
-                    name: 'Thêm mới',
-                    url: '/posts/add',
-                }
-            ]
-        },
-        {
-            name: 'Banner',
-            icon: 'icon-list',
-            url: '/banners',
-        },
-        {
-            name: 'Cài đặt',
-            icon: 'icon-list',
-            url: '/setups',
-        },
+        // {
+        //     name: 'Sản phẩm',
+        //     icon: 'icon-list',
+        //     children: [
+        //         {
+        //             name: 'Danh sách',
+        //             url: '/products',
+        //         },
+        //         {
+        //             name: 'Thêm mới',
+        //             url: '/products/add',
+        //         }
+        //     ]
+        // },
+        // {
+        //     name: 'Bài viết',
+        //     icon: 'icon-list',
+        //     children: [
+        //         {
+        //             name: 'Danh sách',
+        //             url: '/posts',
+        //         },
+        //         {
+        //             name: 'Thêm mới',
+        //             url: '/posts/add',
+        //         }
+        //     ]
+        // },
+        // {
+        //     name: 'Banner',
+        //     icon: 'icon-list',
+        //     url: '/banners',
+        // },
+        // {
+        //     name: 'Cài đặt',
+        //     icon: 'icon-list',
+        //     url: '/setups',
+        // },
     ]
 }

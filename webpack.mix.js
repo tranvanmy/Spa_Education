@@ -66,7 +66,9 @@ mix
     ], 'public/user/library.min.js')
 
     // Admin
-    .js('resources/assets/admin/index.js', 'public/admin/js/index.js')
+    if (process.env.APP_ENV == 'local') {
+        mix.js('resources/assets/admin/index.js', 'public/admin/js/index.js')
+    }
 
  if (mix.inProduction()) {
      mix.version();
