@@ -39,7 +39,7 @@ if (token) {
 
 axios.defaults.baseURL = '/api/v0/';
 
-window.slug = require('slug');
+window.slug = require('./slug-url');
 
 window.configTinyMCE = {
     theme: "modern",
@@ -55,7 +55,7 @@ window.configTinyMCE = {
     external_plugins: { "filemanager" : "/bower_components/responsive-filemanager/filemanager/plugin.min.js"},
 
     image_advtab: true,
-    toolbar1: `undo redo | bold italic underline | alignleft aligncenter alignright alignjustify 
+    toolbar1: `undo redo | bold italic underline | alignleft aligncenter alignright alignjustify
         | bullist numlist outdent indent | styleselect
         | image media | link unlink anchor | print preview | fontsizeselect |
     `,

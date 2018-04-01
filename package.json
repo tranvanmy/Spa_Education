@@ -25,7 +25,6 @@
         "popper.js": "^1.12",
         "sass-loader": "6.0.6",
         "simple-line-icons": "^2.4.1",
-        "slug": "^0.9.1",
         "url-loader": "0.6.2",
         "v-toaster": "^1.0.3",
         "vue": "^2.5.7",
@@ -44,6 +43,7 @@
         "file-loader": "^1.1.11",
         "font-awesome": "^4.7.0",
         "node-sass": "^4.8.3",
-        "vue-template-compiler": "^2.5.16"
+        "vue-template-compiler": "^2.5.16",
+        "webpack-bundle-analyzer": "^2.11.1"
     }
 }

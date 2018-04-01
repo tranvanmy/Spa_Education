@@ -1,3 +1,5 @@
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 let mix = require('laravel-mix');
 
 /*
@@ -19,7 +21,10 @@ mix
                 Admin: path.resolve(__dirname, 'resources/assets/admin'),
                 Assets: path.resolve(__dirname, 'resources/assets')
             }
-        }
+        },
+        plugins: [
+          // new BundleAnalyzerPlugin()
+      ],
     })
 
     // User

@@ -683,9 +683,9 @@
                         <h3 class="elh-section-title">Education for all! Join with us...</h3>
                         <p class="elh-section-text">... Add your text here ....</p>
                     </div>
-
-                    <div class="quick-contact">
-                        <form action="#" method="post">
+                    <a class="btn" id="home-button-join-us" href="#" style="color: #fff">Join Today</a>
+                    <div class="quick-contact" id="home-form-join-us" style="display: none">
+                        <form action="">
                             <div class="row">
                                 <div class="col-sm-4">
                                     <input type="text" id="name" name="name" placeholder="Name *" required>
@@ -698,11 +698,7 @@
                                 </div>
                                 <div class="col-xs-12">
                                     <textarea id="message" name="message" placeholder="Message *" rows="3" required></textarea>
-                                    <button class="btn" type="submit">Join Today</button>
-                                </div>
-                                <div class="col-xs-12">
-                                    <p class="input-success">Your message sent. Thanks for contacting</p>
-                                    <p class="input-error">Something went wrong. try again later</p>
+                                    <button class="btn" type="submit">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -712,7 +708,7 @@
             </div>
         </div>
         <div class="join-us-img">
-            <img class="img-responsive" src="/images/bg/join-us.jpg" alt="...">
+            <img class="img-responsive" src="/images/bg/join-us.jpg" alt="Join us">
         </div>
     </div>
     <!-- Education for all end -->
@@ -724,7 +720,13 @@
         $(document).ready(function(){
             $('#home-nav-onepage').onePageNav({
                 filter: ':not(.purchase-link)'
-            })
+            });
+
+            $('#home-button-join-us').click(function(event){
+                event.preventDefault();
+                $(this).hide();
+                $('#home-form-join-us').animate({ height: 'toggle' }, 700);
+            });
         });
     </script>
 @endsection
