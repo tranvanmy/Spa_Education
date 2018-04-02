@@ -13,7 +13,7 @@
 <div class="elh-page-header has-floatbox elh-img-bg elh-bg-9">
     <div class="elh-overlay">
         <div class="container text-center">
-            <h3 class="elh-page-title">Master color in Adobe Photoshop</h3>
+            <h3 class="elh-page-title">ML in Computer vision</h3>
             <ol class="breadcrumb">
                 <li><a href="course_hub.html">Home</a></li>
                 <li class="active">Course</li>
@@ -127,60 +127,10 @@
                 <div class="col-md-8 col-xs-12">
                     <div class="elh-course-body">
                         <div class="elh-learning-objectives elh-course-section">
-                            <h3>What I will Learn!</h3>
-                            <ul class="checklist half-list">
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Nemo autem atque nesciunt aperiam.</li>
-                                <li>Quidem sunt, aliquid dolore molestias.</li>
-                                <li>Reiciendis voluptatem corrupti amet iste?</li>
-                                <li>Blanditiis natus delectus nihil, illum!</li>
-                                <li>Ab dolores explicabo, architecto ad?</li>
-                                <li>Voluptas adipisci facilis ipsam ipsum.</li>
-                                <li>Harum dicta, fuga culpa magnam.</li>
-                            </ul>
+                                This combined course on computer vision and Image processing will first discuss image processing techniques (sampling, representation, filtering, etc...) that are prerequisites to improving results of ML algorithms in CV domain. Students will then learn the concepts and techniques such as point/edge detection, edge intersest points, etc. Framemorks for object and face detection will be discussed together with popular SW tools and libraries. At the end of the course, students will choose one pratical project to solidify their knowledge (Face detection and recognition, Image categorization, Object tracking and Event detection, Scene description...)
                         </div>
-                        <div class="elh-learning-requirements elh-course-section">
-                            <h3>Requirements</h3>
-                            <ul class="checklist half-list">
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Consequatur, vitae, sunt. Earum, ea.</li>
-                                <li>Neque optio deleniti, consectetur eaque!</li>
-                                <li>Quaerat doloribus, reprehenderit in ab.</li>
-                            </ul>
-                        </div>
-                        <div class="elh-course-description elh-course-section">
-                            <h3>Description</h3>
-                            <div class="post-entry">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
-                                <div class="plyr-video">
-                                    <div data-type="youtube" data-video-id="3BhkeY974Rg"></div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br>Let’s begin!</p>
-                            </div>
-                        </div>
-                        <div class="elh-course-offer-coupon elh-theme-bg">
-                            <div class="coupon-img">
-                                <img class="img-responsive" src="/images/course/course-coupon.jpg" alt="...">
-                            </div>
-                            <div class="coupon-code-content">
-                                <p>Use coupon code</p>
-                                <h5>"All-off"</h5>
-                                <p>to receive 100% off all courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elh-course-pdf-curriculum elh-theme-bg">
-                        <div class="elh-pdf-icon"><i class="fa fa-file-pdf-o"></i></div>
-                        <div class="elh-pdf-text">
-                            <p>Use Coupon Code</p>
-                            <h5>Download Course Curriculum</h5>
-                        </div>
-                        <div class="elh-pdf-download-link pull-right">
-                            <a class="btn" href="#">Download Now</a>
-                        </div>
-                    </div>
 
+                    </div>
                     <!-- Course Instructor box -->
                     <div class="elh-course-single-instructor">
                         <div class="elh-section-header text-left">
@@ -408,13 +358,13 @@
                 <div class="col-md-4 col-xs-12">
                     <div id="course-sidebar" class="course-sidebar">
                         <div id="sidebar-affix" class="sidebar-affix">
-                            <div class="widget widget-purchase text-center">
+                            {{--  <div class="widget widget-purchase text-center">
                                 <h4 class="elh-price">$185</h4>
                                 <a class="widget-purchase-btn" href="#">Buy This Course</a>
                                 <p class="widget-purchase-guarantee">10-Day Money Back Guarantee</p>
                                 <p class="lead">Short Brief</p>
                                 <p class="widget-purchase-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
+                            </div>  --}}
                             <div class="widget widget-course-share text-center">
                                 <p class="lead">Share in Social</p>
                                 <div class="elh-course-social-share">

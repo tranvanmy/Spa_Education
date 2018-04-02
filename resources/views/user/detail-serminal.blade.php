@@ -15,7 +15,7 @@
                 <h3 class="elh-page-title">Events</h3>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active">Fall event detection using single camera for health care </li>
+                    <li class="active">High-tech Agriculture - Issues and solutions</li>
                 </ol>
             </div>
         </div>
@@ -33,15 +33,15 @@
                             </div>
                             <div class="elh-student-count elh-course-profile-item">
                                 <p>Day</p>
-                                <h5>21/4/2018</h5>
+                                <h5>7/4/2018</h5>
                             </div>
                             <div class="elh-student-count elh-course-profile-item">
                                 <p>Time</p>
-                                <h5>9.00-12.00</h5>
+                                <h5>8:30-17:30</h5>
                             </div>
                             <div class="elh-review-score elh-course-profile-item">
                                 <p>Location</p>
-                                <h5>Main Office</h5>
+                                <h5>Vietnam Univerisity of Agriculture</h5>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                             <div class="elh-course-description elh-course-section">
                                 <h3>Description</h3>
                                 <div class="post-entry">
-                                    Fall detection is important for safety for old people or patient living alone. There have been approaches for fall detection using wearable sensors or mobile phone accelerometers. However, wearable equipment is inconvenient for users and the elderly usually forget the equipment. Camera-based methods are more convenient .....as users don't have to take the equipment along with them. In this work, we propose a system for fall detection in indoor environment using single camera. Falls are detected based on the analysis of motion orientation, motion magnitude, and human shape changes from video. With a deep analysis of characteristic of fall events, we propose improvements for motion orientation estimation, large motion detection and human shape detection using motion histogram images (MHI). Fall detection is then determined by analyzing the speed of changing in motion magnitude, motion orientation and human shape before, during and after the fall. Experiments have been conducted on public data sets Li2e having 221 videos of dierent living environments with various daily activities. The experimental results show high detection rate and very fast processing capability. The system can be deployed for real applications.
+                                        Co-organized by Vietnam Agriculture Academy, Hanoi National University of Technology Vietnam National University, Nguyen Tat Thanh University, GFS corporation and the Novelind Knowledge Platform the conference aims to create a link between technology and solutions between scientists and businesses in the fields of agriculture, information technology and training. Thereby, opinions from experts from institutes, schools and enterprises with much experience in the field will be collected in order to serve for the construction and deployment of high technology applications in agriculture. We would like to invite you to the seminar "High-tech Agriculture: Issues and solutions" AI Academy reserve 3 invitations for readers who are intersted in this event. Please contact Mrs. Thuy, email myngthuy@gmail.com For further inquiries about the event please contact Mrs Bích Hồng, nbhong@vnua.edu.vn
                                 </div>
                             </div>
                         </div>
@@ -72,8 +72,7 @@
                         Tag
                          <div class="elh-course-tag">
                            <ul>
-                               <li>ok</li>
-                               <li>ajdkajdksjdk</li>
+                               <li>High-tech</li>
                            </ul>
                         </div>
 
