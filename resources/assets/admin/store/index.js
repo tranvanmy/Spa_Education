@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import storeAuth from 'Admin/modules/auth/store'
 import storeLoading from 'Admin/modules/loading/store'
 import storeAdminEvent from 'Admin/modules/event/store'
+import storeAdminAuthor from 'Admin/modules/author/store'
 
 Vue.use(Vuex)
 
@@ -28,5 +29,6 @@ export default new Vuex.Store({
         storeLanguage,
         storeLoading,
         storeAdminEvent,
+        storeAdminAuthor,
     }
 })

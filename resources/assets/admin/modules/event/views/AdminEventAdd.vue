@@ -64,7 +64,16 @@
                         </b-col>
                     </b-row>
                     <b-row>
-                        <b-col sm="5">
+                        <b-col sm="4">
+                            <b-form-fieldset :label="$t('textAuthor')">
+                                <b-form-select
+                                    :plain="true"
+                                    :options="authorOption()"
+                                    v-model.number="formData.sameData.author_id"
+                                />
+                            </b-form-fieldset>
+                        </b-col>
+                        <b-col sm="3">
                             <b-form-fieldset :label="$t('textPointReviewManual')">
                                 <b-form-input
                                     type="text" required
@@ -73,7 +82,7 @@
                                 />
                             </b-form-fieldset>
                         </b-col>
-                        <b-col sm="5">
+                        <b-col sm="3">
                             <b-form-fieldset :label="$t('textTotalReviewManual')">
                                 <b-form-input
                                     type="text" required
@@ -89,6 +98,26 @@
                                     on="On" off="Off"
                                     :pill="true" :checked="true"
                                     v-model="formData.sameData.is_review_manual"
+                                />
+                            </b-form-fieldset>
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col sm="6">
+                            <b-form-fieldset :label="$t('textStartAt')">
+                                <b-form-input
+                                    type="datetime-local"
+                                    :placeholder="$t('textStartAt')"
+                                    v-model="formData.sameData.start_at"
+                                />
+                            </b-form-fieldset>
+                        </b-col>
+                        <b-col sm="6">
+                            <b-form-fieldset :label="$t('textStartAt')">
+                                <b-form-input
+                                    type="datetime-local"
+                                    :placeholder="$t('textStartEnd')"
+                                    v-model="formData.sameData.start_end"
                                 />
                             </b-form-fieldset>
                         </b-col>
@@ -123,7 +152,7 @@
                                 </b-col>
                             </b-row>
                             <b-row>
-                                <b-col sm="6">
+                                <b-col sm="12">
                                     <b-form-fieldset :label="$t('textSlug')">
                                         <b-form-input
                                             type="text"
@@ -132,12 +161,23 @@
                                         />
                                     </b-form-fieldset>
                                 </b-col>
+                            </b-row>
+                            <b-row>
                                 <b-col sm="6">
                                     <b-form-fieldset :label="$t('textTopic')">
                                         <b-form-input
                                             type="text"
                                             v-model="formData[language.key].topic"
                                             :placeholder="$t('textTopic')"
+                                        />
+                                    </b-form-fieldset>
+                                </b-col>
+                                <b-col sm="6">
+                                    <b-form-fieldset :label="$t('textLocation')">
+                                        <b-form-input
+                                            type="text"
+                                            v-model="formData[language.key].location"
+                                            :placeholder="$t('textLocation')"
                                         />
                                     </b-form-fieldset>
                                 </b-col>
@@ -234,6 +274,7 @@ export default {
 
     beforeCreate() {
         Helper.changeTitleAdminPage(this.$i18n.t('textManageEvent'))
+        this.$store.dispatch('actionFetchAuthors', { vue: this })
     },
 
     data() {
@@ -264,6 +305,18 @@ export default {
     methods: {
         getLanguages(){
             return this.$store.state.storeLanguage.languages
+        },
+
+        authorOption() {
+            let authors = this.$store.state.storeAdminAuthor.listFetch
+            let options = []
+            for (let i = 0; i < authors.length; i++) {
+                options.push({
+                    value: authors[i].id,
+                    text: `${authors[i].name_vi} / ${authors[i].name_en}` ,
+                })
+            }
+            return options
         },
 
         handleChangeTitle(value, languageKey) {
@@ -327,7 +380,8 @@ export default {
                 has: false,
                 seo_keyword: '',
                 seo_description: '',
-                topic: ''
+                topic: '',
+                location: '',
             }
 
             let formData = {
@@ -349,6 +403,12 @@ export default {
             return formData;
         },
 
+        validateForm() {
+            let params = this.formData.sameData
+            return params.author_id
+                && params.start_at && params.end_at
+        },
+
         convertDataSubmit() {
             let params = {
                 ...this.formData.sameData
@@ -365,8 +425,11 @@ export default {
         },
 
         clickAddItem() {
+            if (!this.validateForm()) {
+                return this.$toaster.error(this.$i18n.t('textNotFillEnough'))
+            }
+
             let params = this.convertDataSubmit();
-            console.log(params);
             this.$store.dispatch('actionEventAdd', { vue: this, params });
 
             return this.resetFromData()
