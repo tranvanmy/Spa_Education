@@ -105,20 +105,17 @@
                     <b-row>
                         <b-col sm="6">
                             <b-form-fieldset :label="$t('textStartAt')">
-                                <b-form-input
-                                    type="datetime-local"
-                                    :placeholder="$t('textStartAt')"
+                                <datetime
+                                    type="datetime"
                                     v-model="formData.sameData.start_at"
-                                />
+                                    :format="{ year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit', second: 'numeric'}"
+                                >
+                                </datetime>
                             </b-form-fieldset>
                         </b-col>
                         <b-col sm="6">
                             <b-form-fieldset :label="$t('textStartAt')">
-                                <b-form-input
-                                    type="datetime-local"
-                                    :placeholder="$t('textStartEnd')"
-                                    v-model="formData.sameData.start_end"
-                                />
+                                <datetime type="datetime" v-model="formData.sameData.end_at"></datetime>
                             </b-form-fieldset>
                         </b-col>
                     </b-row>
@@ -261,6 +258,8 @@
 </template>
 
 <script>
+import moment from 'moment'
+
 import cSwitch from 'Assets/components/Switch.vue'
 import Helper from 'Admin/library/Helper'
 
@@ -405,13 +404,14 @@ export default {
 
         validateForm() {
             let params = this.formData.sameData
-            return params.author_id
-                && params.start_at && params.end_at
+            return params.start_at && params.end_at
         },
 
         convertDataSubmit() {
             let params = {
-                ...this.formData.sameData
+                ...this.formData.sameData,
+                start_at: moment(this.formData.sameData.start_at).format('YYYY-MM-DD HH:mm:ss'),
+                end_at: moment(this.formData.sameData.end_at).format('YYYY-MM-DD HH:mm:ss'),
             }
 
             for (let language of this.getLanguages()) {
