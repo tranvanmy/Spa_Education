@@ -179,10 +179,10 @@
                 <div class="col-md-6" style="text-align: justify;">
                     <div class="elh-about-section sm-bottom-30">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">About <span>Us</span></h3>
+                            <h3 class="elh-section-title">About of <span>Us</span></h3>
                         </div>
                         <p>
-                        We are a group AI researchers, practitioners and industry specialists who set to build a learning environment for everyone to learn and apply AI to innovate.
+                        We are a group of AI researchers, practitioners and industry specialists who set to build a learning environment for everyone to learn and apply AI to innovate.
                         </p>
                         <p>
                         We consult on practical aspects of applied machine learning for enterprises, helping them build Data science team, AI-powered products to stay ahead of competition. </p>
@@ -205,7 +205,6 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Popular <span>Courses</span></h3>
-                        <p class="elh-section-text">... Add your text here ....</p>
                         <a class="all-link" href="course.html">See All Courses</a>
                     </div>
                 </div>
@@ -445,7 +444,7 @@
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Research & Development</h3>
                         <p class="elh-section-text">
-                            ... Add your text here ....
+                            We've embraced collaboration with companies to innovate and power their products with AI-engines and features. Joined R&D activities from prototyping, piloting through to commercial implementation keeps us engaged in practical aspects of applied AI and Machine learning
                         </p>
                         <a class="all-link style-2" href="research-develop-all.html">See All Research & Development</a>
                     </div>
@@ -558,6 +557,55 @@
             </div>
         </div>
     </div>
+
+    {{-- <div class="elh-section elh-img-bg elh-bg-3 elh-carousel-section" id="home_news_blog">
+        <div class="elh-overlay elh-section-padding">
+            <div class="container">
+               <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="elh-section-header text-center">
+                        <h3 class="elh-section-title">Our <span>Partners</span></h3>
+                        <p class="elh-section-text">... Add your text here ....</p>
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="elh-generic-carousel owl-carousel">
+                        <article class="elh-post">
+                             <a class="partner-logo" href="#">
+                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                            </a>
+                        </article>
+                        <article class="elh-post">
+                             <a class="partner-logo" href="#">
+                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                            </a>
+                        </article>
+                        <article class="elh-post">
+                             <a class="partner-logo" href="#">
+                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                            </a>
+                        </article>
+                        <article class="elh-post">
+                             <a class="partner-logo" href="#">
+                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                            </a>
+                        </article>
+                        <article class="elh-post">
+                             <a class="partner-logo" href="#">
+                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                            </a>
+                        </article>
+                        <article class="elh-post">
+                             <a class="partner-logo" href="#">
+                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
     <!-- Partner Logoes End -->
 
     <!-- Upcoming Event -->
@@ -583,11 +631,13 @@
                                     <h4 class="elh-event-title"><a href="detail-serminal.html">Fall event detection using single camera for health care  </a></h4>
                                     <p class="elh-event-metas">
                                         <span><i class="fa fa-clock-o"></i>Apr 21 (9:00-12:00)</span>
-                                        <span><i class="fa fa-map-marker"></i>Victoria Campus</span>
+                                        <span><i class="fa fa-users"></i>Victoria Campus</span>
                                     </p>
-                                    <p class="elh-event-excerpt">
-                                        Fall detection is important for safety for old people or patient living alone. There have been approaches for fall detection using wearable sensors or mobile phone accelerometers. However, wearable equipment is inconvenient for users and the elderly usually forget the equipment. Camera-based methods are more convenient .....
-                                    </p>
+                                    <p class="elh-event-description">
+                                    <a href="seminar.html">
+                                            Fall detection is important for safety for old people or patient living alone. There have been approaches for fall detection using wearable sensors or mobile phone accelerometers. However, wearable equipment is inconvenient for users and the elderly usually forget the equipment. Camera-based methods are more convenient .....
+                                    </a>
+                                        </p>
                                 </div>
                             </div>
                         </div>

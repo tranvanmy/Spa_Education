@@ -2703,8 +2703,34 @@ button:focus {
     margin-bottom: 13px;
 }
 
-.elh-event .elh-event-title a {
-    color: inherit;
+.elh-course-tag {
+    border: 1px solid #e7e7e7;
+    padding: 14px;
+    padding-bottom: 4%;
+    text-align: justify;
+}
+
+.elh-course-tag ul li {
+    margin-left: 2%;
+    float: left;
+    list-style: none;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 2px;
+    background-color: #b9baba;
+    color: white;
+}
+
+.elh-event-description {
+    font-size: 1.4rem !important;
+    color: #262626;
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+.elh-event-description a {
+    color: inherit !important;
 }
 
 .elh-event .elh-event-metas {
