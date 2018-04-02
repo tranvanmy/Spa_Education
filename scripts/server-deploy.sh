@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git reset --hard
-git pull origin/develop
+git pull origin develop
 composer install
 php artisan migrate
 yarn
