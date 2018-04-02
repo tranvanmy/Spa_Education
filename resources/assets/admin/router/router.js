@@ -6,6 +6,10 @@ import Admin from 'Admin/components/Admin.vue'
 import Login from 'Admin/modules/auth/views/Login.vue'
 import Dashboard from 'Admin/modules/dashboard/views/Dashboard.vue'
 
+import AdminAuthor from 'Admin/modules/author/views/AdminAuthor.vue'
+import AdminAuthorAdd from 'Admin/modules/author/views/AdminAuthorAdd.vue'
+// import AdminAuthorEdit from 'Admin/modules/author/views/AdminAuthorEdit.vue'
+
 import AdminEvent from 'Admin/modules/event/views/AdminEvent.vue'
 import AdminEventAdd from 'Admin/modules/event/views/AdminEventAdd.vue'
 
@@ -22,6 +26,32 @@ const router =  new VueRouter({
                     path: '/dashboard',
                     name: 'Quản lý',
                     component: Dashboard
+                },
+                {
+                    name: 'Authors',
+                    path: '/authors',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: '',
+                            name: 'Author list',
+                            component: AdminAuthor
+                        },
+                        {
+                            path: 'add',
+                            name: 'Add Author',
+                            component: AdminAuthorAdd
+                        },
+                        // {
+                        //     path: 'edit/:id',
+                        //     name: 'Update Author',
+                        //     component: AdminAuthorEdit
+                        // }
+                    ]
                 },
                 {
                     name: 'Events',

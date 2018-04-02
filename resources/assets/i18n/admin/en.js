@@ -86,6 +86,14 @@ const en = {
     textIsShowManual: 'Is show manual',
     textHasIsset: 'Has isset',
     textTopic: 'Topic',
+    textAddAuthor: 'Add new Author',
+    textNameVietnam: 'Name Vietnam',
+    textNameEnglish: 'Name English',
+    textManageAuthor: 'Manage Author',
+    textAuthor: 'Author',
+    textLocation: 'Location',
+    textStartAt: 'Start at',
+    textStartEnd: 'Start end',
 }
 
 export default en;

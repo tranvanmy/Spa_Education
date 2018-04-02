@@ -20,8 +20,22 @@ export default {
                     url: '/events',
                 },
                 {
-                    name: 'Add new',
+                    name: 'Add new Event',
                     url: '/events/add',
+                }
+            ]
+        },
+        {
+            name: 'Authors',
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'Author list',
+                    url: '/authors',
+                },
+                {
+                    name: 'Add new Author',
+                    url: '/authors/add',
                 }
             ]
         },
