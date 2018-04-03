@@ -45,4 +45,8 @@ class Event extends Model
         'total_review',
         'viewed',
     ];
+    public function author()
+    {
+        return $this->belongsTo(Author::class);
+    }
 }

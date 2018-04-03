@@ -12,7 +12,7 @@ class AuthorSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             factory(App\Models\Author::class)->create();
         }
     }

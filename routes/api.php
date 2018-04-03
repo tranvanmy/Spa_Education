@@ -17,7 +17,7 @@ Route::group(['domain' => 'admin.'.env('MAIN_DOMAIN'), 'namespace' => 'Api\Admin
     Route::middleware('jwt.auth')->get('user', function (Request $request) {
         return $request->user();
     });
-
+    
     Route::post('login', 'AuthController@login');
 
     Route::group(['middleware' => 'jwt.auth'], function(){

@@ -9,4 +9,9 @@ class Comment extends Model
     protected $table = 'comments';
 
     protected $fillable = ['name', 'email', 'content', 'owner_id', 'owner_type'];
+
+    public function commentable()
+    {
+        return $this->morphTo();
+    }
 }

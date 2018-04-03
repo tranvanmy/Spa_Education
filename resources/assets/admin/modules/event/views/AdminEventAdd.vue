@@ -329,10 +329,6 @@ export default {
         },
 
         clickAddItem() {
-            if (!this.validateForm()) {
-                return this.$toaster.error(this.$i18n.t('textNotFillEnough'))
-            }
-
             let params = this.convertDataSubmit();
             this.$store.dispatch('actionEventAdd', { vue: this, params });
 
