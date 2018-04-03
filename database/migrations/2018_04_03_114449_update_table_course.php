@@ -9,9 +9,12 @@ class AddColumnCours extends Migration
     public function up()
     {
         Schema::table('courses', function (Blueprint $table) {
-            $table->string('image_url')->nullable()->after('author_id');
-            $table->string('level_vi')->nullable()->after('detail_vi');
-            $table->string('level_en')->nullable()->after('detail_en');
+            $table->dropColumn('author_id');
+            $table->integer('instructor_id');
+            $table->string('image_url')->nullable();
+
+            $table->string('level_vi')->nullable();
+            $table->string('level_en')->nullable();
         });
     }
 
@@ -23,6 +26,9 @@ class AddColumnCours extends Migration
     public function down()
     {
         Schema::table('courses', function (Blueprint $table) {
+            $table->dropColumn('instructor_id');
+
+            $table->integer('author_id');
             $table->dropColumn('image_url');
             $table->dropColumn('level_vi');
             $table->dropColumn('level_en');
