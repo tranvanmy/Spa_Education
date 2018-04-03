@@ -14,4 +14,9 @@ class Course extends Model
         'point_review_manual', 'total_review_manual', 'is_review_manual', 'point_review_avg', 'total_review', 'viewed',
         'instructor_id', 'image_url'
     ];
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable', 'owner_type', 'owner_id');
+    }
 }

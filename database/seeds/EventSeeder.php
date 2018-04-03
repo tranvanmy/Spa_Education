@@ -14,7 +14,7 @@ class EventSeeder extends Seeder
     {
         for ($i = 0; $i < 5; $i++) {
             factory(Event::class)->create([
-                'author_id' => $i % 4,
+                'author_id' => rand(1, 10),
             ]);
         }
     }

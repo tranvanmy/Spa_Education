@@ -32,56 +32,51 @@
             <ul class="nav navbar-nav navbar-right" id="home-nav-onepage">
                 <li class="dropdown">
                     <a href="#home_about_us">About us</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="purchase-link" href="about-us.html">Vision / Mission</a></li>
-                        <li><a class="purchase-link" href="about-us.html">Scientific Advisory Board</a></li>
-                        <li><a class="purchase-link" href="about-us.html">Researchers & Data scientists</a></li>
-                        <li><a class="purchase-link" href="about-us.html">Student & PhD. candidates </a></li>
-                        <li><a class="purchase-link" href="about-us.html">Our philosophy and approaches</a></li>
-                    </ul>
+                    @if(isset($data['about_us']))
+                        <ul class="dropdown-menu">
+                            @foreach ($data['about_us'] as $about)
+                                <li>
+                                    <a class="purchase-link" href="about-us/{{ $about[fieldLanguage('slug')] }}">{{ $about[fieldLanguage('title')] }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </li>
                 <li class="dropdown">
                     <a href="#home_course">Courses</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="purchase-link" href="course-single.html">ML Fundamental</a></li>
-                        <li><a class="purchase-link" href="course-single.html">ML in Computer Vision</a></li>
-                        <li><a class="purchase-link" href="course-single.html">ML in NLP</a></li>
-                        <li><a class="purchase-link" href="course-single.html">ML in Cyber Security</a></li>
-                        <li><a class="purchase-link" href="course-single.html">ML in the Cloud</a></li>
-                        <li >
-                            <a class="purchase-link" href="category-course.html">
-                                AI in Smart Agriculture (upcoming)
-                            </a>
-                        </li>
-                        <li>
-                            <a class="purchase-link" href="category-course.html">
-                                AI in Smart City (upcoming)
-                            </a>
-                        </li>
-                        <li><a class="purchase-link" href="category-course.html">AI in Marketing</a></li>
-                        <li><a class="purchase-link" href="category-course.html">BigData ecosystem & architecture</a></li>
-                        <li><a class="purchase-link" href="category-course.html">Data governance in the enterprise</a></li>
-                        <li><a class="purchase-link" href="category-course.html">Data analytics & visualization</a></li>
-                        <li><a class="purchase-link" href="category-course.html">AI for Business leaders</a></li>
-                        <li><a class="purchase-link" href="category-course.html">AI for IT leaders</a></li>
-                    </ul>
+                    @if(isset($data['courses']))
+                        <ul class="dropdown-menu">
+                            @foreach ($data['courses'] as $course)
+                                <li>
+                                    <a class="purchase-link" href="course/{{ $course[fieldLanguage('slug')] }}">{{ $course[fieldLanguage('title')] }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </li>
                 <li class="dropdown">
                     <a href="#home_research_develop">R&D</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="purchase-link" href="research-category.html">Research projects</a></li>
-                        <li><a class="purchase-link" href="research-category.html">Publications</a></li>
-                        <li><a class="purchase-link" href="research-category.html">Data Science Lab</a></li>
-                        <li><a class="purchase-link" href="research-category.html">Technology transfer</a></li>
-                    </ul>
+                    @if(isset($data['research_development_categories']))
+                        <ul class="dropdown-menu">
+                            @foreach ($data['research_development_categories'] as $category)
+                                <li>
+                                    <a class="purchase-link" href="research-category/{{ $category[fieldLanguage('slug')] }}">{{ $category[fieldLanguage('title')] }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </li>
                 <li class="dropdown">
                     <a href="products.html">Products</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="purchase-link" href="product-category.html">Smart camera</a></li>
-                        <li><a class="purchase-link" href="product-category.html">NLP</a></li>
-                        <li><a class="purchase-link" href="product-category.html">Data Science Lab</a></li>
-                    </ul>
+                    @if(isset($data['products_categories']))
+                        <ul class="dropdown-menu">
+                            @foreach ($data['products_categories'] as $category)
+                                <li>
+                                    <a class="purchase-link" href="product-category/{{ $category[fieldLanguage('slug')] }}">{{ $category[fieldLanguage('title')] }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </li>
                 <li>
                     <a href="#home_seminar">Events</a>
@@ -91,12 +86,15 @@
                 </li>
                 <li class="dropdown">
                     <a href="#home_join_us">Join us</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="join-us.html">Deliver courses with us</a></li>
-                        <li><a href="join-us.html">Become our data scientist</a></li>
-                        <li><a href="join-us.html">Become our industry advisor </a></li>
-                        <li><a href="join-us.html">Join our partner network</a></li>
-                    </ul>
+                    @if(isset($data['join_us']))
+                        <ul class="dropdown-menu">
+                            @foreach ($data['join_us'] as $us)
+                                <li>
+                                    <a class="purchase-link" href="join-us/{{ $us[fieldLanguage('slug')] }}">{{ $us[fieldLanguage('title')] }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </li>
             </ul>
         </div>
@@ -211,138 +209,27 @@
             </div>
             <div class="row">
                 <div class="elh-generic-carousel owl-carousel">
+                @foreach ($data['courses'] as $course)
                     <div class="elh-course style-2">
-                        <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/images/course/1.jpg" alt="...">
+                        <a class="elh-course-thumb" href="course/{{ $course[fieldLanguage('slug')] }}" title="{{ $course[fieldLanguage('title')] }}">
+                            <img class="img-responsive" src="{{ $course['image_url'] ?: 'http://afamilycdn.com/2017/4732596789-687e6d997e-b-1503900479088.jpg'}}" alt="{{ $course[fieldLanguage('title')] }}">
                         </a>
                         <div class="elh-course-content">
-                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learning Fundamentals</a></h4>
+                            <h4 class="elh-course-title" style="height: 50px"><a href="course/{{ $course[fieldLanguage('slug')] }}" title="{{ $course[fieldLanguage('title')] }}">{{ $course[fieldLanguage('title')] }}</a></h4>
                             <p style="text-align: justify">
-                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
+                                {{ $course[fieldLanguage('description')] }}
                             </p>
                         </div>
                         <div class="elh-course-footer">
                             <p class="elh-course-price" style="color: #00bcd4">
-                               Basics
+                               {{ $course[fieldLanguage('level')] }}
                             </p>
                             <p class="elh-course-metas">
-
-                                <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
+                                <span class="elh-comment-count"><i class="fa fa-comments"></i>{{ $course->comments->count() }}</span>
                             </p>
                         </div>
                     </div>
-                    <div class="elh-course style-2">
-                        <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/images/course/2.jpg" alt="...">
-                        </a>
-                        <div class="elh-course-content">
-                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learning in Computer vision</a></h4>
-                           <p style="text-align: justify">
-                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
-                            </p>
-                        </div>
-                        <div class="elh-course-footer">
-                            <p class="elh-course-price" style="color: #00bcd4">
-                                Advanced
-                            </p>
-                            <p class="elh-course-metas">
-
-                                <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="elh-course style-2">
-                        <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/images/course/3.jpg" alt="...">
-                        </a>
-                        <div class="elh-course-content">
-                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">AI for Business leaders</a></h4>
-                            <p style="text-align: justify">
-                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
-                            </p>
-                        </div>
-                        <div class="elh-course-footer">
-                            <p class="elh-course-price" style="color: #00bcd4">
-                               Special track
-                            </p>
-                            <p class="elh-course-metas">
-
-                                <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="elh-course style-2">
-                        <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/images/course/1.jpg" alt="...">
-                        </a>
-                        <div class="elh-course-content">
-                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learning Fundamentals</a></h4>
-                            <p style="text-align: justify">
-                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
-                            </p>
-                        </div>
-                        <div class="elh-course-footer">
-                            <p class="elh-course-price" style="color: #00bcd4">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </p>
-                            <p class="elh-course-metas">
-
-                                <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="elh-course style-2">
-                        <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/images/course/2.jpg" alt="...">
-                        </a>
-                        <div class="elh-course-content">
-                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">Machine learnign in Computer vision</a></h4>
-                            <p style="text-align: justify">
-                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
-                            </p>
-                        </div>
-                        <div class="elh-course-footer">
-                            <p class="elh-course-price" style="color: #00bcd4">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </p>
-                            <p class="elh-course-metas">
-
-                                <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="elh-course style-2">
-                        <a class="elh-course-thumb" href="course-single.html">
-                            <img class="img-responsive" src="/images/course/3.jpg" alt="...">
-                        </a>
-                        <div class="elh-course-content">
-                            <h4 class="elh-course-title" style="height: 50px"><a href="course-single.html">AI for Business leaders</a></h4>
-                            <p style="text-align: justify">
-                                Learn the AI concepts, methodologies, machine learning pipelines, popular algorithms and typical data manipulation techniques. Understand the power of the state-of-the-art AI and its applications.<br> You will have an overview of data preparation, model training and acquire a good intuition for forming and approaching an AI problem.
-                            </p>
-                        </div>
-                        <div class="elh-course-footer">
-                            <p class="elh-course-price" style="color: #00bcd4">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </p>
-                            <p class="elh-course-metas">
-                                <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
-                            </p>
-                        </div>
-                    </div>
-
+                @endforeach
                 </div>
             </div>
         </div>
@@ -363,72 +250,19 @@
                 </div>
                 <div class="row">
                     <div class="elh-generic-carousel owl-carousel elh-generic-4">
+                    @foreach($data['instructors'] as $instructor)
                         <div class="elh-instructor">
-                            <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/images/instructor/large-2.jpg">
+                            <a class="elh-instructor-thumb" href="instructor-single.html" title="{{ $instructor[fieldLanguage('name')] }}">
+                                <img class="img-responsive" src="{{ $instructor['image_url'] }}" alt="{{ $instructor[fieldLanguage('name')] }}">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Assoc. Prof. Dr. Nguyen Xuan Hoai</a></h4>
-                                <p class="elh-instructor-field">Computational Intelligence</p>
-                                <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
+                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor/{{ $instructor[fieldLanguage('slug')] }}" title="{{ $instructor[fieldLanguage('name')] }}">{{ $instructor[fieldLanguage('name')] }}</a></h4>
+                                <p class="elh-instructor-field">{{ $instructor[fieldLanguage('specialized')] }}</p>
+                                <p class="elh-instructor-excerpt">{{ $instructor[fieldLanguage('description')] }}</p>
+                                <a class="elh-instructor-link" href="instructor/{{ $instructor[fieldLanguage('slug')] }}" title="{{ $instructor[fieldLanguage('name')] }}">View Profile <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="elh-instructor">
-                            <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/images/instructor/large-1.jpg">
-                            </a>
-                            <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Assoc. Prof. Dr. <br>Le Thanh Ha</a></h4>
-                                <p class="elh-instructor-field">Network Security</p>
-                                <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="elh-instructor">
-                            <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/images/instructor/large-5.jpg">
-                            </a>
-                            <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Dr. Dinh Viet Sang</a></h4>
-                                <p class="elh-instructor-field">Computer Vision</p>
-                                <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="elh-instructor">
-                            <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/images/instructor/large-1.jpg">
-                            </a>
-                            <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Dr. Nguyen Thi Thuy</a></h4>
-                                <p class="elh-instructor-field">Natural language processing</p>
-                                <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="elh-instructor">
-                            <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/images/instructor/large-2.jpg">
-                            </a>
-                            <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Dr. Nguyen Do Van</a></h4>
-                                <p class="elh-instructor-field">Network Security</p>
-                                <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="elh-instructor">
-                            <a class="elh-instructor-thumb" href="instructor-single.html">
-                                <img class="img-responsive" src="/images/instructor/large-3.jpg">
-                            </a>
-                            <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor-single.html">Dr. Nguyen Quang Uy</a></h4>
-                                <p class="elh-instructor-field">Network Security</p>
-                                <p class="elh-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a class="elh-instructor-link" href="instructor-single.html">View Profile <i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
+                    @endforeach
                     </div>
                 </div>
             </div>
@@ -446,77 +280,27 @@
                         <p class="elh-section-text">
                             We've embraced collaboration with companies to innovate and power their products with AI-engines and features. Joined R&D activities from prototyping, piloting through to commercial implementation keeps us engaged in practical aspects of applied AI and Machine learning
                         </p>
-                        <a class="all-link style-2" href="research-develop-all.html">See All Research & Development</a>
+                        <a class="all-link style-2" href="research-develop-all.html" title="See All Research & Development">See All Research & Development</a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="elh-grid elh-category-tiles">
+                @foreach($data['research_development'] as $research)
                     <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
-                        <a class="elh-category-tile" href="research-single.html">
+                        <a class="elh-category-tile" href="research/{{ $research[fieldLanguage('slug')] }}" title="{{ $research[fieldLanguage('title')] }}">
                             <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="/images/category/medium-1.jpg" alt="...">
+                                <img class="img-responsive" src="{{ $research['image_url'] }}" alt="{{ $research[fieldLanguage('title')] }}">
                             </div>
                             <div class="elh-category-tile-overlay">
                                 <div class="elh-category-tile-content">
-                                    <h5 class="elh-category-title">Project 2</h5>
-                                    <p class="elh-course-count">Name project</p>
+                                    <h5 class="elh-category-title">{{ $research[fieldLanguage('title')] }}</h5>
+                                    <p class="elh-course-count">Project name</p>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
-                        <a class="elh-category-tile" href="research-single.html">
-                            <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="/images/category/large-1.jpg" alt="...">
-                            </div>
-                            <div class="elh-category-tile-overlay">
-                                <div class="elh-category-tile-content">
-                                    <h5 class="elh-category-title">Project 1</h5>
-                                    <p class="elh-course-count">Name project</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
-                        <a class="elh-category-tile" href="research-single.html">
-                            <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="/images/category/medium-2.jpg" alt="...">
-                            </div>
-                            <div class="elh-category-tile-overlay">
-                                <div class="elh-category-tile-content">
-                                    <h5 class="elh-category-title">Project 3</h5>
-                                    <p class="elh-course-count">Name project</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
-                        <a class="elh-category-tile" href="research-single.html">
-                            <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="/images/category/medium-3.jpg" alt="...">
-                            </div>
-                            <div class="elh-category-tile-overlay">
-                                <div class="elh-category-tile-content">
-                                    <h5 class="elh-category-title">Project 4</h5>
-                                    <p class="elh-course-count">Name project</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
-                        <a class="elh-category-tile" href="research-single.html">
-                            <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="/images/category/medium-4.jpg" alt="...">
-                            </div>
-                            <div class="elh-category-tile-overlay">
-                                <div class="elh-category-tile-content">
-                                    <h5 class="elh-category-title">Project 5</h5>
-                                    <p class="elh-course-count">Name project</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                @endforeach
                 </div>
             </div>
         </div>
@@ -566,69 +350,30 @@
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Upcoming <span>Events</span></h3>
                         <p class="elh-section-text">... Add your text here ....</p>
-                        <a class="all-link style-2" href="seminar.html">See All Events</a>
+                        <a class="all-link style-2" href="seminar.html" title="All Events">See All Events</a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="elh-events">
-                    <div class="col-md-6 col-xs-12">
-                            <div class="elh-event style-2">
-                                <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 27%; height: 140px;">
-                                </div>
-                                <div class="elh-event-detail">
-                                    <h4 class="elh-event-title"><a href="detail-serminal.html">High-tech Agriculture - Issues and solutions</a></h4>
-                                    <p class="elh-event-metas">
-                                        <span><i class="fa fa-clock-o"></i>7/4/2018 8:30-17:30</span>
-                                        <span><i class="fa fa-users"></i>Vietnam</span>
-                                    </p>
-                                    <p class="elh-event-description">
-                                    <a href="detail-serminal.html">
-                                        Organised by leading academies and univierisites and corporations, the conference will address issues in applying high technologies in Vietnam agriculture sector. Topics include automation, food technologies, food origin verification, IT platform as well as technology commercialisation issues and workforce training. AI Academy participate in designing ...
-                                    </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    @foreach($data['events'] as $event)
                         <div class="col-md-6 col-xs-12">
                             <div class="elh-event style-2">
-                                <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 27%; height: 140px;">
+                                <div class="elh-event-date" style="background-image: url({{ $event['image_url'] }})">
                                 </div>
                                 <div class="elh-event-detail">
-                                    <h4 class="elh-event-title"><a href="detail-serminaldemo.html">A vision based method for automatic evaluation of germination rate of rice seeds</a></h4>
+                                    <h4 class="elh-event-title"><a href="serminal/{{ $event[fieldLanguage('slug')] }}">{{ $event[fieldLanguage('title')] }}</a></h4>
                                     <p class="elh-event-metas">
-                                        <span><i class="fa fa-clock-o"></i>19/5/2018 , 9.00-12.00</span>
-                                        <span><i class="fa fa-users"></i>Main office</span>
+                                        <span><i class="fa fa-clock-o"></i>{{ timeEvent($event['start_at'], $event['end_at']) }}</span>
+                                        <span><i class="fa fa-users"></i>{{ $event->author[fieldLanguage('name')] }}</span>
                                     </p>
-                                    <p class="elh-event-description">
-                                    <a href="detail-serminaldemo.html">
-                                        Good seed germination is important for rice seed quality. However, it can only be evaluated manually by experienced specialists. We present a system for automatic evaluation of germination rate of rice seeds using computer vision and machine learning techniques...
-                                    </a>
+                                    <p class="elh-event-excerpt">
+                                        {{ $event[fieldLanguage('description')] }}
                                     </p>
                                 </div>
                             </div>
                         </div>
-
-                    @for($i = 0; $i < 2; $i++)
-                        <div class="col-md-6 col-xs-12">
-                            <div class="elh-event style-2">
-                                <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 27%; height: 140px;">
-                                </div>
-                                <div class="elh-event-detail">
-                                    <h4 class="elh-event-title"><a href="detail-serminal.html">Fall event detection using single camera for health care  </a></h4>
-                                    <p class="elh-event-metas">
-                                        <span><i class="fa fa-clock-o"></i>Apr 21 (9:00-12:00)</span>
-                                        <span><i class="fa fa-users"></i>Victoria Campus</span>
-                                    </p>
-                                    <p class="elh-event-description">
-                                    <a href="seminar.html">
-                                            Fall detection is important for safety for old people or patient living alone. There have been approaches for fall detection using wearable sensors or mobile phone accelerometers. However, wearable equipment is inconvenient for users and the elderly usually forget the equipment. Camera-based methods are more convenient .....
-                                    </a>
-                                        </p>
-                                </div>
-                            </div>
-                        </div>
-                    @endfor
+                    @endforeach
                 </div>
             </div>
         </div>
