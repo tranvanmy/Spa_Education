@@ -19,4 +19,9 @@ class Course extends Model
     {
         return $this->morphMany(Comment::class, 'commentable', 'owner_type', 'owner_id');
     }
+
+    public function instructor()
+    {
+        return $this->belongsTo(Instructor::class);
+    }
 }
