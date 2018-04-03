@@ -28,6 +28,10 @@ Route::group(['domain' => 'admin.'.env('MAIN_DOMAIN'), 'namespace' => 'Api\Admin
         Route::post('upload-image', 'MediaController@uploadImage');
         Route::resource('events', 'EventController')->only($methodAllow);
         Route::resource('authors', 'AuthorController')->only($methodAllow);
+        Route::resource('about-us', 'AboutUsController')->only($methodAllow);
+        Route::resource('join-us', 'JoinUsController')->only($methodAllow);
+        Route::resource('instructors', 'InstructorController')->only($methodAllow);
+        Route::resource('courses', 'CourseController')->only($methodAllow);
     });
 
 

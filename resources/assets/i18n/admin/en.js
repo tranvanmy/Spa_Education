@@ -96,6 +96,17 @@ const en = {
     textEndAt: 'End at',
     textAvatar: 'Avatar',
     textTime: 'Time',
+    textAddAboutUs: 'Add new About us',
+    textManageAboutUs: 'Manage About Us',
+    textAddJoinUs: 'Add new Join us',
+    textManageJoinUs: 'Manage Join us',
+    textAddInstructor: 'Add new Instructor',
+    textManageInstructor: 'Manage Instructor',
+    textSpecialized: 'Specialized',
+    textAddCourse: 'Add new Course',
+    textManageCourse: 'Manage Course',
+    textLevel: 'Level',
+    textInstructor: 'Instructor',
 }
 
 export default en;

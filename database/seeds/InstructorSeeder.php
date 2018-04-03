@@ -12,7 +12,7 @@ class InstructorSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i < 5; $i++) {
             factory(Instructor::class)->create();
         }
     }

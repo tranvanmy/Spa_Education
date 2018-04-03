@@ -192,7 +192,7 @@
         </b-row>
         <div slot="header" class="w-100">
             <b-row>
-                <b-col sm="4">{{ $t('textAddProduct') }}</b-col>
+                <b-col sm="4">{{ $t('textAddNew') }}</b-col>
                 <b-col sm="8" class="text-right">
                     <b-button type="submit" size="xs" variant="primary" @click="clickAddItem">
                         <i class="fa fa-dot-circle-o"></i>
@@ -241,11 +241,8 @@ export default {
     },
 
     data() {
-        let token = JSON.parse(localStorage.getItem(STORAGE_AUTH)).token
-
         return {
             formData: { ...this.resetFromData() },
-            token,
             images: [],
         }
     },
@@ -286,7 +283,7 @@ export default {
 
         handleChangeTitle(value, languageKey) {
             this.formData[languageKey].has = true;
-            this.formData[languageKey].slug = slug(value)
+            this.formData[languageKey].slug = slug(value || '')
         },
 
         ortherOptions() {

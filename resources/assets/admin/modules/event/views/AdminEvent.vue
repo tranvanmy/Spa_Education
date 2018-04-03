@@ -105,7 +105,6 @@
                     {key: 'location', label: this.$i18n.t('textLocation'), tdClass: 'text-left'},
                     {key: 'time', label: this.$i18n.t('textTime'), tdClass: 'text-left'},
                     {key: 'image', label: this.$i18n.t('textImage')},
-                    {key: 'status', label: this.$i18n.t('textStatus')},
                     {key: 'action', label: this.$i18n.t('textAction')},
                 ],
                 perPage: 10,

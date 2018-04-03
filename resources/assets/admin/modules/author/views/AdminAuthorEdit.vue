@@ -42,7 +42,7 @@
        </b-row>
         <div slot="header" class="w-100">
             <b-row>
-                <b-col sm="4">{{ $t('textEditProduct') }}</b-col>
+                <b-col sm="4">{{ $t('textEdit') }}</b-col>
                 <b-col sm="8" class="text-right">
                     <b-button type="submit" size="xs" variant="primary" @click="clickSubmitEdit">
                         <i class="fa fa-dot-circle-o"></i>

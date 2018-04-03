@@ -39,7 +39,7 @@ if (token) {
 
 axios.defaults.baseURL = '/api/v0/';
 
-window.slug = title => {
+window.slug = (title = '') => {
     let slug = title.toLowerCase();
 
     //Đổi ký tự có dấu thành không dấu
