@@ -7,11 +7,8 @@ import Toaster from 'v-toaster'
 import VueSwal from 'vue-swal'
 import tinymce from 'vue-tinymce-editor'
 import VueTransmit from 'vue-transmit'
-import Datetime from 'vue-datetime'
 
 import 'v-toaster/dist/v-toaster.css'
-import 'vue-datetime/dist/vue-datetime.css'
-
 
 Vue.use(Vuex)
 
@@ -28,5 +25,3 @@ Vue.use(VueSwal)
 Vue.component('tinymce', tinymce)
 
 Vue.use(VueTransmit)
-
-Vue.use(Datetime)

@@ -7,73 +7,52 @@
                         <b-col sm="12">
                             <b-form-fieldset :label="$t('textImage')"
                             >
-                                <vue-transmit
-                                    tag="section"
-                                    v-bind="uploadOptions"
-                                    @success="successUploader"
-                                    @error="errorUploader"
-                                    upload-area-classes="bg-faded"
-                                    ref="uploader"
-                                    style="border: 1px solid #E5E5E5"
-                                >
-                                    <b-row>
-                                        <b-col sm="12"
-                                            style="border-radius: 1px; boder: 1px solid #DCDCDC; padding-top:5px;margin-bottom: 5px"
-                                            class="text-center"
-                                        >
-                                            <button class="btn btn-primary"
-                                                @click="triggerBrowse"
-                                                style="margin-left: 20px"
-                                            >{{ $t('textUploadFile') }}</button>
-                                        </b-col>
-                                    </b-row>
-                                    <!-- Scoped slot -->
-                                    <template slot="files" slot-scope="props">
-                                        <div v-for="(file, i) in props.files"
-                                            :key="file.id" :class="{'mt-5': i === 0}"
-                                            style="margin-bottom: 20px"
-                                        >
-                                            <b-row>
-                                                <b-col sm="2">
-                                                    <b-img thumbnail
-                                                        :src="file.dataUrl"
-                                                        class="img-fluid d-flex mr-3"
-                                                    />
-                                                </b-col>
-                                                <b-col sm="9">
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-success"
-                                                            :style="{width: file.upload.progress + '%'}"
-                                                        >
-                                                            {{ file.upload.progress + '%' }}
-                                                        </div>
-                                                    </div>
-                                                </b-col>
-                                                <b-col sm="1">
-                                                    <b-button type="reset" size="sm" variant="danger"
-                                                        @click="removeUploadFile(i, $event)"
-                                                    >
-                                                        <i class="fa fa-remove"></i>
-                                                    </b-button>
-                                                </b-col>
-                                            </b-row>
-                                        </div>
-                                    </template>
-                                </vue-transmit>
+                                <UploadImage
+                                    folder="event"
+                                    :doSuccessUploader="successUploader"
+                                    :token="getToken()"
+                                    :doRemoveFile="removeFile"
+                                />
                             </b-form-fieldset>
                         </b-col>
                     </b-row>
                     <b-row>
-                        <b-col sm="4">
+                        <b-col sm="6">
                             <b-form-fieldset :label="$t('textAuthor')">
                                 <b-form-select
-                                    :plain="true"
+                                    :plain="true" required
                                     :options="authorOption()"
-                                    v-model.number="formData.sameData.author_id"
+                                    v-model="formData.sameData.author_id"
                                 />
                             </b-form-fieldset>
                         </b-col>
                         <b-col sm="3">
+                            <b-form-fieldset :label="$t('textStartAt')">
+                                <vue-datepicker-local
+                                    v-model="formData.sameData.start_at"
+                                    format="YYYY-MM-DD HH:mm:ss"
+                                    :local="getConfigDateTimeLocal()"
+                                    input-class="form-control"
+                                    show-buttons
+                                    style="width: 100%"
+                                ></vue-datepicker-local>
+                            </b-form-fieldset>
+                        </b-col>
+                        <b-col sm="3">
+                            <b-form-fieldset :label="$t('textEndAt')">
+                                <vue-datepicker-local
+                                    v-model="formData.sameData.end_at"
+                                    format="YYYY-MM-DD HH:mm:ss"
+                                    :local="getConfigDateTimeLocal()"
+                                    input-class="form-control"
+                                    show-buttons
+                                    style="width: 100%"
+                                ></vue-datepicker-local>
+                            </b-form-fieldset>
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col sm="2">
                             <b-form-fieldset :label="$t('textPointReviewManual')">
                                 <b-form-input
                                     type="text" required
@@ -82,7 +61,7 @@
                                 />
                             </b-form-fieldset>
                         </b-col>
-                        <b-col sm="3">
+                        <b-col sm="2">
                             <b-form-fieldset :label="$t('textTotalReviewManual')">
                                 <b-form-input
                                     type="text" required
@@ -102,24 +81,6 @@
                             </b-form-fieldset>
                         </b-col>
                     </b-row>
-                    <b-row>
-                        <b-col sm="6">
-                            <b-form-fieldset :label="$t('textStartAt')">
-                                <datetime
-                                    type="datetime"
-                                    v-model="formData.sameData.start_at"
-                                    :format="{ year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit', second: 'numeric'}"
-                                >
-                                </datetime>
-                            </b-form-fieldset>
-                        </b-col>
-                        <b-col sm="6">
-                            <b-form-fieldset :label="$t('textStartAt')">
-                                <datetime type="datetime" v-model="formData.sameData.end_at"></datetime>
-                            </b-form-fieldset>
-                        </b-col>
-                    </b-row>
-
                     <b-tabs pills card>
                         <b-tab
                             :title="language.title"
@@ -259,17 +220,20 @@
 
 <script>
 import moment from 'moment'
-
 import cSwitch from 'Assets/components/Switch.vue'
+import UploadImage from 'Assets/components/UploadImage.vue'
+import VueDatepickerLocal from 'vue-datepicker-local'
+
 import Helper from 'Admin/library/Helper'
 
 import { STATUS_SHOW, STATUS_HIDDEN } from '../store'
 import { STORAGE_AUTH } from 'Admin/modules/auth/store'
+import { sameForm, sameData } from '../store/formData'
 
 export default {
-    name: 'AdminProductAdd',
+    name: 'AdminEventAdd',
 
-    components: { cSwitch },
+    components: { cSwitch, UploadImage, VueDatepickerLocal },
 
     beforeCreate() {
         Helper.changeTitleAdminPage(this.$i18n.t('textManageEvent'))
@@ -278,32 +242,34 @@ export default {
 
     data() {
         let token = JSON.parse(localStorage.getItem(STORAGE_AUTH)).token
-        let today = new Date()
 
         return {
-            formData: this.resetFromData(),
-            uploadOptions: {
-                acceptedFileTypes: ['image/*'],
-                url: '/api/v0/upload-image',
-                clickable: false,
-                params: {
-                    folder: `product-${today.getFullYear()}
-                        -${today.getMonth() + 1}
-                        -${today.getDate()}
-                    `,
-                },
-                maxFiles: 1,
-                paramName: 'image',
-                headers: {
-                    Authorization: `${token.token_type} ${token.access_token}`
-                }
-            }
+            formData: { ...this.resetFromData() },
+            token,
+            images: [],
         }
     },
 
     methods: {
         getLanguages(){
             return this.$store.state.storeLanguage.languages
+        },
+
+        getToken() {
+            return JSON.parse(localStorage.getItem(STORAGE_AUTH)).token
+        },
+
+        getConfigDateTimeLocal()
+        {
+            return configDateTimeLocal
+        },
+
+        successUploader(path) {
+            return this.images.push(path)
+        },
+
+        removeFile(index) {
+            return this.images = this.images.filter((image, key) => key !== index)
         },
 
         authorOption() {
@@ -323,46 +289,6 @@ export default {
             this.formData[languageKey].slug = slug(value)
         },
 
-        triggerBrowse(event) {
-            event.preventDefault()
-
-            if (this.$refs.uploader.files.length >= this.uploadOptions.maxFiles) {
-                return this.$toaster.error(this.$i18n.t('textNotAddFile'));
-            }
-
-            return this.$refs.uploader.triggerBrowseFiles()
-        },
-
-        async removeUploadFile(index, event) {
-            event.preventDefault();
-
-            let files = this.$refs.uploader.files
-
-            await this.$swal({
-                title: this.$i18n.t('textConfirmDelete'),
-                icon: 'warning',
-                buttons: true,
-                dangerMode: true,
-            }) && (this.$refs.uploader.files = files.filter((f, i) => i !== index))
-
-            return this.formData.sameData.image_url = ''
-        },
-
-        successUploader(response) {
-            let serveRespone = JSON.parse(response.xhr.response)
-
-            return this.formData.sameData.image_url = serveRespone.path
-        },
-
-        errorUploader(error) {
-            let files = this.$refs.uploader.files
-            let xhr = { response: JSON.parse(error.xhr.response) }
-
-            this.$toaster.error(Helper.getFirstError(xhr, this.$i18n.t('textDefaultErrorRequest')))
-
-            return this.$refs.uploader.files.length = files.length - 1;
-        },
-
         ortherOptions() {
             return {
                 ...configTinyMCE,
@@ -371,47 +297,28 @@ export default {
         },
 
         resetFromData() {
-            let sameForm = {
-                title: '',
-                slug: '',
-                description: '',
-                detail: '',
-                has: false,
-                seo_keyword: '',
-                seo_description: '',
-                topic: '',
-                location: '',
-            }
-
-            let formData = {
-                sameData: {
-                    'image_url': '',
-                    'author_id': null,
-                    'start_at': null,
-                    'end_at': null,
-                    'point_review_manual': 5,
-                    'total_review_manual': 0,
-                    'is_review_manual': true,
-                }
-            }
+            let formData = { sameData: { ...sameData } }
 
             for (let language of this.getLanguages()) {
                 formData[language.key] = { ...sameForm }
             }
 
-            return formData;
+            return { ...formData }
         },
 
         validateForm() {
             let params = this.formData.sameData
-            return params.start_at && params.end_at
+
+            return  params.author_id
+                && params.start_at && params.end_at
         },
 
         convertDataSubmit() {
             let params = {
                 ...this.formData.sameData,
-                start_at: moment(this.formData.sameData.start_at).format('YYYY-MM-DD HH:mm:ss'),
-                end_at: moment(this.formData.sameData.end_at).format('YYYY-MM-DD HH:mm:ss'),
+                start_at: moment(this.formData.sameData.start_at).format('YYYY-MM-DD HH:mm'),
+                end_at: moment(this.formData.sameData.end_at).format('YYYY-MM-DD HH:mm'),
+                image_url: this.images.length ? this.images[0] : '',
             }
 
             for (let language of this.getLanguages()) {
@@ -432,7 +339,7 @@ export default {
             let params = this.convertDataSubmit();
             this.$store.dispatch('actionEventAdd', { vue: this, params });
 
-            return this.resetFromData()
+            return this.formData = this.resetFromData()
         },
 
         clickCancel() {

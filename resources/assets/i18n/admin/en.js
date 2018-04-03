@@ -93,7 +93,9 @@ const en = {
     textAuthor: 'Author',
     textLocation: 'Location',
     textStartAt: 'Start at',
-    textStartEnd: 'Start end',
+    textEndAt: 'End at',
+    textAvatar: 'Avatar',
+    textTime: 'Time',
 }
 
 export default en;

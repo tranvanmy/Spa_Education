@@ -32,17 +32,22 @@
                     :current-page="currentPage"
                     :per-page="perPage"
                 >
-                    <template slot="status" slot-scope="data">
-                        <b-button size="sm" :variant="data.item.status ? 'success' : 'danger'">
-                            {{ $t(data.item.status ? 'show' : 'hidden') }}
-                        </b-button>
+                    <template slot="title" slot-scope="data">
+                        {{ data.item.title_vi }} <br/>
+                        {{ data.item.title_en }}
+                    </template>
+                    <template slot="location" slot-scope="data">
+                        {{ data.item.location_vi }} <br/>
+                        {{ data.item.location_en }}
+                    </template>
+                    <template slot="time" slot-scope="data">
+                        {{ data.item.start_at }} -> {{ data.item.start_at }}
                     </template>
                     <template slot="image" slot-scope="data">
                         <b-img thumbnail
-                            :src="`/${data.item.image}`"
-                            :alt="data.item.name"
+                            :src="`/${data.item.image_url}`"
                             style="width: 150px"
-                            v-if="data.item.image"
+                            v-if="data.item.image_url"
                         />
                     </template>
                     <template slot="action" slot-scope="data">
@@ -96,10 +101,10 @@
             return {
                 fields: [
                     {key: 'id', sortable: true},
-                    {key: 'name', label: this.$i18n.t('textName'), tdClass: 'text-left'},
+                    {key: 'title', label: this.$i18n.t('textName'), tdClass: 'text-left'},
+                    {key: 'location', label: this.$i18n.t('textLocation'), tdClass: 'text-left'},
+                    {key: 'time', label: this.$i18n.t('textTime'), tdClass: 'text-left'},
                     {key: 'image', label: this.$i18n.t('textImage')},
-                    {key: 'price', label: this.$i18n.t('textPrice'), tdClass: 'text-left'},
-                    {key: 'prioty', label: this.$i18n.t('textPrioty'), sortable: true},
                     {key: 'status', label: this.$i18n.t('textStatus')},
                     {key: 'action', label: this.$i18n.t('textAction')},
                 ],
@@ -124,7 +129,7 @@
                         buttons: true,
                         dangerMode: true,
                     })
-                    && this.$store.dispatch('callEventDelete', { vue: this, id })
+                    && this.$store.dispatch('actionEventDelete', { vue: this, id })
             },
 
             changePage(page) {
@@ -156,9 +161,7 @@
                 }
 
                 return this.items.filter(item => {
-                    let ignore = ['category', 'detail', 'guide', 'image']
                     for (let i in item) {
-                        if (ignore.indexOf(i) !== -1) continue
                         if (String(item[i]).toLowerCase().indexOf(valueFilter) !== -1) return true
                     }
 

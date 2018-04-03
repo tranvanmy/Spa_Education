@@ -81,6 +81,20 @@ window.configTinyMCE = {
 
     fontsize_formats: '8pt 10pt 12pt 13pt 14pt 16pt 18pt 20pt 24pt 36pt',
 }
+
+window.configDateTimeLocal = {
+    dow: 0, // Sunday is the first day of the week
+    hourTip: 'Select Hour', // tip of select hour
+    minuteTip: 'Select Minute', // tip of select minute
+    secondTip: 'Select Second', // tip of select second
+    yearSuffix: '', // suffix of head year
+    monthsHead: 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
+    months: 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'),
+    weeks: 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'),
+    cancelTip: 'Cancel',
+    submitTip: 'Confirm'
+}
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

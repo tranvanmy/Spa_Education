@@ -40,14 +40,14 @@
                         />
                     </template>
                     <template slot="action" slot-scope="data">
-                        <!-- <b-button
+                        <b-button
                             type="submit" size="sm"
                             variant="primary"
                             @click="clickEditItem(data.item)"
                         >
                             <i class="icon-pencil"></i>
                             {{ $t('textEdit') }}
-                        </b-button> -->
+                        </b-button>
                         <b-button
                             type="reset" size="sm"
                             variant="danger"
