@@ -5,6 +5,10 @@ import storeAuth from 'Admin/modules/auth/store'
 import storeLoading from 'Admin/modules/loading/store'
 import storeAdminEvent from 'Admin/modules/event/store'
 import storeAdminAuthor from 'Admin/modules/author/store'
+import storeAdminAboutUs from 'Admin/modules/about-us/store'
+import storeAdminJoinUs from 'Admin/modules/join-us/store'
+import storeAdminInstructor from 'Admin/modules/instructor/store'
+import storeAdminCourse from 'Admin/modules/course/store'
 
 Vue.use(Vuex)
 
@@ -30,5 +34,9 @@ export default new Vuex.Store({
         storeLoading,
         storeAdminEvent,
         storeAdminAuthor,
+        storeAdminAboutUs,
+        storeAdminJoinUs,
+        storeAdminInstructor,
+        storeAdminCourse,
     }
 })

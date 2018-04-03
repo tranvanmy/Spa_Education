@@ -12,7 +12,7 @@ class SubcriberSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             factory(Subcriber::class)->create([
                 'email' => "oliverliam{$i}@aiacademy.com",
             ]);

@@ -30,7 +30,7 @@ const mutations = {
     },
 
     [ADMIN_EVENT_SET_EVENT](state, { data }) {
-        return state.edit.data = data
+        return state.edit.data = { ...data }
     },
 
     [ADMIN_EVENT_DELETE](state, { id }) {

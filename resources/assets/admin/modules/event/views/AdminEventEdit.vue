@@ -1,8 +1,8 @@
 <template>
-   <b-card>
-       <b-row>
-           <b-col sm="12">
-               <b-form validated>
+    <b-card>
+        <b-row>
+            <b-col sm="12">
+                <b-form validated>
                    <b-row>
                        <b-col sm="12">
                             <b-form-fieldset :label="$t('textImage')"
@@ -159,11 +159,11 @@
                            <b-row>
                                <b-col sm="6">
                                    <b-form-fieldset :label="$t('textSeoKeyword')">
-                                       <b-form-input
-                                               type="text"
-                                               :placeholder="$t('textSeoKeyword')"
-                                               v-model="formData[language.key].seo_keyword"
-                                       />
+                                        <b-form-input
+                                           type="text"
+                                           :placeholder="$t('textSeoKeyword')"
+                                           v-model="formData[language.key].seo_keyword"
+                                        />
                                    </b-form-fieldset>
                                </b-col>
                                <b-col sm="6">
@@ -179,23 +179,23 @@
                            <b-row>
                                <b-col sm="12">
                                    <b-form-fieldset :label="$t('textDetail')">
-                                       <tinymce
-                                               :id="`event_add_detail_${language.key}`"
-                                               v-model="formData[language.key].detail || ''"
-                                               :other_options="ortherOptions()"
-                                       />
+                                        <tinymce
+                                            :id="`event_edit_detail_${new Date().getTime()}_${language.key}`"
+                                            v-model="formData[language.key].detail"
+                                            :other_options="ortherOptions()"
+                                        />
                                    </b-form-fieldset>
                                </b-col>
                            </b-row>
                        </b-tab>
                    </b-tabs>
 
-               </b-form>
-           </b-col><!--/.col-->
-       </b-row>
+                </b-form>
+            </b-col><!--/.col-->
+        </b-row>
         <div slot="header" class="w-100">
             <b-row>
-                <b-col sm="4">{{ $t('textEditProduct') }}</b-col>
+                <b-col sm="4">{{ $t('textEdit') }}</b-col>
                 <b-col sm="8" class="text-right">
                     <b-button type="submit" size="xs" variant="primary" @click="clickSubmitEdit">
                         <i class="fa fa-dot-circle-o"></i>
@@ -264,6 +264,7 @@ export default {
                     formData[language.key][key] = data[`${key}_${language.key}`]
                 }
                 formData[language.key].has = data[`has_${language.key}`] ? true : false
+                formData[language.key].detail = data[`detail_${language.key}`] ? data[`detail_${language.key}`] : ''
             }
 
             return { ...formData }
@@ -342,6 +343,7 @@ export default {
                     params[`${key}_${language.key}`] = form[key]
                 }
             }
+
             return params;
         },
 

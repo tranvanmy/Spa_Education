@@ -12,6 +12,20 @@ export default {
             // }
         },
         {
+            name: 'Instructors',
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'Instructor list',
+                    url: '/instructors',
+                },
+                {
+                    name: 'Add new Instructor',
+                    url: '/instructors/add',
+                }
+            ]
+        },
+        {
             name: 'Authors',
             icon: 'icon-list',
             children: [
@@ -39,29 +53,47 @@ export default {
                 }
             ]
         },
-        // {
-        //     name: 'Bài viết',
-        //     icon: 'icon-list',
-        //     children: [
-        //         {
-        //             name: 'Danh sách',
-        //             url: '/posts',
-        //         },
-        //         {
-        //             name: 'Thêm mới',
-        //             url: '/posts/add',
-        //         }
-        //     ]
-        // },
-        // {
-        //     name: 'Banner',
-        //     icon: 'icon-list',
-        //     url: '/banners',
-        // },
-        // {
-        //     name: 'Cài đặt',
-        //     icon: 'icon-list',
-        //     url: '/setups',
-        // },
+        {
+            name: 'Courses',
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'Course list',
+                    url: '/courses',
+                },
+                {
+                    name: 'Add new Course',
+                    url: '/courses/add',
+                }
+            ]
+        },
+        {
+            name: 'About-us',
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'About us list',
+                    url: '/about-us',
+                },
+                {
+                    name: 'Add new About us',
+                    url: '/about-us/add',
+                }
+            ]
+        },
+        {
+            name: 'Join-us',
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'Join us list',
+                    url: '/join-us',
+                },
+                {
+                    name: 'Add new Join us',
+                    url: '/join-us/add',
+                }
+            ]
+        },
     ]
 }

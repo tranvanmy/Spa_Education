@@ -11,6 +11,7 @@ export const sameForm = {
 }
 
 export const sameData = {
+    'id': null,
     'image_url': '',
     'author_id': null,
     'start_at': null,

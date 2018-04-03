@@ -12,7 +12,7 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i < 5; $i++) {
             factory(Event::class)->create([
                 'author_id' => $i % 4,
             ]);

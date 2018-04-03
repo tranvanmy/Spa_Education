@@ -12,7 +12,7 @@ class DataScientistSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 15; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             factory(DataScientist::class)->create([
                 'author_id' => $i%4,
                 'category_id' => $i%3,
