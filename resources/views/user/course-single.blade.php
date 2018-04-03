@@ -358,13 +358,6 @@
                 <div class="col-md-4 col-xs-12">
                     <div id="course-sidebar" class="course-sidebar">
                         <div id="sidebar-affix" class="sidebar-affix">
-                            {{--  <div class="widget widget-purchase text-center">
-                                <h4 class="elh-price">$185</h4>
-                                <a class="widget-purchase-btn" href="#">Buy This Course</a>
-                                <p class="widget-purchase-guarantee">10-Day Money Back Guarantee</p>
-                                <p class="lead">Short Brief</p>
-                                <p class="widget-purchase-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>  --}}
                             <div class="widget widget-course-share text-center">
                                 <p class="lead">Share in Social</p>
                                 <div class="elh-course-social-share">

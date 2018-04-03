@@ -24,7 +24,11 @@ Route::get('contact.html', function () { return view('user.contact'); });
 Route::get('course-single.html', function () { return view('user.course-single'); });
 Route::get('course.html', function () { return view('user.course'); });
 Route::get('data-scientist.html', function () { return view('user.data-scientist'); });
+
 Route::get('detail-serminal.html', function () { return view('user.detail-serminal'); });
+Route::get('detail-serminaldemo.html', function () { return view('user.detail-serminaldemo'); });
+
+
 Route::get('instructor-single.html', function () { return view('user.instructor-single'); });
 Route::get('join-us.html', function () { return view('user.join-us'); });
 Route::get('product-category.html', function () { return view('user.product-category'); });

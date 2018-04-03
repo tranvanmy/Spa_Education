@@ -2742,7 +2742,7 @@ button:focus {
 }
 
 .elh-event .elh-event-metas span+span {
-    margin-left: 90px;
+    margin-left: 20px;
 }
 
 .elh-event .elh-event-metas span .fa {
@@ -4942,7 +4942,8 @@ footer.elh-kids-footer .elh-footer-lower-area .copyright a {
 }
 
 .elh-course-infobox .elh-course-info-name {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
+    text-align: unset !important;
 }
 
 .elh-course-infobox .elh-course-info-value {
