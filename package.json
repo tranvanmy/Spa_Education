@@ -45,7 +45,7 @@
         "luxon": "^1.0.0",
         "moment": "^2.22.0",
         "node-sass": "^4.8.3",
-        "vue-datetime": "^1.0.0-beta.3",
+        "vue-datepicker-local": "^1.0.14",
         "vue-template-compiler": "^2.5.16",
         "webpack-bundle-analyzer": "^2.11.1",
         "weekstart": "^1.0.0"

@@ -14,7 +14,7 @@ const ADMIN_EVENT_SET_FILTER = 'admin_event/set_filter'
 const state = {
     listFetch: [],
     edit: {
-        event: {}
+        data: {}
     },
     currentPage: 1,
     valueFilter: '',
@@ -29,8 +29,8 @@ const mutations = {
         return state.currentPage = page
     },
 
-    [ADMIN_EVENT_SET_EVENT](state, { event }) {
-        return state.edit.event = event
+    [ADMIN_EVENT_SET_EVENT](state, { data }) {
+        return state.edit.data = data
     },
 
     [ADMIN_EVENT_DELETE](state, { id }) {
@@ -82,12 +82,12 @@ const actions = {
         vue.$store.dispatch('setAdminMainLoading', { ...mainLoading, show: false })
 
         if (response.status == 200) {
-            return commit(ADMIN_EVENT_SET_EVENT, { product: response.data })
+            return commit(ADMIN_EVENT_SET_EVENT, { data: response.data })
         }
 
         vue.$toaster.error(Helper.getFirstError(response, vue.$i18n.t('textDefaultErrorRequest')));
 
-        return vue.$router.push({ path: '/products' })
+        return vue.$router.push({ path: '/events' })
     },
 
     async actionEventEdit({ commit }, { vue, id, params }) {
@@ -99,7 +99,7 @@ const actions = {
         if (response.status == 200) {
             vue.$toaster.success(response.data.message)
 
-            return vue.$router.push({ path: '/products' })
+            return vue.$router.push({ path: '/events' })
         }
 
         return vue.$toaster.error(Helper.getFirstError(response, vue.$i18n.t('textDefaultErrorRequest')));

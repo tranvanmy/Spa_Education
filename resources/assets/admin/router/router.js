@@ -8,10 +8,11 @@ import Dashboard from 'Admin/modules/dashboard/views/Dashboard.vue'
 
 import AdminAuthor from 'Admin/modules/author/views/AdminAuthor.vue'
 import AdminAuthorAdd from 'Admin/modules/author/views/AdminAuthorAdd.vue'
-// import AdminAuthorEdit from 'Admin/modules/author/views/AdminAuthorEdit.vue'
+import AdminAuthorEdit from 'Admin/modules/author/views/AdminAuthorEdit.vue'
 
 import AdminEvent from 'Admin/modules/event/views/AdminEvent.vue'
 import AdminEventAdd from 'Admin/modules/event/views/AdminEventAdd.vue'
+import AdminEventEdit from 'Admin/modules/event/views/AdminEventEdit.vue'
 
 const router =  new VueRouter({
     routes: [
@@ -46,11 +47,11 @@ const router =  new VueRouter({
                             name: 'Add Author',
                             component: AdminAuthorAdd
                         },
-                        // {
-                        //     path: 'edit/:id',
-                        //     name: 'Update Author',
-                        //     component: AdminAuthorEdit
-                        // }
+                        {
+                            path: 'edit/:id',
+                            name: 'Update Author',
+                            component: AdminAuthorEdit
+                        }
                     ]
                 },
                 {
@@ -72,11 +73,11 @@ const router =  new VueRouter({
                             name: 'Add Event',
                             component: AdminEventAdd
                         },
-                        // {
-                        //     path: 'edit/:id',
-                        //     name: 'Update Event',
-                        //     component: AdminEventEdit
-                        // }
+                        {
+                            path: 'edit/:id',
+                            name: 'Update Event',
+                            component: AdminEventEdit
+                        }
                     ]
                 },
             ]

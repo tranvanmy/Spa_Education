@@ -28,16 +28,6 @@ class EventController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -45,9 +35,14 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        if ($this->model->create($request->all())) {
+        $data = $request->all();
+        $data['slug_vi'] = str_slug($request->title_vi);
+        $data['slug_en'] = str_slug($request->title_en);
+
+        if ($this->model->create($data)) {
             return $this->response(['message' => trans('message.add_success')]);
         }
+
         return $this->response(['message' => trans('message.add_failed')], 401);
     }
 
@@ -57,20 +52,9 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Event $event)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return $this->response($event);
     }
 
     /**
@@ -80,9 +64,17 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Event $event)
     {
-        //
+        $data = $request->all();
+        $data['slug_vi'] = str_slug($request->title_vi);
+        $data['slug_en'] = str_slug($request->title_en);
+
+        if ($event->fill($data)->save()) {
+            return $this->response(['message' => trans('message.edit_success')]);
+        }
+
+        return $this->response(['message' => trans('message.edit_success')], 401);
     }
 
     /**
@@ -91,8 +83,12 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Event $event)
     {
-        //
+        if ($event->delete()) {
+            return $this->response(['message' => trans('message.delete_success')]);
+        }
+
+        return $this->response(['message' => trans('message.delete_failed')], 401);
     }
 }

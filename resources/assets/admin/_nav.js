@@ -12,20 +12,6 @@ export default {
             // }
         },
         {
-            name: 'Events',
-            icon: 'icon-list',
-            children: [
-                {
-                    name: 'Event list',
-                    url: '/events',
-                },
-                {
-                    name: 'Add new Event',
-                    url: '/events/add',
-                }
-            ]
-        },
-        {
             name: 'Authors',
             icon: 'icon-list',
             children: [
@@ -36,6 +22,20 @@ export default {
                 {
                     name: 'Add new Author',
                     url: '/authors/add',
+                }
+            ]
+        },
+        {
+            name: 'Events',
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'Event list',
+                    url: '/events',
+                },
+                {
+                    name: 'Add new Event',
+                    url: '/events/add',
                 }
             ]
         },

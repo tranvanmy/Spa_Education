@@ -11,7 +11,7 @@ const ADMIN_AUTHOR_SET_FILTER = 'admin_author/set_filter'
 const state = {
     listFetch: [],
     edit: {
-        author: {}
+        data: {}
     },
     currentPage: 1,
     valueFilter: '',
@@ -26,8 +26,8 @@ const mutations = {
         return state.currentPage = page
     },
 
-    [ADMIN_AUTHOR_SET_AUTHOR](state, { author }) {
-        return state.edit.author = author
+    [ADMIN_AUTHOR_SET_AUTHOR](state, { data }) {
+        return state.edit.data = data
     },
 
     [ADMIN_AUTHOR_DELETE](state, { id }) {
@@ -79,7 +79,7 @@ const actions = {
         vue.$store.dispatch('setAdminMainLoading', { ...mainLoading, show: false })
 
         if (response.status == 200) {
-            return commit(ADMIN_AUTHOR_SET_AUTHOR, { product: response.data })
+            return commit(ADMIN_AUTHOR_SET_AUTHOR, { data: response.data })
         }
 
         vue.$toaster.error(Helper.getFirstError(response, vue.$i18n.t('textDefaultErrorRequest')));

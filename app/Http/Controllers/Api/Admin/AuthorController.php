@@ -21,16 +21,6 @@ class AuthorController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -53,18 +43,7 @@ class AuthorController extends Controller
      */
     public function show(Author $author)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Author  $author
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Author $author)
-    {
-        //
+        return $this->response($author);
     }
 
     /**
@@ -76,7 +55,11 @@ class AuthorController extends Controller
      */
     public function update(Request $request, Author $author)
     {
-        //
+        if ($author->fill($request->all())->save()) {
+            return $this->response(['message' => trans('message.edit_success')]);
+        }
+
+        return $this->response(['message' => trans('message.edit_success')], 401);
     }
 
     /**
@@ -90,7 +73,7 @@ class AuthorController extends Controller
         if ($author->delete()) {
             return $this->response(['message' => trans('message.delete_success')]);
         }
-        
+
         return $this->response(['message' => trans('message.delete_failed')], 401);
     }
 }
