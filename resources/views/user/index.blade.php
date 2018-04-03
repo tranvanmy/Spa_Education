@@ -529,7 +529,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 col-xs-12">
                     <div class="elh-section-header text-center">
-                        <h3 class="elh-section-title">Our <span>Partners</span></h3>
+                        <h3 class="elh-section-title">Success <span>Stories</span></h3>
                         <p class="elh-section-text">... Add your text here ....</p>
                     </div>
                 </div>
@@ -622,7 +622,25 @@
             </div>
             <div class="row">
                 <div class="elh-events">
-                    @for($i = 0; $i < 4; $i++)
+                    <div class="col-md-6 col-xs-12">
+                            <div class="elh-event style-2">
+                                <div class="elh-event-date" style="background-image: url(/images/event/small-1.jpg)">
+                                </div>
+                                <div class="elh-event-detail">
+                                    <h4 class="elh-event-title"><a href="detail-serminal.html">High-tech Agriculture - Issues and solutions</a></h4>
+                                    <p class="elh-event-metas">
+                                        <span><i class="fa fa-clock-o"></i>7/4/2018 8:30-17:30</span>
+                                        <span><i class="fa fa-users"></i>Vietnam</span>
+                                    </p>
+                                    <p class="elh-event-description">
+                                    <a href="seminar.html">
+                                        Organised by leading academies and univierisites and corporations, the conference will address issues in applying high technologies in Vietnam agriculture sector. Topics include automation, food technologies, food origin verification, IT platform as well as technology commercialisation issues and workforce training. AI Academy participate in designing ...
+                                    </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @for($i = 0; $i < 3; $i++)
                         <div class="col-md-6 col-xs-12">
                             <div class="elh-event style-2">
                                 <div class="elh-event-date" style="background-image: url(/images/event/small-1.jpg)">
