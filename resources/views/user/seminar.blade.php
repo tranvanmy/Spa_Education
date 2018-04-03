@@ -34,6 +34,68 @@
                     <div class="col-md-8">
                         <div class="row">
                             <div class="elh-course-listing">
+                                <div>
+                                    <div class="elh-event style-2">
+                                        <div class="row">
+                                            <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 40%; height: 300px;">
+                                            </div>
+                                            <div>
+                                                <h4 class="elh-event-title"><a href="detail-serminal.html">High-tech Agriculture - Issues and solutions</a></h4>
+                                                <div style="display: flex">
+                                                    <div>
+                                                        <img class="img-circle" src="/images/instructor/large-1.jpg" alt="..." style="width: 50px;height: 50px"/>
+                                                    </div>
+                                                    <div style="padding-left: 15px; line-height: 50px">
+                                                        <span style="font-size: 1.5rem; color: #5E6A73">
+                                                            Thuy Nguyen
+                                                        </span><br/>
+                                                    </div>
+                                                </div>
+                                                <p class="elh-event-metas">
+                                                    <span><i class="fa fa-clock-o"></i>7/4/2018 8:30-17:30</span>
+                                                    <span><i class="fa fa-users"></i>Vietnam Univerisity of Agriculture</span>
+                                                </p>
+                                                <p class="elh-event-description elh-event-excerpt" style="margin-top: 20px; margin-right: 15px;">
+                                                <a href="detail-serminal.html">
+                                                    Organised by leading academies and univierisites and corporations, the conference will address issues in applying high technologies in Vietnam agriculture sector. Topics include automation, food technologies, food origin verification...
+                                                </a>                                                
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="elh-event style-2">
+                                        <div class="row">
+                                            <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 40%; height: 300px;">
+                                            </div>
+                                            <div>
+                                                <h4 class="elh-event-title"><a href="detail-serminal.html">A vision based method for automatic evaluation of germination rate of rice seeds</a></h4>
+                                                <div style="display: flex">
+                                                    <div>
+                                                        <img class="img-circle"  src="/images/instructor/large-1.jpg" alt="..." style="width: 50px;height: 50px"/>
+                                                    </div>
+                                                    <div style="padding-left: 15px; line-height: 50px">
+                                                        <span style="font-size: 1.5rem; color: #5E6A73">
+                                                            Thuy Nguyen
+                                                        </span><br/>
+                                                    </div>
+                                                </div>
+                                                <p class="elh-event-metas">
+                                                    <span><i class="fa fa-clock-o"></i>19/5/2018 , 9.00-12.00</span>
+                                                    <span><i class="fa fa-users"></i>Vietnam Univerisity of Agriculture</span>
+                                                </p>
+                                                <p class="elh-event-description elh-event-excerpt" style="margin-top: 20px; margin-right: 15px;">
+                                                <a href="detail-serminal.html">
+                                                    Organised by leading academies and univierisites and corporations, the conference will address issues in applying high technologies in Vietnam agriculture sector. Topics include automation, food technologies, food origin verification...
+                                                </a>                                                
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 @for ($i = 0; $i < 5; $i++)
                                     <div>
                                     <div class="elh-event style-2">
@@ -41,7 +103,7 @@
                                             <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 40%; height: 300px;">
                                             </div>
                                             <div>
-                                                <h4 class="elh-event-title"><a href="detail-serminal.html">Fall event detection using single camera for health care</a></h4>
+                                                <h4 class="elh-event-title"><a href="detail-serminal.html">A vision based method for automatic evaluation of germination rate of rice seeds</a></h4>
                                                 <div style="display: flex">
                                                     <div>
                                                         <img class="img-circle" src="images/instructor/small-1.jpg" alt="..." style="width: 50px;height: 50px"/>
@@ -53,12 +115,12 @@
                                                     </div>
                                                 </div>
                                                 <p class="elh-event-metas">
-                                                    <span><i class="fa fa-clock-o"></i>Apr 21 (9:00-12:00)</span>
-                                                    <span><i class="fa fa-users"></i>Victoria Campus</span>
+                                                    <span><i class="fa fa-clock-o"></i>19/5/2018 , 9.00-12.00</span>
+                                                    <span><i class="fa fa-users"></i>Main office</span>
                                                 </p>
                                                 <p class="elh-event-description elh-event-excerpt" style="margin-top: 20px; margin-right: 15px;">
                                                 <a href="detail-serminal.html">
-                                                    Fall detection is important for safety for old people or patient living alone. There have been approaches for fall detection using wearable sensors or mobile phone accelerometers. However, wearable equipment is inconvenient for users and the elderly usually forget the equipment. Camera-based methods are more convenient .....
+                                                        Good seed germination is important for rice seed quality. However, it can only be evaluated manually by experienced specialists. We present a system for automatic evaluation of germination rate of rice seeds using computer vision and machine learning techniques...
                                                 </a>                                                
                                                 </p>
                                             </div>

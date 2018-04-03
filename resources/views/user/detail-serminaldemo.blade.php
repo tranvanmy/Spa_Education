@@ -15,7 +15,7 @@
                 <h3 class="elh-page-title">Events</h3>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active">High-tech Agriculture - Issues and solutions</li>
+                    <li class="active">A vision based method for automatic evaluation of germination rate of rice seeds</li>
                 </ol>
             </div>
         </div>
@@ -25,7 +25,7 @@
                     <div class="col-xs-12">
                         <div class="elh-course-profile">
                             <div class="elh-instructor-thumb elh-course-profile-item">
-                                <img class="img-responsive"  src="/images/instructor/large-1.jpg" alt="..." style="height: 100%;">
+                                <img class="img-responsive" src="/images/instructor/large-1.jpg" alt="..." style="height: 100%;">
                             </div>
                             <div class="elh-instructor-name elh-course-profile-item">
                                 <p>Author</p>
@@ -33,15 +33,15 @@
                             </div>
                             <div class="elh-student-count elh-course-profile-item">
                                 <p>Day</p>
-                                <h5>7/4/2018</h5>
+                                <h5>19/5/2018</h5>
                             </div>
                             <div class="elh-student-count elh-course-profile-item">
                                 <p>Time</p>
-                                <h5>8:30-17:30</h5>
+                                <h5>9.00-12.00</h5>
                             </div>
                             <div class="elh-review-score elh-course-profile-item">
                                 <p>Location</p>
-                                <h5>Vietnam Univerisity of Agriculture</h5>
+                                <h5>Main office</h5>
                             </div>
                         </div>
                     </div>
@@ -64,10 +64,7 @@
                             <div class="elh-course-description elh-course-section">
                                 <h3>Description</h3>
                                 <div class="post-entry">
-                                    <p>
-                                        Organised by leading academies and univierisites and corporations, the conference will address issues in applying high technologies in Vietnam agriculture sector. Topics include automation, food technologies, food origin verification, IT platform as well as technology commercialisation issues and workforce training. AI Academy participate in designing IT systems for the distribution channel of agriculture products mentioned in the conference.
-                                    </p> <br>
-                                    Co-organized by Vietnam Agriculture Academy, Hanoi National University of Technology Vietnam National University, Nguyen Tat Thanh University, GFS corporation and the Novelind Knowledge Platform the conference aims to create a link between technology and solutions between scientists and businesses in the fields of agriculture, information technology and training. Thereby, opinions from experts from institutes, schools and enterprises with much experience in the field will be collected in order to serve for the construction and deployment of high technology applications in agriculture. We would like to invite you to the seminar "High-tech Agriculture: Issues and solutions" AI Academy reserve 3 invitations for readers who are intersted in this event. Please contact Mrs. Thuy, email myngthuy@gmail.com For further inquiries about the event please contact Mrs Bích Hồng, nbhong@vnua.edu.vn
+                                    Good seed germination is important for rice seed quality. However, it can only be evaluated manually by experienced specialists. We present a system for automatic evaluation of germination rate of rice seeds using computer vision and machine learning techniques... Rice is one of the most cultivated cereal in Asian countries and Vietnam in particular. Good seed germination is important for rice seed quality, that impacts the rice production and crop yield. Currently, seed germination evaluation is carried out manually by experienced persons. This is a tedious and timeconsuming task. In this paper, we present a system for automatic evaluation of germination rate of rice seeds based on advanced techniques in computer vision and machine learning. We propose to use U-Net - a convolutional neural network - for segmentation and separation of rice seeds. Further processing such as computing distance transform and thresholding will be applied on the segmented regions for rice seed detection. Finally, ResNet is utilized to classify segmented rice seed regions into two classes: germinated and non-germinated seeds. Our contributions in this paper are three-fold. Firstly, we propose a framework which confirms that convolutional neural networks are better than traditional methods for both segmentation and classification tasks (with F1-scores of 93.38% and 95.66% respectively). Secondly, we deploy successfully an automatic tool in a real application for estimating rice germination rate. Finally, we introduce a new dataset of 1276 images of rice seeds of various rice varieties germinated from 6 to 10 days. This dataset is publicly available for research purpose.
                                 </div>
                             </div>
                         </div>
@@ -75,7 +72,9 @@
                         Tag
                          <div class="elh-course-tag">
                            <ul>
-                               <li>High-tech</li>
+                               <li>Computer vision</li>
+                               <li>Convolution neural network</li>
+                               <li>agriculture</li>
                            </ul>
                         </div>
 

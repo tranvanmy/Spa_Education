@@ -525,89 +525,39 @@
 
     <!-- Partner Logoes -->
     <div class="elh-section elh-section-padding elh-bottom-0" id="home_our_partner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1 col-xs-12">
-                    <div class="elh-section-header text-center">
-                        <h3 class="elh-section-title">Success <span>Stories</span></h3>
-                        <p class="elh-section-text">... Add your text here ....</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="partner-logoes">
-                        <a class="partner-logo" href="#">
-                            <img class="img-responsive" src="/images/partner/1.png" alt="...">
-                        </a>
-                        <a class="partner-logo" href="#">
-                            <img class="img-responsive" src="/images/partner/2.png" alt="...">
-                        </a>
-                        <a class="partner-logo" href="#">
-                            <img class="img-responsive" src="/images/partner/3.png" alt="...">
-                        </a>
-                        <a class="partner-logo" href="#">
-                            <img class="img-responsive" src="/images/partner/4.png" alt="...">
-                        </a>
-                        <a class="partner-logo" href="#">
-                            <img class="img-responsive" src="/images/partner/5.png" alt="...">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{-- <div class="elh-section elh-img-bg elh-bg-3 elh-carousel-section" id="home_news_blog">
-        <div class="elh-overlay elh-section-padding">
             <div class="container">
-               <div class="row">
-                <div class="col-md-10 col-md-offset-1 col-xs-12">
-                    <div class="elh-section-header text-center">
-                        <h3 class="elh-section-title">Our <span>Partners</span></h3>
-                        <p class="elh-section-text">... Add your text here ....</p>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-xs-12">
+                        <div class="elh-section-header text-center">
+                            <h3 class="elh-section-title">Success <span>Stories</span></h3>
+                            <p class="elh-section-text">... Add your text here ....</p>
+                        </div>
                     </div>
                 </div>
-            </div>
                 <div class="row">
-                    <div class="elh-generic-carousel owl-carousel">
-                        <article class="elh-post">
-                             <a class="partner-logo" href="#">
+                    <div class="col-xs-12">
+                        <div class="partner-logoes">
+                            <a class="partner-logo" href="#">
                                 <img class="img-responsive" src="/images/partner/1.png" alt="...">
                             </a>
-                        </article>
-                        <article class="elh-post">
-                             <a class="partner-logo" href="#">
-                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                            <a class="partner-logo" href="#">
+                                <img class="img-responsive" src="/images/partner/2.png" alt="...">
                             </a>
-                        </article>
-                        <article class="elh-post">
-                             <a class="partner-logo" href="#">
-                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                            <a class="partner-logo" href="#">
+                                <img class="img-responsive" src="/images/partner/3.png" alt="...">
                             </a>
-                        </article>
-                        <article class="elh-post">
-                             <a class="partner-logo" href="#">
-                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                            <a class="partner-logo" href="#">
+                                <img class="img-responsive" src="/images/partner/4.png" alt="...">
                             </a>
-                        </article>
-                        <article class="elh-post">
-                             <a class="partner-logo" href="#">
-                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                            <a class="partner-logo" href="#">
+                                <img class="img-responsive" src="/images/partner/5.png" alt="...">
                             </a>
-                        </article>
-                        <article class="elh-post">
-                             <a class="partner-logo" href="#">
-                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
-                            </a>
-                        </article>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> --}}
-    <!-- Partner Logoes End -->
-
     <!-- Upcoming Event -->
     <div class="elh-section elh-section-padding" id="home_seminar">
         <div class="container">
@@ -624,7 +574,7 @@
                 <div class="elh-events">
                     <div class="col-md-6 col-xs-12">
                             <div class="elh-event style-2">
-                                <div class="elh-event-date" style="background-image: url(/images/event/small-1.jpg)">
+                                <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 27%; height: 140px;">
                                 </div>
                                 <div class="elh-event-detail">
                                     <h4 class="elh-event-title"><a href="detail-serminal.html">High-tech Agriculture - Issues and solutions</a></h4>
@@ -633,17 +583,36 @@
                                         <span><i class="fa fa-users"></i>Vietnam</span>
                                     </p>
                                     <p class="elh-event-description">
-                                    <a href="seminar.html">
+                                    <a href="detail-serminal.html">
                                         Organised by leading academies and univierisites and corporations, the conference will address issues in applying high technologies in Vietnam agriculture sector. Topics include automation, food technologies, food origin verification, IT platform as well as technology commercialisation issues and workforce training. AI Academy participate in designing ...
                                     </a>
                                     </p>
                                 </div>
                             </div>
                         </div>
-                    @for($i = 0; $i < 3; $i++)
                         <div class="col-md-6 col-xs-12">
                             <div class="elh-event style-2">
-                                <div class="elh-event-date" style="background-image: url(/images/event/small-1.jpg)">
+                                <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 27%; height: 140px;">
+                                </div>
+                                <div class="elh-event-detail">
+                                    <h4 class="elh-event-title"><a href="detail-serminaldemo.html">A vision based method for automatic evaluation of germination rate of rice seeds</a></h4>
+                                    <p class="elh-event-metas">
+                                        <span><i class="fa fa-clock-o"></i>19/5/2018 , 9.00-12.00</span>
+                                        <span><i class="fa fa-users"></i>Main office</span>
+                                    </p>
+                                    <p class="elh-event-description">
+                                    <a href="detail-serminaldemo.html">
+                                        Good seed germination is important for rice seed quality. However, it can only be evaluated manually by experienced specialists. We present a system for automatic evaluation of germination rate of rice seeds using computer vision and machine learning techniques...
+                                    </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    @for($i = 0; $i < 2; $i++)
+                        <div class="col-md-6 col-xs-12">
+                            <div class="elh-event style-2">
+                                <div class="elh-event-date" style="background-image: url('http://vov.be/assets/files/events/InternalCommunication.jpg'); width: 27%; height: 140px;">
                                 </div>
                                 <div class="elh-event-detail">
                                     <h4 class="elh-event-title"><a href="detail-serminal.html">Fall event detection using single camera for health care  </a></h4>
