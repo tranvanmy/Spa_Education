@@ -9,7 +9,7 @@
 @endsection
 
 @section('user-banner')
-     <div class="elh-page-header elh-img-bg elh-bg-9">
+    <div class="elh-page-header elh-img-bg elh-bg-9">
         <div class="elh-overlay">
             <div class="container text-center">
                 <h3 class="elh-page-title">All Events</h3>

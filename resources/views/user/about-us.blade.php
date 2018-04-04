@@ -33,7 +33,7 @@
                         <div class="elh-course-description elh-course-section">
                             <h3>{{ __('about_us.vision.description') }}</h3>
                             <div class="post-entry">
-                                {{ $data[fieldLanguage('description')] }}
+                                {{ $data[fieldLanguage('detail')] }}
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                             </form>
                         </div>
                     -->
-                    
+
                     <!-- Student feedback end -->
 
                     <!-- Related Posts -->

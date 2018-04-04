@@ -11,6 +11,6 @@
     </head>
     <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
         <div id="admin"></div>
-        <script defer type="text/javascript" src="/admin/js/index.js"></script>
+        <script defer type="text/javascript" src="{{ mix('/admin/js/index.js') }}"></script>
     </body>
 </html>

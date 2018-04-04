@@ -179,10 +179,9 @@
                            <b-row>
                                <b-col sm="12">
                                    <b-form-fieldset :label="$t('textDetail')">
-                                        <tinymce
-                                            :id="`event_edit_detail_${new Date().getTime()}_${language.key}`"
+                                        <Editor
                                             v-model="formData[language.key].detail"
-                                            :other_options="ortherOptions()"
+                                            :init="ortherOptions()"
                                         />
                                    </b-form-fieldset>
                                </b-col>
@@ -223,6 +222,7 @@
 
 <script>
 import moment from 'moment'
+import Editor from '@tinymce/tinymce-vue'
 import cSwitch from 'Assets/components/Switch.vue'
 import UploadImage from 'Assets/components/UploadImage.vue'
 import VueDatepickerLocal from 'vue-datepicker-local'
@@ -234,7 +234,7 @@ import { sameForm, sameData } from '../store/formData'
 export default {
     name: 'AdminEventEdit',
 
-    components: { cSwitch, UploadImage, VueDatepickerLocal },
+    components: { cSwitch, UploadImage, VueDatepickerLocal, Editor },
 
     async beforeCreate() {
         Helper.changeTitleAdminPage(this.$i18n.t('textManageProduct'))

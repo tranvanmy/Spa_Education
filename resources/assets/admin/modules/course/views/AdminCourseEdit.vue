@@ -146,10 +146,9 @@
                            <b-row>
                                <b-col sm="12">
                                    <b-form-fieldset :label="$t('textDetail')">
-                                        <tinymce
-                                            :id="`instructor_edit_detail_${new Date().getTime()}_${language.key}`"
+                                        <Editor
                                             v-model="formData[language.key].detail"
-                                            :other_options="ortherOptions()"
+                                            :init="ortherOptions()"
                                         />
                                    </b-form-fieldset>
                                </b-col>
@@ -189,6 +188,7 @@
 </template>
 
 <script>
+import Editor from '@tinymce/tinymce-vue'
 import cSwitch from 'Assets/components/Switch.vue'
 import UploadImage from 'Assets/components/UploadImage.vue'
 import Helper from 'Admin/library/Helper'
@@ -199,7 +199,7 @@ import { sameForm, sameData } from '../store/formData'
 export default {
     name: 'AdminInstructorEdit',
 
-    components: { cSwitch, UploadImage },
+    components: { cSwitch, UploadImage, Editor },
 
     async beforeCreate() {
         Helper.changeTitleAdminPage(this.$i18n.t('textManageCourse'))

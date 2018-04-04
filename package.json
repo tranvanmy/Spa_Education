@@ -38,6 +38,7 @@
         "webpack": "3.8.1"
     },
     "dependencies": {
+        "@tinymce/tinymce-vue": "^1.0.3",
         "babel-core": "^6.26.0",
         "bootstrap-vue": "^2.0.0-rc.4",
         "file-loader": "^1.1.11",

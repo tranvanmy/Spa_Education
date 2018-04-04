@@ -110,17 +110,15 @@
                            <b-row>
                                <b-col sm="12">
                                    <b-form-fieldset :label="$t('textDetail')">
-                                        <tinymce
-                                            :id="`about-us_edit_detail_${language.key}`"
+                                        <Editor
                                             v-model="formData[language.key].detail"
-                                            :other_options="ortherOptions()"
+                                            :init="ortherOptions()"
                                         />
                                    </b-form-fieldset>
                                </b-col>
                            </b-row>
                        </b-tab>
                    </b-tabs>
-
                 </b-form>
             </b-col><!--/.col-->
         </b-row>
@@ -154,6 +152,7 @@
 
 <script>
 import cSwitch from 'Assets/components/Switch.vue'
+import Editor from '@tinymce/tinymce-vue'
 import Helper from 'Admin/library/Helper'
 
 import { STORAGE_AUTH } from 'Admin/modules/auth/store'
@@ -162,7 +161,7 @@ import { sameForm, sameData } from '../store/formData'
 export default {
     name: 'AdminAboutUsEdit',
 
-    components: { cSwitch },
+    components: { cSwitch, Editor },
 
     beforeCreate() {
         Helper.changeTitleAdminPage(this.$i18n.t('textManageAboutUs'))

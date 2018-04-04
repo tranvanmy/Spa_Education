@@ -108,10 +108,9 @@
                             <b-row>
                                 <b-col sm="12">
                                     <b-form-fieldset :label="$t('textDetail')">
-                                        <tinymce
-                                            :id="`event_add_detail_${language.key}`"
+                                        <Editor
                                             v-model="formData[language.key].detail"
-                                            :other_options="ortherOptions()"
+                                            :init="ortherOptions()"
                                         />
                                     </b-form-fieldset>
                                 </b-col>
@@ -151,6 +150,7 @@
 </template>
 
 <script>
+import Editor from '@tinymce/tinymce-vue'
 import cSwitch from 'Assets/components/Switch.vue'
 
 import Helper from 'Admin/library/Helper'
