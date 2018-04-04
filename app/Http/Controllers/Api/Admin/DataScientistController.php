@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
-use App\Models\Instructor;
+use App\Models\DataScientist;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class InstructorController extends Controller
+class DataScientistController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class InstructorController extends Controller
      */
     public function index()
     {
-        return $this->response(Instructor::all());
+        return $this->response(DataScientist::all());
     }
 
     /**
@@ -30,7 +30,7 @@ class InstructorController extends Controller
         $data['slug_vi'] = str_slug($request->slug_vi);
         $data['slug_en'] = str_slug($request->slug_en);
 
-        if (Instructor::create($data)) {
+        if (DataScientist::create($data)) {
             return $this->response(['message' => trans('message.add_success')]);
         }
 
@@ -40,28 +40,28 @@ class InstructorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Instructor  $instructor
+     * @param  \App\Models\DataScientist  $dataScientist
      * @return \Illuminate\Http\Response
      */
-    public function show(Instructor $instructor)
+    public function show(DataScientist $dataScientist)
     {
-        return $this->response($instructor);
+        return $this->response($dataScientist);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Instructor  $instructor
+     * @param  \App\Models\DataScientist  $dataScientist
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Instructor $instructor)
+    public function update(Request $request, DataScientist $dataScientist)
     {
         $data = $request->all();
         $data['slug_vi'] = str_slug($request->slug_vi);
         $data['slug_en'] = str_slug($request->slug_en);
 
-        if ($instructor->fill($data)->save()) {
+        if ($dataScientist->fill($data)->save()) {
             return $this->response(['message' => trans('message.edit_success')]);
         }
 
@@ -71,12 +71,12 @@ class InstructorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Instructor  $instructor
+     * @param  \App\Models\DataScientist  $dataScientist
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Instructor $instructor)
+    public function destroy(DataScientist $dataScientist)
     {
-        if ($instructor->delete()) {
+        if ($dataScientist->delete()) {
             return $this->response(['message' => trans('message.delete_success')]);
         }
 

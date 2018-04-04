@@ -8,7 +8,7 @@
                             <b-form-fieldset :label="$t('textImage')"
                             >
                                 <UploadImage
-                                    folder="event"
+                                    folder="authors"
                                     :doSuccessUploader="successUploader"
                                     :token="getToken()"
                                     :doRemoveFile="removeFile"

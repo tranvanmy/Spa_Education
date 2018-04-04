@@ -8,7 +8,7 @@
                             <b-form-fieldset :label="$t('textImage')"
                             >
                                 <UploadImage
-                                    folder="courses"
+                                    folder="data-scientists"
                                     :doSuccessUploader="successUploader"
                                     :token="getToken()"
                                     :doRemoveFile="removeFile"
@@ -18,14 +18,25 @@
                     </b-row>
                     <b-row>
                         <b-col sm="6">
-                            <b-form-fieldset :label="$t('textInstructor')">
+                            <b-form-fieldset :label="$t('textCategory')">
                                 <b-form-select
                                     :plain="true" required
-                                    :options="instructorOption()"
-                                    v-model="formData.sameData.instructor_id"
+                                    :options="categoryOptions()"
+                                    v-model="formData.sameData.category_id"
                                 />
                             </b-form-fieldset>
                         </b-col>
+                        <b-col sm="6">
+                            <b-form-fieldset :label="$t('textAuthor')">
+                                <b-form-select
+                                    :plain="true" required
+                                    :options="authorOptions()"
+                                    v-model="formData.sameData.author_id"
+                                />
+                            </b-form-fieldset>
+                        </b-col>
+                    </b-row>
+                    <b-row>
                         <b-col sm="2">
                             <b-form-fieldset :label="$t('textPointReviewManual')">
                                 <b-form-input
@@ -90,17 +101,6 @@
                                             type="text"
                                             v-model="formData[language.key].slug"
                                             :placeholder="$t('textSlug')"
-                                        />
-                                    </b-form-fieldset>
-                                </b-col>
-                            </b-row>
-                            <b-row>
-                                <b-col sm="12">
-                                    <b-form-fieldset :label="$t('textLevel')">
-                                        <b-form-input
-                                            type="text"
-                                            v-model="formData[language.key].level"
-                                            :placeholder="$t('textLevel')"
                                         />
                                     </b-form-fieldset>
                                 </b-col>
@@ -194,13 +194,14 @@ import { STORAGE_AUTH } from 'Admin/modules/auth/store'
 import { sameForm, sameData } from '../store/formData'
 
 export default {
-    name: 'AdminCourseAdd',
+    name: 'AdminDataScientistAdd',
 
     components: { cSwitch, UploadImage, Editor },
 
     beforeCreate() {
-        Helper.changeTitleAdminPage(this.$i18n.t('textManageCourse'))
-        this.$store.dispatch('actionFetchInstructors', { vue: this })
+        Helper.changeTitleAdminPage(this.$i18n.t('textManageDataScientist'))
+        this.$store.dispatch('actionFetchCategory', { vue: this })
+        this.$store.dispatch('actionFetchAuthors', { vue: this })
     },
 
     data() {
@@ -219,13 +220,25 @@ export default {
             return JSON.parse(localStorage.getItem(STORAGE_AUTH)).token
         },
 
-        instructorOption() {
-            let instructors = this.$store.state.storeAdminInstructor.listFetch
+        categoryOptions() {
+            let categories = this.$store.state.storeAdminCategory.listFetch
             let options = []
-            for (let i = 0; i < instructors.length; i++) {
+            for (let i = 0; i < categories.length; i++) {
                 options.push({
-                    value: instructors[i].id,
-                    text: `${instructors[i].name_vi} / ${instructors[i].name_en}` ,
+                    value: categories[i].id,
+                    text: `${categories[i].title_vi} / ${categories[i].title_en}` ,
+                })
+            }
+            return options
+        },
+
+        authorOptions() {
+            let authors = this.$store.state.storeAdminAuthor.listFetch
+            let options = []
+            for (let i = 0; i < authors.length; i++) {
+                options.push({
+                    value: authors[i].id,
+                    text: `${authors[i].name_vi} / ${authors[i].name_en}` ,
                 })
             }
             return options
@@ -252,7 +265,8 @@ export default {
         },
 
         validateForm() {
-            return  !!this.formData.sameData.instructor_id
+            return  !!this.formData.sameData.category_id
+                && !!this.formData.sameData.author_id
         },
 
         resetFromData() {
@@ -287,13 +301,13 @@ export default {
             }
 
             let params = this.convertDataSubmit();
-            this.$store.dispatch('actionCourseAdd', { vue: this, params });
+            this.$store.dispatch('actionDataScientistAdd', { vue: this, params });
 
             return this.formData = this.resetFromData()
         },
 
         clickCancel() {
-            return this.$router.push({ path: '/courses' })
+            return this.$router.push({ path: '/data-scientists' })
         },
     },
 }

@@ -27,8 +27,8 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['slug_vi'] = str_slug($request->title_vi);
-        $data['slug_en'] = str_slug($request->title_en);
+        $data['slug_vi'] = str_slug($request->slug_vi);
+        $data['slug_en'] = str_slug($request->slug_en);
 
         if (Category::create($data)) {
             return $this->response(['message' => trans('message.add_success')]);
@@ -58,15 +58,14 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $data = $request->all();
-        $data['slug_vi'] = str_slug($request->title_vi);
-        $data['slug_en'] = str_slug($request->title_en);
+        $data['slug_vi'] = str_slug($request->slug_vi);
+        $data['slug_en'] = str_slug($request->slug_en);
 
         if ($category->fill($data)->save()) {
             return $this->response(['message' => trans('message.edit_success')]);
         }
 
         return $this->response(['message' => trans('message.edit_success')], 401);
-
     }
 
     /**

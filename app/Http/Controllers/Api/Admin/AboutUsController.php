@@ -27,8 +27,8 @@ class AboutUsController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['slug_vi'] = str_slug($request->title_vi);
-        $data['slug_en'] = str_slug($request->title_en);
+        $data['slug_vi'] = str_slug($request->slug_vi);
+        $data['slug_en'] = str_slug($request->slug_en);
 
         if (AboutUs::create($data)) {
             return $this->response(['message' => trans('message.add_success')]);
@@ -58,8 +58,8 @@ class AboutUsController extends Controller
     public function update(Request $request, AboutUs $aboutUs)
     {
         $data = $request->all();
-        $data['slug_vi'] = str_slug($request->title_vi);
-        $data['slug_en'] = str_slug($request->title_en);
+        $data['slug_vi'] = str_slug($request->slug_vi);
+        $data['slug_en'] = str_slug($request->slug_en);
 
         if ($aboutUs->fill($data)->save()) {
             return $this->response(['message' => trans('message.edit_success')]);

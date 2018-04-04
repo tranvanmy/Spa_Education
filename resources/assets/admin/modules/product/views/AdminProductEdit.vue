@@ -8,7 +8,7 @@
                             <b-form-fieldset :label="$t('textImage')"
                             >
                                 <UploadImage
-                                    folder="courses"
+                                    folder="data-scientists"
                                     :doSuccessUploader="successUploader"
                                     :token="getToken()"
                                     :doRemoveFile="removeFile"
@@ -19,11 +19,11 @@
                    </b-row>
                    <b-row>
                        <b-col sm="6">
-                           <b-form-fieldset :label="$t('textInstructor')">
+                           <b-form-fieldset :label="$t('textCategory')">
                                <b-form-select
                                    :plain="true" required
-                                   :options="instructorOption()"
-                                   v-model="formData.sameData.instructor_id"
+                                   :options="categoryOptions()"
+                                   v-model="formData.sameData.category_id"
                                />
                            </b-form-fieldset>
                        </b-col>
@@ -94,18 +94,6 @@
                                             :value="formData[language.key].slug"
                                             :placeholder="$t('textSlug')"
                                         />
-                                   </b-form-fieldset>
-                               </b-col>
-                           </b-row>
-
-                           <b-row>
-                               <b-col sm="12">
-                                   <b-form-fieldset :label="$t('textLevel')">
-                                       <b-form-input
-                                           type="text"
-                                           v-model="formData[language.key].level"
-                                           :placeholder="$t('textLevel')"
-                                       />
                                    </b-form-fieldset>
                                </b-col>
                            </b-row>
@@ -197,14 +185,14 @@ import { STORAGE_AUTH } from 'Admin/modules/auth/store'
 import { sameForm, sameData } from '../store/formData'
 
 export default {
-    name: 'AdminInstructorEdit',
+    name: 'AdminProductEdit',
 
     components: { cSwitch, UploadImage, Editor },
 
     async beforeCreate() {
-        Helper.changeTitleAdminPage(this.$i18n.t('textManageCourse'))
-        await this.$store.dispatch('actionFetchInstructors', { vue: this })
-        await this.$store.dispatch('actionCourseShow', { vue: this, id: this.$route.params.id })
+        Helper.changeTitleAdminPage(this.$i18n.t('textManageProduct'))
+        await this.$store.dispatch('actionFetchCategory', { vue: this })
+        await this.$store.dispatch('actionProductShow', { vue: this, id: this.$route.params.id })
     },
 
     data() {
@@ -215,7 +203,7 @@ export default {
 
     computed: {
         formData() {
-            let data = this.$store.state.storeAdminCourse.edit.data
+            let data = this.$store.state.storeAdminProduct.edit.data
             let formData = { sameData: {} }
 
             for (let key in sameData) {
@@ -242,20 +230,20 @@ export default {
         },
 
         getCurrentImages() {
-            return [this.$store.state.storeAdminCourse.edit.data.image_url]
+            return [this.$store.state.storeAdminProduct.edit.data.image_url]
         },
 
         getToken() {
             return JSON.parse(localStorage.getItem(STORAGE_AUTH)).token
         },
 
-        instructorOption() {
-            let instructors = this.$store.state.storeAdminInstructor.listFetch
+        categoryOptions() {
+            let categories = this.$store.state.storeAdminCategory.listFetch
             let options = []
-            for (let i = 0; i < instructors.length; i++) {
+            for (let i = 0; i < categories.length; i++) {
                 options.push({
-                    value: instructors[i].id,
-                    text: `${instructors[i].name_vi} / ${instructors[i].name_en}` ,
+                    value: categories[i].id,
+                    text: `${categories[i].title_vi} / ${categories[i].title_en}` ,
                 })
             }
             return options
@@ -283,7 +271,7 @@ export default {
         },
 
         validateForm() {
-            return  !!this.formData.sameData.instructor_id
+            return  !!this.formData.sameData.category_id
         },
 
         convertDataSubmit() {
@@ -309,11 +297,11 @@ export default {
 
             let params = this.convertDataSubmit();
 
-            this.$store.dispatch('actionCourseEdit', { vue: this, params, id: this.$route.params.id });
+            this.$store.dispatch('actionProductEdit', { vue: this, params, id: this.$route.params.id });
         },
 
         clickCancel() {
-            return this.$router.push({ path: '/courses' })
+            return this.$router.push({ path: '/products' })
         },
     }
 }

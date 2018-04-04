@@ -33,6 +33,10 @@ Route::group(['domain' => 'admin.'.env('MAIN_DOMAIN'), 'namespace' => 'Api\Admin
         Route::resource('instructors', 'InstructorController')->only($methodAllow);
         Route::resource('courses', 'CourseController')->only($methodAllow);
         Route::resource('categories', 'CategoryController')->only($methodAllow);
+        Route::resource('research-developments', 'ResearchController')->only($methodAllow);
+        Route::resource('products', 'ProductController')->only($methodAllow);
+        Route::resource('data-scientists', 'DataScientistController')->only($methodAllow);
+
     });
 
 

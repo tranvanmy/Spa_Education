@@ -10,6 +10,9 @@ import storeAdminJoinUs from 'Admin/modules/join-us/store'
 import storeAdminInstructor from 'Admin/modules/instructor/store'
 import storeAdminCourse from 'Admin/modules/course/store'
 import storeAdminCategory from 'Admin/modules/category/store'
+import storeAdminResearchDevelopment from 'Admin/modules/research-develop/store'
+import storeAdminProduct from 'Admin/modules/product/store'
+import storeAdminDataScientist from 'Admin/modules/data-scientist/store'
 
 Vue.use(Vuex)
 
@@ -40,5 +43,8 @@ export default new Vuex.Store({
         storeAdminInstructor,
         storeAdminCourse,
         storeAdminCategory,
+        storeAdminResearchDevelopment,
+        storeAdminProduct,
+        storeAdminDataScientist,
     }
 })
