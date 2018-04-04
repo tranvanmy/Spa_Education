@@ -21,26 +21,26 @@ Route::group(['namespace' => 'Web'], function () {
     // Route::post('subcribe', '')->name('user.subcribe')
     //
     Route::get('event', 'EventController@index' )->name('user.event.list');
-    // Route::get('event/{slug}', 'EventController@index' )->name('user.event.detail');
+    Route::get('event/{slug}', 'EventController@show' )->name('user.event.detail');
     //
     Route::get('about-us/{slug}', 'AboutUsController@show')->name('user.about-us.detail');
-    // Route::get('join-us/{slug}', '')->name('user.join-us.detail');
+    Route::get('join-us/{slug}', 'IoinUsController@show')->name('user.join-us.detail');
     //
-    // Route::get('course', '')->name('user.course');
-    // Route::get('course/{slug}', '')->name('user.course.detail');
+    Route::get('course', 'CourseController@index')->name('user.course.list');
+    Route::get('course/{slug}', 'CourseController@show')->name('user.course.detail');
     //
     // Route::get('instructor', '')->name('user.instructor');
     // Route::get('instructor/{slug}', '')->name('user.instructor.detail');
     //
-    // Route::get('product', 'ProductControler')->name('user.product.list');
-    // Route::get('product/{category}', 'ProductControler')->name('user.product.category');
+    Route::get('product', 'ProductControler@index')->name('user.product.list');
+    Route::get('product/{category}', 'ProductControler@category')->name('user.product.category');
     // Route::get('product/{category}/{product}', 'ProductControler')->name('user.product.detail');
     //
-    // Route::get('research-and-development', 'ResearchControler')->name('user.research.list');
-    // Route::get('research-and-development/{category}', 'ResearchControler')->name('user.research.category');
+    Route::get('research-and-development', 'ResearchControler@index')->name('user.research.list');
+    Route::get('research-and-development/{category}', 'ResearchControler@category')->name('user.research.category');
     // Route::get('research-and-development/{category}/{slug}', 'ResearchControler')->name('user.research.detail');
     //
-    // Route::get('data-scientists-corner', 'DataScientistControler')->name('user.data-scientist.list');
+    Route::get('data-scientists-corner', 'DataScientistControler@index')->name('user.data-scientist.list');
     // Route::get('data-scientists-corner/{category}', 'DataScientistControler')->name('user.data-scientist.category');
     // Route::get('data-scientists-corner/{category}/{slug}', 'DataScientistControler')->name('user.data-scientist.detail');
 
