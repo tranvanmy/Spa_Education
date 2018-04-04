@@ -14,13 +14,13 @@ Route::group(['domain' => 'admin.'. env('MAIN_DOMAIN')], function(){
     Route::get('/', function () { return view('admin.index'); });
 });
 
-Route::group(['domain' => env('MAIN_DOMAIN'), 'namespace' => 'Web'], function () {
+Route::group(['namespace' => 'Web'], function () {
     Route::get('about-us/{slug}', 'AboutUsController@show')->name('user.about-us.detail');
-    Route::get('/', 'HomeController@index' );
-    Route::get('seminars', 'EventController@index' );
+    Route::get('/', 'HomeController@index' )->name('user.home');
+    Route::get('event', 'EventController@index' )->name('user.event.list');
 });
 
-Route::get('/', function () { return view('user.index'); });
+// Route::get('/', function () { return view('user.index'); });
 Route::get('index.html', function () { return view('user.index'); });
 Route::get('about-us.html', function () { return view('user.about-us'); });
 Route::get('blog-single.html', function () { return view('user.blog-single'); });
@@ -33,7 +33,6 @@ Route::get('data-scientist.html', function () { return view('user.data-scientist
 
 Route::get('detail-serminal.html', function () { return view('user.detail-serminal'); });
 Route::get('detail-serminaldemo.html', function () { return view('user.detail-serminaldemo'); });
-
 
 Route::get('instructor-single.html', function () { return view('user.instructor-single'); });
 Route::get('join-us.html', function () { return view('user.join-us'); });
