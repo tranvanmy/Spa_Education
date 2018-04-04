@@ -78,6 +78,12 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@tinymce/tinymce-vue@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@tinymce/tinymce-vue/-/tinymce-vue-1.0.3.tgz#a54df152f716bbd79b25e52f8bcf42b41696d706"
+  dependencies:
+    vue "^2.5.13"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

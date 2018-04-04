@@ -141,10 +141,9 @@
                             <b-row>
                                 <b-col sm="12">
                                     <b-form-fieldset :label="$t('textDetail')">
-                                        <tinymce
-                                            :id="`event_add_detail_${language.key}`"
+                                        <Editor
                                             v-model="formData[language.key].detail"
-                                            :other_options="ortherOptions()"
+                                            :init="ortherOptions()"
                                         />
                                     </b-form-fieldset>
                                 </b-col>
@@ -184,6 +183,7 @@
 </template>
 
 <script>
+import Editor from '@tinymce/tinymce-vue'
 import cSwitch from 'Assets/components/Switch.vue'
 import UploadImage from 'Assets/components/UploadImage.vue'
 
@@ -196,7 +196,7 @@ import { sameForm, sameData } from '../store/formData'
 export default {
     name: 'AdminCourseAdd',
 
-    components: { cSwitch, UploadImage },
+    components: { cSwitch, UploadImage, Editor },
 
     beforeCreate() {
         Helper.changeTitleAdminPage(this.$i18n.t('textManageCourse'))
@@ -285,7 +285,7 @@ export default {
             if (!this.validateForm()) {
                 return this.$toaster.error(this.$i18n.t('textNotFillEnough'))
             }
-            
+
             let params = this.convertDataSubmit();
             this.$store.dispatch('actionCourseAdd', { vue: this, params });
 

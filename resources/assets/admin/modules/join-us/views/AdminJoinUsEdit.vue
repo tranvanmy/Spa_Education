@@ -110,10 +110,9 @@
                            <b-row>
                                <b-col sm="12">
                                    <b-form-fieldset :label="$t('textDetail')">
-                                        <tinymce
-                                            :id="`about-us_edit_detail_${language.key}`"
+                                        <Editor
                                             v-model="formData[language.key].detail"
-                                            :other_options="ortherOptions()"
+                                            :init="ortherOptions()"
                                         />
                                    </b-form-fieldset>
                                </b-col>
@@ -153,6 +152,7 @@
 </template>
 
 <script>
+import Editor from '@tinymce/tinymce-vue'
 import cSwitch from 'Assets/components/Switch.vue'
 import Helper from 'Admin/library/Helper'
 
@@ -162,7 +162,7 @@ import { sameForm, sameData } from '../store/formData'
 export default {
     name: 'AdminJoinUsEdit',
 
-    components: { cSwitch },
+    components: { cSwitch, Editor },
 
     beforeCreate() {
         Helper.changeTitleAdminPage(this.$i18n.t('textManageJoinUs'))
