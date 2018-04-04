@@ -16,7 +16,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html" style="padding-top: 5px; padding-bottom: 5px">
+            <a class="navbar-brand" href="/" style="padding-top: 5px; padding-bottom: 5px">
                 <img src="/images/logo.png" alt="Site Logo">
             </a>
         </div>
@@ -336,7 +336,7 @@
                             <a class="partner-logo" href="#">
                                 <img class="img-responsive" src="/images/partner/5.png" alt="...">
                             </a>
-                            
+
                         </div>
                     </div>
                 </div>
