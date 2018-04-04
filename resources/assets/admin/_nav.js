@@ -40,6 +40,20 @@ export default {
             ]
         },
         {
+            name: 'Category',
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'Category list',
+                    url: '/categories',
+                },
+                {
+                    name: 'Add new Category',
+                    url: '/categories/add',
+                }
+            ]
+        },
+        {
             name: 'Events',
             icon: 'icon-list',
             children: [

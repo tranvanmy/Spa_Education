@@ -19,17 +19,14 @@ class HomeController extends Controller
         $data = [
             'about_us' => AboutUs::where(fieldLanguage('has'), true)->get($navbarField),
             'courses' => Course::where(fieldLanguage('has'), true)->withCount('comments')->get(),
-            'research_development_categories' => Category::where('type', 'research_development')->get($navbarField),
-            'products_categories' => Category::where('type', 'product')->get($navbarField),
+            'research_development_categories' => Category::where('type', Category::TYPE_RD)->get($navbarField),
+            'products_categories' => Category::where('type', Category::TYPE_PRODUCT)->get($navbarField),
             'join_us' => JoinUs::where(fieldLanguage('has'), true)->get($navbarField),
             'instructors' => Instructor::where(fieldLanguage('has'), true)->get(),
             'research_development' => ResearchDevelopment::where(fieldLanguage('has'), true)->get(),
             'events' => Event::with('author')->where(fieldLanguage('has'), true)->get(),
         ];
 
-        // return timeEvent('2018-04-01 08:00:00', '2018-04-01 08:00:00');
-        // die;
-        // dd($data['events']);
         return view('user.index', compact('data'));
     }
 }

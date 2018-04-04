@@ -3,36 +3,17 @@
         <b-row>
             <b-col sm="12">
                 <b-form validated>
-                   <b-row>
-                       <b-col sm="2">
-                            <b-form-fieldset :label="$t('textPointReviewManual')">
-                                <b-form-input
-                                   type="text" required
-                                   :placeholder="$t('textPointReviewManual')"
-                                   v-model="formData.sameData.point_review_manual"
+                    <b-row>
+                        <b-col sm="12">
+                            <b-form-fieldset :label="$t('textType')">
+                                <b-form-select
+                                    :plain="true" required
+                                    :options="getTypeOptions()"
+                                    v-model="formData.sameData.type"
                                 />
                             </b-form-fieldset>
-                       </b-col>
-                       <b-col sm="2">
-                            <b-form-fieldset :label="$t('textTotalReviewManual')">
-                                <b-form-input
-                                   type="text" required
-                                   :placeholder="$t('textTotalReviewManual')"
-                                   v-model="formData.sameData.total_review_manual"
-                                />
-                            </b-form-fieldset>
-                       </b-col>
-                       <b-col sm="2">
-                           <b-form-fieldset :label="$t('textIsShowManual')" class="text-center">
-                               <c-switch
-                                   type="text" variant="primary-outline-alt"
-                                   on="On" off="Off"
-                                   :pill="true" :checked="true"
-                                   v-model="formData.sameData.is_review_manual"
-                               />
-                           </b-form-fieldset>
-                       </b-col>
-                   </b-row>
+                        </b-col>
+                    </b-row>
 
                    <b-tabs pills card>
                        <b-tab
@@ -41,23 +22,13 @@
                                :key="language.key"
                        >
                            <b-row>
-                               <b-col sm="10">
+                               <b-col sm="12">
                                    <b-form-fieldset :label="$t('textTitle')">
                                        <b-form-input
                                            type="text"
                                            v-model="formData[language.key].title"
                                            :placeholder="$t('textTitle')"
                                            @input="handleChangeTitle($event, language.key)"
-                                       />
-                                   </b-form-fieldset>
-                               </b-col>
-                               <b-col sm="2">
-                                   <b-form-fieldset :label="$t('textHasIsset')" class="text-center">
-                                       <c-switch
-                                               type="text" variant="primary-outline-alt"
-                                               on="On" off="Off"
-                                               :pill="true" :checked="true"
-                                               v-model="formData[language.key].has"
                                        />
                                    </b-form-fieldset>
                                </b-col>
@@ -74,6 +45,7 @@
                                    </b-form-fieldset>
                                </b-col>
                            </b-row>
+
                            <b-row>
                                <b-col sm="12">
                                    <b-form-fieldset :label="$t('textDecription')">
@@ -104,16 +76,6 @@
                                                :placeholder="$t('textSeoDescription')"
                                                v-model="formData[language.key].seo_description"
                                        />
-                                   </b-form-fieldset>
-                               </b-col>
-                           </b-row>
-                           <b-row>
-                               <b-col sm="12">
-                                   <b-form-fieldset :label="$t('textDetail')">
-                                        <Editor
-                                            v-model="formData[language.key].detail"
-                                            :init="ortherOptions()"
-                                        />
                                    </b-form-fieldset>
                                </b-col>
                            </b-row>
@@ -152,40 +114,33 @@
 </template>
 
 <script>
-import Editor from '@tinymce/tinymce-vue'
-import cSwitch from 'Assets/components/Switch.vue'
 import Helper from 'Admin/library/Helper'
 
 import { STORAGE_AUTH } from 'Admin/modules/auth/store'
-import { sameForm, sameData } from '../store/formData'
+import { sameForm, sameData, typeOptions } from '../store/formData'
 
 export default {
-    name: 'AdminJoinUsEdit',
+    name: 'AdminCategoryEdit',
 
-    components: { cSwitch, Editor },
-
-    beforeCreate() {
-        Helper.changeTitleAdminPage(this.$i18n.t('textManageJoinUs'))
-        this.$store.dispatch('actionJoinUsShow', { vue: this, id: this.$route.params.id })
+    async beforeCreate() {
+        Helper.changeTitleAdminPage(this.$i18n.t('textManageCategory'))
+        await this.$store.dispatch('actionCategoryShow', { vue: this, id: this.$route.params.id })
     },
 
     computed: {
         formData() {
-            let data = this.$store.state.storeAdminJoinUs.edit.data
+            let data = this.$store.state.storeAdminCategory.edit.data
             let formData = { sameData: {} }
 
             for (let key in sameData) {
                 formData.sameData[key] = data[key]
             }
-            formData.sameData['is_review_manual'] = formData.sameData['is_review_manual'] ? true : false
 
             for (let language of this.getLanguages()) {
                 formData[language.key] = {}
                 for(let key in sameForm) {
                     formData[language.key][key] = data[`${key}_${language.key}`]
                 }
-                formData[language.key].has = data[`has_${language.key}`] ? true : false
-                formData[language.key].detail = data[`detail_${language.key}`] ? data[`detail_${language.key}`] : ''
             }
 
             return { ...formData }
@@ -193,6 +148,10 @@ export default {
     },
 
     methods: {
+        getTypeOptions() {
+            return typeOptions
+        },
+
         getLanguages() {
             return this.$store.state.storeLanguage.languages;
         },
@@ -200,6 +159,14 @@ export default {
         handleChangeTitle(value, languageKey) {
             this.formData[languageKey].has = true;
             this.formData[languageKey].slug = slug(value || '')
+        },
+
+        successUploader(path) {
+            return this.images.push(path)
+        },
+
+        removeFile(index) {
+            return this.images = this.images.filter((image, key) => key !== index)
         },
 
         ortherOptions() {
@@ -227,11 +194,11 @@ export default {
         clickSubmitEdit() {
             let params = this.convertDataSubmit();
 
-            this.$store.dispatch('actionJoinUsEdit', { vue: this, params, id: this.$route.params.id });
+            this.$store.dispatch('actionCategoryEdit', { vue: this, params, id: this.$route.params.id });
         },
 
         clickCancel() {
-            return this.$router.push({ path: '/join-us' })
+            return this.$router.push({ path: '/categories' })
         },
     }
 }

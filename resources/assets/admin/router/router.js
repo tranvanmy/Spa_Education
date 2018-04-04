@@ -30,6 +30,10 @@ import AdminCourse from 'Admin/modules/course/views/AdminCourse.vue'
 import AdminCourseAdd from 'Admin/modules/course/views/AdminCourseAdd.vue'
 import AdminCourseEdit from 'Admin/modules/course/views/AdminCourseEdit.vue'
 
+import AdminCategory from 'Admin/modules/category/views/AdminCategory.vue'
+import AdminCategoryAdd from 'Admin/modules/category/views/AdminCategoryAdd.vue'
+import AdminCategoryEdit from 'Admin/modules/category/views/AdminCategoryEdit.vue'
+
 const router =  new VueRouter({
     routes: [
         {
@@ -93,6 +97,32 @@ const router =  new VueRouter({
                             path: 'edit/:id',
                             name: 'Update Author',
                             component: AdminAuthorEdit
+                        }
+                    ]
+                },
+                {
+                    name: 'Categories',
+                    path: '/categories',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: '',
+                            name: 'Category list',
+                            component: AdminCategory
+                        },
+                        {
+                            path: 'add',
+                            name: 'Category Add',
+                            component: AdminCategoryAdd
+                        },
+                        {
+                            path: 'edit/:id',
+                            name: 'Update Category',
+                            component: AdminCategoryEdit
                         }
                     ]
                 },

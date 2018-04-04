@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+    const TYPE_DATA_SCIENTIST = 'data-scientist';
+    const TYPE_PRODUCT = 'product';
+    const TYPE_RD = 'research-development';
+
     protected $table = 'categories';
 
     protected $fillable = [
