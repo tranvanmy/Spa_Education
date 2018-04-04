@@ -6,100 +6,8 @@
 
 @section('user-nav')
 <!-- Navigation -->
-<nav class="navbar fix-nav style-2" data-spy="affix" data-offset-top="51" style="border-bottom: 1px solid #FFF">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/" style="padding-top: 5px; padding-bottom: 5px">
-                <img src="/images/logo.png" alt="Site Logo">
-            </a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-            <div class="navbar-search navbar-right">
-                <button id="navbar-search-toggle" class="navbar-search-toggle"><i class="fa fa-search"></i></button>
-                <form id="navbar-searchform" class="navbar-searchform">
-                    <input type="search" name="search" placeholder="Search...">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-            <ul class="nav navbar-nav navbar-right" id="home-nav-onepage">
-                <li class="dropdown">
-                    <a href="#home_about_us">About us</a>
-                    @if(isset($data['about_us']))
-                        <ul class="dropdown-menu">
-                            @foreach ($data['about_us'] as $about)
-                                <li>
-                                    <a class="purchase-link" href="about-us/{{ $about[fieldLanguage('slug')] }}">{{ $about[fieldLanguage('title')] }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
-                </li>
-                <li class="dropdown">
-                    <a href="#home_course">Courses</a>
-                    @if(isset($data['courses']))
-                        <ul class="dropdown-menu">
-                            @foreach ($data['courses'] as $course)
-                                <li>
-                                    <a class="purchase-link" href="course/{{ $course[fieldLanguage('slug')] }}">{{ $course[fieldLanguage('title')] }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
-                </li>
-                <li class="dropdown">
-                    <a href="#home_research_develop">R&D</a>
-                    @if(isset($data['research_development_categories']))
-                        <ul class="dropdown-menu">
-                            @foreach ($data['research_development_categories'] as $category)
-                                <li>
-                                    <a class="purchase-link" href="research-category/{{ $category[fieldLanguage('slug')] }}">{{ $category[fieldLanguage('title')] }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
-                </li>
-                <li class="dropdown">
-                    <a href="products.html">Products</a>
-                    @if(isset($data['products_categories']))
-                        <ul class="dropdown-menu">
-                            @foreach ($data['products_categories'] as $category)
-                                <li>
-                                    <a class="purchase-link" href="product-category/{{ $category[fieldLanguage('slug')] }}">{{ $category[fieldLanguage('title')] }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
-                </li>
-                <li>
-                    <a href="#home_seminar">Events</a>
-                </li>
-                <li>
-                    <a href="#home_news_blog">Data Scientists' corner </a>
-                </li>
-                <li class="dropdown">
-                    <a href="#home_join_us">Join us</a>
-                    @if(isset($data['join_us']))
-                        <ul class="dropdown-menu">
-                            @foreach ($data['join_us'] as $us)
-                                <li>
-                                    <a class="purchase-link" href="join-us/{{ $us[fieldLanguage('slug')] }}">{{ $us[fieldLanguage('title')] }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+
+@include('user.layouts.libraries.navbar', ['isHomePage' => true])
 <!-- Navigation End -->
 @endsection
 
@@ -203,7 +111,7 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Popular <span>Courses</span></h3>
-                        <a class="all-link" href="course.html">See All Courses</a>
+                        <a class="all-link" href="{{ route('user.event.list') }}" title="All Courses">See All Courses</a>
                     </div>
                 </div>
             </div>
@@ -212,7 +120,7 @@
                 @foreach ($data['courses'] as $course)
                     <div class="elh-course style-2">
                         <a class="elh-course-thumb" href="course/{{ $course[fieldLanguage('slug')] }}" title="{{ $course[fieldLanguage('title')] }}">
-                            <img class="img-responsive" src="{{ $course['image_url'] ?: 'http://afamilycdn.com/2017/4732596789-687e6d997e-b-1503900479088.jpg'}}" alt="{{ $course[fieldLanguage('title')] }}">
+                            <img class="img-responsive" src="{{ $course['image_url'] }}" alt="{{ $course[fieldLanguage('title')] }}">
                         </a>
                         <div class="elh-course-content">
                             <h4 class="elh-course-title" style="height: 50px"><a href="course/{{ $course[fieldLanguage('slug')] }}" title="{{ $course[fieldLanguage('title')] }}">{{ $course[fieldLanguage('title')] }}</a></h4>
@@ -280,7 +188,7 @@
                         <p class="elh-section-text">
                             We've embraced collaboration with companies to innovate and power their products with AI-engines and features. Joined R&D activities from prototyping, piloting through to commercial implementation keeps us engaged in practical aspects of applied AI and Machine learning
                         </p>
-                        <a class="all-link style-2" href="research-develop-all.html" title="See All Research & Development">See All Research & Development</a>
+                        <a class="all-link style-2" href="{{ route('user.research.list') }}" title="See All Research & Development">See All Research & Development</a>
                     </div>
                 </div>
             </div>
@@ -350,7 +258,7 @@
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Upcoming <span>Events</span></h3>
                         <p class="elh-section-text">... Add your text here ....</p>
-                        <a class="all-link style-2" href="seminar.html" title="All Events">See All Events</a>
+                        <a class="all-link style-2" href="{{  route('user.event.list') }}" title="All Events">See All Events</a>
                     </div>
                 </div>
             </div>
@@ -362,7 +270,7 @@
                                 <div class="elh-event-date" style="background-image: url({{ $event['image_url'] }})">
                                 </div>
                                 <div class="elh-event-detail">
-                                    <h4 class="elh-event-title"><a href="serminal/{{ $event[fieldLanguage('slug')] }}">{{ $event[fieldLanguage('title')] }}</a></h4>
+                                    <h4 class="elh-event-title"><a href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}" title="{{ $event[fieldLanguage('title')] }}">{{ $event[fieldLanguage('title')] }}</a></h4>
                                     <p class="elh-event-metas">
                                         <span><i class="fa fa-clock-o"></i>{{ timeEvent($event['start_at'], $event['end_at']) }}</span>
                                         <span><i class="fa fa-users"></i>{{ $event->author[fieldLanguage('name')] }}</span>
@@ -389,7 +297,7 @@
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title"><span>Data Scientists' corner</span></h3>
                             <p class="elh-section-text">... Add your text here ....</p>
-                            <a class="all-link style-2" href="blog.html">See All</a>
+                            <a class="all-link style-2" href="{{ route('user.data-scientist.list') }}">See All</a>
                         </div>
                     </div>
                 </div>

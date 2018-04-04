@@ -38,21 +38,7 @@
                                     @include('user.events.event-item')
                                 @endforeach
                                 <div class="col-xs-12">
-                                    <nav class="navigation post-pagination xs-text-center" role="navigation">
-                                        <div class="nav-links">
-                                            <a class="prev page-numbers" href="#">
-                                                <i class="fa fa-angle-double-left"></i>
-                                            </a>
-                                            <a class="page-numbers" href="#">1</a>
-                                            <span class="page-numbers current">2</span>
-                                            <a class="page-numbers" href="#">3</a>
-                                            <a class="page-numbers" href="#">4</a>
-                                            <a class="page-numbers" href="#">5</a>
-                                            <a class="next page-numbers" href="#">
-                                                <i class="fa fa-angle-double-right"></i>
-                                            </a>
-                                        </div>
-                                    </nav>
+                                    {{ $events->links('user.layouts.libraries.paginate') }}
                                 </div>
                             </div>
                         </div>
