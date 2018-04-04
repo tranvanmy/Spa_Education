@@ -4,31 +4,12 @@
             <b-col sm="12">
                 <b-form validated>
                     <b-row>
-                        <b-col sm="2">
-                            <b-form-fieldset :label="$t('textPointReviewManual')">
-                                <b-form-input
-                                    type="text" required
-                                    :placeholder="$t('textPointReviewManual')"
-                                    v-model="formData.sameData.point_review_manual"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                        <b-col sm="2">
-                            <b-form-fieldset :label="$t('textTotalReviewManual')">
-                                <b-form-input
-                                    type="text" required
-                                    :placeholder="$t('textTotalReviewManual')"
-                                    v-model="formData.sameData.total_review_manual"
-                                />
-                            </b-form-fieldset>
-                        </b-col>
-                        <b-col sm="2">
-                            <b-form-fieldset :label="$t('textIsShowManual')" class="text-center">
-                                <c-switch
-                                    type="text" variant="primary-outline-alt"
-                                    on="On" off="Off"
-                                    :pill="true" :checked="true"
-                                    v-model="formData.sameData.is_review_manual"
+                        <b-col sm="12">
+                            <b-form-fieldset :label="$t('textType')">
+                                <b-form-select
+                                    :plain="true" required
+                                    :options="getTypeOptions()"
+                                    v-model="formData.sameData.type"
                                 />
                             </b-form-fieldset>
                         </b-col>
@@ -40,23 +21,13 @@
                             :key="language.key"
                         >
                             <b-row>
-                                <b-col sm="10">
-                                    <b-form-fieldset :label="$t('textTitle')">
+                                <b-col sm="12">
+                                    <b-form-fieldset :label="$t('textName')">
                                         <b-form-input
                                             type="text"
                                             v-model="formData[language.key].title"
-                                            :placeholder="$t('textTitle')"
+                                            :placeholder="$t('textName')"
                                             @input="handleChangeTitle($event, language.key)"
-                                        />
-                                    </b-form-fieldset>
-                                </b-col>
-                                <b-col sm="2">
-                                    <b-form-fieldset :label="$t('textHasIsset')" class="text-center">
-                                        <c-switch
-                                            type="text" variant="primary-outline-alt"
-                                            on="On" off="Off"
-                                            :pill="true" :checked="true"
-                                            v-model="formData[language.key].has"
                                         />
                                     </b-form-fieldset>
                                 </b-col>
@@ -72,6 +43,7 @@
                                     </b-form-fieldset>
                                 </b-col>
                             </b-row>
+
                             <b-row>
                                 <b-col sm="12">
                                     <b-form-fieldset :label="$t('textDecription')">
@@ -101,16 +73,6 @@
                                             type="text"
                                             :placeholder="$t('textSeoDescription')"
                                             v-model="formData[language.key].seo_description"
-                                        />
-                                    </b-form-fieldset>
-                                </b-col>
-                            </b-row>
-                            <b-row>
-                                <b-col sm="12">
-                                    <b-form-fieldset :label="$t('textDetail')">
-                                        <Editor
-                                            v-model="formData[language.key].detail"
-                                            :init="ortherOptions()"
                                         />
                                     </b-form-fieldset>
                                 </b-col>
@@ -150,22 +112,16 @@
 </template>
 
 <script>
-import Editor from '@tinymce/tinymce-vue'
-import cSwitch from 'Assets/components/Switch.vue'
-
 import Helper from 'Admin/library/Helper'
 
 import { STATUS_SHOW, STATUS_HIDDEN } from '../store'
-import { sameForm, sameData } from '../store/formData'
+import { sameForm, sameData, typeOptions } from '../store/formData'
 
 export default {
-    name: 'AdminJoinUsAdd',
-
-    components: { cSwitch, Editor },
+    name: 'AdminCategoryAdd',
 
     beforeCreate() {
-        Helper.changeTitleAdminPage(this.$i18n.t('textManageJoinUs'))
-        this.$store.dispatch('actionFetchJoinUs', { vue: this })
+        Helper.changeTitleAdminPage(this.$i18n.t('textManageCategory'))
     },
 
     data() {
@@ -175,24 +131,16 @@ export default {
     },
 
     methods: {
+        getTypeOptions() {
+            return typeOptions
+        },
+
         getLanguages(){
             return this.$store.state.storeLanguage.languages
         },
 
-        getToken() {
-            return JSON.parse(localStorage.getItem(STORAGE_AUTH)).token
-        },
-
         handleChangeTitle(value, languageKey) {
-            this.formData[languageKey].has = true;
             this.formData[languageKey].slug = slug(value)
-        },
-
-        ortherOptions() {
-            return {
-                ...configTinyMCE,
-                height: 250,
-            }
         },
 
         resetFromData() {
@@ -203,6 +151,10 @@ export default {
             }
 
             return { ...formData }
+        },
+
+        validateForm() {
+            return  !!this.formData.sameData.type
         },
 
         convertDataSubmit() {
@@ -221,14 +173,18 @@ export default {
         },
 
         clickAddItem() {
+            if (!this.validateForm()) {
+                return this.$toaster.error(this.$i18n.t('textNotFillEnough'))
+            }
+
             let params = this.convertDataSubmit();
-            this.$store.dispatch('actionJoinUsAdd', { vue: this, params });
+            this.$store.dispatch('actionCategoryAdd', { vue: this, params });
 
             return this.formData = this.resetFromData()
         },
 
         clickCancel() {
-            return this.$router.push({ path: '/join-us' })
+            return this.$router.push({ path: '/categories' })
         },
     },
 }

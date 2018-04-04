@@ -187,7 +187,7 @@ import { sameForm, sameData } from '../store/formData'
 export default {
     name: 'AdminInstructorAdd',
 
-    components: { cSwitch, UploadImage },
+    components: { cSwitch, UploadImage, Editor },
 
     beforeCreate() {
         Helper.changeTitleAdminPage(this.$i18n.t('textManageInstructor'))
