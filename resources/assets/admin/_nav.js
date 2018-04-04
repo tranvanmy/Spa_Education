@@ -54,6 +54,20 @@ export default {
             ]
         },
         {
+            name: 'Data Scientists',
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'Data Scientist list',
+                    url: '/data-scientists',
+                },
+                {
+                    name: 'Add new Data Scientist',
+                    url: '/data-scientists/add',
+                }
+            ]
+        },
+        {
             name: 'Events',
             icon: 'icon-list',
             children: [
@@ -78,6 +92,34 @@ export default {
                 {
                     name: 'Add new Course',
                     url: '/courses/add',
+                }
+            ]
+        },
+        {
+            name: 'Research & Development',
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'Research & Development list',
+                    url: '/research-developments',
+                },
+                {
+                    name: 'Add new Research & Development',
+                    url: '/research-developments/add',
+                }
+            ]
+        },
+        {
+            name: 'Product',
+            icon: 'icon-list',
+            children: [
+                {
+                    name: 'Product list',
+                    url: '/products',
+                },
+                {
+                    name: 'Add new Product',
+                    url: '/products/add',
                 }
             ]
         },

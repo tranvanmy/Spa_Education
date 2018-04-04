@@ -107,6 +107,9 @@ const en = {
     textManageCourse: 'Manage Course',
     textLevel: 'Level',
     textInstructor: 'Instructor',
+    textManageResearchDevelopment: 'Manage Research & Development',
+    textManageProduct: 'Manage Products',
+    textManageDataScientist: 'Manage Data Scientists',
 }
 
 export default en;

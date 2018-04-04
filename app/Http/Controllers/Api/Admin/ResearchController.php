@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
-use App\Models\Instructor;
+use App\Models\ResearchDevelopment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class InstructorController extends Controller
+class ResearchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class InstructorController extends Controller
      */
     public function index()
     {
-        return $this->response(Instructor::all());
+        return $this->response(ResearchDevelopment::all());
     }
 
     /**
@@ -30,7 +30,7 @@ class InstructorController extends Controller
         $data['slug_vi'] = str_slug($request->slug_vi);
         $data['slug_en'] = str_slug($request->slug_en);
 
-        if (Instructor::create($data)) {
+        if (ResearchDevelopment::create($data)) {
             return $this->response(['message' => trans('message.add_success')]);
         }
 
@@ -40,28 +40,28 @@ class InstructorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Instructor  $instructor
+     * @param  \App\Models\ResearchDevelopment  $researchDevelopment
      * @return \Illuminate\Http\Response
      */
-    public function show(Instructor $instructor)
+    public function show(ResearchDevelopment $researchDevelopment)
     {
-        return $this->response($instructor);
+        return $this->response($researchDevelopment);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Instructor  $instructor
+     * @param  \App\Models\ResearchDevelopment  $researchDevelopment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Instructor $instructor)
+    public function update(Request $request, ResearchDevelopment $researchDevelopment)
     {
         $data = $request->all();
         $data['slug_vi'] = str_slug($request->slug_vi);
         $data['slug_en'] = str_slug($request->slug_en);
 
-        if ($instructor->fill($data)->save()) {
+        if ($researchDevelopment->fill($data)->save()) {
             return $this->response(['message' => trans('message.edit_success')]);
         }
 
@@ -71,12 +71,12 @@ class InstructorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Instructor  $instructor
+     * @param  \App\Models\ResearchDevelopment  $researchDevelopment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Instructor $instructor)
+    public function destroy(ResearchDevelopment $researchDevelopment)
     {
-        if ($instructor->delete()) {
+        if ($researchDevelopment->delete()) {
             return $this->response(['message' => trans('message.delete_success')]);
         }
 

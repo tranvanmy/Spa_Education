@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
-use App\Models\Instructor;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class InstructorController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class InstructorController extends Controller
      */
     public function index()
     {
-        return $this->response(Instructor::all());
+        return $this->response(Product::all());
     }
 
     /**
@@ -30,7 +30,7 @@ class InstructorController extends Controller
         $data['slug_vi'] = str_slug($request->slug_vi);
         $data['slug_en'] = str_slug($request->slug_en);
 
-        if (Instructor::create($data)) {
+        if (Product::create($data)) {
             return $this->response(['message' => trans('message.add_success')]);
         }
 
@@ -40,28 +40,28 @@ class InstructorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Instructor  $instructor
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Instructor $instructor)
+    public function show(Product $product)
     {
-        return $this->response($instructor);
+        return $this->response($product);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Instructor  $instructor
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Instructor $instructor)
+    public function update(Request $request, Product $product)
     {
         $data = $request->all();
         $data['slug_vi'] = str_slug($request->slug_vi);
         $data['slug_en'] = str_slug($request->slug_en);
 
-        if ($instructor->fill($data)->save()) {
+        if ($product->fill($data)->save()) {
             return $this->response(['message' => trans('message.edit_success')]);
         }
 
@@ -71,12 +71,12 @@ class InstructorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Instructor  $instructor
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Instructor $instructor)
+    public function destroy(Product $product)
     {
-        if ($instructor->delete()) {
+        if ($product->delete()) {
             return $this->response(['message' => trans('message.delete_success')]);
         }
 

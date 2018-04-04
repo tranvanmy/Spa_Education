@@ -34,6 +34,18 @@ import AdminCategory from 'Admin/modules/category/views/AdminCategory.vue'
 import AdminCategoryAdd from 'Admin/modules/category/views/AdminCategoryAdd.vue'
 import AdminCategoryEdit from 'Admin/modules/category/views/AdminCategoryEdit.vue'
 
+import AdminResearchDevelopment from 'Admin/modules/research-develop/views/AdminResearchDevelopment.vue'
+import AdminResearchDevelopmentAdd from 'Admin/modules/research-develop/views/AdminResearchDevelopmentAdd.vue'
+import AdminResearchDevelopmentEdit from 'Admin/modules/research-develop/views/AdminResearchDevelopmentEdit.vue'
+
+import AdminProduct from 'Admin/modules/product/views/AdminProduct.vue'
+import AdminProductAdd from 'Admin/modules/product/views/AdminProductAdd.vue'
+import AdminProductEdit from 'Admin/modules/product/views/AdminProductEdit.vue'
+
+import AdminDataScientist from 'Admin/modules/data-scientist/views/AdminDataScientist.vue'
+import AdminDataScientistAdd from 'Admin/modules/data-scientist/views/AdminDataScientistAdd.vue'
+import AdminDataScientistEdit from 'Admin/modules/data-scientist/views/AdminDataScientistEdit.vue'
+
 const router =  new VueRouter({
     routes: [
         {
@@ -123,6 +135,32 @@ const router =  new VueRouter({
                             path: 'edit/:id',
                             name: 'Update Category',
                             component: AdminCategoryEdit
+                        }
+                    ]
+                },
+                {
+                    name: 'DataScientists',
+                    path: '/data-scientists',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: '',
+                            name: 'DataScientist list',
+                            component: AdminDataScientist
+                        },
+                        {
+                            path: 'add',
+                            name: 'Add DataScientist',
+                            component: AdminDataScientistAdd
+                        },
+                        {
+                            path: 'edit/:id',
+                            name: 'Update DataScientist',
+                            component: AdminDataScientistEdit
                         }
                     ]
                 },
@@ -227,6 +265,58 @@ const router =  new VueRouter({
                             path: 'edit/:id',
                             name: 'Update Course',
                             component: AdminCourseEdit
+                        }
+                    ]
+                },
+                {
+                    name: 'Research & Developments',
+                    path: '/research-developments',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: '',
+                            name: 'Research & Development list',
+                            component: AdminResearchDevelopment
+                        },
+                        {
+                            path: 'add',
+                            name: 'Add Research & Development',
+                            component: AdminResearchDevelopmentAdd
+                        },
+                        {
+                            path: 'edit/:id',
+                            name: 'Update Research & Development',
+                            component: AdminResearchDevelopmentEdit
+                        }
+                    ]
+                },
+                {
+                    name: 'Products',
+                    path: '/products',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: '',
+                            name: 'Product list',
+                            component: AdminProduct
+                        },
+                        {
+                            path: 'add',
+                            name: 'Add Product',
+                            component: AdminProductAdd
+                        },
+                        {
+                            path: 'edit/:id',
+                            name: 'Update Product',
+                            component: AdminProductEdit
                         }
                     ]
                 },
