@@ -23,8 +23,9 @@ class HomeController extends Controller
             'events' => Event::with('author')->where(fieldLanguage('has'), true)
                 ->where('start_at', '>', Carbon::now())->orderBy('start_at', 'asc')
                 ->take(4)->get(),
+            'dataScientist' => DataScientist::has('category')->orderBy('created_at', 'desc')->limit(5)->get(),
         ];
-        
+
         return view('user.index', compact('data'));
     }
 

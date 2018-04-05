@@ -16,6 +16,7 @@ Route::group(['domain' => 'admin.'. env('MAIN_DOMAIN')], function(){
 
 Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     Route::get('/', 'HomeController@index' )->name('user.home');
+    Route::get('not-found', 'HomeController@index' )->name('user.not-found');
     Route::get('change-language', 'HomeController@changeLanguage' )->name('user.change-language');
     // Route::get('search', '')->name('user.search');
     //
