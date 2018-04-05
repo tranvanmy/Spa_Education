@@ -1,8 +1,8 @@
 @extends('user.layouts.master')
 
-@section('user-title', 'AI Academy')
-@section('seo-description', 'AI Academy')
-@section('seo-keyword',  'AI Academy')
+@section('user-title', $course[fieldLanguage('title')])
+@section('seo-description', $course[fieldLanguage('seo-description')])
+@section('seo-keyword',  $course[fieldLanguage('seo-keyword')])
 
 @section('user-nav')
     @include('user.layouts.libraries.navbar')
@@ -13,9 +13,9 @@
 <div class="elh-page-header has-floatbox elh-img-bg elh-bg-9">
     <div class="elh-overlay">
         <div class="container text-center">
-            <h3 class="elh-page-title">ML in Computer vision</h3>
+            <h3 class="elh-page-title">{{ $course[fieldLanguage('title')]}}</h3>
             <ol class="breadcrumb">
-                <li><a href="course_hub.html">Home</a></li>
+                <li><a href="{{ route('user.courses') }}">Home</a></li>
                 <li class="active">Course</li>
             </ol>
         </div>
@@ -26,11 +26,12 @@
                 <div class="col-xs-12">
                     <div class="elh-course-profile">
                         <div class="elh-instructor-thumb elh-course-profile-item">
-                            <img class="img-responsive" src="/images/instructor/small-4.jpg" alt="...">
+                            <img class="img-responsive" src="{{ $course['instructor']['image_url'] }}"
+                                    alt="{{ $course['instructor'][fieldLanguage('name')] }}">
                         </div>
                         <div class="elh-instructor-name elh-course-profile-item">
-                            <p>Teacher</p>
-                            <h5>Oliver Liam</h5>
+                            <p>Instructor</p>
+                            <h5>{{ $course['instructor'][fieldLanguage('name')] }}</h5>
                         </div>
                         <div class="elh-student-count elh-course-profile-item">
                             <p>Students</p>
@@ -46,7 +47,7 @@
                                 <span class="star"></span>
                             </div>
                             <div class="elh-review-count">
-                                <h5>(12 Reviews)</h5>
+                                <h5>({{ $course['total_review_manual'] }} Reviews)</h5>
                             </div>
                         </div>
                     </div>
@@ -127,7 +128,7 @@
                 <div class="col-md-8 col-xs-12">
                     <div class="elh-course-body">
                         <div class="elh-learning-objectives elh-course-section">
-                                This combined course on computer vision and Image processing will first discuss image processing techniques (sampling, representation, filtering, etc...) that are prerequisites to improving results of ML algorithms in CV domain. Students will then learn the concepts and techniques such as point/edge detection, edge intersest points, etc. Framemorks for object and face detection will be discussed together with popular SW tools and libraries. At the end of the course, students will choose one pratical project to solidify their knowledge (Face detection and recognition, Image categorization, Object tracking and Event detection, Scene description...)
+                            {{ $course[fieldLanguage('description')] }}
                         </div>
 
                     </div>
@@ -138,30 +139,13 @@
                         </div>
                         <div class="elh-course-instructor-box">
                             <div class="elh-course-instructor-thumb">
-                                <img class="img-responsive" src="/images/course/single-course-instructor-1.jpg" alt="...">
+                                <img class="img-responsive" src="{{ $course['instructor']['image_url'] }}"
+                                    alt="{{ $course['instructor'][fieldLanguage('name')] }}">
                             </div>
                             <div class="elh-course-instructor-body">
-                                <h5 class="elh-course-instructor-name">Oliver Liam</h5>
-                                <p class="elh-course-instructor-field">UI Designer</p>
-                                <p class="elh-course-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <div class="elh-socials">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="elh-course-instructor-box">
-                            <div class="elh-course-instructor-thumb">
-                                <img class="img-responsive" src="/images/course/single-course-instructor-2.jpg" alt="...">
-                            </div>
-                            <div class="elh-course-instructor-body">
-                                <h5 class="elh-course-instructor-name">Jacob Anderson</h5>
-                                <p class="elh-course-instructor-field">UI Designer</p>
-                                <p class="elh-course-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <h5 class="elh-course-instructor-name">{{ $course['instructor'][fieldLanguage('name')] }}</h5>
+                                {{-- <p class="elh-course-instructor-field">UI Designer</p>
+                                <p class="elh-course-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> --}}
                                 <div class="elh-socials">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -191,7 +175,7 @@
                                         <span class="star on"></span>
                                         <span class="star on"></span>
                                     </div>
-                                    <p class="elh-rating-summery-count">12 Rating</p>
+                                    <p class="elh-rating-summery-count">{{ $course['comments_count'] }}</p>
                                 </div>
                             </div>
                             <div class="elh-rating-counter">
@@ -245,34 +229,36 @@
                         </div>
 
                         <!-- Given Reiviews -->
-                        <div class="elh-course-reviews">
-                            <div class="elh-course-review-item">
-                                <div class="elh-course-reviewer-thumb">
-                                    <img class="img-responsive" src="/images/course/course-reviewer-thumb.jpg" alt="...">
-                                </div>
-                                <div class="elh-course-review-body">
-                                    <div class="elh-course-review-title">
-                                        <h5>Oliver Liam</h5>
-                                        <div class="elh-course-reviewer-rating">
-                                            <span class="star on"></span>
-                                            <span class="star on"></span>
-                                            <span class="star on"></span>
-                                            <span class="star on"></span>
-                                            <span class="star on"></span>
-                                        </div>
+                        @if( $course['comments'])
+                            <div class="elh-course-reviews">
+                                <div class="elh-course-review-item">
+                                    <div class="elh-course-reviewer-thumb">
+                                        <img class="img-responsive" src="/images/course/course-reviewer-thumb.jpg" alt="...">
                                     </div>
-                                    <p class="elh-course-review-time"><i class="fa fa-clock-o"></i> June 9, 2018 at 09:52 am</p>
-                                    <p class="elh-course-review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <form class="elh-review-feedback-form" action="#" method="post">
-                                        <span class="elh-feedback-on-review-question">Was this review helpful?</span>
-                                        <button class="submitted" type="submit" value="yes"><i class="fa fa-check"></i> Yes</button>
-                                        <button type="submit" value="no"><i class="fa fa-close"></i> No</button>
-                                        <a href="#">Report</a>
-                                    </form>
+                                    <div class="elh-course-review-body">
+                                        <div class="elh-course-review-title">
+                                            <h5>Oliver Liam</h5>
+                                            <div class="elh-course-reviewer-rating">
+                                                <span class="star on"></span>
+                                                <span class="star on"></span>
+                                                <span class="star on"></span>
+                                                <span class="star on"></span>
+                                                <span class="star on"></span>
+                                            </div>
+                                        </div>
+                                        <p class="elh-course-review-time"><i class="fa fa-clock-o"></i> June 9, 2018 at 09:52 am</p>
+                                        <p class="elh-course-review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <form class="elh-review-feedback-form" action="#" method="post">
+                                            <span class="elh-feedback-on-review-question">Was this review helpful?</span>
+                                            <button class="submitted" type="submit" value="yes"><i class="fa fa-check"></i> Yes</button>
+                                            <button type="submit" value="no"><i class="fa fa-close"></i> No</button>
+                                            <a href="#">Report</a>
+                                        </form>
+                                    </div>
+                                    <div class="clearfix"></div>
                                 </div>
-                                <div class="clearfix"></div>
                             </div>
-                        </div>
+                        @endif
                         <!-- Given Reiviews End -->
 
                         <!-- Write a review -->
@@ -299,58 +285,44 @@
                             <h3 class="elh-section-title">Related Course</h3>
                         </div>
                         <div class="row">
-                            <div class="col-xs-6">
-                                <div class="elh-course">
-                                    <a class="elh-course-thumb" href="course-single.html">
-                                        <img class="img-responsive" src="/images/course/1.jpg" alt="...">
-                                    </a>
-                                    <div class="elh-course-content">
-                                        <h4 class="elh-course-title"><a href="course-single.html">Advance Method for<br>Adobe Photoshop CC 2018</a></h4>
-                                    </div>
-                                    <div class="elh-course-instructor">
-                                        <div class="elh-instructor-thumb">
-                                            <img class="img-responsive" src="/images/instructor/small-1.jpg" alt="...">
+                            @foreach ($relatedCourses as $course)
+                                <div class="col-xs-6">
+                                    <div class="elh-course">
+                                        <a class="elh-course-thumb" href="{{ route('user.course.detail', $course[fieldLanguage('slug')]) }}"
+                                            title="{{ $course[fieldLanguage('title')] }}">
+                                            <img class="img-responsive" src="{{ $course['image_url'] }}"
+                                                alt="{{ $course[fieldLanguage('title')] }}">
+                                        </a>
+                                        <div class="elh-course-content">
+                                            <h4 class="elh-course-title">
+                                                <a href="{{ route('user.course.detail', $course[fieldLanguage('slug')]) }}"
+                                                    title="{{ $course[fieldLanguage('title')] }}">
+                                                    {{ $course[fieldLanguage('title')] }}
+                                                </a>
+                                            </h4>
                                         </div>
-                                        <h5 class="elh-instructor-name">Z.Alexander</h5>
-                                    </div>
-                                    <div class="elh-course-footer">
-                                        <p class="elh-course-price">
-                                            <span class="elh-price-now">$35.00</span>
-                                            <span class="elh-price-regular">$45.00</span>
-                                        </p>
-                                        <p class="elh-course-metas">
-                                            <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
-                                            <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
-                                        </p>
+                                        <div class="elh-course-instructor">
+                                            <div class="elh-instructor-thumb">
+                                                <img class="img-responsive" src="{{ $course['instructor']['image_url'] }}"
+                                                    alt="{{ $course['instructor'][fieldLanguage('name')] }}">
+                                            </div>
+                                            <h5 class="elh-instructor-name">{{ $course['instructor'][fieldLanguage('name')] }}</h5>
+                                        </div>
+                                        <div class="elh-course-footer">
+                                            <p class="elh-course-price">
+                                                <span class="elh-price-now">$35.00</span>
+                                                <span class="elh-price-regular">$45.00</span>
+                                            </p>
+                                            <p class="elh-course-metas">
+                                                <span class="elh-student-count">
+                                                    <i class="fa fa-users"></i> 25</span>
+                                                <span class="elh-comment-count">
+                                                    <i class="fa fa-comments"></i>{{ $course['comments_count'] }}</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="elh-course">
-                                    <a class="elh-course-thumb" href="course-single.html">
-                                        <img class="img-responsive" src="/images/course/2.jpg" alt="...">
-                                    </a>
-                                    <div class="elh-course-content">
-                                        <h4 class="elh-course-title"><a href="course-single.html">Higher Diploma in<br>Graphic Design &amp; Multimedia</a></h4>
-                                    </div>
-                                    <div class="elh-course-instructor">
-                                        <div class="elh-instructor-thumb">
-                                            <img class="img-responsive" src="/images/instructor/small-2.jpg" alt="...">
-                                        </div>
-                                        <h5 class="elh-instructor-name">Olivia Chloe</h5>
-                                    </div>
-                                    <div class="elh-course-footer">
-                                        <p class="elh-course-price">
-                                            <span class="elh-price-now">$35.00</span>
-                                            <span class="elh-price-regular">$45.00</span>
-                                        </p>
-                                        <p class="elh-course-metas">
-                                            <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
-                                            <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     <!-- Related Course End -->

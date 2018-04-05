@@ -29,7 +29,7 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     Route::get('join-us/{slug}', 'IoinUsController@show')->name('user.join-us.detail');
     // Route::get('join-us/{slug}', '')->name('user.join-us.detail');
     //
-    Route::get('course', 'CourseController@index')->name('user.course.list');
+    Route::get('course', 'CourseController@index')->name('user.courses');
     Route::get('course/{slug}', 'CourseController@show')->name('user.course.detail');
     //
     // Route::get('instructor', '')->name('user.instructor');
@@ -55,10 +55,8 @@ Route::get('index.html', function () { return view('user.index'); });
 Route::get('about-us.html', function () { return view('user.about-us'); });
 Route::get('blog-single.html', function () { return view('user.blog-single'); });
 Route::get('blog.html', function () { return view('user.blog'); });
-Route::get('category-course.html', function () { return view('user.category-course'); });
+// Route::get('category-course.html', function () { return view('user.category-course'); });
 Route::get('contact.html', function () { return view('user.contact'); });
-Route::get('course-single.html', function () { return view('user.course-single'); });
-Route::get('course.html', function () { return view('user.course'); });
 Route::get('data-scientist.html', function () { return view('user.data-scientist'); });
 
 Route::get('detail-serminal.html', function () { return view('user.detail-serminal'); });
