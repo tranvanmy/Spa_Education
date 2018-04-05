@@ -24,7 +24,7 @@
                                 <b-col sm="12">
                                     <b-form-fieldset :label="$t('textName')">
                                         <b-form-input
-                                            type="text"
+                                            type="text" required
                                             v-model="formData[language.key].title"
                                             :placeholder="$t('textName')"
                                             @input="handleChangeTitle($event, language.key)"
@@ -36,7 +36,7 @@
                                 <b-col sm="12">
                                     <b-form-fieldset :label="$t('textSlug')">
                                         <b-form-input
-                                            type="text"
+                                            type="text" required
                                             v-model="formData[language.key].slug"
                                             :placeholder="$t('textSlug')"
                                         />
@@ -154,7 +154,15 @@ export default {
         },
 
         validateForm() {
-            return  !!this.formData.sameData.type
+            let validate = true;
+
+            for (let language of this.getLanguages()) {
+                validate &= !!this.formData[language.key].title
+                    & !!this.formData[language.key].slug
+            }
+
+            return validate & !!this.formData.sameData.type
+
         },
 
         convertDataSubmit() {

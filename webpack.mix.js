@@ -36,17 +36,17 @@ mix
        'resources/assets/user/static/assets/css/slick.css',
        'resources/assets/user/static/assets/css/plyr.css',
        'resources/assets/user/static/assets/css/magnific-popup.css',
-   ], 'public/user/external.min.css')
+    ], 'public/user/external.min.css')
 
    .styles([
        'resources/assets/user/static/css/style.css',
        'resources/assets/user/static/css/scheme/primary.css'
-   ], 'public/user/custom.min.css')
+    ], 'public/user/custom.min.css')
 
-  .sass('resources/assets/user/static/css/responsive.scss',
+   .sass('resources/assets/user/static/css/responsive.scss',
     'public/user/responsive.min.css')
 
-  .scripts([
+    .scripts([
         'resources/assets/user/static/assets/js/jquery.min.js',
         'resources/assets/user/static/assets/js/bootstrap.min.js',
         'resources/assets/user/static/assets/js/imagesloaded.pkgd.min.js',
@@ -64,6 +64,11 @@ mix
         'resources/assets/user/static/custom/add-subscribe.js',
         'resources/assets/user/static/custom/custom.js',
     ], 'public/user/library.min.js')
+
+    .scripts([
+        'resources/assets/user/static/custom/home-subcribe.js',
+    ], 'public/user/home-subcribe.js')
+
 
     // Admin
     if (process.env.APP_ENV == 'local') {

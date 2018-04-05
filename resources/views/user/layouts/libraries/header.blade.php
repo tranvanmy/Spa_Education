@@ -15,7 +15,13 @@
                     <a href="#"><i class="fa fa-youtube-play"></i></a>
                     <a href="#"><i class="fa fa-linkedin"></i></a>
                     <a href="#"><i class="fa fa-vimeo"></i></a>
-                    <a href="#" style="margin-left: 50px">EN</a>
+                    <a href="{{ route('user.change-language') }}" style="margin-left: 30px">
+                        @if (config('app.locale') == 'vi')
+                            {{ 'Vietnam' }}
+                        @else
+                            {{ 'English' }}
+                        @endif
+                    </a>
                 </div>
             </div>
         </div>
