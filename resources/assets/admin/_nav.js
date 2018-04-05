@@ -3,7 +3,7 @@ import Vue from 'vue'
 export default {
     items: [
         {
-            name: 'Quản lý',
+            name: 'Dashboard',
             url: '/dashboard',
             icon: 'icon-speedometer',
             // badge: {
@@ -20,7 +20,7 @@ export default {
                     url: '/instructors',
                 },
                 {
-                    name: 'Add new Instructor',
+                    name: 'Add new',
                     url: '/instructors/add',
                 }
             ]
@@ -34,7 +34,7 @@ export default {
                     url: '/authors',
                 },
                 {
-                    name: 'Add new Author',
+                    name: 'Add new',
                     url: '/authors/add',
                 }
             ]
@@ -58,11 +58,11 @@ export default {
             icon: 'icon-list',
             children: [
                 {
-                    name: 'Data Scientist list',
+                    name: 'List',
                     url: '/data-scientists',
                 },
                 {
-                    name: 'Add new Data Scientist',
+                    name: 'Add new',
                     url: '/data-scientists/add',
                 }
             ]
@@ -96,15 +96,15 @@ export default {
             ]
         },
         {
-            name: 'Research & Development',
+            name: 'R&D',
             icon: 'icon-list',
             children: [
                 {
-                    name: 'Research & Development list',
+                    name: 'R&D list',
                     url: '/research-developments',
                 },
                 {
-                    name: 'Add new Research & Development',
+                    name: 'Add new',
                     url: '/research-developments/add',
                 }
             ]

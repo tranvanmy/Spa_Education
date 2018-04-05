@@ -180,7 +180,7 @@ import Helper from 'Admin/library/Helper'
 
 import { STATUS_SHOW, STATUS_HIDDEN } from '../store'
 import { STORAGE_AUTH } from 'Admin/modules/auth/store'
-import { sameForm, sameData } from '../store/formData'
+import { sameForm, sameData, CATEGORY_TYPE } from '../store/formData'
 
 export default {
     name: 'AdminResearchDevelopmentAdd',
@@ -209,7 +209,7 @@ export default {
         },
 
         categoryOptions() {
-            let categories = this.$store.state.storeAdminCategory.listFetch
+            let categories = this.$store.state.storeAdminCategory.listFetch.filter(category => category.type === CATEGORY_TYPE)
             let options = []
             for (let i = 0; i < categories.length; i++) {
                 options.push({
