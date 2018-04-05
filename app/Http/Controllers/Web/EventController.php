@@ -16,12 +16,21 @@ class EventController extends Controller
 
     public function index(Request $request)
     {
-        $events = $this->event->where(fieldLanguage('has'), true)->paginate(5);
+        $events = $this->event->with('author')->where(fieldLanguage('has'), true)->orderBy('start_at', 'desc')->paginate(5);
 
         if ($request->ajax()) {
             return view('user.events.event-ajax', compact('events'));
         }
 
         return view('user.events.event', compact('events'));
+    }
+
+    public function show($slug)
+    {
+        $event = $this->event->with('author')->where(fieldLanguage('has'), true)->where(fieldLanguage('slug'), $slug)->first();
+
+        $relatedEvents = $this->event->with('author')->where(fieldLanguage('has'), true)->orderBy('start_at', 'desc')->limit(2)->get();
+
+        return view('user.events.event-detail', compact('event', 'relatedEvents'));
     }
 }
