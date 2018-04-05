@@ -28,8 +28,11 @@ class EventController extends Controller
     public function show($slug)
     {
         $event = $this->event->with('author')->where(fieldLanguage('has'), true)->where(fieldLanguage('slug'), $slug)->first();
+        if (!$event) {
+            return redirect()->route('user.not-found');
+        }
 
-        $relatedEvents = $this->event->with('author')->where(fieldLanguage('has'), true)->orderBy('start_at', 'desc')->limit(2)->get();
+        $relatedEvents = $this->event->with('author')->where(fieldLanguage('has'), true)->where('id', '!=', $event->id)->inRandomOrder()->limit(2)->get();
 
         return view('user.events.event-detail', compact('event', 'relatedEvents'));
     }

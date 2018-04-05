@@ -151,18 +151,18 @@ $factory->define(App\Models\ResearchDevelopment::class, function (Faker $faker) 
 $factory->define(App\Models\DataScientist::class, function (Faker $faker) use ($defaultTitle, $defaultDes, $defaultSlug){
     $dataVi = [
         'has_vi' => true,
-        'title_vi' => $defaultTitle,
-        'slug_vi' => $defaultSlug,
-        'description_vi' => $defaultDes,
-        'detail_vi' => $defaultDes
+        'title_vi' => $a = $faker->realText(50, 1),
+        'slug_vi' => str_slug($a),
+        'description_vi' => $faker->realText(200, 2),
+        'detail_vi' => $faker->realText(5000, 2)
     ];
 
     $dataEn = [
         'has_en' => true,
-        'title_en' => $defaultTitle,
-        'slug_en' => $defaultSlug,
-        'description_en' => $defaultDes,
-        'detail_en' => $defaultDes
+        'title_en' => $a = $faker->realText(50, 1),
+        'slug_en' => str_slug($a),
+        'description_en' => $faker->realText(200, 2),
+        'detail_en' => $faker->realText(5000, 2)
     ];
 
     $commonData = [
@@ -172,6 +172,7 @@ $factory->define(App\Models\DataScientist::class, function (Faker $faker) use ($
         'point_review_avg' => 3.5,
         'total_review' => 20,
         'viewed' => 30,
+        'image_url' => $faker->imageUrl(370, 275),
     ];
 
     return array_merge($dataVi, $dataEn, $commonData);

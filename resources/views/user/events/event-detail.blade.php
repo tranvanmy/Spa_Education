@@ -12,7 +12,7 @@
     <div class="elh-page-header elh-img-bg elh-bg-9">
         <div class="elh-overlay">
             <div class="container text-center">
-                <h3 class="elh-page-title">$event[fieldLanguage('title')] }}</h3>
+                <h3 class="elh-page-title">{{ $event[fieldLanguage('title')] }}</h3>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
                     <li class="active">High-tech Agriculture - Issues and solutions</li>
@@ -25,7 +25,7 @@
                     <div class="col-xs-12">
                         <div class="elh-course-profile">
                             <div class="elh-instructor-thumb elh-course-profile-item">
-                                <img class="img-responsive"  src="/images/instructor/large-1.jpg" alt="..." style="height: 100%;">
+                                <img class="img-responsive"  src="{{ $event->author->image_url }}" alt="{{ $event->author[fieldLanguage('name')] }}" style="height: 100%;">
                             </div>
                             <div class="elh-instructor-name elh-course-profile-item">
                                 <p>Author</p>
@@ -62,7 +62,7 @@
                     <div class="col-md-8 col-xs-12">
                         <div class="elh-course-body">
                             <div class="elh-course-description elh-course-section">
-                                {{ $event[fieldLanguage('detail')]}}
+                                {!! $event[fieldLanguage('detail')] !!}
                             </div>
                         </div>
                         <br>
@@ -84,7 +84,7 @@
                                 <div class="col-xs-6">
                                     <div class="elh-course">
                                         <a class="elh-course-thumb" href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}">
-                                            <img class="img-responsive" src="{{ $event->author->image_url }}" alt="{{ $event[fieldLanguage('title')] }}">
+                                            <img class="img-responsive" src="{{ $event->image_url }}" alt="{{ $event[fieldLanguage('title')] }}">
                                         </a>
                                         <div class="elh-course-content">
                                             <h4 class="elh-course-title"><a href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}" title="{{ $event[fieldLanguage('title')] }}">{{ $event[fieldLanguage('title')] }}</a></h4>
