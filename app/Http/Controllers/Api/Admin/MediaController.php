@@ -12,7 +12,7 @@ class MediaController extends ApiController
     {
         try {
             $folder = str_slug($request->folder ?: '');
-            $prefix_path = 'uploads/' . join('/', explode('-', $folder));
+            $prefix_path = '/uploads/' . join('/', explode('-', $folder));
 
             $request->file('image')->hashName();
             $path = $request->file('image')->store($prefix_path, 'uploads');

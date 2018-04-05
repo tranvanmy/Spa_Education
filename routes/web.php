@@ -43,7 +43,7 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     //
     Route::get('data-scientists-corner', 'DataScientistControler@index')->name('user.data-scientist.list');
     // Route::get('data-scientists-corner/{category}', 'DataScientistControler')->name('user.data-scientist.category');
-    // Route::get('data-scientists-corner/{category}/{slug}', 'DataScientistControler')->name('user.data-scientist.detail');
+    Route::get('data-scientists-corner/{category}/{slug}', 'DataScientistControler@show')->name('user.data-scientist.detail');
 
 });
 

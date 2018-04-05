@@ -8,6 +8,7 @@ use App\Models\Course;
 use App\Models\Instructor;
 use App\Models\ResearchDevelopment;
 use App\Models\Event;
+use App\Models\DataScientist;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -23,7 +24,7 @@ class HomeController extends Controller
                 ->where('start_at', '>', Carbon::now())->orderBy('start_at', 'asc')
                 ->take(4)->get(),
         ];
-
+        
         return view('user.index', compact('data'));
     }
 

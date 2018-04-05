@@ -29,7 +29,7 @@ class EventController extends Controller
     {
         $event = $this->event->with('author')->where(fieldLanguage('has'), true)->where(fieldLanguage('slug'), $slug)->first();
 
-        $relatedEvents = $this->event->with('author')->where(fieldLanguage('has'), true)->orderBy('start_at', 'desc')->limit(2)->get();
+        $relatedEvents = $this->event->with('author')->where(fieldLanguage('has'), true)->where(fieldLanguage('slug'), '!=', $slug)->inRandomOrder()->limit(2)->get();
 
         return view('user.events.event-detail', compact('event', 'relatedEvents'));
     }

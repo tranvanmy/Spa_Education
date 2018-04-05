@@ -297,66 +297,23 @@
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title"><span>Data Scientists' corner</span></h3>
                             <p class="elh-section-text">... Add your text here ....</p>
-                            <a class="all-link style-2" href="{{ route('user.data-scientist.list') }}">See All</a>
+                            <a class="all-link style-2" href="{{ route('user.data-scientist.list') }}" title="Data Scientists' corner">See All</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="elh-generic-carousel owl-carousel">
+                    @foreach($data['dataScientist'] as $scientist)
                         <article class="elh-post">
-                            <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/images/blog/medium-1.jpg" alt="...">
+                            <a class="elh-post-thumb" href="{{ route('user.data-scientist.detail', [$scientist->category[fieldLanguage('slug')], $scientist[fieldLanguage('slug')]]) }}" title="{{ $scientist[fieldLanguage('title')] }}">
+                                <img class="img-responsive" src="{{ $scientist['image_url'] }}" alt="{{ $scientist[fieldLanguage('title')] }}">
                             </a>
                             <div class="elh-post-body">
-                                <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
-                                <a class="elh-post-link" href="blog-single.html">Read More<i class="fa fa-long-arrow-right"></i></a>
+                                <h4 class="elh-post-title"><a href="{{ route('user.data-scientist.detail', [$scientist->category[fieldLanguage('slug')], $scientist[fieldLanguage('slug')]]) }}" title="{{ $scientist[fieldLanguage('title')] }}">{{ $scientist[fieldLanguage('title')] }}</a></h4>
+                                <a class="elh-post-link" href="{{ route('user.data-scientist.detail', [$scientist->category[fieldLanguage('slug')], $scientist[fieldLanguage('slug')]]) }}" title="{{ $scientist[fieldLanguage('title')] }}">Read More<i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </article>
-                        <article class="elh-post">
-                            <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/images/blog/medium-2.jpg" alt="...">
-                            </a>
-                            <div class="elh-post-body">
-                                <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
-                                <a class="elh-post-link" href="blog-single.html">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </article>
-                        <article class="elh-post">
-                            <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/images/blog/medium-3.jpg" alt="...">
-                            </a>
-                            <div class="elh-post-body">
-                                <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
-                                <a class="elh-post-link" href="blog-single.html">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </article>
-                        <article class="elh-post">
-                            <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/images/blog/medium-1.jpg" alt="...">
-                            </a>
-                            <div class="elh-post-body">
-                                <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
-                                <a class="elh-post-link" href="blog-single.html">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </article>
-                        <article class="elh-post">
-                            <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/images/blog/medium-2.jpg" alt="...">
-                            </a>
-                            <div class="elh-post-body">
-                                <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
-                                <a class="elh-post-link" href="blog-single.html">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </article>
-                        <article class="elh-post">
-                            <a class="elh-post-thumb" href="blog-single.html">
-                                <img class="img-responsive" src="/images/blog/medium-3.jpg" alt="...">
-                            </a>
-                            <div class="elh-post-body">
-                                <h4 class="elh-post-title"><a href="blog-single.html">The Certificate giving ceremony of 2018 in California</a></h4>
-                                <a class="elh-post-link" href="blog-single.html">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </article>
+                    @endforeach
                     </div>
                 </div>
             </div>
