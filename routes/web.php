@@ -27,6 +27,7 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     //
     Route::get('about-us/{slug}', 'AboutUsController@show')->name('user.about-us.detail');
     Route::get('join-us/{slug}', 'IoinUsController@show')->name('user.join-us.detail');
+    // Route::get('join-us/{slug}', '')->name('user.join-us.detail');
     //
     Route::get('course', 'CourseController@index')->name('user.course.list');
     Route::get('course/{slug}', 'CourseController@show')->name('user.course.detail');
@@ -46,6 +47,8 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     // Route::get('data-scientists-corner/{category}', 'DataScientistControler')->name('user.data-scientist.category');
     Route::get('data-scientists-corner/{category}/{slug}', 'DataScientistControler@show')->name('user.data-scientist.detail');
 
+    //instructor
+    Route::get('instructor/{slug}', 'InstructorControler@index')->name('user.instructor.detail');
 });
 
 Route::get('index.html', function () { return view('user.index'); });
