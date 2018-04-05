@@ -160,13 +160,15 @@
                     <div class="elh-generic-carousel owl-carousel elh-generic-4">
                     @foreach($data['instructors'] as $instructor)
                         <div class="elh-instructor">
-                            <a class="elh-instructor-thumb" href="instructor-single.html" title="{{ $instructor[fieldLanguage('name')] }}">
+                            <a class="elh-instructor-thumb" href="instructor/{{ $instructor[fieldLanguage('slug')] }}" title="{{ $instructor[fieldLanguage('name')] }}">
                                 <img class="img-responsive" src="{{ $instructor['image_url'] }}" alt="{{ $instructor[fieldLanguage('name')] }}">
                             </a>
                             <div class="elh-instructor-body">
                                 <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor/{{ $instructor[fieldLanguage('slug')] }}" title="{{ $instructor[fieldLanguage('name')] }}">{{ $instructor[fieldLanguage('name')] }}</a></h4>
                                 <p class="elh-instructor-field">{{ $instructor[fieldLanguage('specialized')] }}</p>
-                                <p class="elh-instructor-excerpt">{{ $instructor[fieldLanguage('description')] }}</p>
+                                <p class="elh-instructor-description">
+                                    <a href="instructor/{{ $instructor[fieldLanguage('slug')] }}">{{ $instructor[fieldLanguage('description')] }}</a>
+                                </p>
                                 <a class="elh-instructor-link" href="instructor/{{ $instructor[fieldLanguage('slug')] }}" title="{{ $instructor[fieldLanguage('name')] }}">View Profile <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>

@@ -13,10 +13,10 @@
 <div class="elh-page-header elh-img-bg elh-bg-9">
     <div class="elh-overlay">
         <div class="container text-center">
-            <h3 class="elh-page-title">Blog</h3>
+            <h3 class="elh-page-title">Data Scientists' Corner</h3>
             <ol class="breadcrumb">
                 <li><a href="course_hub.html">Home</a></li>
-                <li class="active">Blog</li>
+                <li class="active">A</li>
             </ol>
         </div>
     </div>
@@ -33,7 +33,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 elh-posts-center">
-                    <div class="elh-posts-listing">
+                    <div class="elh-posts-listing list-data-scientist">
+                        <div class="row category-data-scientist col-md-10 col-sm-5 .col-md-offset-5">
+                            <button class="btn btn-success">Trend</button>
+                            <button class="btn btn-success">Academic</button>
+                            <button class="btn btn-success">Best practices</button>
+                            <button class="btn btn-success">Industry track</button>
+                            <button class="btn btn-success">Learning</button>
+                        </div>
+                        <div class="clearfix"></div>
+                        <br>
                         <div class="row">
                             <article class="elh-post style-4">
                                 <div class="col-sm-8">

@@ -119,6 +119,17 @@ a:hover {
     padding-bottom: 0;
 }
 
+.elh-instructor-description {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem !important;
+    color: #262626;
+}
+
+.category-data-scientist  {
+    margin-left: 10%;
+}
+
 .elh-section-padding-big {
     padding: 120px 0;
 }

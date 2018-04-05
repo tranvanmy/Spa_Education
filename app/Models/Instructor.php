@@ -14,4 +14,9 @@ class Instructor extends Model
         'point_review_manual', 'total_review_manual', 'is_review_manual', 'point_review_avg', 'total_review', 'viewed',
         'image_url'
     ];
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
 }
