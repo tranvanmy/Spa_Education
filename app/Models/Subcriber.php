@@ -8,5 +8,5 @@ class Subcriber extends Model
 {
     protected $table = 'subcribers';
 
-    protected $fillable = ['email', 'name', 'phone'];
+    protected $fillable = ['email', 'name', 'phone', 'message'];
 }

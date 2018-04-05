@@ -25,7 +25,7 @@
                                <b-col sm="12">
                                    <b-form-fieldset :label="$t('textTitle')">
                                        <b-form-input
-                                           type="text"
+                                           type="text" required
                                            v-model="formData[language.key].title"
                                            :placeholder="$t('textTitle')"
                                            @input="handleChangeTitle($event, language.key)"
@@ -37,7 +37,7 @@
                                <b-col sm="12">
                                    <b-form-fieldset :label="$t('textSlug')">
                                         <b-form-input
-                                            type="text"
+                                            type="text" required
                                             v-model="formData[language.key].slug"
                                             :value="formData[language.key].slug"
                                             :placeholder="$t('textSlug')"
@@ -161,19 +161,16 @@ export default {
             this.formData[languageKey].slug = slug(value || '')
         },
 
-        successUploader(path) {
-            return this.images.push(path)
-        },
+        validateForm() {
+            let validate = true;
 
-        removeFile(index) {
-            return this.images = this.images.filter((image, key) => key !== index)
-        },
-
-        ortherOptions() {
-            return {
-                ...configTinyMCE,
-                height: 250,
+            for (let language of this.getLanguages()) {
+                validate &= !!this.formData[language.key].title
+                    & !!this.formData[language.key].slug
             }
+
+            return validate & !!this.formData.sameData.type
+
         },
 
         convertDataSubmit() {
@@ -192,6 +189,10 @@ export default {
         },
 
         clickSubmitEdit() {
+            if (!this.validateForm()) {
+                return this.$toaster.error(this.$i18n.t('textNotFillEnough'))
+            }
+            
             let params = this.convertDataSubmit();
 
             this.$store.dispatch('actionCategoryEdit', { vue: this, params, id: this.$route.params.id });

@@ -14,11 +14,12 @@ Route::group(['domain' => 'admin.'. env('MAIN_DOMAIN')], function(){
     Route::any('{any}', function () { return view('admin.index'); })->where('any', '.*');
 });
 
-Route::group(['namespace' => 'Web'], function () {
+Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     Route::get('/', 'HomeController@index' )->name('user.home');
+    Route::get('change-language', 'HomeController@changeLanguage' )->name('user.change-language');
     // Route::get('search', '')->name('user.search');
     //
-    // Route::post('subcribe', '')->name('user.subcribe')
+    Route::post('subcribe', 'HomeController@subcribe')->name('user.subcribe');
     //
     Route::get('event', 'EventController@index' )->name('user.event.list');
     Route::get('event/{slug}', 'EventController@show' )->name('user.event.detail');

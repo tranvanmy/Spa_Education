@@ -14,7 +14,7 @@ use App\Models\Event;
 class NavbarComposer
 {
     protected $navbar;
-  
+
     public function __construct(
         AboutUs $aboutUs,
         Course $course,
@@ -25,8 +25,8 @@ class NavbarComposer
         $this->navbar = [
             'about_us' => $aboutUs->where(fieldLanguage('has'), true)->get($navbarField),
             'courses' => $course->where(fieldLanguage('has'), true)->withCount('comments')->get(),
-            'research_development_categories' => $category->where('type', 'research_development')->get($navbarField),
-            'products_categories' => $category->where('type', 'product')->get($navbarField),
+            'research_development_categories' => $category->where('type', Category::TYPE_RD)->get($navbarField),
+            'products_categories' => $category->where('type', Category::TYPE_PRODUCT)->get($navbarField),
             'join_us' => $joinUs->where(fieldLanguage('has'), true)->get($navbarField),
         ];
     }
