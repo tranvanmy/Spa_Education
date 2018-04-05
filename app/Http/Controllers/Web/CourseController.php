@@ -12,7 +12,7 @@ class CourseController extends Controller
         $courses = Course::with('instructor')
             ->where(fieldLanguage('has'), true)
             ->withCount('comments')
-            ->paginate(6);
+            ->paginate(12);
 
         return view('user.course', compact('courses'));
     }
@@ -25,8 +25,13 @@ class CourseController extends Controller
             ->with('instructor', 'comments')
             ->first();
 
+        if (!$course) {
+            return redirect()->route('user.not-found');
+        }
+
         $relatedCourses = Course::with('instructor')
             ->where(fieldLanguage('has'), true)
+            ->where('id', '<>', $course->id)
             ->withCount('comments')
             ->inRandomOrder()
             ->limit(2)

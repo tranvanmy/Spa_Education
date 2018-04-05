@@ -15,7 +15,7 @@
                 <h3 class="elh-page-title">All Events</h3>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="course_hub.html">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li class="active">Events</li>
                 </ol>

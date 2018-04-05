@@ -119,11 +119,15 @@
                 <div class="elh-generic-carousel owl-carousel">
                 @foreach ($data['courses'] as $course)
                     <div class="elh-course style-2">
-                        <a class="elh-course-thumb" href="course/{{ $course[fieldLanguage('slug')] }}" title="{{ $course[fieldLanguage('title')] }}">
+                        <a class="elh-course-thumb" href="{{ route('user.course.detail', [$course[fieldLanguage('slug')]]) }}" title="{{ $course[fieldLanguage('title')] }}">
                             <img class="img-responsive" src="{{ $course['image_url'] }}" alt="{{ $course[fieldLanguage('title')] }}">
                         </a>
                         <div class="elh-course-content">
-                            <h4 class="elh-course-title" style="height: 50px"><a href="course/{{ $course[fieldLanguage('slug')] }}" title="{{ $course[fieldLanguage('title')] }}">{{ $course[fieldLanguage('title')] }}</a></h4>
+                            <h4 class="elh-course-title" style="height: 50px">
+                                <a href="{{ route('user.course.detail', [$course[fieldLanguage('slug')]]) }}"
+                                    title="{{ $course[fieldLanguage('title')] }}"
+                                >{{ $course[fieldLanguage('title')] }}</a>
+                            </h4>
                             <p style="text-align: justify">
                                 {{ $course[fieldLanguage('description')] }}
                             </p>
@@ -160,16 +164,27 @@
                     <div class="elh-generic-carousel owl-carousel elh-generic-4">
                     @foreach($data['instructors'] as $instructor)
                         <div class="elh-instructor">
-                            <a class="elh-instructor-thumb" href="instructor/{{ $instructor[fieldLanguage('slug')] }}" title="{{ $instructor[fieldLanguage('name')] }}">
+                            <a class="elh-instructor-thumb"
+                                href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
+                                title="{{ $instructor[fieldLanguage('name')] }}"
+                            >
                                 <img class="img-responsive" src="{{ $instructor['image_url'] }}" alt="{{ $instructor[fieldLanguage('name')] }}">
                             </a>
                             <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px"><a href="instructor/{{ $instructor[fieldLanguage('slug')] }}" title="{{ $instructor[fieldLanguage('name')] }}">{{ $instructor[fieldLanguage('name')] }}</a></h4>
+                                <h4 class="elh-instructor-title" style="height: 45px">
+                                    <a href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
+                                        title="{{ $instructor[fieldLanguage('name')] }}"
+                                    >{{ $instructor[fieldLanguage('name')] }}</a>
+                                </h4>
                                 <p class="elh-instructor-field">{{ $instructor[fieldLanguage('specialized')] }}</p>
                                 <p class="elh-instructor-description">
-                                    <a href="instructor/{{ $instructor[fieldLanguage('slug')] }}">{{ $instructor[fieldLanguage('description')] }}</a>
+                                    <a href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
+                                        title="{{ $instructor[fieldLanguage('name')] }}"
+                                    >{{ $instructor[fieldLanguage('description')] }}</a>
                                 </p>
-                                <a class="elh-instructor-link" href="instructor/{{ $instructor[fieldLanguage('slug')] }}" title="{{ $instructor[fieldLanguage('name')] }}">View Profile <i class="fa fa-long-arrow-right"></i></a>
+                                <a class="elh-instructor-link" href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
+                                    title="{{ $instructor[fieldLanguage('name')] }}"
+                                >View Profile <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     @endforeach
@@ -205,7 +220,7 @@
                             <div class="elh-category-tile-overlay">
                                 <div class="elh-category-tile-content">
                                     <h5 class="elh-category-title">{{ $research[fieldLanguage('title')] }}</h5>
-                                    <p class="elh-course-count">Project name</p>
+                                    <p class="elh-course-count">{{ $research[fieldLanguage('description')] }}</p>
                                 </div>
                             </div>
                         </a>
@@ -311,8 +326,13 @@
                                 <img class="img-responsive" src="{{ $scientist['image_url'] }}" alt="{{ $scientist[fieldLanguage('title')] }}">
                             </a>
                             <div class="elh-post-body">
-                                <h4 class="elh-post-title"><a href="{{ route('user.data-scientist.detail', [$scientist->category[fieldLanguage('slug')], $scientist[fieldLanguage('slug')]]) }}" title="{{ $scientist[fieldLanguage('title')] }}">{{ $scientist[fieldLanguage('title')] }}</a></h4>
-                                <a class="elh-post-link" href="{{ route('user.data-scientist.detail', [$scientist->category[fieldLanguage('slug')], $scientist[fieldLanguage('slug')]]) }}" title="{{ $scientist[fieldLanguage('title')] }}">Read More<i class="fa fa-long-arrow-right"></i></a>
+                                <h4 class="elh-post-title">
+                                    <a href="{{ route('user.data-scientist.detail', [$scientist->category[fieldLanguage('slug')], $scientist[fieldLanguage('slug')]]) }}"
+                                        title="{{ $scientist[fieldLanguage('title')] }}"
+                                    >{{ $scientist[fieldLanguage('title')] }}</a></h4>
+                                <a class="elh-post-link" href="{{ route('user.data-scientist.detail', [$scientist->category[fieldLanguage('slug')], $scientist[fieldLanguage('slug')]]) }}"
+                                    title="{{ $scientist[fieldLanguage('title')] }}"
+                                >Read More<i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </article>
                     @endforeach

@@ -15,7 +15,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        return $this->response(Course::all());
+        return $this->response(Course::orderBy('id', 'desc')->get());
     }
 
     /**

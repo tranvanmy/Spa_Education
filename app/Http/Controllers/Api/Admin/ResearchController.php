@@ -15,7 +15,7 @@ class ResearchController extends Controller
      */
     public function index()
     {
-        return $this->response(ResearchDevelopment::all());
+        return $this->response(ResearchDevelopment::orderBy('id', 'desc')->get());
     }
 
     /**

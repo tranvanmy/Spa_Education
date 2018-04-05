@@ -35,31 +35,16 @@
                     @endif
                 </li>
                 <li class="dropdown">
-                    <a href="{{ route('user.courses') }}">Courses</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="purchase-link" href="category-course.html">ML Fundamental</a></li>
-                        <li><a class="purchase-link" href="category-course.html">ML in Computer Vision</a></li>
-                        <li><a class="purchase-link" href="category-course.html">ML in NLP</a></li>
-                        <li><a class="purchase-link" href="category-course.html">ML in Cyber Security</a></li>
-                        <li><a class="purchase-link" href="category-course.html">ML in the Cloud</a></li>
-                        <li >
-                            <a class="purchase-link" href="category-course.html">
-                                AI in Smart Agriculture (upcoming)
-                            </a>
-                        </li>
-                        <li>
-                            <a class="purchase-link" href="category-course.html">
-                                AI in Smart City (upcoming)
-                            </a>
-                        </li>
-                        <li><a class="purchase-link" href="category-course.html">Student & PhD. candidates </a></li>
-                        <li><a class="purchase-link" href="category-course.html">AI in Marketing</a></li>
-                        <li><a class="purchase-link" href="category-course.html">BigData ecosystem & architecture</a></li>
-                        <li><a class="purchase-link" href="category-course.html">Data governance in the enterprise</a></li>
-                        <li><a class="purchase-link" href="category-course.html">Data analytics & visualization</a></li>
-                        <li><a class="purchase-link" href="category-course.html">AI for Business leaders</a></li>
-                        <li><a class="purchase-link" href="category-course.html">AI for IT leaders</a></li>
-                    </ul>
+                    <a href="{{ isset($isHomePage) ? '#home_course' : route('user.courses')}}" title="Courses">Courses</a>
+                    @if(isset($navbar['courses']))
+                        <ul class="dropdown-menu">
+                            @foreach ($navbar['courses'] as $course)
+                                <li>
+                                    <a class="purchase-link" href="{{ route('user.course.detail', $course[fieldLanguage('slug')]) }}">{{ $course[fieldLanguage('title')] }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </li>
                 <li class="dropdown">
                     <a href="{{ isset($isHomePage) ? '#home_research_develop' : route('user.research.list')}}" title="R&D">R&D</a>

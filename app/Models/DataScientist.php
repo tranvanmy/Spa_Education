@@ -18,4 +18,8 @@ class DataScientist extends Model
     public function category() {
         return $this->beLongsTo(Category::class);
     }
+
+    public function author() {
+        return $this->beLongsTo(Author::class);
+    }
 }

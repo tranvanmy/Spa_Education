@@ -14,7 +14,7 @@ use App\Models\Event;
 class NavbarComposer
 {
     protected $navbar;
-  
+
     public function __construct(
         AboutUs $aboutUs,
         Course $course,

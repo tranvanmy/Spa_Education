@@ -31,7 +31,6 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="elh-course-body">
                         <div class="elh-course-description elh-course-section">
-                            <h3>{{ __('about_us.vision.description') }}</h3>
                             <div class="post-entry">
                                 {!! $data[fieldLanguage('detail')] !!}
                             </div>

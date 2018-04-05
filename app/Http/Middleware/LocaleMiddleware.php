@@ -15,8 +15,7 @@ class LocaleMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $language = \Session::get('user-language', 'en');
-
+        $language = \Session::get('user-language', config('app.locale'));
         if(!in_array($language, ['en', 'vi'])) {
             $language = 'en';
         }
