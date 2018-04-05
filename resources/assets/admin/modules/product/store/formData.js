@@ -1,3 +1,5 @@
+export const CATEGORY_TYPE = 'product'
+
 export const sameForm = {
     title: '',
     slug: '',

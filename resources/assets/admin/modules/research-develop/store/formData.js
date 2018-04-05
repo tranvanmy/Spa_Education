@@ -1,3 +1,5 @@
+export const CATEGORY_TYPE = 'research-development'
+
 export const sameForm = {
     title: '',
     slug: '',

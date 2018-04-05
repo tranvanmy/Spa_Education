@@ -193,7 +193,7 @@ import UploadImage from 'Assets/components/UploadImage.vue'
 import Helper from 'Admin/library/Helper'
 
 import { STORAGE_AUTH } from 'Admin/modules/auth/store'
-import { sameForm, sameData } from '../store/formData'
+import { sameForm, sameData, CATEGORY_TYPE } from '../store/formData'
 
 export default {
     name: 'AdminProductEdit',
@@ -250,7 +250,7 @@ export default {
         },
 
         categoryOptions() {
-            let categories = this.$store.state.storeAdminCategory.listFetch
+            let categories = this.$store.state.storeAdminCategory.listFetch.filter(category => category.type === CATEGORY_TYPE)
             let options = []
             for (let i = 0; i < categories.length; i++) {
                 options.push({

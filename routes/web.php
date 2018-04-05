@@ -11,7 +11,7 @@
 |
 */
 Route::group(['domain' => 'admin.'. env('MAIN_DOMAIN')], function(){
-    Route::get('/', function () { return view('admin.index'); });
+    Route::any('{any}', function () { return view('admin.index'); })->where('any', '.*');
 });
 
 Route::group(['namespace' => 'Web'], function () {

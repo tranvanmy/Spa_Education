@@ -47,6 +47,8 @@ import AdminDataScientistAdd from 'Admin/modules/data-scientist/views/AdminDataS
 import AdminDataScientistEdit from 'Admin/modules/data-scientist/views/AdminDataScientistEdit.vue'
 
 const router =  new VueRouter({
+    mode: 'history',
+    
     routes: [
         {
             path: '/',

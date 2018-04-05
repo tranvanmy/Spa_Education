@@ -1,3 +1,5 @@
+export const CATEGORY_TYPE = 'data-scientist'
+
 export const sameForm = {
     title: '',
     slug: '',
