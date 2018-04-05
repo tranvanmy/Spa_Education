@@ -34,7 +34,7 @@
                 >
                     <template slot="image_url" slot-scope="data">
                         <b-img thumbnail
-                            :src="`/${data.item.image_url}`"
+                            :src="data.item.image_url"
                             style="width: 150px"
                             v-if="data.item.image_url"
                         />

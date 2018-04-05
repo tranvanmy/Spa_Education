@@ -11,6 +11,11 @@ class AboutUsController extends AbstractController
     public function show($slug)
     {
         $data = AboutUs::where(fieldLanguage('slug'), $slug)->first();
+
+        if (!$data) {
+            return redirect()->route('user.not-found');
+        }
+
         return view('user.about-us', compact(['data']));
     }
 }
