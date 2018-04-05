@@ -2,84 +2,68 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Models\Category;
+use App\Models\DataScientist;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class DataScientistControler extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function listAll()
     {
-        return view('user.blog');
+        $categories = Category::where('type', Category::TYPE_DATA_SCIENTIST)->get();
+        $posts = DataScientist::with('category', 'author')->orderBy('id', 'desc')->paginate(10);
+
+        return view('user.data-scientist.list-all', compact(['categories', 'posts']));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function category($category)
     {
-        //
+        $categories = Category::where('type', Category::TYPE_DATA_SCIENTIST)->get();
+        $category = Category::where('type', Category::TYPE_DATA_SCIENTIST)
+            ->where(fieldLanguage('slug'), $category)->first();
+
+        if(!$category) {
+            return redirect()->route('user.not-found');
+        }
+
+        $posts = DataScientist::with('category', 'author')
+            ->where('category_id', $category->id)
+            ->orderBy('id', 'desc')->paginate(10);
+
+        return view('user.data-scientist.category', compact(['categories', 'category', 'posts']));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function detail($category, $slug)
     {
-        //
-    }
+        $category = Category::where('type', Category::TYPE_DATA_SCIENTIST)
+            ->where(fieldLanguage('slug'), $category)->first();
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+        if(!$category) {
+            return redirect()->route('user.not-found');
+        }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+        $post = DataScientist::with('author')
+            ->where('category_id', $category->id)
+            ->where(fieldLanguage('slug'), $slug)->first();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+        if(!$post) {
+            return redirect()->route('user.not-found');
+        }
+        $post->viewed += 1;
+        $post->save();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $postRelate = DataScientist::with('author')
+            ->where('category_id', $category->id)
+            ->where('id', '<>', $post->id)
+            ->inRandomOrder()->take(2)->get();
+
+        $postLastest = DataScientist::with('category')
+            ->where('id', '<>', $post->id)
+            ->orderBy('id', 'desc')->take(4)->get();
+
+        return view('user.data-scientist.detail', compact([
+            'postLastest', 'postRelate', 'category', 'post',
+        ]));
     }
 }

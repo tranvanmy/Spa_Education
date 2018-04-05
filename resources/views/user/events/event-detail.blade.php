@@ -14,7 +14,7 @@
             <div class="container text-center">
                 <h3 class="elh-page-title">{{ $event[fieldLanguage('title')] }}</h3>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li class="active">High-tech Agriculture - Issues and solutions</li>
                 </ol>
             </div>

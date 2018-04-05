@@ -16,7 +16,7 @@
             <h3 class="elh-page-title">All Courses</h3>
             <ol class="breadcrumb">
                 <li>
-                    <a href="course_hub.html">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li class="active">Courses</li>
             </ol>
@@ -34,11 +34,11 @@
     <div class="elh-section elh-section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="row">
                         <div class="elh-course-listing">
                             @foreach ($courses as $course)
-                                <div class="col-xs-6">
+                                <div class="col-xs-4">
                                     <div class="elh-course">
                                         <a class="elh-course-thumb" href="{{ route('user.course.detail', $course[fieldLanguage('slug')]) }}"
                                             title="{{ $course[fieldLanguage('title')] }}">
@@ -61,15 +61,11 @@
                                             <h5 class="elh-instructor-name">{{ $course['instructor'][fieldLanguage('name')] }}</h5>
                                         </div>
                                         <div class="elh-course-footer">
-                                            <p class="elh-course-price">
-                                                <span class="elh-price-now">$35.00</span>
-                                                <span class="elh-price-regular">$45.00</span>
+                                            <p class="elh-course-price" style="color: #00bcd4">
+                                               {{ $course[fieldLanguage('level')] }}
                                             </p>
                                             <p class="elh-course-metas">
-                                                <span class="elh-student-count">
-                                                    <i class="fa fa-users"></i> 25</span>
-                                                <span class="elh-comment-count">
-                                                    <i class="fa fa-comments"></i>{{ $course['comments_count'] }}</span>
+                                                <i class="fa fa-comments"></i>{{ $course['comments_count'] }}</span>
                                             </p>
                                         </div>
                                     </div>
@@ -78,35 +74,11 @@
                             <div class="col-xs-12">
                                 <nav class="navigation post-pagination xs-text-center" role="navigation">
                                     <div class="nav-links">
-                                        {{ $courses->links() }}
+                                        {{ $courses->links('user.layouts.libraries.paginate') }}
                                     </div>
                                 </nav>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="sidebar">
-                        <aside class="widget category_widget">
-                            <h4 class="widget-title">Categories</h4>
-                            <ul class="categories">
-                                <li><a class="purchase-link" href="category-course.html">ML Fundamental</a></li>
-                                <li><a class="purchase-link" href="category-course.html">ML in Computer Vision</a></li>
-                                <li><a class="purchase-link" href="category-course.html">ML in NLP</a></li>
-                                <li><a class="purchase-link" href="category-course.html">ML in Cyber Security</a></li>
-                                <li><a class="purchase-link" href="category-course.html">ML in the Cloud</a></li>
-                                <li><a class="purchase-link" href="category-course.html">ML Fundamental</a></li>
-                                <li><a class="purchase-link" href="category-course.html">AI in Smart Agriculture (upcoming)</a></li>
-                                <li><a class="purchase-link" href="category-course.html">AI in Smart City (upcoming)</a></li>
-                                <li><a class="purchase-link" href="category-course.html">Student & PhD. candidates </a></li>
-                                <li><a class="purchase-link" href="category-course.html">AI in Marketing</a></li>
-                                <li><a class="purchase-link" href="category-course.html">BigData ecosystem & architecture</a></li>
-                                <li><a class="purchase-link" href="category-course.html">Data governance in the enterprise</a></li>
-                                <li><a class="purchase-link" href="category-course.html">Data analytics & visualization</a></li>
-                                <li><a class="purchase-link" href="category-course.html">AI for Business leaders</a></li>
-                                <li><a class="purchase-link" href="category-course.html">AI for IT leaders</a></li>
-                            </ul>
-                        </aside>
                     </div>
                 </div>
             </div>

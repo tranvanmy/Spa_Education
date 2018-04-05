@@ -9,14 +9,15 @@ use App\Models\Event;
 class EventController extends Controller
 {
     protected $event;
-    
+
     public function __construct(Event $event) {
         $this->event = $event;
     }
 
     public function index(Request $request)
     {
-        $events = $this->event->with('author')->where(fieldLanguage('has'), true)->orderBy('start_at', 'desc')->paginate(5);
+        $events = $this->event->with('author')->where(fieldLanguage('has'), true)
+            ->orderBy('start_at', 'desc')->paginate(5);
 
         if ($request->ajax()) {
             return view('user.events.event-ajax', compact('events'));

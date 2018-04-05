@@ -38,8 +38,8 @@ class HomeController extends Controller
 
     public function changeLanguage()
     {
-        $language = \Session::get('user-language');
-        
+        $language = \Session::get('user-language', config('app.locale'));
+
         if ($language == 'en') {
             \Session::put('user-language', 'vi');
 

@@ -15,7 +15,7 @@ class DataScientistController extends Controller
      */
     public function index()
     {
-        return $this->response(DataScientist::all());
+        return $this->response(DataScientist::orderBy('id', 'desc')->get());
     }
 
     /**

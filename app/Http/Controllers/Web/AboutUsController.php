@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use Illuminate\Http\Request;
 use App\Models\AboutUs;
+use App\Models\JoinUs;
 use App\Models\Comment;
 
 class AboutUsController extends AbstractController
@@ -16,6 +17,17 @@ class AboutUsController extends AbstractController
             return redirect()->route('user.not-found');
         }
 
-        return view('user.about-us', compact(['data']));
+        return view('user.about-us.detail', compact(['data']));
+    }
+
+    public function joinUs($slug)
+    {
+        $data = JoinUs::where(fieldLanguage('slug'), $slug)->first();
+
+        if (!$data) {
+            return redirect()->route('user.not-found');
+        }
+
+        return view('user.join-us.detail', compact(['data']));
     }
 }

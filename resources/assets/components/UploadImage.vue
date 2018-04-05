@@ -16,7 +16,7 @@
                 :key="image"
             >
                 <b-img thumbnail
-                    :src="`/${image}`"
+                    :src="image"
                     style="max-width: 150px; margin-left: 10px; margin-bottom: 15px"
                     v-if="image"
                 />
