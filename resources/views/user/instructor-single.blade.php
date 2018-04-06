@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="elh-instructor-thumb">
-                            <img class="img-responsive" src="/{{ $instructor['image_url'] }}" alt="{{ $instructor[fieldLanguage('name')] }}">
+                            <img class="img-responsive" src="{{ $instructor['image_url'] }}" alt="{{ $instructor[fieldLanguage('name')] }}">
                         </div>
                         <div class="elh-contact-instructor">
                             <a class="btn" href="#">Contact Instructor</a>
@@ -52,7 +52,7 @@
                             <br>
                             {{ $instructor[fieldLanguage('detail')] }}
                         </div>
-                        <div class="elh-instructor-facts">
+                        {{--  <div class="elh-instructor-facts">
                             <div class="elh-instructor-fact-item">
                                 <h5>Students</h5>
                                 <p>246,332</p>
@@ -69,7 +69,7 @@
                                 <h5>Ovarall Rating</h5>
                                 <p>4.85 out of 5</p>
                             </div>
-                        </div>
+                        </div>  --}}
                     </div>
                 </div>
 
@@ -83,8 +83,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title"><span>Courses</span> by Nguyen Xuan Hoai</h3>
-                            <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                            <h3 class="elh-section-title"><span>Courses</span> by {{ $instructor[fieldLanguage('name')] }}</h3>
+                            <p class="elh-section-text">Text</p>
                             <a class="all-link" href="{{ route('user.courses') }}">See All Courses</a>
                         </div>
                     </div>
