@@ -12,7 +12,7 @@ class DataScientistControler extends Controller
     public function listAll()
     {
         $categories = Category::where('type', Category::TYPE_DATA_SCIENTIST)->get();
-        $posts = DataScientist::with('category', 'author')->orderBy('id', 'desc')->paginate(10);
+        $posts = DataScientist::has('author')->has('category')->with('category', 'author')->orderBy('id', 'desc')->paginate(10);
 
         return view('user.data-scientist.list-all', compact(['categories', 'posts']));
     }

@@ -28,22 +28,30 @@
 
       <!-- Popular Courses -->
         <div class="elh-section elh-carousel-section">
+        
         @foreach($products as $category)
-            <div class="container elh-section-padding {{ $products->last()->id == $category->id ? '' : ' elh-bottom-0' }}">
+            <div class="container elh-section-padding{{ end($products)['id'] == $category['id'] ? '' : ' elh-bottom-0' }}">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">{{ $category[fieldLanguage('title')] }}</h3>
+                            <h3 class="elh-section-title">
+                                {{ $category[fieldLanguage('title')] }}
+                                <a  
+                                    href="{{ route('user.product.category', $category[fieldLanguage('slug')]) }}" 
+                                    title="See All {{ $category[fieldLanguage('title')] }}"
+                                    style="font-size: 1.5rem"
+                                >(See All)</a>
+                                
+                            </h3>
                             <p class="elh-section-text">
                                 {!! nl2br($category[fieldLanguage('description')]) !!}
                             </p>
-                            <a class="all-link" href="{{ route('user.product.category', $category[fieldLanguage('slug')]) }}" title="See All {{ $category[fieldLanguage('title')] }}">See All</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="elh-generic-carousel owl-carousel">
-                    @foreach($category->products as $product)
+                    @foreach($category['products'] as $product)
                         <div class="elh-course style-2">
                             <a class="elh-course-thumb" href="{{ route('user.product.detail',[$category[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">
                                 <img class="img-responsive" src="{{ Croppa::url($product->image_url ?: '', 368, null, array('resize')) }}" alt="{{ $product[fieldLanguage('title')] }}">

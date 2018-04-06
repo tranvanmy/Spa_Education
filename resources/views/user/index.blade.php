@@ -171,9 +171,10 @@
                                 href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
                                 title="{{ $instructor[fieldLanguage('name')] }}"
                             >
-                                <img class="img-responsive"
-                                    src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}"
+                                <img 
+                                    class="img-responsive" src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }} }}" 
                                     alt="{{ $instructor[fieldLanguage('name')] }}"
+                                    style="width:100%"
                                 />
                             </a>
                             <div class="elh-instructor-body">
@@ -183,10 +184,7 @@
                                     >{{ $instructor[fieldLanguage('name')] }}</a>
                                 </h4>
                                 <p class="elh-instructor-field">{{ $instructor[fieldLanguage('specialized')] }}</p>
-                                <p class="elh-instructor-description">
-                                    <a href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
-                                        title="{{ $instructor[fieldLanguage('name')] }}"
-                                    >{{ $instructor[fieldLanguage('description')] }}</a>
+                                <p class="elh-instructor-description">{{ $instructor[fieldLanguage('description')] }}
                                 </p>
                                 <a class="elh-instructor-link" href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
                                     title="{{ $instructor[fieldLanguage('name')] }}"
