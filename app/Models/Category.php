@@ -17,4 +17,8 @@ class Category extends Model
         'title_vi', 'slug_vi', 'description_vi', 'seo_keyword_vi', 'seo_description_vi',
         'title_en', 'slug_en', 'description_en', 'seo_keyword_en', 'seo_description_en'
     ];
+
+    public function products () {
+        return $this->hasMany(Product::class);
+    }
 }

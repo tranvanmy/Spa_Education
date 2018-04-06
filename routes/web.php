@@ -31,12 +31,12 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     Route::get('course', 'CourseController@index')->name('user.courses');
     Route::get('course/{slug}', 'CourseController@show')->name('user.course.detail');
 
-    Route::get('product', 'ProductControler@index')->name('user.product.list');
-    Route::get('product/{category}', 'ProductControler@category')->name('user.product.category');
-    // Route::get('product/{category}/{product}', 'ProductControler')->name('user.product.detail');
+    Route::get('product', 'ProductController@index')->name('user.product.list');
+    Route::get('product/{category}', 'ProductController@category')->name('user.product.category');
+    Route::get('product/{category}/{product}', 'ProductController@show')->name('user.product.detail');
     //
-    Route::get('research-and-development', 'ResearchControler@index')->name('user.research.list');
-    Route::get('research-and-development/{category}', 'ResearchControler@category')->name('user.research.category');
+    Route::get('research-and-development', 'ResearchController@index')->name('user.research.list');
+    Route::get('research-and-development/{category}', 'ResearchController@category')->name('user.research.category');
     // Route::get('research-and-development/{category}/{slug}', 'ResearchControler')->name('user.research.detail');
     //
     Route::get('data-scientists-corner', 'DataScientistControler@listAll')->name('user.data-scientist.list');
