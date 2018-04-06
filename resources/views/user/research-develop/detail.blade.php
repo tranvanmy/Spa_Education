@@ -14,13 +14,12 @@
             <div class="container text-center">
                 <h3 class="elh-page-title">{{ $research[fieldLanguage('title')] }}</h3>
                 <ol class="breadcrumb">
-                    <li><a href="/" title="Home">Home</a></li>
+                    <li><a href="{{ route('user.home') }}" title="Home">Home</a></li>
                     <li>
                         <a href="{{ route('user.research.category', [$category[fieldLanguage('slug')]]) }}" title="{{ $category[fieldLanguage('title')] }}">
                             {{ $category[fieldLanguage('title')] }}
                         </a>
                     </li>
-                    <li class="active">{{ $research[fieldLanguage('title')] }}</li>
                 </ol>
             </div>
         </div>
@@ -52,7 +51,7 @@
                             {{-- <div class="elh-course-reviews">
                                 <div class="elh-course-review-item">
                                     <div class="elh-course-reviewer-thumb">
-                                        <img class="img-responsive" src="/images/course/course-reviewer-thumb.jpg" alt="...">
+                                        <img class="img-responsive fix-width" src="/images/course/course-reviewer-thumb.jpg" alt="...">
                                     </div>
                                     <div class="elh-course-review-body">
                                         <div class="elh-course-review-title">
@@ -110,8 +109,8 @@
                                                 href="{{ route('user.research.detail', [$category[fieldLanguage('slug')], $research[fieldLanguage('slug')]]) }}"
                                                 title="{{ $research[fieldLanguage('title')] }}"
                                             >
-                                                <img class="img-responsive"
-                                                    src="{{ Croppa::url($research->image_url ?: '', 360, null, array('resize')) }}"
+                                                <img class="img-responsive fix-width"
+                                                    src="{{ Croppa::url($research->image_url ?: '', 400, null, array('resize')) }}"
                                                     alt="{{ $research[fieldLanguage('title')] }}"
                                                     style="width: 100%"
                                                 />
@@ -151,8 +150,8 @@
                                                 title="{{ $research[fieldLanguage('title')] }}"
                                                 href="{{ route('user.research.detail', [$research->category[fieldLanguage('slug')], $research[fieldLanguage('slug')]]) }}"
                                             >
-                                                <img class="img-responsive"
-                                                    src="{{ Croppa::url($research->image_url ?: '', 200, null, array('resize')) }}"
+                                                <img class="img-responsive fix-width"
+                                                    src="{{ Croppa::url($research->image_url ?: '', 100, null, array('resize')) }}"
                                                     alt="{{ $research[fieldLanguage('title')] }}"
                                                     style="width: 100%"
                                                 />

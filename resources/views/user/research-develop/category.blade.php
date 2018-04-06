@@ -15,9 +15,9 @@
                 <h3 class="elh-page-title">{{ $category[fieldLanguage('title')] }}</h3>
                     <ol class="breadcrumb">
                         <li>
-                            <a href="/" title="Home">Home</a>
+                            <a href="{{route('user.home')}}" title="Home">Home</a>
                         </li>
-                        <li class="active">{{ $category[fieldLanguage('title')] }}</li>
+                        <li> <a href="{{ route('user.research.list')}}" title="All Research & Development">All Research & Development</a></li>
                     </ol>
                 </div>
         </div>
@@ -50,8 +50,8 @@
                                                 href="{{ route('user.research.detail', [$category[fieldLanguage('slug')], $researchDev[fieldLanguage('slug')]]) }}"
                                                 title="{{ $researchDev[fieldLanguage('slug')] }}"
                                             >
-                                                <img class="img-responsive"
-                                                    src="{{ Croppa::url($researchDev->image_url ?: '', 300, null, ['resize']) }}"
+                                                <img class="img-responsive fix-width"
+                                                    src="{{ Croppa::url($researchDev->image_url ?: '', 400, null, ['resize']) }}"
                                                     alt="{{ $researchDev[fieldLanguage('title')] }}"
                                                     style="width: 100%"
                                                 />

@@ -15,8 +15,8 @@
         <div class="container text-center">
             <h3 class="elh-page-title">{{ $course[fieldLanguage('title')]}}</h3>
             <ol class="breadcrumb">
-                <li><a href="{{ route('user.courses') }}">Home</a></li>
-                <li class="active">Course</li>
+                <li><a href="{{ route('user.home') }}">Home</a></li>
+                <li><a href="{{ route('user.courses') }}">All Course</a></li>
             </ol>
         </div>
     </div>

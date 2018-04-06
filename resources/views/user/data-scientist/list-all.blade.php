@@ -15,8 +15,7 @@
         <div class="container text-center">
             <h3 class="elh-page-title">Data Scientists' Corner</h3>
             <ol class="breadcrumb">
-                <li><a href="/">Home</a></li>
-                <li class="active">Data Scientists' Corner</li>
+                <li><a href="{{ route('user.home') }}">Home</a></li>
             </ol>
         </div>
     </div>
@@ -54,7 +53,7 @@
                                             href="{{ route('user.data-scientist.detail', [$post->category[fieldLanguage('slug')], $post[fieldLanguage('slug')]]) }}"
                                             title="{{ $post[fieldLanguage('title')] }}"
                                         >
-                                            <img class="img-responsive" src="{{ $post->image_url }}" alt="{{ $post[fieldLanguage('title')] }}">
+                                            <img class="img-responsive fix-width" src="{{ Croppa::url($post->image_url ?: '', 750, null, array('resize')) }}" alt="{{ $post[fieldLanguage('title')] }}">
                                         </a>
                                     </div>
                                     <div class="col-sm-4">
@@ -64,7 +63,7 @@
                                             >{{ $post[fieldLanguage('title')] }}</a>
                                         </h4>
                                         <p class="elh-post-excerpt" style="color: rgba(0,0,0,.54);">
-                                            {{ $post[fieldLanguage('description')] }}
+                                            {!! nl2br($post[fieldLanguage('description')]) !!}
                                         </p>
                                         <div style="display: flex">
                                             <div>
@@ -97,7 +96,7 @@
                                             href="{{ route('user.data-scientist.detail', [$post->category[fieldLanguage('slug')], $post[fieldLanguage('slug')]]) }}"
                                             title="{{ $post[fieldLanguage('title')] }}"
                                         >
-                                            <img class="img-responsive" src="{{ $post->image_url }}"
+                                            <img class="img-responsive fix-width" src="{{ Croppa::url($post->image_url ?: '', 400, null, array('resize')) }}"
                                                 alt="$post[fieldLanguage('title')]"
                                             />
                                         </a>
@@ -108,7 +107,7 @@
                                                 >{{ $post[fieldLanguage('title')] }}</a>
                                             </h4>
                                             <p class="elh-post-excerpt elh-bottom-0" style="color: rgba(0,0,0,.54);">
-                                                {{ $post[fieldLanguage('description')] }}
+                                                {!! nl2br($post[fieldLanguage('description')]) !!}
                                             </p>
                                             <div style="display: flex">
                                                 <div>
