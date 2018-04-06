@@ -31,7 +31,11 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="elh-instructor-thumb">
-                            <img class="img-responsive" src="{{ $instructor['image_url'] }}" alt="{{ $instructor[fieldLanguage('name')] }}">
+                            <img 
+                                class="img-responsive" src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}" 
+                                alt="{{ $instructor[fieldLanguage('name')] }}"
+                                style="width:100%"
+                            />
                         </div>
                         <div class="elh-contact-instructor">
                             <a class="btn" href="#">Contact Instructor</a>
@@ -48,9 +52,9 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="elh-instructor-entry">
-                            <p>{{ $instructor[fieldLanguage('description')] }}
+                            <p>{!! $instructor[fieldLanguage('description')] !!}
                             <br>
-                            {{ $instructor[fieldLanguage('detail')] }}
+                            {!! nl2br($instructor[fieldLanguage('detail')]) !!}
                         </div>
                         {{--  <div class="elh-instructor-facts">
                             <div class="elh-instructor-fact-item">
