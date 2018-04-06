@@ -10,12 +10,15 @@ use App\Models\Category;
 class ProductController extends Controller
 {
     public function index() {
-       
-        $products = Category::with(['products' => function($query) {
-            $query->where(fieldLanguage('has'), true);
-        }])->where('type', Category::TYPE_PRODUCT)->get();
-        
-        return view('user.products.products', compact('products'));
+        $product = [];
+        $categories = Category::where('type', Category::TYPE_PRODUCT)->get();
+        $categoriesArray = $categories->toArray();
+
+        foreach ($categories as $key => $category) {
+            $categoriesArray[$key]['products'] = $category->products()->orderBy('id', 'desc')->limit(5)->get();
+        }
+
+        return view('user.products.products', compact('products'))->with('products', $categoriesArray);
     }
 
     public function show($category, $product) {
