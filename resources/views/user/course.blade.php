@@ -18,7 +18,6 @@
                 <li>
                     <a href="/">Home</a>
                 </li>
-                <li class="active">Courses</li>
             </ol>
         </div>
     </div>
@@ -42,7 +41,7 @@
                                     <div class="elh-course">
                                         <a class="elh-course-thumb" href="{{ route('user.course.detail', $course[fieldLanguage('slug')]) }}"
                                             title="{{ $course[fieldLanguage('title')] }}">
-                                            <img class="img-responsive" src="{{ $course['image_url'] }}"
+                                            <img class="img-responsive fix-width" src="{{ Croppa::url($course->image_url ?: '', 400, null, array('resize')) }}"
                                                 alt="{{ $course[fieldLanguage('title')] }}">
                                         </a>
                                         <div class="elh-course-content">
@@ -55,7 +54,7 @@
                                         </div>
                                         <div class="elh-course-instructor">
                                             <div class="elh-instructor-thumb">
-                                                <img class="img-responsive" src="{{ $course['instructor']['image_url'] }}"
+                                                <img class="img-responsive fix-width" src="{{ Croppa::url($course['instructor']['image_url'] ?: '', 400, null, array('resize')) }}"
                                                     alt="{{ $course['instructor'][fieldLanguage('name')] }}">
                                             </div>
                                             <h5 class="elh-instructor-name">{{ $course['instructor'][fieldLanguage('name')] }}</h5>

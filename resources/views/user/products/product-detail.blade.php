@@ -53,7 +53,7 @@
                             <div class="elh-course-reviews">
                                 <div class="elh-course-review-item">
                                     <div class="elh-course-reviewer-thumb">
-                                        <img class="img-responsive" src="/images/course/course-reviewer-thumb.jpg" alt="...">
+                                        <img class="img-responsive fix-width" src="/images/course/course-reviewer-thumb.jpg" alt="...">
                                     </div>
                                     <div class="elh-course-review-body">
                                         <div class="elh-course-review-title">
@@ -108,7 +108,7 @@
                                 <div class="col-xs-6">
                                     <div class="elh-course">
                                         <a class="elh-course-thumb" href="{{ route('user.product.detail', [$productsCategory[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">
-                                            <img class="img-responsive" src="{{ Croppa::url($product->image_url ?: '', 358, null, array('resize')) }}" alt="{{ $product[fieldLanguage('title')] }}">
+                                            <img class="img-responsive fix-width" src="{{ Croppa::url($product->image_url ?: '', 400, null, array('resize')) }}" alt="{{ $product[fieldLanguage('title')] }}">
                                         </a>
                                         <div class="elh-course-content">
                                             <h4 class="elh-course-title"><a href="{{ route('user.product.detail', [$productsCategory[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">{{ $product[fieldLanguage('title')] }}</a></h4>
@@ -137,7 +137,7 @@
                                 @foreach($productsPopular as $product)
                                     <div class="widget-post">
                                         <a class="widget-post-thumb" href="{{ route('user.product.detail', [$productsCategory[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">
-                                            <img class="img-responsive" src="{{ Croppa::url($product->image_url ?: '', 60, null, array('resize')) }}" alt="{{ $product[fieldLanguage('title')] }}">
+                                            <img class="img-responsive fix-width" src="{{ Croppa::url($product->image_url ?: '', 60, null, array('resize')) }}" alt="{{ $product[fieldLanguage('title')] }}">
                                         </a>
                                         <div class="widget-post-content">
                                             <a class="widget-post-title" href="{{ route('user.product.detail', [$productsCategory[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">{{ $product[fieldLanguage('title')] }}</a>

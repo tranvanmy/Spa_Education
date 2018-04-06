@@ -30,7 +30,7 @@
                 <div class="col-xs-12">
                     <div class="elh-course-profile">
                         <div class="elh-instructor-thumb elh-course-profile-item">
-                            <img class="img-responsive" src="{{ $post->author->image_url }}"
+                            <img class="img-responsive fix-width" src="{{ Croppa::url($post->author->image_url ?: '', 100, null, array('resize')) }}"
                                 alt="{{ $post->author[fieldLanguage('name')] }}"
                             >
                         </div>
@@ -91,7 +91,7 @@
                         <div class="elh-course-reviews">
                             <div class="elh-course-review-item">
                                 <div class="elh-course-reviewer-thumb">
-                                    <img class="img-responsive" src="/images/course/course-reviewer-thumb.jpg" alt="...">
+                                    <img class="img-responsive fix-width" src="/images/course/course-reviewer-thumb.jpg" alt="...">
                                 </div>
                                 <div class="elh-course-review-body">
                                     <div class="elh-course-review-title">
@@ -149,7 +149,7 @@
                                             href="{{ route('user.data-scientist.detail', [$category[fieldLanguage('slug')], $post[fieldLanguage('slug')]]) }}"
                                             title="{{ $post[fieldLanguage('title')] }}"
                                         >
-                                            <img class="img-responsive" src="{{ $post->image_url }}"
+                                            <img class="img-responsive fix-width" src="{{ Croppa::url($post->image_url ?: '', 400, null, array('resize')) }}"
                                                 alt="{{ $post[fieldLanguage('title')] }}"
                                             >
                                         </a>
@@ -162,7 +162,7 @@
                                         </div>
                                         <div class="elh-course-instructor">
                                             <div class="elh-instructor-thumb">
-                                                <img class="img-responsive" src="{{ $post->author->image_url }}"
+                                                <img class="img-responsive fix-width" src="{{ Croppa::url($post->author->image_url ?: '', 100, null, array('resize')) }}"
                                                     alt="{{ $post->author[fieldLanguage('name')] }}"
                                                 />
                                             </div>
@@ -193,7 +193,7 @@
                                             href="{{ route('user.data-scientist.detail', [$post->category[fieldLanguage('slug')], $post[fieldLanguage('slug')]]) }}"
                                             title="{{ $post[fieldLanguage('title')] }}"
                                         >
-                                            <img class="img-responsive" src="{{ $post->image_url }}"
+                                            <img class="img-responsive fix-width" src="{{ Croppa::url($post->image_url ?: '', 100, null, array('resize')) }}"
                                                 alt="{{ $post[fieldLanguage('title')] }}"
                                             >
                                         </a>

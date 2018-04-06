@@ -54,7 +54,7 @@
                     @foreach($category['products'] as $product)
                         <div class="elh-course style-2">
                             <a class="elh-course-thumb" href="{{ route('user.product.detail',[$category[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">
-                                <img class="img-responsive" src="{{ Croppa::url($product->image_url ?: '', 368, null, array('resize')) }}" alt="{{ $product[fieldLanguage('title')] }}">
+                                <img class="img-responsive fix-width" src="{{ Croppa::url($product->image_url ?: '', 400, null, array('resize')) }}" alt="{{ $product[fieldLanguage('title')] }}">
                             </a>
                             <div class="elh-course-content">
                                 <h4 class="elh-course-title">

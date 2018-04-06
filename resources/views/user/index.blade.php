@@ -120,7 +120,7 @@
                 @foreach ($data['courses'] as $course)
                     <div class="elh-course style-2">
                         <a class="elh-course-thumb" href="{{ route('user.course.detail', [$course[fieldLanguage('slug')]]) }}" title="{{ $course[fieldLanguage('title')] }}">
-                            <img class="img-responsive"
+                            <img class="img-responsive fix-width"
                                 src="{{ Croppa::url($course->image_url ?: '', 358, null, array('resize')) }}"
                                 alt="{{ $course[fieldLanguage('title')] }}"
                             />
@@ -132,7 +132,7 @@
                                 >{{ $course[fieldLanguage('title')] }}</a>
                             </h4>
                             <p style="text-align: justify">
-                                {{ $course[fieldLanguage('description')] }}
+                                {!! nl2br($course[fieldLanguage('description')]) !!}
                             </p>
                         </div>
                         <div class="elh-course-footer">
@@ -171,10 +171,9 @@
                                 href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
                                 title="{{ $instructor[fieldLanguage('name')] }}"
                             >
-                                <img 
-                                    class="img-responsive" src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}" 
+                                <img class="img-responsive fix-width"
+                                    src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}"
                                     alt="{{ $instructor[fieldLanguage('name')] }}"
-                                    style="width:100%"
                                 />
                             </a>
                             <div class="elh-instructor-body">
@@ -184,7 +183,7 @@
                                     >{{ $instructor[fieldLanguage('name')] }}</a>
                                 </h4>
                                 <p class="elh-instructor-field">{{ $instructor[fieldLanguage('specialized')] }}</p>
-                                <p class="elh-instructor-description">{{ $instructor[fieldLanguage('description')] }}
+                                <p class="elh-instructor-description">{!! nl2br($instructor[fieldLanguage('description')]) !!}
                                 </p>
                                 <a class="elh-instructor-link" href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
                                     title="{{ $instructor[fieldLanguage('name')] }}"
@@ -217,17 +216,17 @@
                 <div class="elh-grid elh-category-tiles">
                 @foreach($data['research_development'] as $research)
                     <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
-                        <a class="elh-category-tile" href="research/{{ $research[fieldLanguage('slug')] }}" title="{{ $research[fieldLanguage('title')] }}">
+                        <a class="elh-category-tile" href="{{ route('user.research.detail', [$research->category[fieldLanguage('slug')], $research[fieldLanguage('slug')]]) }}" title="{{ $research[fieldLanguage('title')] }}">
                             <div class="elh-category-tile-thumb">
-                                <img class="img-responsive"
-                                    src="{{ Croppa::url($research->image_url ?: '', 360, null, array('resize')) }}"
+                                <img class="img-responsive fix-width"
+                                    src="{{ Croppa::url($research->image_url ?: '', 400, null, array('resize')) }}"
                                     alt="{{ $research[fieldLanguage('title')] }}"
                                 />
                             </div>
                             <div class="elh-category-tile-overlay">
                                 <div class="elh-category-tile-content">
                                     <h5 class="elh-category-title">{{ $research[fieldLanguage('title')] }}</h5>
-                                    <p class="elh-course-count">{{ $research[fieldLanguage('description')] }}</p>
+                                    <p class="elh-course-count">{!! nl2br($research[fieldLanguage('description')]) !!}</p>
                                 </div>
                             </div>
                         </a>
@@ -254,19 +253,19 @@
                     <div class="col-xs-12">
                         <div class="partner-logoes">
                             <a class="partner-logo" href="#">
-                                <img class="img-responsive" src="/images/partner/1.png" alt="...">
+                                <img class="img-responsive fix-width" src="/images/partner/1.png" alt="...">
                             </a>
                             <a class="partner-logo" href="#">
-                                <img class="img-responsive" src="/images/partner/2.png" alt="...">
+                                <img class="img-responsive fix-width" src="/images/partner/2.png" alt="...">
                             </a>
                             <a class="partner-logo" href="#">
-                                <img class="img-responsive" src="/images/partner/3.png" alt="...">
+                                <img class="img-responsive fix-width" src="/images/partner/3.png" alt="...">
                             </a>
                             <a class="partner-logo" href="#">
-                                <img class="img-responsive" src="/images/partner/4.png" alt="...">
+                                <img class="img-responsive fix-width" src="/images/partner/4.png" alt="...">
                             </a>
                             <a class="partner-logo" href="#">
-                                <img class="img-responsive" src="/images/partner/5.png" alt="...">
+                                <img class="img-responsive fix-width" src="/images/partner/5.png" alt="...">
                             </a>
 
                         </div>
@@ -300,7 +299,7 @@
                                         <span><i class="fa fa-users"></i>{{ $event->author[fieldLanguage('name')] }}</span>
                                     </p>
                                     <p class="elh-event-excerpt">
-                                        {{ $event[fieldLanguage('description')] }}
+                                        {!! nl2br($event[fieldLanguage('description')]) !!}
                                     </p>
                                 </div>
                             </div>
@@ -330,7 +329,7 @@
                     @foreach($data['dataScientist'] as $scientist)
                         <article class="elh-post">
                             <a class="elh-post-thumb" href="{{ route('user.data-scientist.detail', [$scientist->category[fieldLanguage('slug')], $scientist[fieldLanguage('slug')]]) }}" title="{{ $scientist[fieldLanguage('title')] }}">
-                                <img class="img-responsive" src="{{ $scientist['image_url'] }}" alt="{{ $scientist[fieldLanguage('title')] }}">
+                                <img class="img-responsive fix-width" src="{{ Croppa::url($scientist->image_url ?: '', 400, null, array('resize')) }}" alt="{{ $scientist[fieldLanguage('title')] }}">
                             </a>
                             <div class="elh-post-body">
                                 <h4 class="elh-post-title">
@@ -384,7 +383,7 @@
             </div>
         </div>
         <div class="join-us-img">
-            <img class="img-responsive" src="/images/bg/join-us.jpg" alt="Join us">
+            <img class="img-responsive fix-width" src="/images/bg/join-us.jpg" alt="Join us">
         </div>
     </div>
     <!-- Education for all end -->

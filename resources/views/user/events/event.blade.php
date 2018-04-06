@@ -17,7 +17,6 @@
                     <li>
                         <a href="/">Home</a>
                     </li>
-                    <li class="active">Events</li>
                 </ol>
             </div>
         </div>

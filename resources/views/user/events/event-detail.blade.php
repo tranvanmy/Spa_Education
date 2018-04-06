@@ -14,8 +14,8 @@
             <div class="container text-center">
                 <h3 class="elh-page-title">{{ $event[fieldLanguage('title')] }}</h3>
                 <ol class="breadcrumb">
-                    <li><a href="/">Home</a></li>
-                    <li class="active">High-tech Agriculture - Issues and solutions</li>
+                    <li><a href="{{ route('user.home') }}">Home</a></li>
+                    <li><a href="{{ route('user.event.list') }}">All Events</a></li>
                 </ol>
             </div>
         </div>
@@ -25,7 +25,7 @@
                     <div class="col-xs-12">
                         <div class="elh-course-profile">
                             <div class="elh-instructor-thumb elh-course-profile-item">
-                                <img class="img-responsive"  src="{{ $event->author->image_url }}" alt="{{ $event->author[fieldLanguage('name')] }}" style="height: 100%;">
+                                <img class="img-responsive fix-width"  src="{{ Croppa::url($event->author->image_url ?: '', 100, null, array('resize')) }}" alt="{{ $event->author[fieldLanguage('name')] }}" style="height: 100%;">
                             </div>
                             <div class="elh-instructor-name elh-course-profile-item">
                                 <p>Author</p>
@@ -84,14 +84,14 @@
                                 <div class="col-xs-6">
                                     <div class="elh-course">
                                         <a class="elh-course-thumb" href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}">
-                                            <img class="img-responsive" src="{{ $event->image_url }}" alt="{{ $event[fieldLanguage('title')] }}">
+                                            <img class="img-responsive fix-width" src="{{ Croppa::url($event->image_url ?: '', 400, null, array('resize')) }}" alt="{{ $event[fieldLanguage('title')] }}">
                                         </a>
                                         <div class="elh-course-content">
                                             <h4 class="elh-course-title"><a href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}" title="{{ $event[fieldLanguage('title')] }}">{{ $event[fieldLanguage('title')] }}</a></h4>
                                         </div>
                                         <div class="elh-course-instructor">
                                             <div class="elh-instructor-thumb">
-                                                <img class="img-responsive" src="{{ $event->author->image_url }}" alt="{{ $event[fieldLanguage('title')] }}">
+                                                <img class="img-responsive fix-width" src="{{ Croppa::url($event->author->image_url ?: '', 100, null, array('resize')) }}" alt="{{ $event[fieldLanguage('title')] }}">
                                             </div>
                                             <h5 class="elh-instructor-name">{{ $event->author[fieldLanguage('name')] }}</h5>
                                         </div>

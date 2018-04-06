@@ -55,7 +55,7 @@
                                             href="{{ route('user.data-scientist.detail', [$post->category[fieldLanguage('slug')], $post[fieldLanguage('slug')]]) }}"
                                             title="{{ $post[fieldLanguage('title')] }}"
                                         >
-                                            <img class="img-responsive" src="{{ $post->image_url }}" alt="{{ $post[fieldLanguage('title')] }}">
+                                            <img class="img-responsive fix-width fix-width" src="{{ Croppa::url($post->image_url ?: '', 750, null, array('resize')) }}" alt="{{ $post[fieldLanguage('title')] }}">
                                         </a>
                                     </div>
                                     <div class="col-sm-4">
@@ -69,7 +69,7 @@
                                         </p>
                                         <div style="display: flex">
                                             <div>
-                                                <img class="img-circle" src="{{ $post->author->image_url }}"
+                                                <img class="img-circle" src="{{ Croppa::url($post->author->image_url ?: '', 100, null, array('resize')) }}"
                                                     alt="$post->author[fieldLanguage('name')]"
                                                     style="width: 50px;height: 50px"
                                                 />
@@ -98,7 +98,7 @@
                                             href="{{ route('user.data-scientist.detail', [$post->category[fieldLanguage('slug')], $post[fieldLanguage('slug')]]) }}"
                                             title="{{ $post[fieldLanguage('title')] }}"
                                         >
-                                            <img class="img-responsive" src="{{ $post->image_url }}"
+                                            <img class="img-responsive fix-width" src="{{ Croppa::url($post->image_url ?: '', 400, null, array('resize')) }}"
                                                 alt="$post[fieldLanguage('title')]"
                                             />
                                         </a>
@@ -109,11 +109,11 @@
                                                 >{{ $post[fieldLanguage('title')] }}</a>
                                             </h4>
                                             <p class="elh-post-excerpt elh-bottom-0" style="color: rgba(0,0,0,.54);">
-                                                {{ $post[fieldLanguage('description')] }}
+                                                {!! nl2br($post[fieldLanguage('description')]) !!}
                                             </p>
                                             <div style="display: flex">
                                                 <div>
-                                                    <img class="img-circle" src="{{ $post->author->image_url }}"
+                                                    <img class="img-circle" src="{{ Croppa::url($post->author->image_url ?: '', 100, null, array('resize')) }}"
                                                         alt="{{ $post->author[fieldLanguage('name')] }}"
                                                         style="width: 50px;height: 50px"
                                                     />

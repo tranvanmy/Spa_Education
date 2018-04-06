@@ -5832,3 +5832,7 @@ footer.elh-kids-footer .elh-footer-lower-area .copyright a {
 #navbar-search-toggle {
     color: #fff
 }
+
+.fix-width {
+    width: 100%;
+}
