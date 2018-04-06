@@ -12,9 +12,9 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             factory(Product::class)->create([
-                'category_id' => $i % 4,
+                'category_id' => $i % 10,
             ]);
         }
     }
