@@ -35,9 +35,9 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     Route::get('product/{category}', 'ProductController@category')->name('user.product.category');
     Route::get('product/{category}/{product}', 'ProductController@show')->name('user.product.detail');
     //
-    Route::get('research-and-development', 'ResearchController@index')->name('user.research.list');
+    Route::get('research-and-development', 'ResearchController@listAll')->name('user.research.list');
     Route::get('research-and-development/{category}', 'ResearchController@category')->name('user.research.category');
-    // Route::get('research-and-development/{category}/{slug}', 'ResearchControler')->name('user.research.detail');
+    Route::get('research-and-development/{category}/{slug}', 'ResearchController@detail')->name('user.research.detail');
     //
     Route::get('data-scientists-corner', 'DataScientistControler@listAll')->name('user.data-scientist.list');
     Route::get('data-scientists-corner/{category}', 'DataScientistControler@category')->name('user.data-scientist.category');

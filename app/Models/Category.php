@@ -21,4 +21,14 @@ class Category extends Model
     public function products () {
         return $this->hasMany(Product::class);
     }
+
+    public function reseachDevelopments()
+    {
+        return $this->hasMany(ResearchDevelopment::class);
+    }
+
+    public function dataScientists()
+    {
+        return $this->hasMany(DataScientist::class);
+    }
 }
