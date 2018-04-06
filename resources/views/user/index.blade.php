@@ -120,7 +120,10 @@
                 @foreach ($data['courses'] as $course)
                     <div class="elh-course style-2">
                         <a class="elh-course-thumb" href="{{ route('user.course.detail', [$course[fieldLanguage('slug')]]) }}" title="{{ $course[fieldLanguage('title')] }}">
-                            <img class="img-responsive" src="{{ $course['image_url'] }}" alt="{{ $course[fieldLanguage('title')] }}">
+                            <img class="img-responsive"
+                                src="{{ Croppa::url($course->image_url ?: '', 358, null, array('resize')) }}"
+                                alt="{{ $course[fieldLanguage('title')] }}"
+                            />
                         </a>
                         <div class="elh-course-content">
                             <h4 class="elh-course-title" style="height: 50px">
@@ -168,7 +171,10 @@
                                 href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
                                 title="{{ $instructor[fieldLanguage('name')] }}"
                             >
-                                <img class="img-responsive" src="{{ $instructor['image_url'] }}" alt="{{ $instructor[fieldLanguage('name')] }}">
+                                <img class="img-responsive"
+                                    src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}"
+                                    alt="{{ $instructor[fieldLanguage('name')] }}"
+                                />
                             </a>
                             <div class="elh-instructor-body">
                                 <h4 class="elh-instructor-title" style="height: 45px">
@@ -215,7 +221,10 @@
                     <div class="col-md-4 col-xs-6 elh-grid-item elh-category-item">
                         <a class="elh-category-tile" href="research/{{ $research[fieldLanguage('slug')] }}" title="{{ $research[fieldLanguage('title')] }}">
                             <div class="elh-category-tile-thumb">
-                                <img class="img-responsive" src="{{ $research['image_url'] }}" alt="{{ $research[fieldLanguage('title')] }}">
+                                <img class="img-responsive"
+                                    src="{{ Croppa::url($research->image_url ?: '', 360, null, array('resize')) }}"
+                                    alt="{{ $research[fieldLanguage('title')] }}"
+                                />
                             </div>
                             <div class="elh-category-tile-overlay">
                                 <div class="elh-category-tile-content">
