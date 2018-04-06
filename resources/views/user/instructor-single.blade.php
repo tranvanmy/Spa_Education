@@ -96,11 +96,11 @@
                                 <div class="owl-wrapper" style="width: 3120px; left: 0px; display: block;">
                                     <div class="owl-item" style="width: 390px;">
                                         <div class="elh-course">
-                                            <a class="elh-course-thumb" href="course/{{ $course[fieldLanguage('slug')] }}">
+                                            <a class="elh-course-thumb" href="{{ route('user.course.detail', [$course[fieldLanguage('slug')]]) }}">
                                             <img class="img-responsive" src="{{ $course['image_url'] }}" alt="{{ $course[fieldLanguage('name')] }}">
                                             </a>
                                             <div class="elh-course-content">
-                                            <h4 class="elh-course-title"><a href="course/{{ $course[fieldLanguage('slug')] }}">{{ $course[fieldLanguage('title')] }}</a></h4>
+                                            <h4 class="elh-course-title"><a href="{{ route('user.course.detail', [$course[fieldLanguage('slug')]]) }}">{{ $course[fieldLanguage('title')] }}</a></h4>
                                             </div>
                                             <div class="elh-course-footer">
                                             <p class="elh-course-price">
@@ -120,65 +120,7 @@
                                     </div>
                                 </div>
                             </div>
-<<<<<<< 139685b6080aea8dfee5b01f4efc8244197496a9
                         @endforeach
-=======
-                            <div class="elh-course-footer">
-                                <p class="elh-course-price">
-                                    <span class="elh-price-now">$35.00</span>
-                                    <span class="elh-price-regular">$45.00</span>
-                                </p>
-                                <p class="elh-course-metas">
-                                    <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
-                                    <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
-                                </p>
-                            </div>
-                        </div></div><div class="owl-item" style="width: 390px;"><div class="elh-course">
-                            <a class="elh-course-thumb" href="course-single.html">
-                                <img class="img-responsive" src="/images/course/7.jpg" alt="...">
-                            </a>
-                            <div class="elh-course-content">
-                                <h4 class="elh-course-title"><a href="course-single.html">Advance Method for<br>Adobe Photoshop CC 2018</a></h4>
-                            </div>
-                            <div class="elh-course-instructor">
-                                <div class="elh-instructor-thumb">
-                                    <img class="img-responsive" src="/images/instructor/small-5.jpg" alt="...">
-                                </div>
-                                <h5 class="elh-instructor-name">Z.Alexander</h5>
-                            </div>
-                            <div class="elh-course-footer">
-                                <p class="elh-course-price">
-                                    <span class="elh-price-now">$35.00</span>
-                                    <span class="elh-price-regular">$45.00</span>
-                                </p>
-                                <p class="elh-course-metas">
-                                    <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
-                                    <span class="elh-comment-count"><i class="fa fa-comments"></i> 5</span>
-                                </p>
-                            </div>
-                        </div></div></div></div>
-
-
-
-
-
-                    <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div></div></div>
-                </div>
-            </div>
-        </div>
-        <!-- Popular Courses End -->
-
-         <!-- Popular Product -->
-         <div class="elh-section elh-section-padding elh-gray-bg elh-carousel-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title"><span>Product</span> by Nguyen Xuan Hoai</h3>
-                            <p class="elh-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
-                            <a class="all-link" href="{{ route('user.courses') }}">See All Product</a>
-                        </div>
->>>>>>> TuanNDA - Courses list and sigle
                     </div>
                 </div>
             </div>

@@ -172,7 +172,7 @@
                                 title="{{ $instructor[fieldLanguage('name')] }}"
                             >
                                 <img 
-                                    class="img-responsive" src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }} }}" 
+                                    class="img-responsive" src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}" 
                                     alt="{{ $instructor[fieldLanguage('name')] }}"
                                     style="width:100%"
                                 />
