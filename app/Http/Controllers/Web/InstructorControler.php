@@ -13,12 +13,12 @@ class InstructorControler extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($slug)
-    {
-        $instructor = Instructor::where(fieldLanguage('slug'), $slug)->with('courses')->first();
+    // public function index($slug)
+    // {
+    //     $instructor = Instructor::where(fieldLanguage('slug'), $slug)->with('courses')->first();
 
-        return view('user.instructor-single', compact(['instructor']));
-    }
+    //     return view('user.instructor-single', compact(['instructor']));
+    // }
 
     /**
      * Display the specified resource.
@@ -26,7 +26,7 @@ class InstructorControler extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
         $instructor = Instructor::where(fieldLanguage('slug'), $slug)->with('courses')->first();
 
