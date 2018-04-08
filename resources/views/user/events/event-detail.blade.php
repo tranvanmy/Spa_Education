@@ -103,14 +103,12 @@
                                         </div>
                                         <div class="elh-course-footer">
                                             <p class="elh-course-price">
-                                                    <a class="widget-read-more" href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}"
-                                                        title="{{ $event[fieldLanguage('title')] }}"
-                                                    ><i class="fa fa-clock-o"></i>{{ date("d/m/Y", strtotime($event->start_at)) }}</a>
+                                                <i class="fa fa-clock-o"></i>
+                                                {{ date("d/m/Y", strtotime($event->start_at)) }}
                                             </p>
                                             <p class="elh-course-price">
-                                                <a class="widget-read-more" href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}"
-                                                    title="{{ $event[fieldLanguage('title')] }}"
-                                                ><i class="fa fa-map-marker"></i>{{ $event[fieldLanguage('location')] }}</a>
+                                                <i class="fa fa-map-marker"></i>
+                                                {{ $event[fieldLanguage('location')] }}
                                             </p>
                                         </div>
                                     </div>
