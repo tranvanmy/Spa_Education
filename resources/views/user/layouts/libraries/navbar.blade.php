@@ -21,7 +21,7 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-            <ul class="nav navbar-nav navbar-right" id="home-nav-onepage" style="margin-right: 0px!important">
+            <ul class="nav navbar-nav navbar-right" id="home-nav-onepage" style="margin-right: 5px!important">
                 <li class="dropdown">
                     <a href="{{ isset($isHomePage) ? '#home_about_us' : '#'}}" title="About us">About us</a>
                     @if(isset($navbar['about_us']))
