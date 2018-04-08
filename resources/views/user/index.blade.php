@@ -85,7 +85,7 @@
                 <div class="col-md-6" style="text-align: justify;">
                     <div class="elh-about-section sm-bottom-30">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">About of <span>Us</span></h3>
+                            <h3 class="elh-section-title">About <span>Us</span></h3>
                         </div>
                         <p>
                         We are a group of AI researchers, practitioners and industry specialists who set to build a learning environment for everyone to learn and apply AI to innovate.
@@ -165,32 +165,30 @@
                 </div>
                 <div class="row">
                     <div class="elh-generic-carousel owl-carousel elh-generic-4">
-                    @foreach($data['instructors'] as $instructor)
-                        <div class="elh-instructor">
-                            <a class="elh-instructor-thumb"
-                                href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
-                                title="{{ $instructor[fieldLanguage('name')] }}"
-                            >
-                                <img class="img-responsive fix-width"
-                                    src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}"
-                                    alt="{{ $instructor[fieldLanguage('name')] }}"
-                                />
-                            </a>
-                            <div class="elh-instructor-body">
-                                <h4 class="elh-instructor-title" style="height: 45px">
-                                    <a href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
-                                        title="{{ $instructor[fieldLanguage('name')] }}"
-                                    >{{ $instructor[fieldLanguage('name')] }}</a>
-                                </h4>
-                                <p class="elh-instructor-field">{{ $instructor[fieldLanguage('specialized')] }}</p>
-                                <p class="elh-instructor-description">{!! nl2br($instructor[fieldLanguage('description')]) !!}
-                                </p>
-                                <a class="elh-instructor-link" href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
+                        @foreach($data['instructors'] as $instructor)
+                            <div class="elh-instructor">
+                                <a class="elh-instructor-thumb"
+                                    href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
                                     title="{{ $instructor[fieldLanguage('name')] }}"
-                                >View Profile <i class="fa fa-long-arrow-right"></i></a>
+                                >
+                                    <img class="img-responsive fix-width"
+                                        src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}"
+                                        alt="{{ $instructor[fieldLanguage('name')] }}"
+                                    />
+                                </a>
+                                <div class="elh-instructor-body">
+                                    <h4 class="elh-instructor-title" style="height: 45px">
+                                        <a href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
+                                            title="{{ $instructor[fieldLanguage('name')] }}"
+                                        >{{ $instructor[fieldLanguage('name')] }}</a>
+                                    </h4>
+                                    <p class="elh-instructor-field">{{ $instructor[fieldLanguage('specialized')] }}</p>
+                                    <p class="elh-instructor-description">
+                                            {!! nl2br($instructor[fieldLanguage('description')]) !!}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -280,7 +278,7 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Upcoming <span>Events</span></h3>
-                        <p class="elh-section-text">... Add your text here ....</p>
+                        <p class="elh-section-text"></p>
                         <a class="all-link style-2" href="{{  route('user.event.list') }}" title="All Events">See All Events</a>
                     </div>
                 </div>

@@ -41,7 +41,7 @@
                             </div>
                             <div class="elh-review-score elh-course-profile-item">
                                 <p>Location</p>
-                                <h5>{{ $event[fieldLanguage('address')] }}</h5>
+                                <h5>{{ $event[fieldLanguage('location')] }}</h5>
                             </div>
                         </div>
                     </div>
@@ -87,20 +87,30 @@
                                             <img class="img-responsive fix-width" src="{{ Croppa::url($event->image_url ?: '', 400, null, array('resize')) }}" alt="{{ $event[fieldLanguage('title')] }}">
                                         </a>
                                         <div class="elh-course-content">
-                                            <h4 class="elh-course-title"><a href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}" title="{{ $event[fieldLanguage('title')] }}">{{ $event[fieldLanguage('title')] }}</a></h4>
+                                            <h4 class="elh-course-title">
+                                                <a href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}"
+                                                    title="{{ $event[fieldLanguage('title')] }}"
+                                                >{{ $event[fieldLanguage('title')] }}</a>
+                                            </h4>
                                         </div>
                                         <div class="elh-course-instructor">
                                             <div class="elh-instructor-thumb">
-                                                <img class="img-responsive fix-width" src="{{ Croppa::url($event->author->image_url ?: '', 100, null, array('resize')) }}" alt="{{ $event[fieldLanguage('title')] }}">
+                                                <img class="img-responsive fix-width" src="{{ Croppa::url($event->author->image_url ?: '', 100, null, array('resize')) }}"
+                                                    alt="{{ $event[fieldLanguage('title')] }}"
+                                                />
                                             </div>
                                             <h5 class="elh-instructor-name">{{ $event->author[fieldLanguage('name')] }}</h5>
                                         </div>
                                         <div class="elh-course-footer">
                                             <p class="elh-course-price">
-                                                    <a class="widget-read-more" href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}" title="{{ $event[fieldLanguage('title')] }}"><i class="fa fa-clock-o"></i>{{ date("d/m/Y", strtotime($event->start_at)) }}</a>
+                                                    <a class="widget-read-more" href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}"
+                                                        title="{{ $event[fieldLanguage('title')] }}"
+                                                    ><i class="fa fa-clock-o"></i>{{ date("d/m/Y", strtotime($event->start_at)) }}</a>
                                             </p>
                                             <p class="elh-course-price">
-                                                <a class="widget-read-more" href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}" title="{{ $event[fieldLanguage('title')] }}"><i class="fa fa-map-marker"></i>{{ $event[fieldLanguage('address')] }}</a>
+                                                <a class="widget-read-more" href="{{ route('user.event.detail', $event[fieldLanguage('slug')]) }}"
+                                                    title="{{ $event[fieldLanguage('title')] }}"
+                                                ><i class="fa fa-map-marker"></i>{{ $event[fieldLanguage('location')] }}</a>
                                             </p>
                                         </div>
                                     </div>

@@ -79,7 +79,7 @@ window.configTinyMCE = {
     `,
     // toolbar2: " | image | media | link unlink anchor | print preview | fontsizeselect",
 
-    fontsize_formats: '8pt 10pt 12pt 13pt 14pt 16pt 18pt 20pt 24pt 36pt',
+    fontsize_formats: '8pt 9pt 10pt 11pt 12pt 13pt 14pt 15pt 16pt 17pt 18pt 19pt 20pt 21pt 22pt 23pt 24pt 25pt 26pt 27pt 28pt 29pt 30pt 36pt 48pt 60pt 72pt',
 }
 
 window.configDateTimeLocal = {
