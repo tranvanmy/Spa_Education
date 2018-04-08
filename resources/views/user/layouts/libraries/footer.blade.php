@@ -134,7 +134,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
-                    <p class="copyright xs-text-center">Copyright 2018, <a href="index.html">AI Academy Vietnam</a>. All Rights Reserved.</p>
+                    <p class="copyright xs-text-center">Copyright {{ date('Y') }}, 
+                        <a href="
+                        /">AI Academy Vietnam</a>. All Rights Reserved.
+                    </p>
                 </div>
                 <div class="col-sm-6 col-xs-12 text-right xs-text-center">
                     <ul class="footer-menu">
