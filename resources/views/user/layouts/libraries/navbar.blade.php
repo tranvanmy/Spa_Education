@@ -1,4 +1,4 @@
-<nav class="navbar fix-nav style-2" data-spy="affix" data-offset-top="51" style="border-bottom: 1px solid #FFF">
+<nav class="navbar fix-nav style-2" data-spy="affix" data-offset-top="51" style="border-bottom: 1px solid #FFF;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -21,7 +21,7 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-            <ul class="nav navbar-nav navbar-right" id="home-nav-onepage">
+            <ul class="nav navbar-nav navbar-right" id="home-nav-onepage" style="margin-right: 0px!important">
                 <li class="dropdown">
                     <a href="{{ isset($isHomePage) ? '#home_about_us' : '#'}}" title="About us">About us</a>
                     @if(isset($navbar['about_us']))
