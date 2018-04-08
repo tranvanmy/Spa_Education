@@ -3,7 +3,7 @@
 @section('user-title', 'AI Academy')
 @section('seo-description', 'AI Academy')
 @section('seo-keyword',  'AI Academy')
- 
+
 @section('user-nav')
     @include('user.layouts.libraries.navbar')
 @endsection
@@ -31,8 +31,8 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="elh-instructor-thumb">
-                            <img 
-                                class="img-responsive" src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}" 
+                            <img
+                                class="img-responsive" src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}"
                                 alt="{{ $instructor[fieldLanguage('name')] }}"
                                 style="width:100%"
                             />
@@ -56,24 +56,6 @@
                             <br>
                             {!! nl2br($instructor[fieldLanguage('detail')]) !!}
                         </div>
-                        {{--  <div class="elh-instructor-facts">
-                            <div class="elh-instructor-fact-item">
-                                <h5>Students</h5>
-                                <p>246,332</p>
-                            </div>
-                            <div class="elh-instructor-fact-item">
-                                <h5>Total Courses</h5>
-                                <p>4 Courses</p>
-                            </div>
-                            <div class="elh-instructor-fact-item">
-                                <h5>Reviews</h5>
-                                <p>36,352</p>
-                            </div>
-                            <div class="elh-instructor-fact-item">
-                                <h5>Ovarall Rating</h5>
-                                <p>4.85 out of 5</p>
-                            </div>
-                        </div>  --}}
                     </div>
                 </div>
 
