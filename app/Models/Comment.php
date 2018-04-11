@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    const PER_PAGE_COURSE = 5;
+
     protected $table = 'comments';
 
-    protected $fillable = ['name', 'email', 'content', 'owner_id', 'owner_type'];
+    protected $fillable = ['name', 'email', 'content', 'commentable_id', 'commentable_type'];
 
     public function commentable()
     {

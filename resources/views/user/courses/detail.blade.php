@@ -26,17 +26,22 @@
                 <div class="col-xs-12">
                     <div class="elh-course-profile">
                         <div class="elh-instructor-thumb elh-course-profile-item">
-                            <img class="img-responsive" src="{{ $course['instructor']['image_url'] }}"
-                                    alt="{{ $course['instructor'][fieldLanguage('name')] }}">
+                            <a title="{{ $course->instructor[fieldLanguage('name')] }}"
+                                href="{{ route('user.instructor.detail', [$course->instructor[fieldLanguage('slug')]]) }}"
+                            >
+                                <img class="img-responsive" src="{{ $course['instructor']['image_url'] }}"
+                                    alt="{{ $course['instructor'][fieldLanguage('name')] }}"
+                                />
+                            </a>
                         </div>
                         <div class="elh-instructor-name elh-course-profile-item">
                             <p>Instructor</p>
                             <h5>{{ $course['instructor'][fieldLanguage('name')] }}</h5>
                         </div>
-                        <div class="elh-student-count elh-course-profile-item">
+                        {{-- <div class="elh-student-count elh-course-profile-item">
                             <p>Students</p>
                             <h5>120 (Registered)</h5>
-                        </div>
+                        </div> --}}
                         <div class="elh-review-score elh-course-profile-item">
                             <p>Review</p>
                             <div class="elh-rating">
@@ -44,7 +49,7 @@
                                 <span class="star star-on"></span>
                                 <span class="star star-on"></span>
                                 <span class="star star-on"></span>
-                                <span class="star"></span>
+                                <span class="star star-on"></span>
                             </div>
                             <div class="elh-review-count">
                                 <h5>({{ $course['total_review_manual'] }} Reviews)</h5>
@@ -139,20 +144,29 @@
                         </div>
                         <div class="elh-course-instructor-box">
                             <div class="elh-course-instructor-thumb">
-                                <img class="img-responsive" src="{{ $course['instructor']['image_url'] }}"
-                                    alt="{{ $course['instructor'][fieldLanguage('name')] }}">
+                                <a title="{{ $course->instructor[fieldLanguage('name')] }}"
+                                    href="{{ route('user.instructor.detail', [$course->instructor[fieldLanguage('slug')]]) }}"
+                                >
+                                    <img class="img-responsive" src="{{ $course['instructor']['image_url'] }}"
+                                        alt="{{ $course['instructor'][fieldLanguage('name')] }}"
+                                    />
+                                </a>
                             </div>
                             <div class="elh-course-instructor-body">
                                 <h5 class="elh-course-instructor-name">{{ $course['instructor'][fieldLanguage('name')] }}</h5>
-                                {{-- <p class="elh-course-instructor-field">UI Designer</p>
-                                <p class="elh-course-instructor-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> --}}
-                                <div class="elh-socials">
+                                <p class="elh-course-instructor-field">
+                                    {{ $course['instructor'][fieldLanguage('specialized')] }}
+                                </p>
+                                <p class="elh-course-instructor-excerpt">
+                                    {{ $course['instructor'][fieldLanguage('description')] }}
+                                </p>
+                                {{-- <div class="elh-socials">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
                                     <a href="#"><i class="fa fa-google-plus"></i></a>
                                     <a href="#"><i class="fa fa-youtube-play"></i></a>
                                     <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -165,7 +179,7 @@
                             <h3 class="elh-section-title">Student Feeback</h3>
                         </div>
                         <div class="elh-course-rating">
-                            <div class="elh-rating-summery">
+                            {{-- <div class="elh-rating-summery">
                                 <div class="elh-rating-summery-content">
                                     <h5 class="elh-rating-summery-text">5</h5>
                                     <div class="elh-rating-summery-star">
@@ -177,8 +191,8 @@
                                     </div>
                                     <p class="elh-rating-summery-count">{{ $course['comments_count'] }}</p>
                                 </div>
-                            </div>
-                            <div class="elh-rating-counter">
+                            </div> --}}
+                            {{-- <div class="elh-rating-counter">
                                 <div class="elh-rating-counter-item">
                                     <p class="elh-rating-counter-star">5 Stars</p>
                                     <div class="elh-rating-counter-bar-wrap">
@@ -225,56 +239,48 @@
                                     <p class="elh-rating-counter-count">0</p>
                                 </div>
                             </div>
-                            <div class="clearfix"></div>
+                            <div class="clearfix"></div> --}}
                         </div>
 
-                        <!-- Given Reiviews -->
-                        @if( $course['comments'])
-                            <div class="elh-course-reviews">
-                                <div class="elh-course-review-item">
-                                    <div class="elh-course-reviewer-thumb">
-                                        <img class="img-responsive" src="/images/course/course-reviewer-thumb.jpg" alt="...">
-                                    </div>
-                                    <div class="elh-course-review-body">
-                                        <div class="elh-course-review-title">
-                                            <h5>Oliver Liam</h5>
-                                            <div class="elh-course-reviewer-rating">
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                            </div>
-                                        </div>
-                                        <p class="elh-course-review-time"><i class="fa fa-clock-o"></i> June 9, 2018 at 09:52 am</p>
-                                        <p class="elh-course-review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        <form class="elh-review-feedback-form" action="#" method="post">
-                                            <span class="elh-feedback-on-review-question">Was this review helpful?</span>
-                                            <button class="submitted" type="submit" value="yes"><i class="fa fa-check"></i> Yes</button>
-                                            <button type="submit" value="no"><i class="fa fa-close"></i> No</button>
-                                            <a href="#">Report</a>
-                                        </form>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                        @endif
-                        <!-- Given Reiviews End -->
-
                         <!-- Write a review -->
+
                         <form id="courseReviewForm" class="elh-course-review-form" action="#" method="post">
                             <p class="lead elh-theme-color">Write a Review</p>
-                            <div class="elh-rating-inputs">
+
+                            <div class="row">
+                                <input type="hidden" id="home-course-id" value="{{ $course->id }}">
+                                <div class="col-sm-6">
+                                    <input type="text" id="home-course-name" placeholder="Name *" required>
+                                    <span style="color: red" id="home-course-name-message"></span>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="email" id="home-course-email" placeholder="Email">
+                                    <span style="color: red" id="home-course-email-message"></span>
+                                </div>
+                                <div class="col-sm-12" style="margin-top: 10px">
+                                    <textarea name="review-message" rows="4"
+                                        id="home-course-content"
+                                        required placeholder="Content *" value=""
+                                    ></textarea>
+                                    <span style="color: red;" id="home-course-content-message"></span>
+                                </div>
+                            </div>
+
+                            {{-- <div class="elh-rating-inputs">
                                 <label class="elh-rate-on"><input type="radio" name="rate-value" value="1"><i class="star"></i></label>
                                 <label><input type="radio" name="rate-value" value="2"><i class="star"></i></label>
                                 <label><input type="radio" name="rate-value" value="3"><i class="star"></i></label>
                                 <label><input type="radio" name="rate-value" value="4"><i class="star"></i></label>
                                 <label><input type="radio" name="rate-value" value="5"><i class="star"></i></label>
-                            </div>
-                            <textarea name="review-message" rows="4"></textarea>
-                            <button class="btn" type="submit">Submit</button>
+                            </div> --}}
+                            <button class="btn" type="submit" id="home-course-submit">
+                                Submit
+                            </button>
                         </form>
                         <!-- Write a review End -->
+                        <div id="couse-comment-area">
+                            @include('user.courses.component-comments', ['comments' => $course->comments])
+                        </div>
 
                     </div>
                     <!-- Student feedback end -->
@@ -309,15 +315,13 @@
                                             <h5 class="elh-instructor-name">{{ $course['instructor'][fieldLanguage('name')] }}</h5>
                                         </div>
                                         <div class="elh-course-footer">
-                                            <p class="elh-course-price">
-                                                <span class="elh-price-now">$35.00</span>
-                                                <span class="elh-price-regular">$45.00</span>
+                                            <p class="elh-course-price" style="color: #00bcd4">
+                                               {{ $course[fieldLanguage('level')] }}
                                             </p>
                                             <p class="elh-course-metas">
-                                                <span class="elh-student-count">
-                                                    <i class="fa fa-users"></i> 25</span>
                                                 <span class="elh-comment-count">
-                                                    <i class="fa fa-comments"></i>{{ $course['comments_count'] }}</span>
+                                                    <i class="fa fa-comments"></i>{{ $course['comments_count'] }}
+                                                </span>
                                             </p>
                                         </div>
                                     </div>
@@ -371,4 +375,8 @@
 
 </div>
 <!-- Main wrapper start end -->
+@endsection
+
+@section('user-script')
+    <script type="text/javascript" src="{{ mix('/user/course-comment.js') }}"></script>
 @endsection

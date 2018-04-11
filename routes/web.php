@@ -21,6 +21,8 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     // Route::get('search', '')->name('user.search');
     Route::post('subcribe', 'HomeController@subcribe')->name('user.subcribe');
 
+    Route::post('comments/store', 'CommentController@store')->name('user.comment.store');
+
     Route::get('event', 'EventController@index' )->name('user.event.list');
     Route::get('event/{slug}', 'EventController@show' )->name('user.event.detail');
 

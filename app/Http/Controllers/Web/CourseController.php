@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Models\Course;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,7 @@ class CourseController extends Controller
             ->withCount('comments')
             ->paginate(12);
 
-        return view('user.course', compact('courses'));
+        return view('user.courses.list-all', compact('courses'));
     }
 
     public function show($slug)
@@ -22,7 +23,10 @@ class CourseController extends Controller
         $course = Course::where(fieldLanguage('slug'), $slug)
             ->where(fieldLanguage('has'), true)
             ->withCount('comments')
-            ->with('instructor', 'comments')
+            ->with('instructor')
+            ->with(['comments' => function($query){
+                $query->orderBy('id', 'desc');
+            }])
             ->first();
 
         if (!$course) {
@@ -37,6 +41,6 @@ class CourseController extends Controller
             ->limit(2)
             ->get();
 
-        return view('user.course-single', compact(['course', 'relatedCourses']));
+        return view('user.courses.detail', compact(['course', 'relatedCourses']));
     }
 }

@@ -69,6 +69,9 @@ mix
         'resources/assets/user/static/custom/home-subcribe.js',
     ], 'public/user/home-subcribe.js')
 
+    .scripts([
+        'resources/assets/user/static/custom/course-comment.js',
+    ], 'public/user/course-comment.js')
 
     // Admin
     if (process.env.APP_ENV == 'local') {

@@ -34,6 +34,6 @@ class InstructorControler extends Controller
             return redirect()->route('user.not-found');
         }
 
-        return view('user.instructor-single', compact(['instructor']));
+        return view('user.instructors.detail', compact(['instructor']));
     }
 }
