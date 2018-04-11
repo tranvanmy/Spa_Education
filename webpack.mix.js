@@ -65,11 +65,11 @@ mix
         'resources/assets/user/static/custom/custom.js',
     ], 'public/user/library.min.js')
 
-    .scripts([
+    .babel([
         'resources/assets/user/static/custom/home-subcribe.js',
     ], 'public/user/home-subcribe.js')
 
-    .scripts([
+    .babel([
         'resources/assets/user/static/custom/course-comment.js',
     ], 'public/user/course-comment.js')
 
