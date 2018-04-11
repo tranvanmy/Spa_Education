@@ -94,11 +94,11 @@
                             </a>
                             <p>AI for All. Here at AI academy we'are commited to drive the adoption and application of AI for enterprises of all sizes.</p>
                             <div class="socials">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                {{-- <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                                 <a href="#"><i class="fa fa-google-plus"></i></a>
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-youtube"></i></a>
+                                <a href="#"><i class="fa fa-youtube"></i></a> --}}
                             </div>
                         </aside>
                     </div>
@@ -134,7 +134,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
-                    <p class="copyright xs-text-center">Copyright {{ date('Y') }}, 
+                    <p class="copyright xs-text-center">Copyright {{ date('Y') }},
                         <a href="
                         /">AI Academy Vietnam</a>. All Rights Reserved.
                     </p>

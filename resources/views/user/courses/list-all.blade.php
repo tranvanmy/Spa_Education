@@ -1,8 +1,8 @@
 @extends('user.layouts.master')
 
-@section('user-title', 'AI Academy')
-@section('seo-description', 'AI Academy')
-@section('seo-keyword',  'AI Academy')
+@section('user-title', 'All Courses')
+@section('seo-description', 'All Courses')
+@section('seo-keyword',  'All Courses')
 
 @section('user-nav')
     @include('user.layouts.libraries.navbar')
