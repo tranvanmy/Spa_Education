@@ -70,9 +70,13 @@ mix
         'resources/assets/user/static/custom/home-subcribe.js',
     ], 'public/user/home-subcribe.js')
 
+    // Comment Js
     .babel([
         'resources/assets/user/static/custom/course-comment.js',
     ], 'public/user/course-comment.js')
+
+    // Comment Vue
+    // .js('resources/assets/user/components/course-comment/index.js', 'public/user/course-comment.js')
 
     // Admin
     if (process.env.APP_ENV == 'local') {

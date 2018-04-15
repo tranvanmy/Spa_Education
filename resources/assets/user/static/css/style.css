@@ -3371,6 +3371,7 @@ button:focus {
     overflow: hidden;
     position: relative;
     margin-bottom: -20px;
+    text-align: center;
 }
 
 .partner-logoes {
@@ -3383,7 +3384,6 @@ button:focus {
     height: 100px;
     margin-bottom: 20px;
     position: relative;
-    float: left;
 }
 
 .partner-logo img {

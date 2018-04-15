@@ -9,7 +9,7 @@
             <p class="lead elh-theme-color">Write a Review</p>
 
             <div class="row">
-                <input type="hidden" id="home-course-id" value="{{ $course->id }}">
+                <input type="hidden" id="home-course-id" value="a">
                 <div class="col-sm-6">
                     <input type="text" id="home-course-name" placeholder="Name *" required>
                     <span style="color: red" id="home-course-name-message"></span>
@@ -19,39 +19,42 @@
                     <span style="color: red" id="home-course-email-message"></span>
                 </div>
                 <div class="col-sm-12" style="margin-top: 10px">
-                                    <textarea name="review-message" rows="4"
-                                              id="home-course-content"
-                                              required placeholder="Content *" value=""
-                                    ></textarea>
+                    <textarea name="review-message" rows="4"
+                        id="home-course-content"
+                        required placeholder="Content *" value=""
+                    ></textarea>
                     <span style="color: red;" id="home-course-content-message"></span>
                 </div>
             </div>
 
-            {{-- <div class="elh-rating-inputs">
-            <label class="elh-rate-on"><input type="radio" name="rate-value" value="1"><i class="star"></i></label>
-            <label><input type="radio" name="rate-value" value="2"><i class="star"></i></label>
-            <label><input type="radio" name="rate-value" value="3"><i class="star"></i></label>
-            <label><input type="radio" name="rate-value" value="4"><i class="star"></i></label>
-            <label><input type="radio" name="rate-value" value="5"><i class="star"></i></label>
-        </div> --}}
             <button class="btn" type="submit" id="home-course-submit">
                 Submit
             </button>
         </form>
         <!-- Write a review End -->
         <div id="couse-comment-area">
-            @include('user.courses.component-comments', ['comments' => $course->comments])
+            <CommentItem/>
         </div>
 
     </div>
 </template>
 
 <script>
+    import CommentItem from './CommentItem'
+
     export default {
-        name: "couse-comment"
+        name: "CourseComment",
+
+        beforeCreate() {
+            
+        },
+
+        data() {
+            return {
+                items: []
+            }
+        },
+
+        components: { CommentItem }
     }
 </script>
-
-<style scoped>
-
-</style>
