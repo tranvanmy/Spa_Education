@@ -12,143 +12,51 @@ export default {
             // }
         },
         {
-            name: 'Instructors',
+            name: 'Categories',
             icon: 'icon-list',
-            children: [
-                {
-                    name: 'Instructor list',
-                    url: '/instructors',
-                },
-                {
-                    name: 'Add new',
-                    url: '/instructors/add',
-                }
-            ]
+            url: '/categories',
         },
         {
             name: 'Authors',
             icon: 'icon-list',
-            children: [
-                {
-                    name: 'Author list',
-                    url: '/authors',
-                },
-                {
-                    name: 'Add new',
-                    url: '/authors/add',
-                }
-            ]
+            url: '/authors',
         },
         {
-            name: 'Category',
+            name: 'Pages',
             icon: 'icon-list',
             children: [
                 {
-                    name: 'Category list',
-                    url: '/categories',
-                },
-                {
-                    name: 'Add new Category',
-                    url: '/categories/add',
-                }
-            ]
-        },
-        {
-            name: 'Data Scientists',
-            icon: 'icon-list',
-            children: [
-                {
-                    name: 'List',
-                    url: '/data-scientists',
-                },
-                {
-                    name: 'Add new',
-                    url: '/data-scientists/add',
-                }
-            ]
-        },
-        {
-            name: 'Events',
-            icon: 'icon-list',
-            children: [
-                {
-                    name: 'Event list',
-                    url: '/events',
-                },
-                {
-                    name: 'Add new Event',
-                    url: '/events/add',
-                }
-            ]
-        },
-        {
-            name: 'Courses',
-            icon: 'icon-list',
-            children: [
-                {
-                    name: 'Course list',
-                    url: '/courses',
-                },
-                {
-                    name: 'Add new Course',
-                    url: '/courses/add',
-                }
-            ]
-        },
-        {
-            name: 'R&D',
-            icon: 'icon-list',
-            children: [
-                {
-                    name: 'R&D list',
-                    url: '/research-developments',
-                },
-                {
-                    name: 'Add new',
-                    url: '/research-developments/add',
-                }
-            ]
-        },
-        {
-            name: 'Product',
-            icon: 'icon-list',
-            children: [
-                {
-                    name: 'Product list',
-                    url: '/products',
-                },
-                {
-                    name: 'Add new Product',
-                    url: '/products/add',
-                }
-            ]
-        },
-        {
-            name: 'About-us',
-            icon: 'icon-list',
-            children: [
-                {
-                    name: 'About us list',
+                    name: 'About us',
                     url: '/about-us',
                 },
                 {
-                    name: 'Add new About us',
-                    url: '/about-us/add',
-                }
-            ]
-        },
-        {
-            name: 'Join-us',
-            icon: 'icon-list',
-            children: [
-                {
-                    name: 'Join us list',
+                    name: 'Join us',
                     url: '/join-us',
                 },
                 {
-                    name: 'Add new Join us',
-                    url: '/join-us/add',
-                }
+                    name: 'Instructors',
+                    url: '/instructors',
+                },
+                {
+                    name: 'Data scientists',
+                    url: '/data-scientists',
+                },
+                {
+                    name: 'Events',
+                    url: '/events',
+                },
+                {
+                    name: 'Courses',
+                    url: '/courses',
+                },
+                {
+                    name: 'R&D',
+                    url: '/research-developments',
+                },
+                {
+                    name: 'Products',
+                    url: '/products',
+                },
             ]
         },
     ]

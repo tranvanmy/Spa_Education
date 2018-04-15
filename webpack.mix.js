@@ -40,7 +40,8 @@ mix
 
    .styles([
        'resources/assets/user/static/css/style.css',
-       'resources/assets/user/static/css/scheme/primary.css'
+       'resources/assets/user/static/css/scheme/primary.css',
+       'resources/assets/user/static/css/custom.css',
     ], 'public/user/custom.min.css')
 
    .sass('resources/assets/user/static/css/responsive.scss',

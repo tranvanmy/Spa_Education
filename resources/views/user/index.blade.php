@@ -71,6 +71,10 @@
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="5"></span></h3>
                             <p class="elh-fact-name" style="height: 50px">Projects</p>
                         </div>
+                        <div class="elh-counter-item">
+                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="8"></span></h3>
+                            <p class="elh-fact-name" style="height: 50px">Patterns</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,7 +162,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">Our <span>Instructors</span></h3>
+                            <h3 class="elh-section-title">Our <span>Scientific Advisory Boards</span></h3>
                             <p class="elh-section-text">All our intrustors have at least 5 years of experiences researching and working at universities and hightech companies in AI disciplines and related fields like Big Data analytics, Data mining, Information architect, Cyber security, Image processing, etc.</p>
                         </div>
                     </div>
