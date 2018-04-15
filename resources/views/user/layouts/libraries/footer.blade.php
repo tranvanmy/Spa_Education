@@ -1,47 +1,4 @@
 <!-- Popup sucribe -->
-<style>
-    .button-subcribe {
-        position: fixed;
-        right: 10px;
-        bottom: 20px;
-        z-index: 101;
-        width: 48px;
-        height: 48px;
-        cursor: pointer;
-    }
-    .onesignal-bell-svg {
-        width: 100%;
-        height: 100%;
-    }
-    .onesignal-bell-launcher-message {
-        position: absolute;
-        top: 2px;
-        background-color: #00bcd4;
-        color: #fff;
-        right: 51px;
-        opacity: 0;
-        width: 105px;
-        border-radius: 10px;
-        padding: 10px;
-    }
-    .button-subcribe:hover .onesignal-bell-launcher-message {
-      opacity: 0.7
-    }
-    .subcribe {
-      width: 400px;
-      min-height: 200px;
-      position: fixed;
-      bottom: 20px;
-      right: 10px;
-      background-color: #fff;
-      text-align: center;
-      padding: 20px;
-      border: 1px solid #dcdcdc;
-      z-index: 100;
-      display: none;
-      max-width: 100%;
-    }
-</style>
 <div id="onesignal-bell-launcher" class="button-subcribe">
     <div style="border-radius: 50%">
         <svg class="onesignal-bell-svg" xmlns="http://www.w3.org/2000/svg" width="99.7" height="99.7" viewBox="0 0 99.7 99.7" style="filter: drop-shadow(0 2px 4px rgba(34,36,38,0.35));; -webkit-filter: drop-shadow(0 2px 4px rgba(34,36,38,0.35));;">
@@ -106,8 +63,8 @@
                         <div class="widget widget_custom-menu">
                             <h3 class="widget-title">About Us</h3>
                             <ul class="custom-menu">
-                                <li><a href="#">How the University</a></li>
-                                <li><a href="#">Visit University</a></li>
+                                <li><a href="#">How the Academy</a></li>
+                                <li><a href="#">Visit Academy</a></li>
                                 <li><a href="#">Maps</a></li>
                                 <li><a href="#">News</a></li>
                                 <li><a href="#">Jobs</a></li>
@@ -118,11 +75,11 @@
                         <div class="widget widget_custom-menu">
                             <h3 class="widget-title">Useful Links</h3>
                             <ul class="custom-menu">
-                                <li><a href="#">News &amp; Blog</a></li>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Discussion</a></li>
+                                <li><a href="#">Learning experiences</a></li>
+                                <li><a href="#">Best practices</a></li>
+                                <li><a href="#">Technology trends</a></li>
                                 <li><a href="#">Spotlight on</a></li>
-                                <li><a href="#">Research LAB</a></li>
+                                <li><a href="#">Data Science Lab</a></li>
                             </ul>
                         </div>
                     </div>
