@@ -8,6 +8,11 @@ use App\Models\Comment;
 
 class CommentController extends Controller
 {
+    public function index(Request $request)
+    {
+
+    }
+
     public function store(Request $request) {
         $commentable = Comment::create($request->all())->commentable;
         $comments = $commentable->comments()->orderBy('id', 'desc')->get();

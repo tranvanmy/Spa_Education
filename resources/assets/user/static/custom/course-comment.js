@@ -1,6 +1,6 @@
 function validateEmail(email) {
-  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
 }
 
 $('#home-course-submit').click((event) => {
@@ -18,7 +18,7 @@ $('#home-course-submit').click((event) => {
         !params.name && $('#home-course-name-message').text('The name field is required.')
         !params.content && $('#home-course-content-message').text('The content field is required.')
 
-        return !validateEmail(params.email)
+        return params.email && !validateEmail(params.email)
             && $('#home-course-email-message').text('The email must be a valid email address.')
     }
 
@@ -37,7 +37,7 @@ $('#home-course-submit').click((event) => {
         $('#home-course-name').val('')
         $('#home-course-email').val('')
         $('#home-course-content').val('')
-        
+
         $('#couse-comment-area').html(response)
     })
 })

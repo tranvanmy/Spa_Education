@@ -254,22 +254,17 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="partner-logoes">
-                            <a class="partner-logo" href="#">
-                                <img class="img-responsive fix-width" src="/images/partner/1.png" alt="...">
-                            </a>
-                            <a class="partner-logo" href="#">
-                                <img class="img-responsive fix-width" src="/images/partner/2.png" alt="...">
-                            </a>
-                            <a class="partner-logo" href="#">
-                                <img class="img-responsive fix-width" src="/images/partner/3.png" alt="...">
-                            </a>
-                            <a class="partner-logo" href="#">
-                                <img class="img-responsive fix-width" src="/images/partner/4.png" alt="...">
-                            </a>
-                            <a class="partner-logo" href="#">
-                                <img class="img-responsive fix-width" src="/images/partner/5.png" alt="...">
-                            </a>
-
+                            <div class="partner-logoes">
+                                <a class="partner-logo" href="#">
+                                    <img class="img-responsive fix-width" src="/images/partner/viettel.png" alt="Viettel">
+                                </a>
+                                <a class="partner-logo" href="#">
+                                    <img class="img-responsive fix-width" src="/images/partner/orchnetwork.png" alt="Orchnetword">
+                                </a>
+                                <a class="partner-logo" href="#">
+                                    <img class="img-responsive fix-width" src="/images/partner/an-viet.png" alt="An viet">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

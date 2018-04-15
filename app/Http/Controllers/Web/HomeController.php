@@ -26,7 +26,7 @@ class HomeController extends Controller
             'dataScientist' => DataScientist::has('category')->orderBy('created_at', 'desc')->limit(5)->get(),
         ];
 
-        return view('user.index', compact('data'));
+        return view('user.home.'.fieldLanguage('index'), compact('data'));
     }
 
     public function subcribe(Request $request)
