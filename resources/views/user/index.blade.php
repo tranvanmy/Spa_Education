@@ -156,7 +156,7 @@
     <!-- Popular Courses End -->
 
     <!-- Our instructor -->
-    <div class="elh-section elh-carousel-section elh-img-bg elh-bg-2">
+    <div class="elh-section elh-carousel-section elh-img-bg elh-bg-2" id="scientific-advisory-boards">
         <div class="elh-overlay elh-section-padding-big">
             <div class="container">
                 <div class="row">
