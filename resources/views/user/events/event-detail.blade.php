@@ -14,8 +14,8 @@
             <div class="container text-center">
                 <h3 class="elh-page-title">{{ $event[fieldLanguage('title')] }}</h3>
                 <ol class="breadcrumb">
-                    <li><a href="{{ route('user.home') }}">Home</a></li>
-                    <li><a href="{{ route('user.event.list') }}">All Events</a></li>
+                    <li><a href="{{ route('user.home') }}">{{ __('events.Home') }}</a></li>
+                    <li><a href="{{ route('user.event.list') }}">{{ __('events.All_events') }}</a></li>
                 </ol>
             </div>
         </div>
@@ -28,19 +28,19 @@
                                 <img class="img-responsive fix-width"  src="{{ Croppa::url($event->author->image_url ?: '', 100, null, array('resize')) }}" alt="{{ $event->author[fieldLanguage('name')] }}" style="height: 100%;">
                             </div>
                             <div class="elh-instructor-name elh-course-profile-item">
-                                <p>Author</p>
+                                <p>{{ __('events.Author') }}</p>
                                 <h5> {{ $event->author[fieldLanguage('name')] }}</h5>
                             </div>
                             <div class="elh-student-count elh-course-profile-item">
-                                <p>Day</p>
+                                <p>{{ __('events.Day') }}</p>
                                 <h5>{{ date_format(date_create($event['start_at']), 'd/m/Y') }}</h5>
                             </div>
                             <div class="elh-student-count elh-course-profile-item">
-                                <p>Time</p>
+                                <p>{{ __('events.Time') }}</p>
                                 <h5>{{ date_format(date_create($event['start_at']), 'G:i'). '-' .  date_format(date_create($event['end_at']), 'H:i')}}</h5>
                             </div>
                             <div class="elh-review-score elh-course-profile-item">
-                                <p>Location</p>
+                                <p>{{ __('events.Location') }}</p>
                                 <h5>{{ $event[fieldLanguage('location')] }}</h5>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                         <!-- Seminar -->
                         <div class="elh-related-course">
                             <div class="elh-section-header text-left">
-                               <h3 class="elh-section-title">Related Event</h3>
+                               <h3 class="elh-section-title">{{ __('events.Related_event') }}</h3>
                             </div>
                             <div class="row">
                             @foreach($relatedEvents as $event)
@@ -122,11 +122,11 @@
                         <div class="sidebar">
                             <aside class="widget post_widget">
                                 <div class="sidebar">
-                                    <h4 class="widget-title">SIGN UP FOR MORE SEMINAR</h4>
+                                    <h4 class="widget-title">{{ __('events.Sign_up_for') }}</h4>
                                     <input class="form-control" style="margin: 10px" placeholder="Enter your name" />
                                     <input class="form-control" style="margin: 10px" placeholder="Enter your email" />
                                     <input class="form-control" style="margin: 10px" placeholder="Enter your phone number" />
-                                    <input type="submit" class="btn btn-primary" value="Sign up"/>
+                                    <input type="submit" class="btn btn-primary" value="{{ __('events.Sign_up') }}"/>
                                 </div>
                             </aside>
                         </div>
@@ -142,7 +142,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="elh-subscribe-heading">
-                            <h3>Subscribe us for Future Updates</h3>
+                            <h3>{{ __('events.Subscribe_us') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">

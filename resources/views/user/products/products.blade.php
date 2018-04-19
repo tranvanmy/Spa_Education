@@ -12,10 +12,10 @@
     <div class="elh-page-header elh-img-bg elh-bg-9">
         <div class="elh-overlay">
             <div class="container text-center">
-                <h3 class="elh-page-title">All Product</h3>
+                <h3 class="elh-page-title">{{ __('products.All_product') }}</h3>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="{{ route('user.home') }}" title="Home">Home</a>
+                        <a href="{{ route('user.home') }}" title="Home">{{ __('products.Home') }}</a>
                     </li>
                 </ol>
             </div>
@@ -81,7 +81,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="elh-subscribe-heading">
-                            <h3>Subscribe us for Future Updates</h3>
+                            <h3>{{ __('products.Subscribe_us') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">

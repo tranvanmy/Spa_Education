@@ -22,11 +22,11 @@
                       <div class="row">
                           <div class="col-xs-12" style="color: #40632c;">
                               <h4 class="elh-banner-title">
-                                  Want to learn AI <br> at AI Academy?
+                                  Bạn muốn tham gia học AI <br> tại Viện AI?
                               </h4>
                               <h1 class="elh-banner-subtitle">
-                                 Whether you’re a business leader, engineer, industry expert or marketer
-                                 <br>there are AI skills to learn !
+                                 Viện AI tổ chức khóa học cho mọi đối tượng, từ nhà quản lý chính sách đến chuyên gia, kỹ sư chuyên ngành, phủ rộng các lĩnh vực như CNTT, marketing, nông nghiệp, y tế, hành chính công, quản trị doanh nghiệp
+                                 <br>Chúng tôi luôn có khóa học thích hợp dành cho bạn !
                               </h1>
                           </div>
                       </div>
@@ -47,33 +47,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <h3 class="slogan_class">Academy - at a glance</h3>
+                    <h3 class="slogan_class">Viện AI qua các con số</h3>
                 </div>
                 <div class="col-sm-9">
                     <div class="elh-counter-group">
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="12"></span></h3>
-                            <p class="elh-fact-name" style="height: 50px">Industry experts</p>
+                            <p class="elh-fact-name" style="height: 50px">Chuyên gia ngành</p>
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="15"></span></h3>
-                            <p class="elh-fact-name" style="height: 50px">Professors</p>
+                            <p class="elh-fact-name" style="height: 50px">GS, pGS đại học</p>
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="45"></span></h3>
-                            <p class="elh-fact-name" style="height: 50px">Researchers</p>
+                            <p class="elh-fact-name" style="height: 50px">Nghiên cứu</p>
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="15"></span></h3>
-                            <p class="elh-fact-name" style="height: 50px">Courses</p>
+                            <p class="elh-fact-name" style="height: 50px">Khóa học</p>
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="5"></span></h3>
-                            <p class="elh-fact-name" style="height: 50px">Projects</p>
+                            <p class="elh-fact-name" style="height: 50px">Dự án</p>
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="8"></span></h3>
-                            <p class="elh-fact-name" style="height: 50px">Patterns</p>
+                            <p class="elh-fact-name" style="height: 50px">Sáng chế</p>
                         </div>
                     </div>
                 </div>
@@ -89,13 +89,11 @@
                 <div class="col-md-6" style="text-align: justify;">
                     <div class="elh-about-section sm-bottom-30">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">About <span>Us</span></h3>
+                            <h3 class="elh-section-title">Về <span>Chúng Tôi</span></h3>
                         </div>
                         <p>
-                        We are a group of AI researchers, practitioners and industry specialists who set to build a learning environment for everyone to learn and apply AI to innovate.
+                        Chúng tôi gồm các nhà nghiên cứu, giảng viên đạo học, các chuyên gia chuyên ngành, các doanh nghiệp kết hợp lại nhằm tạo dựng môi trường học tập cho doanh nghiệp và cá nhân đang mong muốn áp dụng Trí tuệ nhân tạo để sáng tạo và đổi mới.
                         </p>
-                        <p>
-                        We consult on practical aspects of applied machine learning for enterprises, helping them build Data science team, AI-powered products to stay ahead of competition. </p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -114,8 +112,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
-                        <h3 class="elh-section-title">Popular <span>Courses</span></h3>
-                        <a class="all-link" href="{{ route('user.courses') }}">See All Courses</a>
+                        <h3 class="elh-section-title">Khóa học  <span>Phổ biến</span></h3>
+                        <a class="all-link" href="{{ route('user.courses') }}"> {{ __('index.See_all', ['name' => 'Khóa học']) }}</a>
                     </div>
                 </div>
             </div>
@@ -162,8 +160,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">Our <span>Scientific Advisory Boards</span></h3>
-                            <p class="elh-section-text">All our intrustors have at least 5 years of experiences researching and working at universities and hightech companies in AI disciplines and related fields like Big Data analytics, Data mining, Information architect, Cyber security, Image processing, etc.</p>
+                            <h3 class="elh-section-title">Hội đồng <span>Khoa học</span></h3>
+                            <p class="elh-section-text">... Add your text here ....</p>
                         </div>
                     </div>
                 </div>
@@ -206,11 +204,11 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
-                        <h3 class="elh-section-title">Research & Development</h3>
+                        <h3 class="elh-section-title">Nghiên cứu và Phát triển</h3>
                         <p class="elh-section-text">
-                            We've embraced collaboration with companies to innovate and power their products with AI-engines and features. Joined R&D activities from prototyping, piloting through to commercial implementation keeps us engaged in practical aspects of applied AI and Machine learning
+                            ... Add your text here ....
                         </p>
-                        <a class="all-link style-2" href="{{ route('user.research.list') }}" title="See All Research & Development">See All Research & Development</a>
+                        <a class="all-link style-2" href="{{ route('user.research.list') }}" title="See All Research & Development">{{ __('index.See_all', ['name' => 'Nghiên cứu']) }}</a>
                     </div>
                 </div>
             </div>
@@ -246,7 +244,7 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-xs-12">
                         <div class="elh-section-header text-center">
-                            <h3 class="elh-section-title">Success <span>Stories</span></h3>
+                            <h3 class="elh-section-title">Đối tác <span> Chiến lược</span></h3>
                             <p class="elh-section-text">... Add your text here ....</p>
                         </div>
                     </div>
@@ -276,9 +274,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
-                        <h3 class="elh-section-title">Upcoming <span>Events</span></h3>
+                        <h3 class="elh-section-title">Sự kiện  <span>Sắp diễn ra</span></h3>
                         <p class="elh-section-text"></p>
-                        <a class="all-link style-2" href="{{  route('user.event.list') }}" title="All Events">See All Events</a>
+                        <a class="all-link style-2" href="{{  route('user.event.list') }}" title="All Events">{{ __('index.See_all', ['name' => 'Sự kiện']) }}</a>
                     </div>
                 </div>
             </div>
@@ -315,9 +313,9 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title"><span>Data Scientists' corner</span></h3>
+                            <h3 class="elh-section-title"><span>Góc Data Science</span></h3>
                             <p class="elh-section-text">... Add your text here ....</p>
-                            <a class="all-link style-2" href="{{ route('user.data-scientist.list') }}" title="Data Scientists' corner">See All</a>
+                            <a class="all-link style-2" href="{{ route('user.data-scientist.list') }}" title="Data Scientists' corner">{{ __('index.See_all', ['name' => '']) }}</a>
                         </div>
                     </div>
                 </div>
@@ -335,7 +333,7 @@
                                     >{{ $scientist[fieldLanguage('title')] }}</a></h4>
                                 <a class="elh-post-link" href="{{ route('user.data-scientist.detail', [$scientist->category[fieldLanguage('slug')], $scientist[fieldLanguage('slug')]]) }}"
                                     title="{{ $scientist[fieldLanguage('title')] }}"
-                                >Read More<i class="fa fa-long-arrow-right"></i></a>
+                                >Xem thêm<i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </article>
                     @endforeach
@@ -352,7 +350,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
                     <div class="elh-section-header">
-                        <h3 class="elh-section-title">Education for all! Join with us...</h3>
+                        <h3 class="elh-section-title">Hệ thống giáo dục cho mọi người! Hãy tham gia cùng chúng tôi...</h3>
                         <p class="elh-section-text">... Add your text here ....</p>
                     </div>
                     <div id="errors" class="alert alert-danger alert-dismissable hidden">
@@ -363,7 +361,7 @@
                         <button type="button" class="close" aria-hidden="true">×</button>
                         <p id="message-success"></p>
                     </div>
-                    <a class="btn" id="home-button-join-us" href="#" style="color: #fff">Join Today</a>
+                    <a class="btn" id="home-button-join-us" href="#" style="color: #fff">{{ __('index.Join_today') }}</a>
                     <div class="quick-contact" id="home-form-join-us" style="display: none">
                         <form action="post" url="{{ route('user.subcribe') }}">
                             <div class="row">
@@ -371,14 +369,14 @@
                                     <input type="email" id="home-subcribe-email" name="email" placeholder="Email *" required>
                                 </div>
                                 <div class="col-sm-4">
-                                    <input type="text" id="name" name="home-subcribe-name" placeholder="Name *" required>
+                                    <input type="text" id="name" name="home-subcribe-name" placeholder="{{ __('index.Name') }} *" required>
                                 </div>
                                 <div class="col-sm-4">
-                                    <input type="tel" id="home-subcribe-phone" name="phone" placeholder="Phone">
+                                    <input type="tel" id="home-subcribe-phone" name="phone" placeholder="{{ __('index.Phone') }}">
                                 </div>
                                 <div class="col-xs-12">
-                                    <textarea id="home-subcribe-message" name="message" placeholder="Message" rows="3" required></textarea>
-                                    <button class="btn" type="submit" id="home-subcribe-submit">Submit</button>
+                                    <textarea id="home-subcribe-message" name="message" placeholder="{{ __('index.Message') }}" rows="3" required></textarea>
+                                    <button class="btn" type="submit" id="home-subcribe-submit">{{ __('index.Submit') }}</button>
                                 </div>
                             </div>
                         </form>

@@ -7,4 +7,6 @@ return [
     'edit_failed' => 'Edit failed!',
     'delete_success' => 'Delete successfully!',
     'delete_failed' => 'Delete failed!',
+    'Subscribe_failed' => 'Subscribe Failed!',
+    'Subscribe_successed' => 'Subscribe Successed!',
 ];

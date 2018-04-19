@@ -5,5 +5,5 @@ return [
 		'name' => 'vision',
 		'description' => 'Description',
 	],
-    'Subscribe_us' => 'Subscribe us for Future Updates',
+    'Subscribe_us' => 'Đăng ký nhận tin tức mới nhất',
 ];

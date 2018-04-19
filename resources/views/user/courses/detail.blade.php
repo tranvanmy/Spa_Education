@@ -15,8 +15,8 @@
         <div class="container text-center">
             <h3 class="elh-page-title">{{ $course[fieldLanguage('title')]}}</h3>
             <ol class="breadcrumb">
-                <li><a href="{{ route('user.home') }}">Home</a></li>
-                <li><a href="{{ route('user.courses') }}">All Course</a></li>
+                <li><a href="{{ route('user.home') }}">{{ __('courses.Home') }}</a></li>
+                <li><a href="{{ route('user.courses') }}">{{ __('courses.All_course') }}</a></li>
             </ol>
         </div>
     </div>
@@ -35,7 +35,7 @@
                             </a>
                         </div>
                         <div class="elh-instructor-name elh-course-profile-item">
-                            <p>Instructor</p>
+                            <p>{{ __('courses.Instructor') }}</p>
                             <h5>{{ $course['instructor'][fieldLanguage('name')] }}</h5>
                         </div>
                         {{-- <div class="elh-student-count elh-course-profile-item">
@@ -43,7 +43,7 @@
                             <h5>120 (Registered)</h5>
                         </div> --}}
                         <div class="elh-review-score elh-course-profile-item">
-                            <p>Review</p>
+                            <p>{{ __('courses.Review') }}</p>
                             <div class="elh-rating">
                                 <span class="star star-on"></span>
                                 <span class="star star-on"></span>
@@ -52,7 +52,7 @@
                                 <span class="star star-on"></span>
                             </div>
                             <div class="elh-review-count">
-                                <h5>({{ $course['total_review_manual'] }} Reviews)</h5>
+                                <h5>({{ $course['total_review_manual'] }} {{ __('courses.Review') }})</h5>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             <div class="course-info-icon">
                                 <i class="fa fa-file-video-o"></i>
                             </div>
-                            <p class="elh-course-info-name">Duration</p>
+                            <p class="elh-course-info-name">{{ __('courses.Duration') }}</p>
                             <h4 class="elh-course-info-value">50 Hours</h4>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                             <div class="course-info-icon">
                                 <i class="fa fa-file-word-o"></i>
                             </div>
-                            <p class="elh-course-info-name">Topics</p>
+                            <p class="elh-course-info-name">{{ __('courses.Topics') }}</p>
                             <h4 class="elh-course-info-value">08 Articles</h4>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                             <div class="course-info-icon">
                                 <i class="fa fa-book"></i>
                             </div>
-                            <p class="elh-course-info-name">Resources</p>
+                            <p class="elh-course-info-name">{{ __('courses.Resources') }}</p>
                             <h4 class="elh-course-info-value">25 Files</h4>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                             <div class="course-info-icon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <p class="elh-course-info-name">Access</p>
+                            <p class="elh-course-info-name">{{ __('courses.Access') }}</p>
                             <h4 class="elh-course-info-value">Lifetime</h4>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                             <div class="course-info-icon">
                                 <i class="fa fa-language"></i>
                             </div>
-                            <p class="elh-course-info-name">Language</p>
+                            <p class="elh-course-info-name">{{ __('courses.Language') }}</p>
                             <h4 class="elh-course-info-value">English</h4>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             <div class="course-info-icon">
                                 <i class="fa fa-certificate"></i>
                             </div>
-                            <p class="elh-course-info-name">Certification</p>
+                            <p class="elh-course-info-name">{{ __('courses.Certification') }}</p>
                             <h4 class="elh-course-info-value">Yes</h4>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                     <!-- Course Instructor box -->
                     <div class="elh-course-single-instructor">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">Instructors</h3>
+                            <h3 class="elh-section-title">{{ __('courses.Instructor') }}</h3>
                         </div>
                         <div class="elh-course-instructor-box">
                             <div class="elh-course-instructor-thumb">
@@ -176,7 +176,7 @@
                     <!-- Student feedback -->
                     <div class="elh-course-student-feedback">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">Student Feeback</h3>
+                            <h3 class="elh-section-title">{{ __('courses.Student_feedback') }}</h3>
                         </div>
                         <div class="elh-course-rating">
                             {{-- <div class="elh-rating-summery">
@@ -245,12 +245,12 @@
                         <!-- Write a review -->
 
                         <form id="courseReviewForm" class="elh-course-review-form" action="#" method="post">
-                            <p class="lead elh-theme-color">Write a Review</p>
+                            <p class="lead elh-theme-color">{{ __('courses.Write_a_review') }}</p>
 
                             <div class="row">
                                 <input type="hidden" id="home-course-id" value="{{ $course->id }}">
                                 <div class="col-sm-6">
-                                    <input type="text" id="home-course-name" placeholder="Name *" required>
+                                    <input type="text" id="home-course-name" placeholder="{{ __('courses.Name') }} *" required>
                                     <span style="color: red" id="home-course-name-message"></span>
                                 </div>
                                 <div class="col-sm-6">
@@ -260,7 +260,7 @@
                                 <div class="col-sm-12" style="margin-top: 10px">
                                     <textarea name="review-message" rows="4"
                                         id="home-course-content"
-                                        required placeholder="Content *" value=""
+                                        required placeholder="{{ __('courses.Content') }} *" value=""
                                     ></textarea>
                                     <span style="color: red;" id="home-course-content-message"></span>
                                 </div>
@@ -274,7 +274,7 @@
                                 <label><input type="radio" name="rate-value" value="5"><i class="star"></i></label>
                             </div> --}}
                             <button class="btn" type="submit" id="home-course-submit">
-                                Submit
+                                {{ __('courses.Submit') }}
                             </button>
                         </form>
                         <!-- Write a review End -->
@@ -288,7 +288,7 @@
                     <!-- Related Course -->
                     <div class="elh-related-course">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title">Related Course</h3>
+                            <h3 class="elh-section-title">{{ __('courses.Related_course') }}</h3>
                         </div>
                         <div class="row">
                             @foreach ($relatedCourses as $course)
@@ -335,7 +335,7 @@
                     <div id="course-sidebar" class="course-sidebar">
                         <div id="sidebar-affix" class="sidebar-affix">
                             <div class="widget widget-course-share text-center">
-                                <p class="lead">Share in Social</p>
+                                <p class="lead">{{ __('courses.Share_in_social') }}</p>
                                 <div class="elh-course-social-share">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -358,14 +358,13 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="elh-subscribe-heading">
-                        <h5>for Future Update</h5>
-                        <h3>Subscribe Us</h3>
+                        <h3>{{ __('courses.Subscribe_us') }}</h3>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <form id="subscription" class="elh-subscribe-form pull-right xs-pull-center" action="#" method="post">
                         <input type="email" name="email" placeholder="Enter your mail">
-                        <button type="submit">Subscribe</button>
+                        <button type="submit">{{ __('courses.Subscribe') }}</button>
                     </form>
                 </div>
             </div>

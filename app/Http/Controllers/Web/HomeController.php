@@ -11,6 +11,7 @@ use App\Models\ResearchDevelopment;
 use App\Models\Event;
 use App\Models\DataScientist;
 use Carbon\Carbon;
+use Lang;
 
 class HomeController extends Controller
 {
@@ -47,13 +48,13 @@ class HomeController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Subcribe Fail',
+                'message' => Lang::get('messages.Subscribe_failed'),
             ]);
         }
 
         return response()->json([
             'success' => true,
-            'message' => 'Subcribe Success',
+            'message' => Lang::get('messages.Subscribe_successed'),
         ]);
     }
 

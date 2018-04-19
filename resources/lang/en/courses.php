@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'Home' => 'Home',
+    'All_course' => 'All Course',
+    'Instructor' => 'Instructor',
+    'Review' => 'Review',
+    'Duration' => 'Duration',
+    'Topics' => 'Topics',
+    'Resources' => 'Resources',
+    'Access' => 'Access',
+    'Language' => 'Language',
+    'Certification' => 'Certification',
+    'Student_feedback' => 'Student Feedback',
+    'Write_a_review' => 'Write a Review',
+    'Submit' => 'Submit',
+    'Related_course' => 'Related Course',
+    'Share_in_social' => 'Share in Social',
+    'for_future_update' => 'for Future Update',
+    'Subscribe_us' => 'Subscribe us for Future Updates',
+    'Subscribe' => 'Subscribe',
+    'Name' => 'Name',
+    'Content' => 'Content',
+    'Submit' => 'Submit',
+];

@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 text-center" style="margin-top: 30px">
-                    <a class="btn" href="#" style="color: #fff">Join Today</a>
+                    <a class="btn" href="#" style="color: #fff">{{ __('join-us.Join_today') }}</a>
                     <div class="quick-contact" id="home-form-join-us" style="margin-top: 20px">
                         <form action="">
                             <div class="row">
@@ -46,14 +46,14 @@
                                     <input type="email" id="home-subcribe-email" name="email" placeholder="Email *" required>
                                 </div>
                                 <div class="col-sm-4">
-                                    <input type="text" id="name" name="home-subcribe-name" placeholder="Name *" required>
+                                    <input type="text" id="name" name="home-subcribe-name" placeholder="{{ __('join-us.Name') }} *" required>
                                 </div>
                                 <div class="col-sm-4">
-                                    <input type="tel" id="home-subcribe-phone" name="phone" placeholder="Phone">
+                                    <input type="tel" id="home-subcribe-phone" name="phone" placeholder="{{ __('join-us.Phone') }}">
                                 </div>
                                 <div class="col-xs-12">
-                                    <textarea id="home-subcribe-message" name="message" placeholder="Message" rows="3" required></textarea>
-                                    <button class="btn" type="submit" id="home-subcribe-submit">Submit</button>
+                                    <textarea id="home-subcribe-message" name="message" placeholder="{{ __('join-us.Message') }}" rows="3" required></textarea>
+                                    <button class="btn" type="submit" id="home-subcribe-submit">{{ __('join-us.Submit') }}</button>
                                 </div>
                             </div>
                         </form>
@@ -71,7 +71,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="elh-subscribe-heading">
-                        <h3>Subscribe us for Future Updates</h3>
+                        <h3>{{ __('join-us.Subscribe_us') }}</h3>
                     </div>
                 </div>
                 <div class="col-sm-6">

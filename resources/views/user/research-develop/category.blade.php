@@ -15,9 +15,9 @@
                 <h3 class="elh-page-title">{{ $category[fieldLanguage('title')] }}</h3>
                     <ol class="breadcrumb">
                         <li>
-                            <a href="{{route('user.home')}}" title="Home">Home</a>
+                            <a href="{{route('user.home')}}" title="Home">{{ __('research.Home') }}</a>
                         </li>
-                        <li> <a href="{{ route('user.research.list')}}" title="All Research & Development">All Research & Development</a></li>
+                        <li> <a href="{{ route('user.research.list')}}" title="All Research & Development">{{ __('research.All_rd') }}</a></li>
                     </ol>
                 </div>
         </div>
@@ -95,7 +95,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="elh-subscribe-heading">
-                            <h3>Subscribe us for Future Updates</h3>
+                            <h3>{{ __('research.Subscribe_us') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">
