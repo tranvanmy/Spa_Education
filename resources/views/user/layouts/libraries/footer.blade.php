@@ -49,7 +49,7 @@
                             <a class="footer-logo" href="#">
                                 <img src="/images/logo.png" alt="Site Logo" style="height: 70px">
                             </a>
-                            <p>AI for All. Here at AI academy we'are commited to drive the adoption and application of AI for enterprises of all sizes.</p>
+                            {{-- <p>AI for All. Here at AI academy we'are commited to drive the adoption and application of AI for enterprises of all sizes.</p> --}}
                             <div class="socials">
                                 {{-- <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>

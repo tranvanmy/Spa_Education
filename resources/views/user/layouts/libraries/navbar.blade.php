@@ -16,14 +16,14 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <div class="navbar-search navbar-right">
                 <button id="navbar-search-toggle" class="navbar-search-toggle"><i class="fa fa-search"></i></button>
-                <form id="navbar-searchform" class="navbar-searchform">
-                    <input type="search" name="search" placeholder="{{ __('Search...') }}'">
+                <form id="navbar-searchform" class="navbar-searchform" action="{{ route('user.search.all') }}">
+                    <input type="search" name="q" placeholder="{{ __('navbar.Search') }}..." maxlength="200" autofocus>
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
             <ul class="nav navbar-nav navbar-right" id="home-nav-onepage" style="margin-right: 5px!important">
                 <li class="dropdown">
-                    <a href="{{ isset($isHomePage) ? '#home_about_us' : '#'}}" title="{{ __('About us') }}">{{ __('About us') }}</a>
+                    <a href="{{ isset($isHomePage) ? '#home_about_us' : '#'}}" title="{{ __('navbar.About us') }}">{{ __('navbar.About us') }}</a>
                     @if(isset($navbar['about_us']))
                         <ul class="dropdown-menu">
                             @foreach ($navbar['about_us'] as $about)
@@ -35,7 +35,7 @@
                     @endif
                 </li>
                 <li class="dropdown">
-                    <a href="{{ isset($isHomePage) ? '#home_course' : route('user.courses')}}" title="{{ __('Courses') }}">{{ __('Courses') }}</a>
+                    <a href="{{ isset($isHomePage) ? '#home_course' : route('user.courses')}}" title="{{ __('navbar.Courses') }}">{{ __('navbar.Courses') }}</a>
                     @if(isset($navbar['courses']))
                         <ul class="dropdown-menu">
                             @foreach ($navbar['courses'] as $course)
@@ -47,7 +47,7 @@
                     @endif
                 </li>
                 <li class="dropdown">
-                    <a href="{{ isset($isHomePage) ? '#home_research_develop' : route('user.research.list')}}" title="{{ __('R&D') }}">{{ __('R&D') }}</a>
+                    <a href="{{ isset($isHomePage) ? '#home_research_develop' : route('user.research.list')}}" title="{{ __('navbar.R&D') }}">{{ __('navbar.R&D') }}</a>
                     @if(isset($navbar['research_development_categories']))
                         <ul class="dropdown-menu">
                             @foreach ($navbar['research_development_categories'] as $category)
@@ -62,7 +62,7 @@
                     @endif
                 </li>
                 <li class="dropdown">
-                    <a href="{{ route('user.product.list') }}" title="{{ __('Products') }}">{{ __('Products') }}</a>
+                    <a href="{{ route('user.product.list') }}" title="{{ __('navbar.Products') }}">{{ __('navbar.Products') }}</a>
                     @if(isset($navbar['products_categories']))
                         <ul class="dropdown-menu">
                             @foreach ($navbar['products_categories'] as $category)
@@ -77,15 +77,15 @@
                     @endif
                 </li>
                 <li>
-                    <a href="{{ isset($isHomePage) ? '#home_seminar' : route('user.event.list')}}" title="{{ __('Events') }}">{{ __('Events') }}</a>
+                    <a href="{{ isset($isHomePage) ? '#home_seminar' : route('user.event.list')}}" title="{{ __('navbar.Events') }}">{{ __('navbar.Events') }}</a>
                 </li>
                 <li>
                     <a href="{{ isset($isHomePage) ? '#home_news_blog' : route('user.data-scientist.list')}}"
-                        title="{{ __("Data Scientists' corner") }}"
-                    >{{ __("Data Scientists' corner") }}</a>
+                        title="{{ __("navbar.Data Scientists' corner") }}"
+                    >{{ __("navbar.Data Scientists' corner") }}</a>
                 </li>
                 <li class="dropdown">
-                    <a href="{{ isset($isHomePage) ? '#home_join_us' : '#'}}" title="{{ __('Join us') }}">{{ __('Join us') }}</a>
+                    <a href="{{ isset($isHomePage) ? '#home_join_us' : '#'}}" title="{{ __('navbar.Join us') }}">{{ __('navbar.Join us') }}</a>
                     @if(isset($navbar['join_us']))
                         <ul class="dropdown-menu">
                             @foreach ($navbar['join_us'] as $us)
