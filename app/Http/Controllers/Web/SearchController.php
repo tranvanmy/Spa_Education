@@ -41,6 +41,8 @@ class SearchController extends Controller
                 ->take(4)
                 ->get(),
             'dataScientists' => DataScientist::where(fieldLanguage('title'), 'like', '%' . $searchQuery . '%')
+                ->has('category')
+                ->with('category')
                 ->where(fieldLanguage('has'), true)
                 ->orderBy('created_at', 'desc')
                 ->limit(4)
