@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
+use App\Models\Subcriber;
 use App\Models\Instructor;
 use App\Models\ResearchDevelopment;
 use App\Models\Event;
@@ -32,7 +33,27 @@ class HomeController extends Controller
     public function subcribe(Request $request)
     {
         $request->validate([
-            'email' => 'email|required|max:255',
+            'email' => 'required|email|max:255',
+        ]);
+
+        $registerData = $request->all();
+        try {
+            $registed = Subcriber::where('email', $registerData['email']);
+            if (!$registed) {
+                $subcriber = Subcriber::create($registerData);
+            } else {
+                $registed->update(array_only($registerData, ['phone', 'message', 'name']));
+            }
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Subcribe Fail',
+            ]);
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Subcribe Success',
         ]);
     }
 

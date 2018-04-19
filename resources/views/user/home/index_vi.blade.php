@@ -355,9 +355,17 @@
                         <h3 class="elh-section-title">Education for all! Join with us...</h3>
                         <p class="elh-section-text">... Add your text here ....</p>
                     </div>
+                    <div id="errors" class="alert alert-danger alert-dismissable hidden">
+                        <button type="button" class="close" aria-hidden="true">×</button>
+                        <p id="message-failure"></p>
+                    </div>
+                    <div class="alert alert-success alert-dismissable hidden">
+                        <button type="button" class="close" aria-hidden="true">×</button>
+                        <p id="message-success"></p>
+                    </div>
                     <a class="btn" id="home-button-join-us" href="#" style="color: #fff">Join Today</a>
                     <div class="quick-contact" id="home-form-join-us" style="display: none">
-                        <form action="">
+                        <form action="post" url="{{ route('user.subcribe') }}">
                             <div class="row">
                                 <div class="col-sm-4">
                                     <input type="email" id="home-subcribe-email" name="email" placeholder="Email *" required>
