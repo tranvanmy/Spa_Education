@@ -62,6 +62,7 @@ $(document).ready(function ($) {
             $('#navbar-search-toggle').on('click', function () {
                 $(this).children('.fa').toggleClass('fa-search fa-close');
                 $('#navbar-searchform').slideToggle();
+                $("#navbar-searchform input").focus();
             });
 
             $(document).on('click', function (event) {

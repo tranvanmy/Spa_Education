@@ -55,6 +55,9 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     Route::get('instructor', 'InstructorControler@index')->name('user.instructor');
     Route::get('instructor/{slug}', 'InstructorControler@show')
         ->name('user.instructor.detail');
+    
+    Route::get('search', 'SearchController@searchAll')
+        ->name('user.search.all');
 
     Route::any('{any}', function () {
         return redirect()->route('user.not-found');
