@@ -14,10 +14,10 @@
             <div class="container text-center">
                 <h3 class="elh-page-title">{{ $product[fieldLanguage('title')] }}</h3>
                 <ol class="breadcrumb">
-                    <li><a href="{{ route('user.home') }}" title="Home">Home</a></li>
+                    <li><a href="{{ route('user.home') }}" title="Home">{{ __('products.Home') }}</a></li>
                     <li>
                         <a href="{{ route('user.product.list') }}" title="All Product">
-                            All Product
+                            {{ __('products.All_product') }}
                         </a>
                     </li>
                     <li>
@@ -46,7 +46,7 @@
                         <!-- Feedback -->
                         <div class="elh-course-student-feedback">
                             <div class="elh-section-header text-left">
-                                <h3 class="elh-section-title">Feeback</h3>
+                                <h3 class="elh-section-title">{{ __('products.Feeback') }}</h3>
                             </div>
 
                             <!-- Given Reiviews -->
@@ -82,7 +82,7 @@
 
                             <!-- Write a review -->
                             <form id="courseReviewForm" class="elh-course-review-form" action="#" method="post">
-                                <p class="lead elh-theme-color">Write a Review</p>
+                                <p class="lead elh-theme-color">{{ __('products.Write_a_review') }}</p>
                                 <div class="elh-rating-inputs">
                                     <label class="elh-rate-on"><input type="radio" name="rate-value" value="1"><i class="star"></i></label>
                                     <label><input type="radio" name="rate-value" value="2"><i class="star"></i></label>
@@ -91,7 +91,7 @@
                                     <label><input type="radio" name="rate-value" value="5"><i class="star"></i></label>
                                 </div>
                                 <textarea name="review-message" rows="4"></textarea>
-                                <button class="btn" type="submit">Submit</button>
+                                <button class="btn" type="submit">{{ __('products.Submit') }}</button>
                             </form>
                             <!-- Write a review End -->
 
@@ -101,7 +101,7 @@
                         <!-- Related Posts -->
                         <div class="elh-related-course">
                             <div class="elh-section-header text-left">
-                                <h3 class="elh-section-title">Related {{ $productsCategory[fieldLanguage('title')] }}</h3>
+                                <h3 class="elh-section-title">{{ __('products.Related') }} {{ $productsCategory[fieldLanguage('title')] }}</h3>
                             </div>
                             <div class="row">
                             @foreach($productsCategory->products as $product)
@@ -115,7 +115,7 @@
                                         </div>
                                         <div class="elh-course-footer">
                                             <p class="elh-course-price">
-                                                <a class="widget-read-more" href="{{ route('user.product.detail', [$productsCategory[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                                <a class="widget-read-more" href="{{ route('user.product.detail', [$productsCategory[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">{{ __('products.Read_more') }}<i class="fa fa-long-arrow-right"></i></a>
                                             </p>
                                             <p class="elh-course-metas">
                                                 <span class="elh-student-count"><i class="fa fa-users"></i> 25</span>
@@ -132,7 +132,7 @@
                     <div class="col-md-4">
                         <div class="sidebar">
                             <aside class="widget post_widget">
-                                <h4 class="widget-title">Popular Product</h4>
+                                <h4 class="widget-title">{{ __('products.Popular_product') }}</h4>
                                 <div class="widget-posts">
                                 @foreach($productsPopular as $product)
                                     <div class="widget-post">
@@ -141,7 +141,7 @@
                                         </a>
                                         <div class="widget-post-content">
                                             <a class="widget-post-title" href="{{ route('user.product.detail', [$productsCategory[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">{{ $product[fieldLanguage('title')] }}</a>
-                                            <a class="widget-read-more" href="{{ route('user.product.detail', [$productsCategory[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">Read More<i class="fa fa-long-arrow-right"></i></a>
+                                            <a class="widget-read-more" href="{{ route('user.product.detail', [$productsCategory[fieldLanguage('slug')], $product[fieldLanguage('slug')]]) }}" title="{{ $product[fieldLanguage('title')] }}">{{ __('products.Read_more') }}<i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -161,7 +161,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="elh-subscribe-heading">
-                            <h3>Subscribe us for Future Updates</h3>
+                            <h3>{{ __('products.Subscribe_us') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">

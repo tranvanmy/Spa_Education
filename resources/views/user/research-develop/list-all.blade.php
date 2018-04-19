@@ -12,10 +12,10 @@
     <div class="elh-page-header elh-img-bg elh-bg-9">
         <div class="elh-overlay">
             <div class="container text-center">
-                <h3 class="elh-page-title">All Research & Development</h3>
+                <h3 class="elh-page-title">{{ __('research.All_rd') }}</h3>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="{{ route('user.home') }}">Home</a>
+                        <a href="{{ route('user.home') }}">{{ __('research.Home') }}</a>
                     </li>
                 </ol>
             </div>
@@ -87,7 +87,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="elh-subscribe-heading">
-                            <h3>Subscribe us for Future Updates</h3>
+                            <h3>{{ __('research.Subscribe_us') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">

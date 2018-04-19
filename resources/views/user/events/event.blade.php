@@ -12,10 +12,10 @@
     <div class="elh-page-header elh-img-bg elh-bg-9">
         <div class="elh-overlay">
             <div class="container text-center">
-                <h3 class="elh-page-title">All Events</h3>
+                <h3 class="elh-page-title">{{ __('events.All_events') }}</h3>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="/">Home</a>
+                        <a href="/">{{ __('events.Home') }}</a>
                     </li>
                 </ol>
             </div>
@@ -45,7 +45,7 @@
                     <div class="col-md-4">
                         <div class="sidebar">
                             <aside class="widget category_widget">
-                                <h4 class="widget-title">SIGN UP FOR MORE SEMINAR</h4>
+                                <h4 class="widget-title">{{ __('events.Sign_up_for') }}</h4>
                                 <input class="form-control" style="margin: 10px" placeholder="Enter your name" />
                                 <input class="form-control" style="margin: 10px" placeholder="Enter your email" />
                                 <input class="form-control" style="margin: 10px" placeholder="Enter your phone number" />
@@ -64,7 +64,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="elh-subscribe-heading">
-                            <h3>Subscribe us for Future Updates</h3>
+                            <h3>{{ __('events.Subscribe_us') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">

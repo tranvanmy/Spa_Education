@@ -15,11 +15,11 @@
                 <h3 class="elh-page-title">{{ $category[fieldLanguage('title')] }}</h3>
                 <ol class="breadcrumb">
                     <li>
-                          <a href="{{ route('user.home') }}" title="Home">Home</a>
+                          <a href="{{ route('user.home') }}" title="Home">{{ __('products.Home') }}</a>
                     </li>
                     <li>
                         <a href="{{ route('user.product.list') }}" title="All Product">
-                            All Product
+                            {{ __('products.All_product') }}
                         </a>
                     </li>
                 </ol>
@@ -88,7 +88,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="elh-subscribe-heading">
-                            <h3>Subscribe us for Future Updates</h3>
+                            <h3>{{ __('products.Subscribe_us') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">

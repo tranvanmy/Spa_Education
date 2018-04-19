@@ -14,7 +14,7 @@
             <div class="container text-center">
                 <h3 class="elh-page-title">{{ $research[fieldLanguage('title')] }}</h3>
                 <ol class="breadcrumb">
-                    <li><a href="{{ route('user.home') }}" title="Home">Home</a></li>
+                    <li><a href="{{ route('user.home') }}" title="Home">{{ __('research.Home') }}</a></li>
                     <li>
                         <a href="{{ route('user.research.category', [$category[fieldLanguage('slug')]]) }}" title="{{ $category[fieldLanguage('title')] }}">
                             {{ $category[fieldLanguage('title')] }}
@@ -44,7 +44,7 @@
                         <!-- Feedback -->
                         <div class="elh-course-student-feedback">
                             <div class="elh-section-header text-left">
-                                <h3 class="elh-section-title">Feeback</h3>
+                                <h3 class="elh-section-title">{{ __('research.Feedback') }}</h3>
                             </div>
 
                             <!-- Given Reiviews -->
@@ -99,7 +99,7 @@
                         <!-- Related Posts -->
                         <div class="elh-related-course">
                             <div class="elh-section-header text-left">
-                                <h3 class="elh-section-title">Related {{ nl2br($research[fieldLanguage('title')]) }}</h3>
+                                <h3 class="elh-section-title">{{ __('research.Related') }} {{ nl2br($research[fieldLanguage('title')]) }}</h3>
                             </div>
                             <div class="row">
                                 @foreach($researchRelated as $research)
@@ -129,7 +129,7 @@
                                                     <a class="widget-read-more"
                                                         href="{{ route('user.research.detail', [$category[fieldLanguage('slug')], $research[fieldLanguage('slug')]]) }}"
                                                         title="{{ $research[fieldLanguage('title')] }}"
-                                                    >Read More <i class="fa fa-long-arrow-right"></i></a>
+                                                    >{{ __('research.Read_more') }} <i class="fa fa-long-arrow-right"></i></a>
                                                 </p>
                                             </div>
                                         </div>
@@ -142,7 +142,7 @@
                     <div class="col-md-4">
                         <div class="sidebar">
                             <aside class="widget post_widget">
-                                <h4 class="widget-title">Popular Research & Development</h4>
+                                <h4 class="widget-title">{{ __('research.Popular_rd') }}</h4>
                                 <div class="widget-posts">
                                     @foreach ($researchLastest as $research)
                                         <div class="widget-post">
@@ -164,7 +164,7 @@
                                                 <a class="widget-read-more"
                                                     title="{{ $research[fieldLanguage('title')] }}"
                                                     href="{{ route('user.research.detail', [$research->category[fieldLanguage('slug')], $research[fieldLanguage('slug')]]) }}"
-                                                >Read More<i class="fa fa-long-arrow-right"></i></a>
+                                                >{{ __('research.Read_more') }}<i class="fa fa-long-arrow-right"></i></a>
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>
@@ -184,7 +184,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="elh-subscribe-heading">
-                            <h3>Subscribe us for Future Updates</h3>
+                            <h3>{{ __('research.Subscribe_us') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">

@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="elh-subscribe-heading">
-                        <h3>Subscribe us for Future Updates</h3>
+                        <h3>{{ __('about_us.Subscribe_us') }}</h3>
                     </div>
                 </div>
                 <div class="col-sm-6">

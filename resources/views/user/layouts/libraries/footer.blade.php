@@ -8,7 +8,7 @@
         </svg>
     </div>
     <div class="onesignal-bell-launcher-message" >
-        <div class="onesignal-bell-launcher-message-body">Subscribe us</div>
+        <div class="onesignal-bell-launcher-message-body">{{ __('layout.Subscribe') }}</div>
     </div>
 </div>
 
@@ -16,18 +16,18 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="quick-contact">
-                <h4>Subscribe us for Future Updates!</h4>
+                <h4>{{ __('layout.Subscribe_us') }}</h4>
                 <form action="#" method="post">
                     <div class="row">
                         <div class="col-sm-12">
                             <input type="email" name="name" placeholder="Enter email address here" required>
                         </div>
                         <div class="col-xs-12">
-                            <button class="btn col-xs-12" type="submit" style="margin-bottom: 10px">Subscribe</button>
+                            <button class="btn col-xs-12" type="submit" style="margin-bottom: 10px">{{ __('layout.Subscribe') }}</button>
                             <a style="color: #606060; border-bottom: 1px dotted #dcdcdc; cursor: pointer"
                                 id="subcribe-button-cancel"
                             >
-                                No, thanks!
+                                {{ __('layout.No_thanks') }}
                             </a>
                         </div>
                     </div>
@@ -61,25 +61,25 @@
                     </div>
                     <div class="col-md-2 col-xs-6">
                         <div class="widget widget_custom-menu">
-                            <h3 class="widget-title">About Us</h3>
+                            <h3 class="widget-title">{{ __('layout.About_us') }}</h3>
                             <ul class="custom-menu">
-                                <li><a href="#">How the Academy</a></li>
-                                <li><a href="#">Visit Academy</a></li>
-                                <li><a href="#">Maps</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">{{ __('layout.How_the_academy') }}</a></li>
+                                <li><a href="#">{{ __('layout.Visit_academy') }}</a></li>
+                                <li><a href="#">{{ __('layout.Maps') }}</a></li>
+                                <li><a href="#">{{ __('layout.News') }}</a></li>
+                                <li><a href="#">{{ __('layout.Jobs') }}</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-2 col-xs-6">
                         <div class="widget widget_custom-menu">
-                            <h3 class="widget-title">Useful Links</h3>
+                            <h3 class="widget-title">{{ __('layout.Useful_links') }}</h3>
                             <ul class="custom-menu">
-                                <li><a href="#">Learning experiences</a></li>
-                                <li><a href="#">Best practices</a></li>
-                                <li><a href="#">Technology trends</a></li>
-                                <li><a href="#">Spotlight on</a></li>
-                                <li><a href="#">Data Science Lab</a></li>
+                                <li><a href="#">{{ __('layout.Learning_experiences') }}</a></li>
+                                <li><a href="#">{{ __('layout.Best_practices') }}</a></li>
+                                <li><a href="#">{{ __('layout.Technology_trends') }}</a></li>
+                                <li><a href="#">{{ __('layout.Spotlight_on') }}</a></li>
+                                <li><a href="#">{{ __('layout.Data_science_lab') }}</a></li>
                             </ul>
                         </div>
                     </div>

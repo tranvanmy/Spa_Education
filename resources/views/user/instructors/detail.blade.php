@@ -14,7 +14,7 @@
             <div class="container text-center">
                 <h3 class="elh-page-title">{{ $instructor[fieldLanguage('name')] }}</h3>
                 <ol class="breadcrumb">
-                    <li>Home</li>
+                    <li>{{ __('instructors.Home') }}</li>
                     <li class="active">{{ $instructor[fieldLanguage('specialized')] }}</li>
                 </ol>
             </div>
@@ -38,8 +38,8 @@
                             />
                         </div>
                         <div class="elh-contact-instructor">
-                            <a class="btn" href="#">Contact Instructor</a>
-                            <a class="btn btn-border" href="#">Subscribe Instructor</a>
+                            <a class="btn" href="#">{{ __('instructors.Contact_instructor') }}</a>
+                            <a class="btn btn-border" href="#">{{ __('instructors.Subscribe_instructor') }}</a>
                         </div>
                         <div class="elh-instructor-single-socials">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -69,9 +69,9 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title"><span>Courses</span> by {{ $instructor[fieldLanguage('name')] }}</h3>
-                            <p class="elh-section-text">Text</p>
-                            <a class="all-link" href="{{ route('user.courses') }}">See All Courses</a>
+                            <h3 class="elh-section-title"><span>{{ __('instructors.Courses') }}</span> {{ __('instructors.by') }} {{ $instructor[fieldLanguage('name')] }}</h3>
+                            <p class="elh-section-text">{{ __('instructors.Text') }}</p>
+                            <a class="all-link" href="{{ route('user.courses') }}">{{ __('instructors.See_all_courses') }}</a>
                         </div>
                     </div>
                 </div>
@@ -118,14 +118,14 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="elh-subscribe-heading">
-                            <h5>for Future Update</h5>
-                            <h3>Subscribe Us</h3>
+                            <h5>{{ __('instructors.for_future_update') }}</h5>
+                            <h3>{{ __('instructors.Subscribe_us') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <form id="subscription" class="elh-subscribe-form pull-right xs-pull-center" action="#" method="post" novalidate="true">
                             <input type="email" name="EMAIL" placeholder="Enter your mail">
-                            <button type="submit">Subscribe</button>
+                            <button type="submit">{{ __('instructors.Subscribe') }}</button>
                         </form>
                     </div>
                 </div>
