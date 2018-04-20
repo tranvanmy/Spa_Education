@@ -247,7 +247,7 @@
                     <div class="col-md-10 col-md-offset-1 col-xs-12">
                         <div class="elh-section-header text-center">
                             <h3 class="elh-section-title">Success <span>Stories</span></h3>
-                            <p class="elh-section-text">... Add your text here ....</p>
+                            {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
                         </div>
                     </div>
                 </div>
@@ -314,7 +314,7 @@
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title"><span>Data Scientists' corner</span></h3>
-                            <p class="elh-section-text">... Add your text here ....</p>
+                            {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
                             <a class="all-link style-2" href="{{ route('user.data-scientist.list') }}" title="Data Scientists' corner">See All</a>
                         </div>
                     </div>
@@ -351,7 +351,7 @@
                 <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
                     <div class="elh-section-header">
                         <h3 class="elh-section-title">Education for all! Join with us...</h3>
-                        <p class="elh-section-text">... Add your text here ....</p>
+                        {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
                     </div>
                     <div id="errors" class="alert alert-danger alert-dismissable hidden">
                         <button type="button" class="close" aria-hidden="true">×</button>
