@@ -113,23 +113,7 @@
         </div>
         <!-- Popular Courses End -->
         <!-- Subscribe -->
-        <div class="elh-section elh-theme-bg elh-subscribe-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="elh-subscribe-heading">
-                            <h3>{{ __('instructors.Subscribe_us') }}</h3>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <form id="subscription" class="elh-subscribe-form pull-right xs-pull-center" action="#" method="post" novalidate="true">
-                            <input type="email" name="EMAIL" placeholder="Enter your mail">
-                            <button type="submit">{{ __('instructors.Subscribe') }}</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('user.layouts.libraries.subcrice')
         <!-- Subscribe End -->
 
     </div>

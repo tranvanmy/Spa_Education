@@ -353,23 +353,7 @@
     <!-- Course Body End -->
 
     <!-- Subscribe -->
-    <div class="elh-section elh-theme-bg elh-subscribe-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="elh-subscribe-heading">
-                        <h3>{{ __('courses.Subscribe_us') }}</h3>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <form id="subscription" class="elh-subscribe-form pull-right xs-pull-center" action="#" method="post">
-                        <input type="email" name="email" placeholder="Enter your mail">
-                        <button type="submit">{{ __('courses.Subscribe') }}</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('user.layouts.libraries.subcrice')
     <!-- Subscribe End -->
 
 </div>

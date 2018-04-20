@@ -10,4 +10,5 @@ return [
     'Subscribe_us' => 'Subscribe us for Future Updates',
     'Write_a_review' => 'Write a Review',
     'Feedback' => 'Feedback',
+    'See_all' => 'See all'
 ];

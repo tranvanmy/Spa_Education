@@ -10,4 +10,5 @@ return [
     'Subscribe_us' => 'Đăng ký nhận tin tức mới nhất',
     'Write_a_review' => 'Viết đánh giá',
     'Feedback' => 'Phản hồi',
+    'See_all' => 'Xem tất cả'
 ];
