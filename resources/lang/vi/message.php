@@ -9,4 +9,5 @@ return [
     'delete_failed' => 'Xóa thất bại!',
     'Subscribe_failed' => 'Đăng ký thất bại!',
     'Subscribe_successed' => 'Đăng ký thành công!',
+    'Enter_your_mail_here' => 'Nhập email của bạn vào đây!',
 ];
