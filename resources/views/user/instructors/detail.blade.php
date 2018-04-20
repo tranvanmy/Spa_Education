@@ -118,7 +118,6 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="elh-subscribe-heading">
-                            <h5>{{ __('instructors.for_future_update') }}</h5>
                             <h3>{{ __('instructors.Subscribe_us') }}</h3>
                         </div>
                     </div>
