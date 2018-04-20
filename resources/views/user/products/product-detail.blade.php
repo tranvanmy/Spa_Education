@@ -44,58 +44,7 @@
                         </div>
 
                         <!-- Feedback -->
-                        <div class="elh-course-student-feedback">
-                            <div class="elh-section-header text-left">
-                                <h3 class="elh-section-title">{{ __('products.Feeback') }}</h3>
-                            </div>
-
-                            <!-- Given Reiviews -->
-                            <div class="elh-course-reviews">
-                                <div class="elh-course-review-item">
-                                    <div class="elh-course-reviewer-thumb">
-                                        <img class="img-responsive fix-width" src="/images/course/course-reviewer-thumb.jpg" alt="...">
-                                    </div>
-                                    <div class="elh-course-review-body">
-                                        <div class="elh-course-review-title">
-                                            <h5>Oliver Liam</h5>
-                                            <div class="elh-course-reviewer-rating">
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                                <span class="star on"></span>
-                                            </div>
-                                        </div>
-                                        <p class="elh-course-review-time"><i class="fa fa-clock-o"></i> June 9, 2018 at 09:52 am</p>
-                                        <p class="elh-course-review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        <form class="elh-review-feedback-form" action="#" method="post">
-                                            <span class="elh-feedback-on-review-question">Was this review helpful?</span>
-                                            <button class="submitted" type="submit" value="yes"><i class="fa fa-check"></i> Yes</button>
-                                            <button type="submit" value="no"><i class="fa fa-close"></i> No</button>
-                                            <a href="#">Report</a>
-                                        </form>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <!-- Given Reiviews End -->
-
-                            <!-- Write a review -->
-                            <form id="courseReviewForm" class="elh-course-review-form" action="#" method="post">
-                                <p class="lead elh-theme-color">{{ __('products.Write_a_review') }}</p>
-                                <div class="elh-rating-inputs">
-                                    <label class="elh-rate-on"><input type="radio" name="rate-value" value="1"><i class="star"></i></label>
-                                    <label><input type="radio" name="rate-value" value="2"><i class="star"></i></label>
-                                    <label><input type="radio" name="rate-value" value="3"><i class="star"></i></label>
-                                    <label><input type="radio" name="rate-value" value="4"><i class="star"></i></label>
-                                    <label><input type="radio" name="rate-value" value="5"><i class="star"></i></label>
-                                </div>
-                                <textarea name="review-message" rows="4"></textarea>
-                                <button class="btn" type="submit">{{ __('products.Submit') }}</button>
-                            </form>
-                            <!-- Write a review End -->
-
-                        </div>
+                      
                         <!-- Student feedback end -->
 
                         <!-- Related Posts -->
