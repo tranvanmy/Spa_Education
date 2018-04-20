@@ -57,7 +57,7 @@
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="15"></span></h3>
-                            <p class="elh-fact-name" style="height: 50px">GS, pGS đại học</p>
+                            <p class="elh-fact-name" style="height: 50px">GS, PGS đại học</p>
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="45"></span></h3>
@@ -92,7 +92,7 @@
                             <h3 class="elh-section-title">Về <span>Chúng Tôi</span></h3>
                         </div>
                         <p>
-                        Chúng tôi gồm các nhà nghiên cứu, giảng viên đạo học, các chuyên gia chuyên ngành, các doanh nghiệp kết hợp lại nhằm tạo dựng môi trường học tập cho doanh nghiệp và cá nhân đang mong muốn áp dụng Trí tuệ nhân tạo để sáng tạo và đổi mới.
+                        Chúng tôi gồm các nhà nghiên cứu, giảng viên đại học, các chuyên gia chuyên ngành, các doanh nghiệp kết hợp lại nhằm tạo dựng môi trường học tập cho doanh nghiệp và cá nhân đang mong muốn áp dụng Trí tuệ nhân tạo để sáng tạo và đổi mới.
                         </p>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title">Hội đồng <span>Khoa học</span></h3>
-                            <p class="elh-section-text">... Add your text here ....</p>
+                            {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
                         </div>
                     </div>
                 </div>
@@ -205,9 +205,9 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Nghiên cứu và Phát triển</h3>
-                        <p class="elh-section-text">
+                        {{--  <p class="elh-section-text">
                             ... Add your text here ....
-                        </p>
+                        </p>  --}}
                         <a class="all-link style-2" href="{{ route('user.research.list') }}" title="See All Research & Development">{{ __('index.See_all', ['name' => 'Nghiên cứu']) }}</a>
                     </div>
                 </div>
@@ -245,7 +245,7 @@
                     <div class="col-md-10 col-md-offset-1 col-xs-12">
                         <div class="elh-section-header text-center">
                             <h3 class="elh-section-title">Đối tác <span> Chiến lược</span></h3>
-                            <p class="elh-section-text">... Add your text here ....</p>
+                            {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
                         </div>
                     </div>
                 </div>
@@ -314,7 +314,7 @@
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title"><span>Góc Data Science</span></h3>
-                            <p class="elh-section-text">... Add your text here ....</p>
+                            {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
                             <a class="all-link style-2" href="{{ route('user.data-scientist.list') }}" title="Data Scientists' corner">{{ __('index.See_all', ['name' => '']) }}</a>
                         </div>
                     </div>
@@ -351,7 +351,7 @@
                 <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
                     <div class="elh-section-header">
                         <h3 class="elh-section-title">Hệ thống giáo dục cho mọi người! Hãy tham gia cùng chúng tôi...</h3>
-                        <p class="elh-section-text">... Add your text here ....</p>
+                        {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
                     </div>
                     <div id="errors" class="alert alert-danger alert-dismissable hidden">
                         <button type="button" class="close" aria-hidden="true">×</button>

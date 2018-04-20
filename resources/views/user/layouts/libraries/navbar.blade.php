@@ -81,7 +81,7 @@
                 </li>
                 <li>
                     <a href="{{ isset($isHomePage) ? '#home_news_blog' : route('user.data-scientist.list')}}"
-                        title="{{ __("navbar.Data Scientists' corner") }}"
+                        title="{{ __("navbar.Data Scientists corner") }}"
                     >{{ __("navbar.Data Scientists' corner") }}</a>
                 </li>
                 <li class="dropdown">

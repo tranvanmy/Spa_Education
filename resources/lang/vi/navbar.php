@@ -7,7 +7,7 @@ return [
     'Products' => 'Sản phẩm',
     'Events' => 'Sự kiện',
     'Join us' => 'Tham gia',
-    "Data Scientists' corner" => 'Góc Data Science',
+    "Data Scientists' corner" => 'Góc khoa học dữ liệu',
     "Search" => 'Tìm kiếm',
     "Search for" => 'Tìm kiếm cho',
     "Search here" => 'Từ khóa bạn cần tìm ..',
