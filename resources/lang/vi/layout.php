@@ -14,6 +14,6 @@ return [
     'Learning_experiences' => 'Kinh nghiệm học tập',
     'Best_practices' => 'Thực hành tối ưu nhất',
     'Technology_trends' => 'Xu hướng công nghệ',
-    'Spotlight_on' => 'Spotlight on',
-    'Data_science_lab' => 'Data Science Lab',
+    'Spotlight_on' => 'Điểm nhấn',
+    'Data_science_lab' => 'Phòng thí nghiệm khoa học dữ liệu',
 ];

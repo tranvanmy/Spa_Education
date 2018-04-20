@@ -313,7 +313,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
-                            <h3 class="elh-section-title"><span>Góc Data Science</span></h3>
+                            <h3 class="elh-section-title"><span>Góc khoa học dữ liệu</span></h3>
                             {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
                             <a class="all-link style-2" href="{{ route('user.data-scientist.list') }}" title="Data Scientists' corner">{{ __('index.See_all', ['name' => '']) }}</a>
                         </div>
