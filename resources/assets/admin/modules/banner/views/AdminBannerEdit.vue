@@ -8,7 +8,7 @@
                             <b-form-fieldset :label="$t('textImage')"
                             >
                                 <UploadImage
-                                    folder="authors"
+                                    folder="banners"
                                     :doSuccessUploader="successUploader"
                                     :token="getToken()"
                                     :doRemoveFile="removeFile"
@@ -16,6 +16,17 @@
                                 />
                            </b-form-fieldset>
                         </b-col>
+                   </b-row>
+                   <b-row>
+                       <b-col sm="12">
+                           <b-form-fieldset :label="$t('textPosition')">
+                               <b-form-select
+                                   :plain="true" required
+                                   :options="getPositionOptions()"
+                                   v-model="formData.sameData.position"
+                               />
+                           </b-form-fieldset>
+                       </b-col>
                    </b-row>
                    <b-tabs pills card>
                        <b-tab
@@ -25,12 +36,35 @@
                        >
                            <b-row>
                                <b-col sm="12">
-                                   <b-form-fieldset :label="$t('textName')">
+                                   <b-form-fieldset :label="$t('textTitle')">
+                                       <textarea
+                                           class="form-control"
+                                           :placeholder="$t('textTitle')"
+                                           v-model="formData[language.key].title"
+                                           rows="3"
+                                       />
+                                   </b-form-fieldset>
+                               </b-col>
+                           </b-row>
+                           <b-row>
+                               <b-col sm="12">
+                                   <b-form-fieldset :label="$t('textLink')">
                                        <b-form-input
                                            type="text"
-                                           v-model="formData[language.key].name"
-                                           :placeholder="$t('textName')"
-                                           @input="handleChangeTitle($event, language.key)"
+                                           v-model="formData[language.key].link"
+                                           :placeholder="$t('textLink')"
+                                       />
+                                   </b-form-fieldset>
+                               </b-col>
+                           </b-row>
+                           <b-row>
+                               <b-col sm="12">
+                                   <b-form-fieldset :label="$t('textDecription')">
+                                       <textarea
+                                           class="form-control"
+                                           :placeholder="$t('textDecription')"
+                                           v-model="formData[language.key].description"
+                                           rows="4"
                                        />
                                    </b-form-fieldset>
                                </b-col>
@@ -75,16 +109,16 @@ import UploadImage from 'Assets/components/UploadImage.vue'
 import Helper from 'Admin/library/Helper'
 
 import { STORAGE_AUTH } from 'Admin/modules/auth/store'
-import { sameForm, sameData } from '../store/formData'
+import { sameForm, sameData, positionOptions } from '../store/formData'
 
 export default {
-    name: 'AdminAuthorEdit',
+    name: 'AdminBannerEdit',
 
     components: { cSwitch, UploadImage },
 
     async beforeCreate() {
-        Helper.changeTitleAdminPage(this.$i18n.t('textManageAuthor'))
-        await this.$store.dispatch('actionAuthorShow', { vue: this, id: this.$route.params.id })
+        Helper.changeTitleAdminPage(this.$i18n.t('textManageBanner'))
+        await this.$store.dispatch('actionBannerShow', { vue: this, id: this.$route.params.id })
     },
 
     data() {
@@ -95,7 +129,7 @@ export default {
 
     computed: {
         formData() {
-            let data = this.$store.state.storeAdminAuthor.edit.data
+            let data = this.$store.state.storeAdminBanner.edit.data
             let formData = { sameData: {} }
 
             for (let key in sameData) {
@@ -113,21 +147,20 @@ export default {
     },
 
     methods: {
+        getPositionOptions() {
+            return positionOptions
+        },
+
         getLanguages() {
             return this.$store.state.storeLanguage.languages;
         },
 
         getCurrentImages() {
-            return [this.$store.state.storeAdminAuthor.edit.data.image_url]
+            return [this.$store.state.storeAdminBanner.edit.data.image]
         },
 
         getToken() {
             return JSON.parse(localStorage.getItem(STORAGE_AUTH)).token
-        },
-
-        handleChangeTitle(value, languageKey) {
-            this.formData[languageKey].has = true;
-            this.formData[languageKey].slug = slug(value || '')
         },
 
         successUploader(path) {
@@ -141,7 +174,7 @@ export default {
         convertDataSubmit() {
             let params = {
                 ...this.formData.sameData,
-                image_url: this.images.length ? this.images[0] : this.formData.sameData.image_url,
+                image: this.images.length ? this.images[0] : this.formData.sameData.image,
             }
 
             for (let language of this.getLanguages()) {
@@ -156,11 +189,11 @@ export default {
         clickSubmitEdit() {
             let params = this.convertDataSubmit();
 
-            this.$store.dispatch('actionAuthorEdit', { vue: this, params, id: this.$route.params.id });
+            this.$store.dispatch('actionBannerEdit', { vue: this, params, id: this.$route.params.id });
         },
 
         clickCancel() {
-            return this.$router.push({ path: '/authors' })
+            return this.$router.push({ path: '/banners' })
         },
     }
 }

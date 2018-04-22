@@ -110,6 +110,12 @@ const en = {
     textManageResearchDevelopment: 'Manage Research & Development',
     textManageProduct: 'Manage Products',
     textManageDataScientist: 'Manage Data Scientists',
+    textManageComment: 'Manage Comments',
+    textEmail: 'Email',
+    textContent: 'Content',
+    textCourse: 'Course',
+    textCreatedAt: 'Created at',
+    textManageBanner: 'Manage Banner',
 }
 
 export default en;

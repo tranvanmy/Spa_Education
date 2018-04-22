@@ -3,13 +3,18 @@ import Vue from 'vue'
 export default {
     items: [
         {
-            name: 'Dashboard',
-            url: '/dashboard',
+            name: 'Setups',
+            url: '/setups',
             icon: 'icon-speedometer',
             // badge: {
             //     variant: 'primary',
             //     text: 'NEW'
             // }
+        },
+        {
+            name: 'Banners',
+            icon: 'icon-list',
+            url: '/banners',
         },
         {
             name: 'Categories',
@@ -20,6 +25,11 @@ export default {
             name: 'Authors',
             icon: 'icon-list',
             url: '/authors',
+        },
+        {
+            name: 'Comments',
+            icon: 'icon-list',
+            url: '/comments',
         },
         {
             name: 'Pages',

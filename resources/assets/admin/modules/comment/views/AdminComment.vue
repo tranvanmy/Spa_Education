@@ -10,14 +10,6 @@
                         @input="handleChangeValueFilter"
                     />
                 </b-col>
-                <b-col lg="3">
-                    <b-button-group class="pull-right">
-                        <b-button variant="success" @click="clickAddNewItem">
-                            <i class="icon-plus"></i>
-                            {{ $t('textAddAuthor') }}
-                        </b-button>
-                    </b-button-group>
-                </b-col>
             </b-row>
         </b-col>
         <b-col lg="12">
@@ -32,22 +24,11 @@
                     :current-page="currentPage"
                     :per-page="perPage"
                 >
-                    <template slot="image_url" slot-scope="data">
-                        <b-img thumbnail
-                            :src="data.item.image_url"
-                            style="width: 150px"
-                            v-if="data.item.image_url"
-                        />
+                    <template slot="course" slot-scope="data">
+                        {{ data.item.commentable.title_vi }} <br/>
+                        {{ data.item.commentable.title_en }}
                     </template>
                     <template slot="action" slot-scope="data">
-                        <b-button
-                            type="submit" size="sm"
-                            variant="primary"
-                            @click="clickEditItem(data.item)"
-                        >
-                            <i class="icon-pencil"></i>
-                            {{ $t('textEdit') }}
-                        </b-button>
                         <b-button
                             type="reset" size="sm"
                             variant="danger"
@@ -75,24 +56,25 @@
 </template>
 
 <script>
-    import { PRODUCT_STATUS_SHOW, PRODUCT_STATUS_HIDDEN } from '../store'
     import Helper from 'Admin/library/Helper'
 
     export default {
-        name: 'AdminAuthor',
+        name: 'AdminComment',
 
-        beforeCreate() {
-            Helper.changeTitleAdminPage(this.$i18n.t('textManageAuthor'))
-            this.$store.dispatch('actionFetchAuthors', { vue: this })
+        async beforeCreate() {
+            Helper.changeTitleAdminPage(this.$i18n.t('textManageComment'))
+            await this.$store.dispatch('actionFetchComment', { vue: this })
         },
 
         data() {
             return {
                 fields: [
                     {key: 'id', sortable: true},
-                    {key: 'name_vi', label: this.$i18n.t('textNameVietnam'), tdClass: 'text-left'},
-                    {key: 'name_en', label: this.$i18n.t('textNameEnglish'), tdClass: 'text-left'},
-                    {key: 'image_url', label: this.$i18n.t('textImage')},
+                    {key: 'name', label: this.$i18n.t('textName'), tdClass: 'text-left'},
+                    {key: 'email', label: this.$i18n.t('textEmail'), tdClass: 'text-left'},
+                    {key: 'content', label: this.$i18n.t('textContent'), tdClass: 'text-left'},
+                    {key: 'course', label: this.$i18n.t('textCourse'), tdClass: 'text-left'},
+                    {key: 'created_at', label: this.$i18n.t('textCreatedAt'), tdClass: 'text-left'},
                     {key: 'action', label: this.$i18n.t('textAction')},
                 ],
                 perPage: 10,
@@ -100,14 +82,6 @@
         },
 
         methods: {
-            clickAddNewItem() {
-                return this.$router.push({ path: '/authors/add' })
-            },
-
-            clickEditItem(data) {
-                return this.$router.push({ path: `/authors/edit/${data.id}` })
-            },
-
             async clickDeleteItem(id) {
                 return id
                     && await this.$swal({
@@ -116,28 +90,28 @@
                         buttons: true,
                         dangerMode: true,
                     })
-                    && this.$store.dispatch('actionAuthorDelete', { vue: this, id })
+                    && this.$store.dispatch('actionCommentDelete', { vue: this, id })
             },
 
             changePage(page) {
-                this.$store.dispatch('actionAuthorSetPage', { page })
+                this.$store.dispatch('actionCommentSetPage', { page })
             },
 
             handleChangeValueFilter(value) {
-                return this.$store.dispatch('actionAuthorSetFilter', { value: value.trim() })
+                return this.$store.dispatch('actionCommentSetFilter', { value: value.trim() })
             },
         },
 
         computed: {
             currentPage: {
                 get() {
-                    return this.$store.state.storeAdminAuthor.currentPage
+                    return this.$store.state.storeAdminComment.currentPage
                 },
                 set(value) {}
             },
 
             valueFilter() {
-                return this.$store.state.storeAdminAuthor.valueFilter
+                return this.$store.state.storeAdminComment.valueFilter
             },
 
             filterItems() {
@@ -148,7 +122,11 @@
                 }
 
                 return this.items.filter(item => {
+                    if (String(item.commentable.title_en).toLowerCase().indexOf(valueFilter) !== -1) return true
+                    if (String(item.commentable.title_vi).toLowerCase().indexOf(valueFilter) !== -1) return true
+
                     for (let i in item) {
+                        if (i === 'commentable') continue;
                         if (String(item[i]).toLowerCase().indexOf(valueFilter) !== -1) return true
                     }
 
@@ -157,7 +135,7 @@
             },
 
             items() {
-                return this.$store.state.storeAdminAuthor.listFetch
+                return this.$store.state.storeAdminComment.listFetch
             },
         },
     }

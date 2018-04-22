@@ -13,6 +13,9 @@ import storeAdminCategory from 'Admin/modules/category/store'
 import storeAdminResearchDevelopment from 'Admin/modules/research-develop/store'
 import storeAdminProduct from 'Admin/modules/product/store'
 import storeAdminDataScientist from 'Admin/modules/data-scientist/store'
+import storeAdminComment from 'Admin/modules/comment/store'
+import storeAdminBanner from 'Admin/modules/banner/store'
+import storeAdminSetup from 'Admin/modules/setup/store'
 
 Vue.use(Vuex)
 
@@ -46,5 +49,8 @@ export default new Vuex.Store({
         storeAdminResearchDevelopment,
         storeAdminProduct,
         storeAdminDataScientist,
+        storeAdminComment,
+        storeAdminBanner,
+        storeAdminSetup,
     }
 })

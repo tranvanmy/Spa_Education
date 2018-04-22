@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/" style="padding-top: 5px; padding-bottom: 5px">
-                <img src="/images/logo.png" alt="Site Logo">
+                <img src="{{ $webSetup->logo ?: '/images/logo.png' }}" alt="Site Logo">
             </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,7 +17,7 @@
             <div class="navbar-search navbar-right">
                 <button id="navbar-search-toggle" class="navbar-search-toggle"><i class="fa fa-search"></i></button>
                 <form id="navbar-searchform" class="navbar-searchform" action="{{ route('user.search.all') }}">
-                    <input type="search" name="q" placeholder="{{ __('navbar.Search') }}..." maxlength="200" autofocus>
+                    <input type="search" name="q" placeholder="{{ __('navbar.Search') }}..." maxlength="200">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
@@ -28,7 +28,10 @@
                         <ul class="dropdown-menu">
                             @foreach ($navbar['about_us'] as $about)
                                 <li>
-                                    <a class="purchase-link" href="{{ route('user.about-us.detail', $about[fieldLanguage('slug')]) }}" title="{{ $about[fieldLanguage('title')] }}">{{ $about[fieldLanguage('title')] }}</a>
+                                    <a class="purchase-link"
+                                        href="{{ route('user.about-us.detail', $about[fieldLanguage('slug')]) }}"
+                                        title="{{ $about[fieldLanguage('title')] }}"
+                                    >{{ $about[fieldLanguage('title')] }}</a>
                                 </li>
                             @endforeach
                         </ul>

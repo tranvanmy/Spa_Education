@@ -1,8 +1,8 @@
 @extends('user.layouts.master')
 
-@section('user-title', 'AI Academy')
-@section('seo-description', 'AI Academy')
-@section('seo-keyword',  'AI Academy')
+@section('user-title', $webSetup[fieldLanguage('title')] ?: 'AI Academy')
+@section('seo-description', $webSetup[fieldLanguage('seo_description')] ?: 'AI Academy')
+@section('seo-keyword',  $webSetup[fieldLanguage('seo_keyword')] ?: 'AI Academy')
 
 @section('user-nav')
 <!-- Navigation -->
@@ -15,25 +15,24 @@
 <!-- Banner -->
 <div class="elh-banner style-2" id="elh-banner">
     <div class="owl-carousel" id="banner-slider">
-
-        <div class="elh-banner-item banner-item-4">
-              <div class="banner-content">
-                  <div class="container-fluid">
-                      <div class="row">
-                          <div class="col-xs-12" style="color: #40632c;">
-                              <h4 class="elh-banner-title">
-                                  Bạn muốn tham gia học AI <br> tại Viện AI?
-                              </h4>
-                              <h1 class="elh-banner-subtitle">
-                                 Viện AI tổ chức khóa học cho mọi đối tượng, từ nhà quản lý chính sách đến chuyên gia, kỹ sư chuyên ngành, phủ rộng các lĩnh vực như CNTT, marketing, nông nghiệp, y tế, hành chính công, quản trị doanh nghiệp
-                                 <br>Chúng tôi luôn có khóa học thích hợp dành cho bạn !
-                              </h1>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-        </div>
-
+        @foreach ($data['sliders'] as $slider)
+            <div class="elh-banner-item" style="background-image: url({{ $slider->image }})">
+                <div class="banner-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12" style="color: #40632c;">
+                                <h4 class="elh-banner-title">
+                                    {!! nl2br($slider[fieldLanguage('title')]) !!}
+                                </h4>
+                                <h1 class="elh-banner-subtitle">
+                                    {!! nl2br($slider[fieldLanguage('description')]) !!}
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
 </div>
 <!-- Banner End -->
@@ -92,14 +91,16 @@
                             <h3 class="elh-section-title">Về <span>Chúng Tôi</span></h3>
                         </div>
                         <p>
-                        Chúng tôi gồm các nhà nghiên cứu, giảng viên đại học, các chuyên gia chuyên ngành, các doanh nghiệp kết hợp lại nhằm tạo dựng môi trường học tập cho doanh nghiệp và cá nhân đang mong muốn áp dụng Trí tuệ nhân tạo để sáng tạo và đổi mới.
+                            {!! nl2br($webSetup[fieldLanguage('about_us')]) !!}
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="plyr-video">
-                        <div data-type="youtube" data-video-id="3BhkeY974Rg"></div>
-                    </div>
+                    @if ($webSetup[fieldLanguage('about_us_youtube')])
+                        <div class="plyr-video">
+                            <div data-type="youtube" data-video-id="{{ $webSetup[fieldLanguage('about_us_youtube')] }}"></div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -161,7 +162,9 @@
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title">Hội đồng <span>Khoa học</span></h3>
-                            {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
+                             <p class="elh-section-text">
+                                 {!! nl2br($webSetup[fieldLanguage('instructor_description')]) !!}
+                             </p>
                         </div>
                     </div>
                 </div>
@@ -205,9 +208,9 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Nghiên cứu và Phát triển</h3>
-                        {{--  <p class="elh-section-text">
-                            ... Add your text here ....
-                        </p>  --}}
+                        <p class="elh-section-text">
+                            {!! nl2br($webSetup[fieldLanguage('rd_description')]) !!}
+                        </p>
                         <a class="all-link style-2" href="{{ route('user.research.list') }}" title="See All Research & Development">{{ __('index.See_all', ['name' => 'Nghiên cứu']) }}</a>
                     </div>
                 </div>
@@ -240,34 +243,35 @@
 
     <!-- Partner Logoes -->
     <div class="elh-section elh-section-padding elh-bottom-0" id="home_our_partner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-xs-12">
-                        <div class="elh-section-header text-center">
-                            <h3 class="elh-section-title">Đối tác <span> Chiến lược</span></h3>
-                            {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="elh-section-header text-center">
+                        <h3 class="elh-section-title">Đối tác <span> Chiến lược</span></h3>
+                        <p class="elh-section-text">
+                            {!! nl2br($webSetup[fieldLanguage('partner')]) !!}
+                        </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12">
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="partner-logoes">
                         <div class="partner-logoes">
-                            <div class="partner-logoes">
-                                <a class="partner-logo" href="#">
-                                    <img class="img-responsive fix-width" src="/images/partner/viettel.png" alt="Viettel">
+                            @foreach ($data['partners'] as $partner)
+                                <a class="partner-logo" href="{{ $partner[fieldLanguage('link')] }}">
+                                    <img class="img-responsive fix-width" src="{{ $partner->image }}"
+                                        alt="{{ $partner[fieldLanguage('title')] }}"
+                                    />
                                 </a>
-                                <a class="partner-logo" href="#">
-                                    <img class="img-responsive fix-width" src="/images/partner/orchnetwork.png" alt="Orchnetword">
-                                </a>
-                                <a class="partner-logo" href="#">
-                                    <img class="img-responsive fix-width" src="/images/partner/an-viet.png" alt="An viet">
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
     <!-- Upcoming Event -->
     <div class="elh-section elh-section-padding" id="home_seminar">
         <div class="container">
@@ -275,7 +279,9 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Sự kiện  <span>Sắp diễn ra</span></h3>
-                        <p class="elh-section-text"></p>
+                        <p class="elh-section-text">
+                            {!! nl2br($webSetup[fieldLanguage('rd_description')]) !!}
+                        </p>
                         <a class="all-link style-2" href="{{  route('user.event.list') }}" title="All Events">{{ __('index.See_all', ['name' => 'Sự kiện']) }}</a>
                     </div>
                 </div>
@@ -314,7 +320,9 @@
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title"><span>Góc khoa học dữ liệu</span></h3>
-                            {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
+                            <p class="elh-section-text">
+                                {!! nl2br($webSetup[fieldLanguage('data_scientist')]) !!}
+                            </p>
                             <a class="all-link style-2" href="{{ route('user.data-scientist.list') }}" title="Data Scientists' corner">{{ __('index.See_all', ['name' => '']) }}</a>
                         </div>
                     </div>
@@ -351,7 +359,9 @@
                 <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
                     <div class="elh-section-header">
                         <h3 class="elh-section-title">Hệ thống giáo dục cho mọi người! Hãy tham gia cùng chúng tôi...</h3>
-                        {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
+                        <p class="elh-section-text">
+                            {!! nl2br($webSetup[fieldLanguage('join_us')]) !!}
+                        </p>
                     </div>
                     <div id="errors" class="alert alert-danger alert-dismissable hidden">
                         <button type="button" class="close" aria-hidden="true">×</button>

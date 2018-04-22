@@ -15,6 +15,7 @@ class ViewComposerProvider extends ServiceProvider
     public function boot()
     {
         View::composer('user.layouts.libraries.navbar', 'App\Http\ViewComposers\NavbarComposer');
+        View::composer('*', 'App\Http\ViewComposers\SetupComposer');
     }
 
     /**

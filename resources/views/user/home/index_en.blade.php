@@ -1,8 +1,8 @@
 @extends('user.layouts.master')
 
-@section('user-title', 'AI Academy')
-@section('seo-description', 'AI Academy')
-@section('seo-keyword',  'AI Academy')
+@section('user-title', $webSetup[fieldLanguage('title')] ?: 'AI Academy')
+@section('seo-description', $webSetup[fieldLanguage('seo_description')] ?: 'AI Academy')
+@section('seo-keyword',  $webSetup[fieldLanguage('seo_keyword')] ?: 'AI Academy')
 
 @section('user-nav')
 <!-- Navigation -->
@@ -15,25 +15,24 @@
 <!-- Banner -->
 <div class="elh-banner style-2" id="elh-banner">
     <div class="owl-carousel" id="banner-slider">
-
-        <div class="elh-banner-item banner-item-4">
-              <div class="banner-content">
-                  <div class="container-fluid">
-                      <div class="row">
-                          <div class="col-xs-12" style="color: #40632c;">
-                              <h4 class="elh-banner-title">
-                                  Want to learn AI <br> at AI Academy?
-                              </h4>
-                              <h1 class="elh-banner-subtitle">
-                                 Whether you’re a business leader, engineer, industry expert or marketer
-                                 <br>there are AI skills to learn !
-                              </h1>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-        </div>
-
+        @foreach ($data['sliders'] as $slider)
+            <div class="elh-banner-item" style="background-image: url({{ $slider->image }})">
+                <div class="banner-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12" style="color: #40632c;">
+                                <h4 class="elh-banner-title">
+                                    {!! nl2br($slider[fieldLanguage('title')]) !!}
+                                </h4>
+                                <h1 class="elh-banner-subtitle">
+                                    {!! nl2br($slider[fieldLanguage('description')]) !!}
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
 </div>
 <!-- Banner End -->
@@ -68,12 +67,12 @@
                             <p class="elh-fact-name" style="height: 50px">Courses</p>
                         </div>
                         <div class="elh-counter-item">
-                            <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="5"></span></h3>
+                                <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="5"></span></h3>
                             <p class="elh-fact-name" style="height: 50px">Projects</p>
                         </div>
                         <div class="elh-counter-item">
                             <h3 class="elh-fact-number"><span class="elh-count" data-form="0" data-to="8"></span></h3>
-                            <p class="elh-fact-name" style="height: 50px">Patterns</p>
+                            <p class="elh-fact-name" style="height: 50px">Patents</p>
                         </div>
                     </div>
                 </div>
@@ -92,16 +91,16 @@
                             <h3 class="elh-section-title">About <span>Us</span></h3>
                         </div>
                         <p>
-                        We are a group of AI researchers, practitioners and industry specialists who set to build a learning environment for everyone to learn and apply AI to innovate.
+                            {!! nl2br($webSetup[fieldLanguage('about_us')]) !!}
                         </p>
-                        <p>
-                        We consult on practical aspects of applied machine learning for enterprises, helping them build Data science team, AI-powered products to stay ahead of competition. </p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="plyr-video">
-                        <div data-type="youtube" data-video-id="3BhkeY974Rg"></div>
-                    </div>
+                    @if ($webSetup[fieldLanguage('about_us_youtube')])
+                        <div class="plyr-video">
+                            <div data-type="youtube" data-video-id="{{ $webSetup[fieldLanguage('about_us_youtube')] }}"></div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -163,7 +162,9 @@
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title">Our <span>Scientific Advisory Boards</span></h3>
-                            <p class="elh-section-text">All our intrustors have at least 5 years of experiences researching and working at universities and hightech companies in AI disciplines and related fields like Big Data analytics, Data mining, Information architect, Cyber security, Image processing, etc.</p>
+                            <p class="elh-section-text">
+                                {!! nl2br($webSetup[fieldLanguage('instructor_description')]) !!}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -208,7 +209,7 @@
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Research & Development</h3>
                         <p class="elh-section-text">
-                            We've embraced collaboration with companies to innovate and power their products with AI-engines and features. Joined R&D activities from prototyping, piloting through to commercial implementation keeps us engaged in practical aspects of applied AI and Machine learning
+                            {!! nl2br($webSetup[fieldLanguage('rd_description')]) !!}
                         </p>
                         <a class="all-link style-2" href="{{ route('user.research.list') }}" title="See All Research & Development">See All Research & Development</a>
                     </div>
@@ -242,32 +243,33 @@
 
     <!-- Partner Logoes -->
     <div class="elh-section elh-section-padding elh-bottom-0" id="home_our_partner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-xs-12">
-                        <div class="elh-section-header text-center">
-                            <h3 class="elh-section-title">Success <span>Stories</span></h3>
-                            {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="elh-section-header text-center">
+                        <h3 class="elh-section-title">Success <span>Stories</span></h3>
+                        <p class="elh-section-text">
+                            {!! nl2br($webSetup[fieldLanguage('partner')]) !!}
+                        </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="partner-logoes">
-                            <a class="partner-logo" href="#">
-                                <img class="img-responsive fix-width" src="/images/partner/viettel.png" alt="Viettel">
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="partner-logoes">
+                        @foreach ($data['partners'] as $partner)
+                            <a class="partner-logo" href="{{ $partner[fieldLanguage('link')] }}">
+                                <img class="img-responsive fix-width" src="{{ $partner->image }}"
+                                    alt="{{ $partner[fieldLanguage('title')] }}"
+                                />
                             </a>
-                            <a class="partner-logo" href="#">
-                                <img class="img-responsive fix-width" src="/images/partner/orchnetwork.png" alt="Orchnetword">
-                            </a>
-                            <a class="partner-logo" href="#">
-                                <img class="img-responsive fix-width" src="/images/partner/an-viet.png" alt="An viet">
-                            </a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
     <!-- Upcoming Event -->
     <div class="elh-section elh-section-padding" id="home_seminar">
         <div class="container">
@@ -275,7 +277,9 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Upcoming <span>Events</span></h3>
-                        <p class="elh-section-text"></p>
+                        <p class="elh-section-text">
+                            {!! nl2br($webSetup[fieldLanguage('rd_description')]) !!}
+                        </p>
                         <a class="all-link style-2" href="{{  route('user.event.list') }}" title="All Events">See All Events</a>
                     </div>
                 </div>
@@ -314,7 +318,9 @@
                     <div class="col-xs-12">
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title"><span>Data Scientists' corner</span></h3>
-                            {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
+                            <p class="elh-section-text">
+                                {!! nl2br($webSetup[fieldLanguage('data_scientist')]) !!}
+                            </p>
                             <a class="all-link style-2" href="{{ route('user.data-scientist.list') }}" title="Data Scientists' corner">See All</a>
                         </div>
                     </div>
@@ -351,7 +357,9 @@
                 <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
                     <div class="elh-section-header">
                         <h3 class="elh-section-title">Education for all! Join with us...</h3>
-                        {{--  <p class="elh-section-text">... Add your text here ....</p>  --}}
+                        <p class="elh-section-text">
+                            {!! nl2br($webSetup[fieldLanguage('join_us')]) !!}
+                        </p>
                     </div>
                     <div id="errors" class="alert alert-danger alert-dismissable hidden">
                         <button type="button" class="close" aria-hidden="true">×</button>
