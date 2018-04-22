@@ -26,7 +26,7 @@ class CreateSetupsTable extends Migration
 
             $table->mediumText('title_vi')->nullable();
             $table->text('about_us_vi')->nullable();
-            $table->string('about_us_link_vi')->nullable();
+            $table->string('about_us_youtube_vi')->nullable();
             $table->text('instructor_description_vi')->nullable();
             $table->text('rd_description_vi')->nullable();
             $table->text('partner_vi')->nullable();
@@ -39,7 +39,7 @@ class CreateSetupsTable extends Migration
 
             $table->mediumText('title_en')->nullable();
             $table->text('about_us_en')->nullable();
-            $table->string('about_us_link_en')->nullable();
+            $table->string('about_us_youtube_en')->nullable();
             $table->text('instructor_description_en')->nullable();
             $table->text('rd_description_en')->nullable();
             $table->text('partner_en')->nullable();
