@@ -114,7 +114,7 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Popular <span>Courses</span></h3>
-                        <a class="all-link" href="{{ route('user.courses') }}">See All Courses</a>
+                        <a class="all-link style-2" href="{{ route('user.courses') }}">See All Courses</a>
                     </div>
                 </div>
             </div>
