@@ -18,7 +18,6 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     Route::get('/', 'HomeController@index' )->name('user.home');
     Route::get('not-found', 'HomeController@index' )->name('user.not-found');
     Route::get('change-language', 'HomeController@changeLanguage' )->name('user.change-language');
-    // Route::get('search', '')->name('user.search');
     Route::post('subcribe', 'HomeController@subcribe')->name('user.subcribe');
 
     Route::post('comments/store', 'CommentController@store')->name('user.comment.store');
@@ -55,7 +54,7 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     Route::get('instructor', 'InstructorControler@index')->name('user.instructor');
     Route::get('instructor/{slug}', 'InstructorControler@show')
         ->name('user.instructor.detail');
-    
+
     Route::get('search', 'SearchController@searchAll')
         ->name('user.search.all');
 

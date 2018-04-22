@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <div class="navbar-search navbar-right">
                 <button id="navbar-search-toggle" class="navbar-search-toggle"><i class="fa fa-search"></i></button>
-                <form id="navbar-searchform" class="navbar-searchform" action="{{ route('user.search.all') }}">
+                <form id="navbar-searchform" class="navbar-searchform" action="/search">
                     <input type="search" name="q" placeholder="{{ __('navbar.Search') }}..." maxlength="200">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
