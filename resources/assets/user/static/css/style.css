@@ -270,7 +270,7 @@ a:hover {
 .elh-carousel-section .owl-buttons {
     position: absolute;
     right: 15px;
-    top: -144px;
+    top: -45px;
 }
 
 .elh-single-carousel .owl-prev,
@@ -328,10 +328,6 @@ a:hover {
 
 .all-link.style-2:hover {
     background-color: transparent;
-}
-
-.elh-carousel-section .all-link {
-    right: 110px;
 }
 
 .elh-mini-section {

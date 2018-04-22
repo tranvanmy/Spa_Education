@@ -114,7 +114,7 @@
                 <div class="col-xs-12">
                     <div class="elh-section-header text-left">
                         <h3 class="elh-section-title">Khóa học  <span>Phổ biến</span></h3>
-                        <a class="all-link" href="{{ route('user.courses') }}"> {{ __('index.See_all', ['name' => 'Khóa học']) }}</a>
+                        <a class="all-link style-2" href="{{ route('user.courses') }}"> {{ __('index.See_all', ['name' => 'Khóa học']) }}</a>
                     </div>
                 </div>
             </div>

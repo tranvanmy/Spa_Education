@@ -39,3 +39,7 @@
     display: none;
     max-width: 100%;
 }
+
+.owl-buttons .fa {
+    font-size: 30px;
+}
