@@ -46,21 +46,29 @@ import AdminDataScientist from 'Admin/modules/data-scientist/views/AdminDataScie
 import AdminDataScientistAdd from 'Admin/modules/data-scientist/views/AdminDataScientistAdd.vue'
 import AdminDataScientistEdit from 'Admin/modules/data-scientist/views/AdminDataScientistEdit.vue'
 
+import AdminComment from 'Admin/modules/comment/views/AdminComment.vue'
+
+import AdminBanner from 'Admin/modules/banner/views/AdminBanner.vue'
+import AdminBannerAdd from 'Admin/modules/banner/views/AdminBannerAdd.vue'
+import AdminBannerEdit from 'Admin/modules/banner/views/AdminBannerEdit.vue'
+
+import AdminSetup from 'Admin/modules/setup/views/AdminSetup.vue'
+
 const router =  new VueRouter({
     mode: 'history',
-    
+
     routes: [
         {
             path: '/',
-            redirect: '/dashboard',
+            redirect: '/setups',
             component: Admin,
             name: 'Trang chủ',
             meta: { requiresAuth: true },
             children: [
                 {
-                    path: '/dashboard',
-                    name: 'Quản lý',
-                    component: Dashboard
+                    path: '/setups',
+                    name: 'Setups',
+                    component: AdminSetup
                 },
                 {
                     name: 'Instructors',
@@ -319,6 +327,37 @@ const router =  new VueRouter({
                             path: 'edit/:id',
                             name: 'Update Product',
                             component: AdminProductEdit
+                        }
+                    ]
+                },
+                {
+                    name: 'Comments',
+                    path: '/comments',
+                    component: AdminComment,
+                },
+                {
+                    name: 'Banners',
+                    path: '/banners',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: '',
+                            name: 'Banner list',
+                            component: AdminBanner
+                        },
+                        {
+                            path: 'add',
+                            name: 'Add Banner',
+                            component: AdminBannerAdd
+                        },
+                        {
+                            path: 'edit/:id',
+                            name: 'Update Banner',
+                            component: AdminBannerEdit
                         }
                     ]
                 },

@@ -2,6 +2,7 @@
 
 namespace App\Http\ViewComposers;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\View\View;
 use App\Models\AboutUs;
 use App\Models\Course;
@@ -21,14 +22,16 @@ class NavbarComposer
         Category $category,
         JoinUs $joinUs
     ) {
-        $navbarField = [fieldLanguage('title'), fieldLanguage('slug')];
-        $this->navbar = [
-            'about_us' => $aboutUs->where(fieldLanguage('has'), true)->get($navbarField),
-            'courses' => $course->where(fieldLanguage('has'), true)->withCount('comments')->get(),
-            'research_development_categories' => $category->where('type', Category::TYPE_RD)->get($navbarField),
-            'products_categories' => $category->where('type', Category::TYPE_PRODUCT)->get($navbarField),
-            'join_us' => $joinUs->where(fieldLanguage('has'), true)->get($navbarField),
-        ];
+        if (Schema::hasTable($category->getTable())) {
+            $navbarField = [fieldLanguage('title'), fieldLanguage('slug')];
+            $this->navbar = [
+                'about_us' => $aboutUs->where(fieldLanguage('has'), true)->get($navbarField),
+                'courses' => $course->where(fieldLanguage('has'), true)->withCount('comments')->get(),
+                'research_development_categories' => $category->where('type', Category::TYPE_RD)->get($navbarField),
+                'products_categories' => $category->where('type', Category::TYPE_PRODUCT)->get($navbarField),
+                'join_us' => $joinUs->where(fieldLanguage('has'), true)->get($navbarField),
+            ];
+        }
     }
 
     /**

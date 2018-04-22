@@ -10,6 +10,7 @@ use App\Models\Instructor;
 use App\Models\ResearchDevelopment;
 use App\Models\Event;
 use App\Models\DataScientist;
+use App\Models\Banner;
 use Carbon\Carbon;
 use Lang;
 
@@ -26,9 +27,11 @@ class HomeController extends Controller
                 ->where('start_at', '>', Carbon::now())->orderBy('start_at', 'asc')
                 ->take(4)->get(),
             'dataScientist' => DataScientist::has('category')->orderBy('created_at', 'desc')->limit(5)->get(),
+            'sliders' => Banner::where('position', Banner::POSITION_SLIDER)->get(),
+            'partners' => Banner::where('position', Banner::POSITION_PARTNER)->get(),
         ];
 
-        return view('user.home.'.fieldLanguage('index'), compact('data'));
+        return view('user.home.' . fieldLanguage('index'), compact('data'));
     }
 
     public function subcribe(Request $request)
@@ -58,17 +61,11 @@ class HomeController extends Controller
         ]);
     }
 
-    public function changeLanguage()
+    public function changeLanguage(Request $request)
     {
-        $language = \Session::get('user-language', config('app.locale'));
-
-        if ($language == 'en') {
-            \Session::put('user-language', 'vi');
-
-            return redirect()->back();
-        }
-
-        \Session::put('user-language', 'en');
+        $lang = $request->lang;
+        $lang =  in_array($lang, ['vi', 'en']) ? $lang : 'en';
+        \Session::put('user-language', $lang);
 
         return redirect()->back();
     }

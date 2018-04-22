@@ -18,6 +18,8 @@ class SearchController extends Controller
 
         $results= [
             'courses' => Course::where(fieldLanguage('title'), 'like', '%' . $searchQuery . '%')
+                ->orWhere(fieldLanguage('description'), 'like', '%' . $searchQuery . '%')
+                ->orWhere(fieldLanguage('detail'), 'like', '%' . $searchQuery . '%')
                 ->with('instructor')
                 ->where(fieldLanguage('has'), true)
                 ->withCount('comments')
@@ -25,6 +27,8 @@ class SearchController extends Controller
                 ->limit(4)
                 ->get(),
             'products' => Product::where(fieldLanguage('title'), 'like', '%' . $searchQuery . '%')
+                ->orWhere(fieldLanguage('description'), 'like', '%' . $searchQuery . '%')
+                ->orWhere(fieldLanguage('detail'), 'like', '%' . $searchQuery . '%')
                 ->has('category')
                 ->with('category')
                 ->where(fieldLanguage('has'), true)
@@ -32,15 +36,21 @@ class SearchController extends Controller
                 ->limit(4)
                 ->get(),
             'events' => Event::where(fieldLanguage('title'), 'like', '%' . $searchQuery . '%')
+                ->orWhere(fieldLanguage('description'), 'like', '%' . $searchQuery . '%')
+                ->orWhere(fieldLanguage('detail'), 'like', '%' . $searchQuery . '%')
                 ->with('author')
                 ->where(fieldLanguage('has'), true)
                 ->take(4)->get(),
             'research_development' => ResearchDevelopment::where(fieldLanguage('title'), 'like', '%' . $searchQuery . '%')
+                ->orWhere(fieldLanguage('description'), 'like', '%' . $searchQuery . '%')
+                ->orWhere(fieldLanguage('detail'), 'like', '%' . $searchQuery . '%')
                 ->where(fieldLanguage('has'), true)
                 ->orderBy('id', 'desc')
                 ->take(4)
                 ->get(),
             'dataScientists' => DataScientist::where(fieldLanguage('title'), 'like', '%' . $searchQuery . '%')
+                ->orWhere(fieldLanguage('description'), 'like', '%' . $searchQuery . '%')
+                ->orWhere(fieldLanguage('detail'), 'like', '%' . $searchQuery . '%')
                 ->has('category')
                 ->with('category')
                 ->where(fieldLanguage('has'), true)
@@ -53,7 +63,7 @@ class SearchController extends Controller
         }
 
         return view('user.searchs.search-all', compact('results', 'searchQuery'));
-        
+
     }
 
     public function checkIsEmptyArr($data)

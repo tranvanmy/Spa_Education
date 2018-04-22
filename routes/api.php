@@ -36,7 +36,11 @@ Route::group(['domain' => 'admin.'.env('MAIN_DOMAIN'), 'namespace' => 'Api\Admin
         Route::resource('research-developments', 'ResearchController')->only($methodAllow);
         Route::resource('products', 'ProductController')->only($methodAllow);
         Route::resource('data-scientists', 'DataScientistController')->only($methodAllow);
+        Route::resource('comments', 'CommentController')->only(['index', 'destroy']);
+        Route::resource('banners', 'BannerController')->only($methodAllow);
 
+        Route::get('setups', 'SetupController@show');
+        Route::put('setups', 'SetupController@update');
     });
 
 

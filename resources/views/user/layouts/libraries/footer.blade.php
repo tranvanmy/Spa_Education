@@ -49,13 +49,38 @@
                             <a class="footer-logo" href="#">
                                 <img src="/images/logo.png" alt="Site Logo" style="height: 70px">
                             </a>
-                            {{-- <p>AI for All. Here at AI academy we'are commited to drive the adoption and application of AI for enterprises of all sizes.</p> --}}
+                            {!! nl2br($webSetup->footer) !!}
                             <div class="socials">
-                                {{-- <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-youtube"></i></a> --}}
+                                @if ($webSetup->facebook)
+                                    <a href="{{ $webSetup->facebook }}" title="Facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                @endif
+                                @if ($webSetup->twitter)
+                                    <a href="{{ $webSetup->twitter }}" title="Twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                @endif
+                                @if ($webSetup->google)
+                                    <a href="{{ $webSetup->google }}" title="Google">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                @endif
+                                @if ($webSetup->youtube)
+                                    <a href="{{ $webSetup->youtube }}" title="Youtube">
+                                        <i class="fa fa-youtube-play"></i>
+                                    </a>
+                                @endif
+                                @if ($webSetup->linkedin)
+                                    <a href="{{ $webSetup->linkedin }}" title="Linked in">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                @endif
+                                @if ($webSetup->vimeo)
+                                    <a href="{{ $webSetup->vimeo }}" title="Vimeo">
+                                        <i class="fa fa-vimeo"></i>
+                                    </a>
+                                @endif
                             </div>
                         </aside>
                     </div>
