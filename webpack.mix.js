@@ -79,7 +79,7 @@ mix
     // .js('resources/assets/user/components/course-comment/index.js', 'public/user/course-comment.js')
 
     // Admin
-    mix.js('resources/assets/admin/index.js', 'public/admin/js/index.js')
+    .js('resources/assets/admin/index.js', 'public/admin/js/index.js')
 
  if (mix.inProduction()) {
      mix.version();
