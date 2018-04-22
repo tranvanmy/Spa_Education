@@ -11,7 +11,7 @@
 |
 */
 Route::group(['domain' => 'admin.'. env('MAIN_DOMAIN')], function(){
-    Route::any('{any}', function () { return view('admin.index'); })->where('any', '.*');
+    Route::any('{any}', 'HomeController@admin')->where('any', '.*');
 });
 
 Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
@@ -58,7 +58,5 @@ Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
     Route::get('search', 'SearchController@searchAll')
         ->name('user.search.all');
 
-    Route::any('{any}', function () {
-        return redirect()->route('user.not-found');
-    })->where('any', '.*');
+    Route::any('{any}', 'HomeController@notFound')->where('any', '.*');
 });

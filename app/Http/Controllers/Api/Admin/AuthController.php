@@ -15,6 +15,11 @@ class AuthController extends ApiController
         $this->jwtAuth = $jwtAuth;
     }
 
+    public function user(Request $request)
+    {
+        return $this->response($request->user());
+    }
+
     public function login(Request $request)
     {
         if ($validator = $this->notValidateLogin($request)) {
