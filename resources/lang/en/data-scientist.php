@@ -13,4 +13,5 @@ return [
     'Related_posts' => 'Related Posts',
     'Read_more' => 'Read More',
     'Subscribe_us' => 'Subscribe us for Future Updates',
+    'Popular_posts' => 'Popular posts',
 ];

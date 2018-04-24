@@ -82,7 +82,7 @@
                     </div>
 
                     <!-- Feedback -->
-                    <div class="elh-course-student-feedback">
+                   {{--  <div class="elh-course-student-feedback">
                         <div class="elh-section-header text-left">
                             <h3 class="elh-section-title">{{ __('data-scientist.Feeback') }}</h3>
                         </div>
@@ -133,7 +133,7 @@
                         </form>
                         <!-- Write a review End -->
 
-                    </div>
+                    </div> --}}
                     <!-- Student feedback end -->
 
                     <!-- Related Posts -->

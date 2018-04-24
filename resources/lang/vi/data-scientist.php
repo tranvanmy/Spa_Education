@@ -13,4 +13,5 @@ return [
     'Related_posts' => 'Bài viết liên quan',
     'Read_more' => 'Đọc thêm',
     'Subscribe_us' => 'Đăng ký nhận tin tức mới nhất',
+    'Popular_posts' => 'Bài viết phổ biến',
 ];
