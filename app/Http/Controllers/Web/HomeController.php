@@ -39,11 +39,6 @@ class HomeController extends Controller
         return redirect()->route('user.not-found');
     }
 
-    public function admin()
-    {
-        return view('admin.index');
-    }
-
     public function subcribe(Request $request)
     {
         $request->validate([

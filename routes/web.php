@@ -11,7 +11,9 @@
 |
 */
 Route::group(['domain' => 'admin.'. env('MAIN_DOMAIN')], function(){
-    Route::any('{any}', 'HomeController@admin')->where('any', '.*');
+    Route::any('{any}', function(){
+        return view('admin.index');
+    })->where('any', '.*');
 });
 
 Route::group(['namespace' => 'Web', 'middleware' => 'locale'], function () {
