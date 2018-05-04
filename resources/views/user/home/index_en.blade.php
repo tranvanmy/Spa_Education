@@ -171,7 +171,7 @@
                 <div class="row">
                     <div>
                         @foreach($data['instructors'] as $instructor)
-                            <div class="col-md-3 elh-instructor" style="margin-top: 20px;">
+                            <div class="col-md-2 col-sm-6 elh-instructor" style="margin-top: 20px;">
                                 <a class="elh-instructor-thumb"
                                     href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
                                     title="{{ $instructor[fieldLanguage('description')] }}"
@@ -181,13 +181,13 @@
                                         alt="{{ $instructor[fieldLanguage('name')] }}"
                                     />
                                 </a>
-                                <div class="elh-instructor-body">
-                                    <h4 class="elh-instructor-title" style="height: 45px">
+                                <div class="elh-instructor-body" style="padding: 10px 5px;height: 150px; text-align: justify;">
+                                    <h4 class="elh-instructor-title" style="height: 45px; font-size: 1.5rem; ">
                                         <a href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
                                             title="{{ $instructor[fieldLanguage('name')] }}"
                                         >{{ $instructor[fieldLanguage('name')] }}</a>
                                     </h4>
-                                    <p class="elh-instructor-field">{{ $instructor[fieldLanguage('specialized')] }}</p>
+                                    <p class="elh-instructor-field" style="padding-bottom: 0px">{{ $instructor[fieldLanguage('specialized')] }}</p>
                                 </div>
                             </div>
                         @endforeach
