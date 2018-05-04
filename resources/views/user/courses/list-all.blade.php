@@ -37,7 +37,7 @@
                     <div class="row">
                         <div class="elh-course-listing">
                             @foreach ($courses as $course)
-                                <div class="col-md-4">
+                                <div class="col-md-4" style="height: 490px;">
                                     <div class="elh-course">
                                         <a class="elh-course-thumb" href="{{ route('user.course.detail', $course[fieldLanguage('slug')]) }}"
                                             title="{{ $course[fieldLanguage('title')] }}">

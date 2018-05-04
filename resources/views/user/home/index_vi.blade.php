@@ -169,12 +169,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="elh-generic-carousel owl-carousel elh-generic-4">
+                    <div>
                         @foreach($data['instructors'] as $instructor)
-                            <div class="elh-instructor">
+                            <div class="col-md-3 elh-instructor" style="margin-top: 20px">
                                 <a class="elh-instructor-thumb"
                                     href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
-                                    title="{{ $instructor[fieldLanguage('name')] }}"
+                                    title="{{ $instructor[fieldLanguage('description')] }}"
                                 >
                                     <img class="img-responsive fix-width"
                                         src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}"
@@ -188,9 +188,6 @@
                                         >{{ $instructor[fieldLanguage('name')] }}</a>
                                     </h4>
                                     <p class="elh-instructor-field">{{ $instructor[fieldLanguage('specialized')] }}</p>
-                                    <p class="elh-instructor-description">
-                                            {!! nl2br($instructor[fieldLanguage('description')]) !!}
-                                    </p>
                                 </div>
                             </div>
                         @endforeach
