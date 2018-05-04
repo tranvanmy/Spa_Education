@@ -290,6 +290,8 @@ $factory->define(App\Models\Comment::class, function (Faker $faker) {
     return [
         'name' => 'Thuy Nguyen',
         'email' => 'oliverliam@aiacademy.com',
+        'commentable_type' => 'course',
+        'commentable_id' => 1,
         'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     ];
 });
