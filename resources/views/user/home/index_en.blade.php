@@ -176,7 +176,7 @@
                                     href="{{ route('user.instructor.detail', [$instructor[fieldLanguage('slug')]]) }}"
                                     title="{{ $instructor[fieldLanguage('description')] }}"
                                 >
-                                    <img class="img-responsive fix-width"
+                                    <img class="img-responsive fix-width img-circle"
                                         src="{{ Croppa::url($instructor->image_url ?: '', 345, null, array('resize')) }}"
                                         alt="{{ $instructor[fieldLanguage('name')] }}"
                                     />

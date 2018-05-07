@@ -19,14 +19,14 @@ class HomeController extends Controller
     public function index() {
         $navbarField = [fieldLanguage('title'), fieldLanguage('slug')];
         $data = [
-            'courses' => Course::where(fieldLanguage('has'), true)->withCount('comments')->take(6)->get(),
+            'courses' => Course::where(fieldLanguage('has'), true)->withCount('comments')->get(),
             'instructors' => Instructor::where(fieldLanguage('has'), true)->get(),
             'research_development' => ResearchDevelopment::where(fieldLanguage('has'), true)
-                ->orderBy('id', 'desc')->take(6)->get(),
+                ->orderBy('id', 'desc')->get(),
             'events' => Event::with('author')->where(fieldLanguage('has'), true)
                 ->where('start_at', '>', Carbon::now())->orderBy('start_at', 'asc')
-                ->take(4)->get(),
-            'dataScientist' => DataScientist::has('category')->orderBy('created_at', 'desc')->limit(5)->get(),
+                ->get(),
+            'dataScientist' => DataScientist::has('category')->orderBy('created_at', 'desc')->get(),
             'sliders' => Banner::where('position', Banner::POSITION_SLIDER)->get(),
             'partners' => Banner::where('position', Banner::POSITION_PARTNER)->get(),
         ];
