@@ -1,37 +1,52 @@
-## Welcome to GitHub Pages
+## Welcome to Education Pages
 
-You can use the [editor on GitHub](https://github.com/tranvanmy/SPA_VUEX/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Requirement
+Docker
+Docker for Mac
+Docker for Linux
+PHP >= 7.13
+Mysql
+Laravel ~5.6
+Redis
+npm or yarn (recommend)
+Setup
+Copy file .env.example to .env,
+Modify .env config file (optional). If you modify the mysql, mongo, redis configurations in .env file, remember to modify the configurations in docker-compose.yml file too.
+Install or run Docker
+docker-compose up -d
+### Stop
+docker-compose stop
+Site will publish on 127.0.0.1:{ports} (ports config in docker-compose.yml > services > ngix > ports). Add domain to host file so we can access site by domain:{ports}
+127.0.0.1 education.local
+127.0.0.1 admin.education.local
+chmod cache folders
+chmod -R 777 storage
+chmod -R 777 bootstrap/cache
+Deploy
+Quick deploy: Run after each time you pull code from framgia repository
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Run deploy
+Install laravel
+composer install
+php artisan key:generate
+Install node modules
+npm install
+#or
+yarn install
+Build
+npm run dev
+#or
+yarn run dev
+Run migration
+### Check Docker Container list, copy the `workspace` container name
+docker ps
 
-### Markdown
+### Go into the `workspace` container
+docker exec -it education_workspace bash
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Run migration
+php artisan migrate --seed
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tranvanmy/SPA_VUEX/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Or running outside the docker container
+docker exec -it education_workspace php artisan migrate --seed
+If you want run project on your local instead of Docker, just skip all step about docker and create virtual host. And modify .env config of DB_HOST, DB_HOST_TEST, REDIS_HOST to 127.0.0.1
