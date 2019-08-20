@@ -8,14 +8,12 @@ services:
             - ./:/var/www/laravel
     workspace:
         container_name: education_workspace
-        restart: always
         image: framgia/laravel-workspace
         volumes_from:
             - application
         tty: true
     php-fpm:
         container_name: education_php-fpm
-        restart: always
         image: framgia/laravel-php-fpm
         volumes_from:
             - application
@@ -25,14 +23,13 @@ services:
             - workspace
     nginx:
         container_name: education_nginx
-        restart: always
         image: framgia/laravel-nginx
         volumes_from:
             - data
             - logs
             - application
         ports:
-            - "2018:80"
+            - "2020:80"
         links:
             - php-fpm
     data:
@@ -55,7 +52,6 @@ services:
             - .docker/logs/mongodb:/var/log/mongodb
     mysql:
         container_name: education_mysql
-        restart: always
         image: mysql
         volumes_from:
             - data
@@ -69,7 +65,6 @@ services:
             MYSQL_ROOT_PASSWORD: root
     mysql_test:
         container_name: education_mysql_test
-        restart: always
         image: mysql
         volumes_from:
             - data_test
@@ -82,7 +77,6 @@ services:
             MYSQL_ROOT_PASSWORD: root
     redis:
         container_name: education_redis
-        restart: always
         image: redis
         expose:
             - "6379"

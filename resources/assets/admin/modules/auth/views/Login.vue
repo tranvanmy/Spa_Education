@@ -72,7 +72,7 @@ export default {
         let auth = JSON.parse(localStorage.getItem(STORAGE_AUTH) || defaultAuth)
 
         if (checkAuthAdmin(auth)) {
-            return this.$router.push({ path: '/dashboard' })
+            return this.$router.push({ path: '/setups' })
         }
     },
 
@@ -112,7 +112,7 @@ export default {
                 axios.defaults.headers.common['Authorization'] = `${token.token_type} ${token.access_token}`;
 
                 this.$toaster.success(this.$i18n.t('textLoginAdminSuccess'))
-                return this.$router.push({ path: '/dashboard' })
+                return this.$router.push({ path: '/setups' })
             } else {
                 let errors = response.response.data.errors
                 this.errors.email = errors.email;
